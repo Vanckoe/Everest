@@ -2,6 +2,8 @@
   "name": "everest",
   "version": "0.1.0",
   "private": true,
+  "module": "index.ts",
+  "type": "module",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -19,6 +21,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "@types/bun": "latest"
   }
 }
