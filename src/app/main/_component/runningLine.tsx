@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
 
 const RunningLine = () => {
-     console.log('retbfwer');
   return (
-    <div className='my-10'>
-        <p className="text-4xl">Runing line</p>
+    <div>
+      <p className="">RunningLine</p>
     </div>
-  )
-}
+  );
+};
 
-export default RunningLine
+export default RunningLine;
