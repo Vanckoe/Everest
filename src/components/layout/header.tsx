@@ -7,7 +7,7 @@ const Header = () => {
     <div className="flex flex-row items-center justify-between py-8">
       <div className="flex flex-row items-center gap-10">
         <Logo />
-        <div className="flex flex-row text-base font-semibold gap-7">
+        <div className="hidden md:flex flex-row text-base font-semibold gap-7">
           <p className="">About</p>
           <p className="">Company</p>
           <p className="">Services</p>
