@@ -1,0 +1,7 @@
+// PostCSS в CommonJS-формате, чтобы обойти "type":"module"
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {}
+  }
+};

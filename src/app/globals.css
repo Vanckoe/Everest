@@ -1,4 +1,8 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* твои кастом-правила ниже */
 
 html {
   font-size: 1.15vw !important;

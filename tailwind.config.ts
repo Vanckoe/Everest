@@ -1,21 +1,17 @@
-// tailwind.config.ts
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // Next 13 App Router
-    './pages/**/*.{js,ts,jsx,tsx,mdx}', // (если используете Pages Router)
-    './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        /** Фирменная палитра */
         brand: {
-          /** Тёмный Navy-фон — #001F3F */
-          navy: '#001F3F',
-          /** Яркий акцент/CTA — #FE5B2C */
+          navy:   '#001F3F',
           orange: '#FE5B2C',
         },
       },
