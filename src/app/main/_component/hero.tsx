@@ -4,7 +4,7 @@ import RightIcon from '@/assets/Right';
 
 const Hero = () => {
   return (
-    <section className="w-full flex gap-5 flex-col md:flex-row">
+    <section className="w-full flex px-8 gap-5 flex-col md:flex-row">
       <div className="flex flex-col text-white px-10 md:px-16 pt-10 md:pt-20 pb-20 bg-[#001F3F] rounded-[2rem] md:w-1/2">
         <p className="font-semibold text-base px-5 py-1 border border-neutral-300 rounded-3xl opacity-90 w-fit">
           Your Local Appliance Repair Сompany
