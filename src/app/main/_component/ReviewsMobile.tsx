@@ -1,27 +1,8 @@
 'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import GoogleIcon from '@/assets/google-icon'
+import React, { useState } from 'react'
 import StarIcon from '@/assets/Star'
 import VerifiedIcon from '@/assets/verified'
 import GoogleLogo from '@/assets/google'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import ReviewsMobile from './ReviewsMobile'
-
-export default function Home() {
-  return (
-    <div>
-      {/* ПК версия */}
-      <div className="hidden md:block">
-        <Reviews />
-      </div>
-
-      {/* Мобильная версия */}
-      <div className="block md:hidden">
-        <ReviewsMobile />
-      </div>
-        </div>
-    )
-}
 
 const reviewsData = [
   {
@@ -89,7 +70,8 @@ const reviewsData = [
   },
 ]
 
-const CARD_WIDTH_REM = 18.375
+const CARD_WIDTH_REM = 25 // 400px
+const CARD_HEIGHT_REM = 13 // 260px
 
 const ReviewCard = ({
   review,
@@ -105,25 +87,24 @@ const ReviewCard = ({
 
   return (
     <div
-      className={`w-[${CARD_WIDTH_REM}rem] bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-1`}
-      style={{ zIndex: expanded ? 20 : undefined }}
+      className="bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start flex-shrink-0 relative mr-4"
+      style={{ width: `${CARD_WIDTH_REM}rem`, height: `${CARD_HEIGHT_REM}rem` }}
     >
       <div className="flex justify-between items-start">
-        <div className="flex gap-[0.9375rem] items-center flex-1">
+        <div className="flex gap-4 items-center flex-1 overflow-hidden text-left">
           <img
             src={review.avatar}
             alt={review.name}
-            className="w-[2.5rem] h-[2.5rem] rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover"
           />
-          <div className="flex flex-col justify-center overflow-hidden text-left">
+          <div className="flex flex-col justify-center overflow-hidden">
             <p className="font-semibold text-sm text-gray-900 truncate">{review.name}</p>
             <p className="text-xs text-gray-500">{review.time}</p>
           </div>
         </div>
-        <GoogleIcon width="1.25rem" height="1.25rem" />
       </div>
 
-      <div className="flex items-center mt-[0.9375rem] mb-[0.5rem]">
+      <div className="flex items-center mt-4 mb-2">
         <div className="flex gap-px">
           {[...Array(5)].map((_, i) => (
             <StarIcon key={i} color="#fbbf24" width="1.25rem" height="1.25rem" />
@@ -167,57 +148,16 @@ const ReviewCard = ({
   )
 }
 
-const Reviews = () => {
+export default function ReviewsMobile() {
   const [expandedId, setExpandedId] = useState<number | null>(null)
-  const [scrollX, setScrollX] = useState(0)
-  const containerRef = useRef<HTMLDivElement>(null)
 
   const toggleExpanded = (id: number) => {
     setExpandedId(prev => (prev === id ? null : id))
   }
 
-  const scrollLeft = () => {
-    if (containerRef.current) {
-      const newScrollX = Math.max(scrollX - CARD_WIDTH_REM * 16, 0)
-      containerRef.current.scrollTo({ left: newScrollX, behavior: 'smooth' })
-      setScrollX(newScrollX)
-    }
-  }
-
-  const scrollRight = () => {
-    if (containerRef.current) {
-      const maxScroll = containerRef.current.scrollWidth - containerRef.current.clientWidth
-      const newScrollX = Math.min(scrollX + CARD_WIDTH_REM * 16, maxScroll)
-      containerRef.current.scrollTo({ left: newScrollX, behavior: 'smooth' })
-      setScrollX(newScrollX)
-    }
-  }
-
-  useEffect(() => {
-    const onScroll = () => {
-      if (containerRef.current) {
-        setScrollX(containerRef.current.scrollLeft)
-      }
-    }
-    const el = containerRef.current
-    if (el) {
-      el.addEventListener('scroll', onScroll)
-    }
-    return () => {
-      if (el) {
-        el.removeEventListener('scroll', onScroll)
-      }
-    }
-  }, [])
-
-  const maxScroll =
-    containerRef.current
-      ? containerRef.current.scrollWidth - containerRef.current.clientWidth
-      : 0
-
   return (
-    <div className="flex flex-col items-center justify-center py-24 bg-gray-50">
-      <h2 className="text-xl font-bold mb-2">EXCELLENT</h2>
+    <div className="flex flex-col items-center justify-center py-8 bg-gray-50">
+      <h2 className="text-base font-bold mb-2">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (
           <StarIcon key={i} color="#fbbf24" width="1.875rem" height="1.875rem" />
@@ -230,44 +170,19 @@ const Reviews = () => {
         <GoogleLogo width="6.875rem" height="2.1875rem" />
       </div>
 
-      <div className="relative w-full max-w-[100%] flex items-center">
-        {scrollX > 0 && (
-          <button
-            onClick={scrollLeft}
-            className="absolute left-0 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100"
-            aria-label="Scroll left"
-          >
-            <ChevronLeft size={24} />
-          </button>
-        )}
-
-        <div
-          ref={containerRef}
-          className="flex overflow-x-auto no-scrollbar scroll-smooth pb-6 px-4 max-w-full"
-          style={{ scrollBehavior: 'smooth', scrollSnapType: 'x mandatory' }}
-        >
-          {reviewsData.map(review => (
-            <ReviewCard
-              key={review.id}
-              review={review}
-              expanded={expandedId === review.id}
-              onToggle={() => toggleExpanded(review.id)}
-            />
-          ))}
-        </div>
-
-        {containerRef.current && scrollX < maxScroll && maxScroll > 0 && (
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 z-20 p-2 bg-white rounded-full shadow hover:bg-gray-100"
-            aria-label="Scroll right"
-          >
-            <ChevronRight size={24} />
-          </button>
-        )}
+      <div
+        className="flex overflow-x-auto scrollbar-hide"
+        style={{ width: `${CARD_WIDTH_REM}rem` }}
+      >
+        {reviewsData.map(review => (
+          <ReviewCard
+            key={review.id}
+            review={review}
+            expanded={expandedId === review.id}
+            onToggle={() => toggleExpanded(review.id)}
+          />
+        ))}
       </div>
     </div>
   )
 }
-
-export { Reviews }
