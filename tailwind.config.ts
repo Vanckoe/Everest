@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'tropiline-square': ['Tropiline-Square', 'sans-serif'],
+      },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },

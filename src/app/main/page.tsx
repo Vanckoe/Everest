@@ -4,6 +4,7 @@ import Hero from './_component/hero';
 import About from './_component/about';
 import RunningLine from './_component/runningLine';
 import Services from './_component/services';
+import Advantages from './_component/advantages';
 import Appliances from './_component/appliances';
 import BrandGrid from './_component/logoGrid';
 
@@ -15,6 +16,7 @@ const Main = () => {
       <RunningLine />
       <Services />
       <About />
+      <Advantages />
       <BrandGrid />
       <Appliances />
     </div>
