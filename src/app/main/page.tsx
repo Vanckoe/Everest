@@ -3,6 +3,7 @@ import Header from '@/components/layout/header';
 import Hero from './_component/hero';
 import About from './_component/about';
 import RunningLine from './_component/runningLine';
+import Reviews from './_component/reviews';
 import Services from './_component/services';
 import Advantages from './_component/advantages';
 import Appliances from './_component/appliances';
@@ -13,6 +14,8 @@ const Main = () => {
     <div className="flex flex-col">
       <Header />
       <Hero />
+      <About />
+      <Reviews/>
       <RunningLine />
       <Services />
       <About />

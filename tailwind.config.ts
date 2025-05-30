@@ -1,8 +1,10 @@
-// tailwind.config.ts
 import type { Config } from 'tailwindcss';
+import lineClamp from '@tailwindcss/line-clamp';
 
 const config: Config = {
   content: [
+    './app/**/*.{js,ts,jsx,tsx,mdx}',   // Next 13 App Router
+    './pages/**/*.{js,ts,jsx,tsx,mdx}', // Pages Router (если используется)
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Next 13 App Router
     './pages/**/*.{js,ts,jsx,tsx,mdx}', // (если используете Pages Router)
     './components/**/*.{js,ts,jsx,tsx}',
@@ -32,7 +34,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    lineClamp,
+  ],
 };
 
 export default config;
