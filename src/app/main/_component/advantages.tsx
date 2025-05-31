@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import AdvantagesMobile from './AdvantagesMobile'; // Импорт мобильной версии
 
 type Advantage = {
   Icon: FC<any>;
@@ -36,37 +37,45 @@ const advantages: Advantage[] = [
 
 export default function Advantages() {
   return (
-    <section className="flex px-8 py-[4.5rem]">
-      {/* Левая часть */}
-      <div className="w-1/2 flex flex-col pr-8">
-        <div className="md:sticky md:top-24 flex flex-col gap-4">
-        <span className="text-3xl md:text-xl font-semibold">
-          <span className="text-[#FE5B2C]">//</span>{' '}
-          <span className="text-[#001f3f]">04 - Advantages</span>
-        </span>
-          <h2 className="text-[#001f3f] text-[3rem] md:text-[2.75rem] font-bold leading-tight w-[450px]">
-          Why 92% of clients recommend us to their friends?
-          </h2>
+    <>
+      {/* ПК версия */}
+      <div className="hidden md:flex px-8 py-[4.5rem]">
+        {/* Левая часть */}
+        <div className="w-1/2 flex flex-col pr-8">
+          <div className="md:sticky md:top-24 flex flex-col gap-4">
+            <span className="text-3xl md:text-xl font-semibold">
+              <span className="text-[#FE5B2C]">//</span>{' '}
+              <span className="text-[#001f3f]">04 - Advantages</span>
+            </span>
+            <h2 className="text-[#001f3f] text-[3rem] md:text-[2.75rem] font-bold leading-tight w-[450px]">
+              Why 92% of clients recommend us to their friends?
+            </h2>
+          </div>
+        </div>
+
+        {/* Правая часть - сетка 2x2 с линиями между элементами */}
+        <div className="w-1/2 relative grid grid-cols-2 grid-rows-2">
+          {/* Вертикальная линия между колонками */}
+          <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[#1212120F] transform -translate-x-1/2"></div>
+          {/* Горизонтальная линия между рядами */}
+          <div className="absolute top-1/2 left-0 right-0 h-px bg-[#1212120F] transform -translate-y-1/2"></div>
+          {/* Левая внешниая линия */}
+          <div className="absolute top-0 bottom-0 left-0 w-px bg-[#1212120F]"></div>
+
+          {advantages.map(({ Icon, title, subtitle }, idx) => (
+            <div key={idx} className="flex flex-col items-start gap-4 px-12 py-8">
+              <Icon className="text-[#001f3f] w-[40px] h-[40px]" />
+              <h3 className="text-2xl font-semibold text-[#121212] leading-snug">{title}</h3>
+              <p className="text-[#888888] text-lg leading-normal">{subtitle}</p>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Правая часть - сетка 2x2 с линиями между элементами */}
-      <div className="w-1/2 relative grid grid-cols-2 grid-rows-2">
-        {/* Вертикальная линия между колонками */}
-        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-[#1212120F] transform -translate-x-1/2"></div>
-        {/* Горизонтальная линия между рядами */}
-        <div className="absolute top-1/2 left-0 right-0 h-px bg-[#1212120F] transform -translate-y-1/2"></div>
-        {/* Левая внешниая линия */}
-        <div className="absolute top-0 bottom-0 left-0 w-px bg-[#1212120F]"></div>
-
-        {advantages.map(({ Icon, title, subtitle }, idx) => (
-          <div key={idx} className="flex flex-col items-start gap-4 px-12 py-8">
-            <Icon className="text-[#001f3f] w-[40px] h-[40px]" />
-            <h3 className="text-2xl font-semibold text-[#121212] leading-snug">{title}</h3>
-            <p className="text-[#888888] text-lg leading-normal">{subtitle}</p>
-          </div>
-        ))}
+      {/* Мобильная версия */}
+      <div className="block md:hidden">
+        <AdvantagesMobile />
       </div>
-    </section>
+    </>
   );
 }
