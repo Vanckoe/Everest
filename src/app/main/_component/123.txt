@@ -1,0 +1,29 @@
+export default function AdvantagesMobile() {
+  return (
+    <section className="flex flex-col px-10 py-8 gap-8 max-w-md h-[700px] mx-auto">
+      {/* Заголовок сверху */}
+      <span className="text-3xl font-semibold text-left">
+        <span className="text-[#FE5B2C]">//</span>{' '}
+        <span className="text-[#001f3f]">04 - Advantages</span>
+      </span>
+
+      {/* Основной заголовок */}
+      <h2 className="text-[#001f3f] text-[32px] font-bold leading-tight text-left w-[325px] h-[115px]">
+        Why 92% of clients recommend us to their friends?
+      </h2>
+
+      {/* Контейнер, центрирует только блок преимуществ по вертикали */}
+      <div className="flex flex-1 items-center">
+        <div className="flex flex-col gap-6 items-start w-[325px] mx-auto">
+          {advantages.map(({ Icon, title, subtitle }, idx) => (
+            <div key={idx} className="flex flex-col items-start gap-3">
+              <Icon className="w-10 h-10 text-[#001f3f]" />
+              <h3 className="text-lg font-semibold text-[#121212] leading-snug">{title}</h3>
+              <p className="text-[#888888] text-base leading-normal">{subtitle}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
