@@ -19,7 +19,6 @@ const Main = () => {
       <Reviews/>
       <RunningLine />
       <Services />
-      <About />
       <Advantages />
       <BrandGrid />
       <Appliances />
