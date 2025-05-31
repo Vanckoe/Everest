@@ -105,8 +105,8 @@ const ReviewCard = ({
 
   return (
     <div
-      className={`w-[${CARD_WIDTH_REM}rem] bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-1`}
-      style={{ zIndex: expanded ? 20 : undefined }}
+        className="w-[18.375rem] bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-1"
+        style={{ zIndex: expanded ? 20 : undefined }}
     >
       <div className="flex justify-between items-start">
         <div className="flex gap-[0.9375rem] items-center flex-1">
@@ -217,13 +217,13 @@ const Reviews = () => {
 
   return (
     <div className="flex flex-col items-center justify-center py-24 bg-gray-50">
-      <h2 className="text-xl font-bold mb-2">EXCELLENT</h2>
+      <h2 className="text-3xl font-bold">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (
-          <StarIcon key={i} color="#fbbf24" width="1.875rem" height="1.875rem" />
+          <StarIcon key={i} color="#fbbf24" width="2rem" height="2rem" />
         ))}
       </div>
-      <p className="text-sm text-gray-800 mb-6">
+      <p className="text-sm text-gray-800 mb-2">
         Based on <span className="font-bold">22 reviews</span>
       </p>
       <div className="mb-4">

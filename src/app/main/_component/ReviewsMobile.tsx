@@ -1,8 +1,9 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import StarIcon from '@/assets/Star'
 import VerifiedIcon from '@/assets/verified'
 import GoogleLogo from '@/assets/google'
+import GoogleIcon from '@/assets/google-icon'
 
 const reviewsData = [
   {
@@ -70,118 +71,94 @@ const reviewsData = [
   },
 ]
 
-const CARD_WIDTH_REM = 25 // 400px
-const CARD_HEIGHT_REM = 13 // 260px
+const CARD_WIDTH_PX = 320
+const CARD_HEIGHT_PX = 220
 
 const ReviewCard = ({
   review,
-  expanded,
-  onToggle,
 }: {
   review: typeof reviewsData[0]
-  expanded: boolean
-  onToggle: () => void
 }) => {
-  const maxChars = 120
-  const isLong = review.text.length > maxChars
-
   return (
     <div
-      className="bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start flex-shrink-0 relative mr-4"
-      style={{ width: `${CARD_WIDTH_REM}rem`, height: `${CARD_HEIGHT_REM}rem` }}
+      className="bg-[#f4f4f4] rounded-[0.25rem] p-8 flex flex-col justify-start flex-shrink-0 relative"
+      style={{
+        width: `${CARD_WIDTH_PX}px`,
+        height: `${CARD_HEIGHT_PX}px`,
+        scrollSnapAlign: 'start',
+        overflow: 'visible',
+      }}
     >
-      <div className="flex justify-between items-start">
+      <div className="flex justify-between items-center">
         <div className="flex gap-4 items-center flex-1 overflow-hidden text-left">
           <img
             src={review.avatar}
             alt={review.name}
-            className="w-10 h-10 rounded-full object-cover"
+            className="w-18 h-18 rounded-full object-cover"
           />
           <div className="flex flex-col justify-center overflow-hidden">
-            <p className="font-semibold text-sm text-gray-900 truncate">{review.name}</p>
-            <p className="text-xs text-gray-500">{review.time}</p>
+            <p className="font-semibold text-2xl text-gray-900 truncate">{review.name}</p>
+            <p className="text-xl text-gray-500">{review.time}</p>
           </div>
         </div>
+        {/* <div className="ml-4 flex-shrink-0 flex items-center">
+            <GoogleIcon width="1.25rem" height="1.25rem" className="object-contain" />
+        </div> */}
       </div>
 
       <div className="flex items-center mt-4 mb-2">
-        <div className="flex gap-px">
+        <div className="flex">
           {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} color="#fbbf24" width="1.25rem" height="1.25rem" />
+            <StarIcon key={i} color="#fbbf24" width="2rem" height="2rem" />
           ))}
         </div>
         <div className="ml-2">
-          <VerifiedIcon width="1rem" height="1rem" />
+          <VerifiedIcon width="2rem" height="2rem" />
         </div>
       </div>
 
-      <div
-        className="text-sm text-black relative"
-        style={{
-          maxHeight: expanded ? '1000px' : '5.5rem',
-          overflow: 'hidden',
-          transition: 'max-height 0.5s ease',
-          whiteSpace: 'normal',
-        }}
-      >
+      <div className="text-2xl text-black relative" style={{ whiteSpace: 'normal' }}>
         <p>{review.text}</p>
       </div>
-
-      {isLong && !expanded && (
-        <button
-          onClick={onToggle}
-          className="mt-1 text-black opacity-60 hover:underline text-xs font-medium text-left w-full"
-        >
-          Read more
-        </button>
-      )}
-
-      {expanded && (
-        <button
-          onClick={onToggle}
-          className="mt-1 text-black opacity-60 hover:underline text-xs font-medium text-left w-full"
-        >
-          Hide
-        </button>
-      )}
     </div>
   )
 }
 
-export default function ReviewsMobile() {
-  const [expandedId, setExpandedId] = useState<number | null>(null)
 
-  const toggleExpanded = (id: number) => {
-    setExpandedId(prev => (prev === id ? null : id))
-  }
-
+export default function ReviewsMobileSwipe() {
   return (
     <div className="flex flex-col items-center justify-center py-8 bg-gray-50">
-      <h2 className="text-base font-bold mb-2">EXCELLENT</h2>
+      <h2 className="text-[3rem] font-bold mb-2">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (
-          <StarIcon key={i} color="#fbbf24" width="1.875rem" height="1.875rem" />
+          <StarIcon key={i} color="#fbbf24" width="3.5rem" height="3.5rem" />
         ))}
       </div>
-      <p className="text-sm text-gray-800 mb-6">
+      <p className="text-2xl text-gray-800 mb-6">
         Based on <span className="font-bold">22 reviews</span>
       </p>
       <div className="mb-4">
-        <GoogleLogo width="6.875rem" height="2.1875rem" />
+        <GoogleLogo width="110px" height="35px" />
       </div>
 
       <div
-        className="flex overflow-x-auto scrollbar-hide"
-        style={{ width: `${CARD_WIDTH_REM}rem` }}
+        className="overflow-x-auto no-scrollbar"
+        style={{
+          width: `${CARD_WIDTH_PX}px`, 
+          scrollSnapType: 'x mandatory',
+          WebkitOverflowScrolling: 'touch',
+        }}
       >
-        {reviewsData.map(review => (
-          <ReviewCard
-            key={review.id}
-            review={review}
-            expanded={expandedId === review.id}
-            onToggle={() => toggleExpanded(review.id)}
-          />
-        ))}
+        <div
+          className="flex flex-nowrap"
+          style={{
+            gap: '16px',
+          }}
+        >
+          {reviewsData.map((review) => (
+            <ReviewCard key={review.id} review={review} />
+          ))}
+        </div>
       </div>
     </div>
   )
