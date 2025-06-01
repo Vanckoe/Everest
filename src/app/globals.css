@@ -56,3 +56,95 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* для Chrome, Safari, Opera */
 }
+
+/* === Animation Start === */
+
+/* Плавное появление снизу */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-up {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+/* Появление слева с торможением */
+@keyframes slideInLeftSlow {
+  0% {
+    opacity: 0;
+    transform: translateX(80px);
+    animation-timing-function: ease-out;
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10px);
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: translateX(5px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-left-slow {
+  animation: slideInLeftSlow 0.7s ease forwards;
+}
+
+/* Анимация сдвига влево (например, при свайпе вправо) */
+@keyframes slideLeft {
+  from {
+    transform: translateX(100px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-anim-left {
+  animation: slideLeft 0.4s ease-in-out;
+}
+
+/* Анимация сдвига вправо (например, при свайпе влево) */
+@keyframes slideRight {
+  from {
+    transform: translateX(-100px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-anim-right {
+  animation: slideRight 0.4s ease-in-out;
+}
+
+/* === Animation End === */
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
