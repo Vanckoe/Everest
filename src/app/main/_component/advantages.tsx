@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import AdvantagesMobile from './AdvantagesMobile'; // Импорт мобильной версии
+import AdvantagesMobile from './AdvantagesMobile';
 
 type Advantage = {
   Icon: FC<any>;

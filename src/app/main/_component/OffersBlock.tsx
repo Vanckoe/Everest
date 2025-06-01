@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import RightIcon from '@/assets/Right'
+import OffersMobile from './OffersMobile'
 
 const slides = [
   {
@@ -116,8 +117,9 @@ export default function BestOffersSection() {
 
   return (
     <>
+      {/* ПК версия: скрыта до md, видна с md */}
       <section
-        className="m-[70px_20px] bg-[#d8e7ef] rounded-[40px] w-[1395px] h-[665px] mx-auto flex overflow-hidden select-none relative"
+        className="hidden md:flex m-[70px_20px] bg-[#d8e7ef] rounded-[40px] w-[1395px] h-[665px] mx-auto overflow-hidden select-none relative"
         onMouseDown={onDragStart}
         onMouseUp={onDragEnd}
         onTouchStart={onTouchStart}
@@ -206,94 +208,99 @@ export default function BestOffersSection() {
         </div>
       </section>
 
+      {/* Модальное окно */}
       {isModalOpen && (
-  <div
-    className="fixed inset-0 z-50 flex items-center justify-center"
-    style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-    onClick={closeModal}
-  >
-    <div
-      className="bg-white w-[550px] h-[780px] rounded-[40px] p-8 overflow-y-auto relative"
-      onClick={(e) => e.stopPropagation()}
-    >
-      <button
-        className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl"
-        onClick={closeModal}
-        aria-label="Close modal"
-      >
-        ✕
-      </button>
-
-      <h2 className="text-center text-3xl font-bold text-[#001f3f] mb-8">Use a coupon</h2>
-
-      {/* Центрированный контейнер */}
-      <div className="flex flex-col items-center">
-        <select className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4">
-          <option>Select service</option>
-          <option>Repair</option>
-          <option>Installation</option>
-          <option>Maintenance</option>
-          <option>Commercial</option>
-        </select>
-
-        <select className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4">
-          <option>Select appliance</option>
-          <option>Refrigerator</option>
-          <option>Freezer</option>
-          <option>Oven</option>
-          <option>Cooktop</option>
-          <option>Microwave Oven</option>
-          <option>Dishwasher</option>
-          <option>Washing Machine</option>
-          <option>Dryer</option>
-          <option>Wine Storage</option>
-        </select>
-
-        <input
-          type="text"
-          placeholder="Your Name"
-          className="w-[440px] h-[62px] border-[1px]  border-[#ddd] rounded-[10px] px-4 mb-4"
-        />
-
-        <input
-          type="tel"
-          placeholder="Phone"
-          className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4"
-        />
-
-        <input
-          type="email"
-          placeholder="Email"
-          className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4"
-        />
-
-        <textarea
-          placeholder="Comments (questions or additional details)"
-          className="w-[440px] h-[120px] border-[1px] border-[#ddd] rounded-[10px] px-4 py-3 mb-4 resize-y"
-        />
-      </div>
-
-      <p className="text-base text-left text-[#999999] mb-6 px-6">
-        By continuing, you are agreeing to{' '}
-        <a href="#" className="text-[#505050] underline">
-          Terms of Use
-        </a>{' '}
-        and{' '}
-        <a href="#" className="text-[#505050] underline">
-          Privacy Policy
-        </a>
-      </p>
-
-      <div className="flex justify-center">
-        <button
-          className="w-[120px] h-[60px] bg-[#001f3f] text-white rounded-[30px] text-lg hover:bg-[#001a35] transition"
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center"
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          onClick={closeModal}
         >
-          Send
-        </button>
+          <div
+            className="bg-white w-[550px] h-[780px] rounded-[40px] p-8 overflow-y-auto relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl"
+              onClick={closeModal}
+              aria-label="Close modal"
+            >
+              ✕
+            </button>
+
+            <h2 className="text-center text-3xl font-bold text-[#001f3f] mb-8">Use a coupon</h2>
+
+            <div className="flex flex-col items-center">
+              <select className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4">
+                <option>Select service</option>
+                <option>Repair</option>
+                <option>Installation</option>
+                <option>Maintenance</option>
+                <option>Commercial</option>
+              </select>
+
+              <select className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4">
+                <option>Select appliance</option>
+                <option>Refrigerator</option>
+                <option>Freezer</option>
+                <option>Oven</option>
+                <option>Cooktop</option>
+                <option>Microwave Oven</option>
+                <option>Dishwasher</option>
+                <option>Washing Machine</option>
+                <option>Dryer</option>
+                <option>Wine Storage</option>
+              </select>
+
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="w-[440px] h-[62px] border-[1px]  border-[#ddd] rounded-[10px] px-4 mb-4"
+              />
+
+              <input
+                type="tel"
+                placeholder="Phone"
+                className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4"
+              />
+
+              <input
+                type="email"
+                placeholder="Email"
+                className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4"
+              />
+
+              <textarea
+                placeholder="Comments (questions or additional details)"
+                className="w-[440px] h-[120px] border-[1px] border-[#ddd] rounded-[10px] px-4 py-3 mb-4 resize-y"
+              />
+            </div>
+
+            <p className="text-base text-left text-[#999999] mb-6 px-6">
+              By continuing, you are agreeing to{' '}
+              <a href="#" className="text-[#505050] underline">
+                Terms of Use
+              </a>{' '}
+              and{' '}
+              <a href="#" className="text-[#505050] underline">
+                Privacy Policy
+              </a>
+            </p>
+
+            <div className="flex justify-center">
+              <button
+                className="w-[120px] h-[60px] bg-[#001f3f] text-white rounded-[30px] text-lg hover:bg-[#001a35] transition"
+              >
+                Send
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Мобильная версия: видна только до md */}
+      <div className="block md:hidden">
+        <OffersMobile />
       </div>
-    </div>
-  </div>   
-     )}
     </>
   )
 }
