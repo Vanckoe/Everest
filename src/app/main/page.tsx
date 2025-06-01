@@ -9,6 +9,7 @@ import Advantages from './_component/advantages';
 import Appliances from './_component/appliances';
 import BrandGrid from './_component/logoGrid';
 import ReviewsMobile from './_component/ReviewsMobile';
+import FaqAccordion from './_component/faq';
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
       <Advantages />
       <BrandGrid />
       <Appliances />
+      <FaqAccordion/>
     </div>
   );
 };
