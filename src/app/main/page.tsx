@@ -9,6 +9,8 @@ import Advantages from './_component/advantages';
 import Appliances from './_component/appliances';
 import BrandGrid from './_component/logoGrid';
 import OffersBlock from './_component/OffersBlock';
+import Reception from './_component/Reception';
+import Contact from './_component/Contact';
 
 const Main = () => {
   return (
@@ -23,6 +25,8 @@ const Main = () => {
       <BrandGrid />
       <Appliances />
       <OffersBlock/>
+      <Reception/>
+      <Contact/>
     </div>
   );
 };
