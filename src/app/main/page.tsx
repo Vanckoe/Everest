@@ -12,23 +12,27 @@ import FaqAccordion from './_component/faq';
 import OffersBlock from './_component/OffersBlock';
 import Reception from './_component/Reception';
 import Contact from './_component/Contact';
+import Footer from '@/components/layout/footer';
+import ColorPalettes from '@/components/layout/ColorPalettes';
 
 const Main = () => {
   return (
     <div className="flex flex-col">
+      <ColorPalettes />
       <Header />
       <Hero />
       <About />
-      <Reviews/>
+      <Reviews />
       <RunningLine />
       <Services />
       <Advantages />
       <BrandGrid />
       <Appliances />
-      <FaqAccordion/>
-      <OffersBlock/>
-      <Reception/>
-      <Contact/>
+      <FaqAccordion />
+      <OffersBlock />
+      <Reception />
+      <Contact />
+      <Footer />
     </div>
   );
 };

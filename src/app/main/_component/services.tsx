@@ -84,19 +84,19 @@ export default function Services() {
             <button className="group mt-auto md:-ml-12 flex w-fit items-center">
               <div
                 className="
-                  hidden md:flex size-12 bg-[#FE5B2C] rounded-full items-center justify-center
+                  hidden md:flex size-12 bg-second rounded-full items-center justify-center
                   opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0
                   transition-all duration-300 ease-in-out
                 "
               >
                 <RightIcon color="white" width="1.25rem" height="1.25rem" />
               </div>
-              <span className="bg-[#FE5B2C] text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-base">
+              <span className="bg-second text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-base">
                 Schedule an appointment
               </span>
               <div
                 className="
-                  flex size-20 min-w-20 md:size-12 md:min-w-12 bg-[#FE5B2C] rounded-full items-center justify-center
+                  flex size-20 min-w-20 md:size-12 md:min-w-12 bg-second rounded-full items-center justify-center
                   opacity-100 translate-x-0 group-hover:-mr-12 group-hover:opacity-0 group-hover:-translate-x-4
                   transition-all duration-300 ease-in-out
                 "

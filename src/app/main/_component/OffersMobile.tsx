@@ -98,7 +98,7 @@ const OffersMobile: React.FC<OffersMobileProps> = ({
               <span className="text-5xl font-bold text-[#001F3F] leading-none">{slideIndex + 1}</span>
               <span className="text-2xl text-[#001F3F] relative -top-5">/{totalSlides}</span>
             </div>
-            <div className="mt-1 w-[30px] h-[2px] bg-[#FE5B2C] rounded" />
+            <div className="mt-1 w-[30px] h-[2px] bg-second rounded" />
           </div>
 
           {/* Заголовок */}
@@ -117,7 +117,7 @@ const OffersMobile: React.FC<OffersMobileProps> = ({
               className="group flex items-center select-none"
             >
               <div
-                className="flex size-14 min-w-14 bg-[#FE5B2C] rounded-full items-center justify-center
+                className="flex size-14 min-w-14 bg-second rounded-full items-center justify-center
                 opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0
                 transition-all duration-300 ease-in-out"
               >
@@ -125,14 +125,14 @@ const OffersMobile: React.FC<OffersMobileProps> = ({
               </div>
 
               <span
-                className="bg-[#FE5B2C] text-white text-3xl rounded-full flex items-center justify-center"
+                className="bg-second text-white text-3xl rounded-full flex items-center justify-center"
                 style={{ width: '16rem', height: '6rem' }}
               >
                 Use Coupon
               </span>
 
               <div
-                className="flex size-25 min-w-25 bg-[#FE5B2C] rounded-full items-center justify-center
+                className="flex size-25 min-w-25 bg-second rounded-full items-center justify-center
                 opacity-100 translate-x-0 group-hover:-mr-12 group-hover:opacity-0 group-hover:-translate-x-4
                 transition-all duration-300 ease-in-out"
               >
@@ -235,7 +235,7 @@ const OffersMobile: React.FC<OffersMobileProps> = ({
 
             {/* Кнопка отправки */}
             <div className="flex justify-center mt-auto">
-                <button className="w-full max-w-md h-16 bg-[#001f3f] text-white rounded-full text-xl font-semibold hover:bg-[#001a35] transition">
+                <button className="w-full max-w-md h-16 bg-accent text-white rounded-full text-xl font-semibold hover:bg-[#001a35] transition">
                 Send
                 </button>
             </div>

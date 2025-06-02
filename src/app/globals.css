@@ -39,6 +39,13 @@ body {
   max-width: 87.2rem;
 }
 
+.bg-accent{
+  background-color: #001F3F;
+}
+.bg-second{
+  background-color: #FE5B2C;
+}
+
 @media (max-width: 640px) {
   .container {
     width: 100%;

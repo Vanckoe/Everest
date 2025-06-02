@@ -18,13 +18,13 @@ const Header = () => {
         </div>
       </div>
       <div className="flex flex-row items-center gap-2">
-        <div className="flex items-center justify-center size-[3rem] rounded-full bg-[#001F3F]">
+        <div className="flex items-center justify-center size-[3rem] rounded-full bg-accent">
           <CallIcon color="white" width="2rem" />
         </div>
-        <button className="bg-[#001F3F] text-white px-8 py-3 rounded-4xl font-medium">
+        <button className="bg-accent text-white px-8 py-3 rounded-4xl font-medium">
           +1 123 456 78 90
         </button>
-        <button className="bg-[#FE5B2C] text-white px-8 py-3 rounded-4xl font-medium">
+        <button className="bg-second text-white px-8 py-3 rounded-4xl font-medium">
           Schedule Service
         </button>
       </div>
