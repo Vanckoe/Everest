@@ -43,7 +43,7 @@ const Hero = () => {
       </div>
       <div className="hidden md:flex flex-col md:w-1/2 gap-5">
         <Image
-          src={'/img/stok-image.jpeg'}
+          src={'/img/about/2pic.jpg'}
           width={300}
           height={300}
           alt="hero image"

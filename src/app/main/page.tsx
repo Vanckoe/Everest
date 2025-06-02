@@ -21,15 +21,15 @@ const Main = () => {
       <ColorPalettes />
       <Header />
       <Hero />
-      <About />
-      <Reviews />
       <RunningLine />
       <Services />
+      <About />
+      <Reviews />
       <Advantages />
       <BrandGrid />
       <Appliances />
-      <FaqAccordion />
       <OffersBlock />
+      <FaqAccordion />
       <Reception />
       <Contact />
       <Footer />
