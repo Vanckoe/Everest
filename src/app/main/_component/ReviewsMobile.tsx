@@ -71,8 +71,8 @@ const reviewsData = [
   },
 ]
 
-const CARD_WIDTH_PX = 320
-const CARD_HEIGHT_PX = 220
+const CARD_WIDTH_REM = 20
+const CARD_HEIGHT_REM = 13.75
 
 const ReviewCard = ({
   review,
@@ -83,8 +83,8 @@ const ReviewCard = ({
     <div
       className="bg-[#f4f4f4] rounded-[0.25rem] p-8 flex flex-col justify-start flex-shrink-0 relative"
       style={{
-        width: `${CARD_WIDTH_PX}px`,
-        height: `${CARD_HEIGHT_PX}px`,
+        width: `${CARD_WIDTH_REM}rem`,
+        height: `${CARD_HEIGHT_REM}rem`,
         scrollSnapAlign: 'start',
         overflow: 'visible',
       }}
@@ -101,9 +101,6 @@ const ReviewCard = ({
             <p className="text-xl text-gray-500">{review.time}</p>
           </div>
         </div>
-        {/* <div className="ml-4 flex-shrink-0 flex items-center">
-            <GoogleIcon width="1.25rem" height="1.25rem" className="object-contain" />
-        </div> */}
       </div>
 
       <div className="flex items-center mt-4 mb-2">
@@ -124,7 +121,6 @@ const ReviewCard = ({
   )
 }
 
-
 export default function ReviewsMobileSwipe() {
   return (
     <div className="flex flex-col items-center justify-center py-8 bg-gray-50">
@@ -138,13 +134,13 @@ export default function ReviewsMobileSwipe() {
         Based on <span className="font-bold">22 reviews</span>
       </p>
       <div className="mb-4">
-        <GoogleLogo width="110px" height="35px" />
+        <GoogleLogo width="6.875rem" height="2.1875rem" />
       </div>
 
       <div
         className="overflow-x-auto no-scrollbar"
         style={{
-          width: `${CARD_WIDTH_PX}px`, 
+          width: `${CARD_WIDTH_REM}rem`,
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch',
         }}
@@ -152,7 +148,7 @@ export default function ReviewsMobileSwipe() {
         <div
           className="flex flex-nowrap"
           style={{
-            gap: '16px',
+            gap: '1rem',
           }}
         >
           {reviewsData.map((review) => (

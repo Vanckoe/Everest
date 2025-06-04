@@ -10,9 +10,9 @@ const MobileFooter = () => {
   };
 
   return (
-    <footer className="w-full block md:hidden bg-[#000913] text-white pt-[60px] px-6 rounded-tl-3xl rounded-tr-3xl">
+    <footer className="w-full block md:hidden bg-[#000913] text-white pt-[3.75rem] px-6 rounded-tl-3xl rounded-tr-3xl">
       {/* Логотип и описание */}
-      <div className="flex flex-col pb-16 items-start">
+      <div className="flex flex-col pb-[4rem] items-start">
         <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[12rem] h-[12rem] mb-4" />
         <p className="text-3xl text-[#9FAEB6] mb-6">
           We are always here to assist you with any <br /> questions or requests. Reach out to us in <br />the way that suits you best.
@@ -20,7 +20,7 @@ const MobileFooter = () => {
       </div>
 
       {/* Ссылки */}
-      <div className="flex flex-col pt-16 gap-16 mb-8">
+      <div className="flex flex-col pt-[4rem] gap-16 mb-8">
         <div>
           <h3 className="text-5xl font-semibold mb-2">Company</h3>
           <ul className="space-y-1 text-3xl text-[#9FAEB6]">
@@ -43,11 +43,11 @@ const MobileFooter = () => {
       </div>
 
       {/* Иконки */}
-      <div className="flex gap-4 mb-10">
-        <a href="https://www.yelp.com/biz/midwest-standards-schaumburg" target="_blank" className="w-[50px] h-[50px] bg-[#af0606] rounded-md flex items-center justify-center">
+      <div className="flex gap-4 mt-[2.5rem] mb-[2.5rem]">
+        <a href="https://www.yelp.com/biz/midwest-standards-schaumburg" target="_blank" className="w-[5.125rem] h-[5.125rem] bg-[#af0606] rounded-md flex items-center justify-center">
           <GoUpIcon color="white" width="25" height="25" />
         </a>
-        <a href="https://www.google.com/maps/place/Midwest+Standards" target="_blank" className="w-[50px] h-[50px] bg-[#69727d] rounded-md flex items-center justify-center">
+        <a href="https://www.google.com/maps/place/Midwest+Standards" target="_blank" className="w-[5.125rem] h-[5.125rem] bg-[#69727d] rounded-md flex items-center justify-center">
           <CustomIcon color="white" width="25" height="25" />
         </a>
       </div>
@@ -55,18 +55,18 @@ const MobileFooter = () => {
       <div className="w-full h-px bg-[#234151] mb-6"></div>
 
       {/* WhatsApp и копирайт */}
-        <div className="flex flex-col items-center space-y-2 gap-4">
+      <div className="flex flex-col items-center space-y-2 gap-4">
         <a
-            href="https://api.whatsapp.com/send/?phone=12246299583&text&type=phone_number&app_absent=0"
-            target="_blank"
-            rel="noopener noreferrer"
+          href="https://api.whatsapp.com/send/?phone=12246299583&text&type=phone_number&app_absent=0"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-            <WhatsAppIcon className="w-16 h-16 text-[#9FAEB6]" />
+          <WhatsAppIcon className="w-16 h-16 text-[#9FAEB6]" />
         </a>
-        <p className="text-[#9FAEB6] text-2xl pb-10 font-medium text-center">
-            © 2025 Midwest Standards
+        <p className="text-[#9FAEB6] text-2xl pb-[2.5rem] font-medium text-center">
+          © 2025 Midwest Standards
         </p>
-        </div>
+      </div>
     </footer>
   );
 };

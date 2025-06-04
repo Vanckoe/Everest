@@ -12,7 +12,7 @@ const DesktopFooter = () => {
 
   return (
     <footer className="relative bg-[#000913] w-full text-white hidden md:block">
-      <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row px-6 md:pl-8 relative">
+      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row px-6 md:pl-8 relative">
 
         {/* Кнопка "GO UP" */}
         <button
@@ -20,12 +20,12 @@ const DesktopFooter = () => {
           className="
             absolute 
             top-1/2 
-            left-[530px] 
-            -translate-y-1/2 
-            -translate-x-1/5
-            w-[38px] 
-            h-[115px]
-            rounded-[30px] 
+            left-[32.125rem] 
+            -translate-y-1/2
+            -translate-x-[0.3]
+            w-[2.375rem] 
+            h-[7.1875rem]
+            rounded-[1.875rem] 
             bg-[#001f3f] 
             border border-[#234151] 
             text-white 
@@ -37,6 +37,7 @@ const DesktopFooter = () => {
             justify-center
             flex-col
           "
+          style={{ transformOrigin: 'center' }}
         >
           <span className="text-white text-base font-semibold tracking-wider writing-vertical">
             GO UP
@@ -44,7 +45,7 @@ const DesktopFooter = () => {
         </button>
 
         {/* Левая секция */}
-        <div className="w-[530px] h-[496px] pr-8 border-r border-[#234151] flex flex-col justify-start md:pt-20 z-10">
+        <div className="w-[33.125rem] h-[31rem] pr-8 border-r border-[#234151] flex flex-col justify-start md:pt-20 z-10">
           <div className="mb-6">
             <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[7rem] h-[7rem]" />
           </div>
@@ -56,7 +57,7 @@ const DesktopFooter = () => {
         </div>
 
         {/* Правая секция */}
-        <div className="w-[900px] h-[496px] pl-20 flex flex-col justify-between md:pt-20 z-10">
+        <div className="w-[56.25rem] h-[31rem] pl-20 flex flex-col justify-between md:pt-20 z-10">
           <div className="flex flex-col md:flex-row gap-16">
             {/* Первый столбец */}
             <div>
@@ -95,15 +96,16 @@ const DesktopFooter = () => {
                 href="https://www.yelp.com/biz/midwest-standards-schaumburg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[50px] h-[50px] bg-[#af0606] rounded-md flex items-center justify-center"
+                className="w-[3.125rem] h-[3.125rem] bg-[#af0606] rounded-md flex items-center justify-center"
               >
+                {/* 50px = 3.125rem */}
                 <GoUpIcon color='white' width="25" height="25" />
               </a>
               <a
                 href="https://www.google.com/maps/place/Midwest+Standards"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[50px] h-[50px] bg-[#69727d] rounded-md flex items-center justify-center"
+                className="w-[3.125rem] h-[3.125rem] bg-[#69727d] rounded-md flex items-center justify-center"
               >
                 <CustomIcon color='white' width="25" height="25" />
               </a>
