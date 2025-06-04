@@ -46,6 +46,12 @@ body {
   background-color: #FE5B2C;
 }
 
+/* В globals.css */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
 @media (max-width: 640px) {
   .container {
     width: 100%;

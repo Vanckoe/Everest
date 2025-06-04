@@ -4,16 +4,18 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full px-6 md:px-16 bg-white md:bg-transparent overflow-visible pt-0 md:pt-0"
+      className="relative w-full px-6 md:px-16 bg-white md:bg-transparent overflow-visible pt-0 md:pt-0 md:pb-[24rem] pb-10"
     >
       {/* Google Map — только на десктопе */}
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.0187803672154!2d-88.132977!3d42.046494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fa998eea9166f%3A0x87398fc03cfbc714!2sMidwest%20Standards!5e0!3m2!1sen!2sus!4v1717244999!5m2!1sen!2sus"
-        allowFullScreen
-        loading="lazy"
-        className="hidden md:block absolute inset-0 w-full h-[45rem] rounded-[2rem]"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <div className="hidden md:block absolute inset-0 w-full h-[45rem]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.0187803672154!2d-88.132977!3d42.046494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fa998eea9166f%3A0x87398fc03cfbc714!2sMidwest%20Standards!5e0!3m2!1sen!2sus!4v1717244999!5m2!1sen!2sus"
+          allowFullScreen
+          loading="lazy"
+          className="w-full h-full"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
 
       {/* Contact Card */}
       <div
