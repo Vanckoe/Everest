@@ -29,20 +29,17 @@ export default function BestOffersSection() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [animatingSlide, setAnimatingSlide] = useState(false)
   const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null)
-  const [leftVisible, setLeftVisible] = useState(false)
+  const [leftVisible] = useState(true) // ← показываем сразу
   const [isModalOpen, setIsModalOpen] = useState(false)
   const dragStartX = useRef<number | null>(null)
   const dragEndX = useRef<number | null>(null)
-  const leftRef = useRef<HTMLDivElement>(null)
 
   const totalSlides = slides.length
 
   const goToSlide = (newIndex: number, direction: 'left' | 'right') => {
     if (animatingSlide || newIndex === currentSlide) return
-
     setSlideDirection(direction)
     setAnimatingSlide(true)
-
     setTimeout(() => {
       setCurrentSlide(newIndex)
       setAnimatingSlide(false)
@@ -82,7 +79,6 @@ export default function BestOffersSection() {
       if (diff > threshold) nextSlide()
       else if (diff < -threshold) prevSlide()
     }
-
     dragStartX.current = null
     dragEndX.current = null
   }
@@ -91,33 +87,15 @@ export default function BestOffersSection() {
     const interval = setInterval(() => {
       nextSlide()
     }, 5000)
-
     return () => clearInterval(interval)
   }, [currentSlide])
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setLeftVisible(true)
-        }
-      },
-      { threshold: 0.3 }
-    )
-
-    if (leftRef.current) observer.observe(leftRef.current)
-
-    return () => {
-      if (leftRef.current) observer.unobserve(leftRef.current)
-    }
-  }, [])
 
   const openModal = () => setIsModalOpen(true)
   const closeModal = () => setIsModalOpen(false)
 
   return (
     <>
-      {/* ПК версия: скрыта до md, видна с md */}
+      {/* ПК версия */}
       <section
         className="hidden md:flex m-[70px_20px] bg-[#d8e7ef] rounded-[40px] w-[1395px] h-[665px] mx-auto overflow-hidden select-none relative"
         onMouseDown={onDragStart}
@@ -138,7 +116,6 @@ export default function BestOffersSection() {
         >
           {/* Левая половина */}
           <div
-            ref={leftRef}
             className={`w-1/2 flex flex-col justify-between pl-[160px] pt-[100px] pr-[50px] pb-[115px] transition-opacity duration-500 ${
               leftVisible ? 'animate-slide-up' : 'opacity-0'
             }`}
@@ -208,11 +185,10 @@ export default function BestOffersSection() {
         </div>
       </section>
 
-      {/* Модальное окно */}
+      {/* Модалка */}
       {isModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center"
-          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
           onClick={closeModal}
         >
           <div
@@ -254,7 +230,7 @@ export default function BestOffersSection() {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-[440px] h-[62px] border-[1px]  border-[#ddd] rounded-[10px] px-4 mb-4"
+                className="w-[440px] h-[62px] border-[1px] border-[#ddd] rounded-[10px] px-4 mb-4"
               />
 
               <input
@@ -297,7 +273,7 @@ export default function BestOffersSection() {
         </div>
       )}
 
-      {/* Мобильная версия: видна только до md */}
+      {/* Мобильная версия */}
       <div className="block md:hidden">
         <OffersMobile />
       </div>
