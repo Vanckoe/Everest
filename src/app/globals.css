@@ -10,6 +10,8 @@
 
 html {
   font-size: 1.15vw !important;
+  scroll-behavior: smooth;
+
 }
 :root {
   --background: #ffffff;

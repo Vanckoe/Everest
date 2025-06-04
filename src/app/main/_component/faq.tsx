@@ -52,6 +52,7 @@ const faqs = [
 /* ---------- SVG иконка + / – ---------- */
 const Icon = ({ open }: { open: boolean }) => (
   <svg
+    id='faq'
     className="h-6 w-6 shrink-0 stroke-[3] transition-transform duration-200"
     viewBox="0 0 24 24"
     fill="none"

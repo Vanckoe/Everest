@@ -47,7 +47,7 @@ const grid: CellData[][] = [
 
 export default function BrandGrid() {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-6 auto-rows-[8.75rem] bg-[#F7F8FA] px-5 py-40 md:px-20 w-full select-none">
+    <div id='brands' className="grid grid-cols-2 md:grid-cols-6 auto-rows-[8.75rem] bg-[#F7F8FA] px-5 py-40 md:px-20 w-full select-none">
       {grid.map((row, r) =>
         row.map((cell, c) => {
           /* ---------- пустая ячейка ---------- */

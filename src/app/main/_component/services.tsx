@@ -44,7 +44,7 @@ const cards: Card[] = [
 
 export default function Services() {
   return (
-    <section className="px-8 py-[7.5rem]">
+    <section id='services' className="px-8 py-[7.5rem]">
       {/* Заголовок */}
       <div className="mb-10 flex flex-col gap-5">
         <div className="text-2xl font-semibold italic md:text-base">

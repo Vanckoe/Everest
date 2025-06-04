@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       {/* ПК версия */}
-      <div className="hidden md:block">
+      <div id='reviews' className="hidden md:block">
         <Reviews />
       </div>
 
