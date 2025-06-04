@@ -104,10 +104,10 @@ const ReviewCard = ({
   const isLong = review.text.length > maxChars
 
   return (
-    <div
-        className="w-[18.375rem] bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-1"
-        style={{ zIndex: expanded ? 20 : undefined }}
-    >
+      <div
+        className="w-[18.375rem] bg-[#f4f4f4] rounded-[0.25rem] p-4 flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-1 hover:z-30"
+        style={{ zIndex: expanded ? 30 : 10 }}
+      >
       <div className="flex justify-between items-start">
         <div className="flex gap-[0.9375rem] items-center flex-1">
           <img
@@ -243,8 +243,7 @@ const Reviews = () => {
 
         <div
           ref={containerRef}
-          className="flex overflow-x-auto no-scrollbar scroll-smooth pb-6 px-4 max-w-full"
-          style={{ scrollBehavior: 'smooth', scrollSnapType: 'x mandatory' }}
+          className="flex overflow-visible no-scrollbar scroll-smooth pb-6 px-4 max-w-full"
         >
           {reviewsData.map(review => (
             <ReviewCard
