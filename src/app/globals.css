@@ -44,6 +44,12 @@ body {
 .bg-accent{
   background-color: #001F3F;
 }
+.accent-color{
+  color: #001F3F;
+}
+.second-color{
+  color: #FE5B2C;
+}
 .bg-second{
   background-color: #FE5B2C;
 }

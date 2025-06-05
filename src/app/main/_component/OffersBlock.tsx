@@ -1,97 +1,98 @@
-'use client'
+'use client';
 
-import React, { useState, useRef, useEffect } from 'react'
-import RightIcon from '@/assets/Right'
-import OffersMobile from './OffersMobile'
+import React, { useState, useRef, useEffect } from 'react';
+import RightIcon from '@/assets/Right';
+import OffersMobile from './OffersMobile';
 
 const slides = [
   {
-    title: "//   06 - BEST OFFERS",
-    heading: "$30off",
-    subtitle: "New customers discount",
-    content: "Book a repair service day online and get $30 welcome discount for your first service call",
+    title: '//   06 - BEST OFFERS',
+    heading: '$30off',
+    subtitle: 'New customers discount',
+    content:
+      'Book a repair service day online and get $30 welcome discount for your first service call',
   },
   {
-    title: "//   06 - BEST OFFERS",
-    heading: "$15off",
-    subtitle: "Second slide subtitle",
-    content: "Second offer content goes here...",
+    title: '//   06 - BEST OFFERS',
+    heading: '$15off',
+    subtitle: 'Second slide subtitle',
+    content: 'Second offer content goes here...',
   },
   {
-    title: "//   06 - BEST OFFERS",
-    heading: "$30off",
-    subtitle: "Third slide subtitle",
-    content: "Third offer content goes here...",
+    title: '//   06 - BEST OFFERS',
+    heading: '$30off',
+    subtitle: 'Third slide subtitle',
+    content: 'Third offer content goes here...',
   },
-]
+];
 
 export default function BestOffersSection() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [animatingSlide, setAnimatingSlide] = useState(false)
-  const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null)
-  const [leftVisible] = useState(true)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const dragStartX = useRef<number | null>(null)
-  const dragEndX = useRef<number | null>(null)
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [animatingSlide, setAnimatingSlide] = useState(false);
+  const [slideDirection, setSlideDirection] = useState<'left' | 'right' | null>(null);
+  const [leftVisible] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const dragStartX = useRef<number | null>(null);
+  const dragEndX = useRef<number | null>(null);
 
-  const totalSlides = slides.length
+  const totalSlides = slides.length;
 
   const goToSlide = (newIndex: number, direction: 'left' | 'right') => {
-    if (animatingSlide || newIndex === currentSlide) return
-    setSlideDirection(direction)
-    setAnimatingSlide(true)
+    if (animatingSlide || newIndex === currentSlide) return;
+    setSlideDirection(direction);
+    setAnimatingSlide(true);
     setTimeout(() => {
-      setCurrentSlide(newIndex)
-      setAnimatingSlide(false)
-    }, 400)
-  }
+      setCurrentSlide(newIndex);
+      setAnimatingSlide(false);
+    }, 400);
+  };
 
   const nextSlide = () => {
-    goToSlide((currentSlide + 1) % totalSlides, 'left')
-  }
+    goToSlide((currentSlide + 1) % totalSlides, 'left');
+  };
 
   const prevSlide = () => {
-    goToSlide((currentSlide - 1 + totalSlides) % totalSlides, 'right')
-  }
+    goToSlide((currentSlide - 1 + totalSlides) % totalSlides, 'right');
+  };
 
   const onDragStart = (e: React.MouseEvent) => {
-    dragStartX.current = e.clientX
-  }
+    dragStartX.current = e.clientX;
+  };
 
   const onDragEnd = (e: React.MouseEvent) => {
-    dragEndX.current = e.clientX
-    handleSwipe()
-  }
+    dragEndX.current = e.clientX;
+    handleSwipe();
+  };
 
   const onTouchStart = (e: React.TouchEvent) => {
-    dragStartX.current = e.touches[0].clientX
-  }
+    dragStartX.current = e.touches[0].clientX;
+  };
 
   const onTouchEnd = (e: React.TouchEvent) => {
-    dragEndX.current = e.changedTouches[0].clientX
-    handleSwipe()
-  }
+    dragEndX.current = e.changedTouches[0].clientX;
+    handleSwipe();
+  };
 
   const handleSwipe = () => {
     if (dragStartX.current !== null && dragEndX.current !== null) {
-      const diff = dragStartX.current - dragEndX.current
-      const threshold = 50
-      if (diff > threshold) nextSlide()
-      else if (diff < -threshold) prevSlide()
+      const diff = dragStartX.current - dragEndX.current;
+      const threshold = 50;
+      if (diff > threshold) nextSlide();
+      else if (diff < -threshold) prevSlide();
     }
-    dragStartX.current = null
-    dragEndX.current = null
-  }
+    dragStartX.current = null;
+    dragEndX.current = null;
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide()
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [currentSlide])
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [currentSlide]);
 
-  const openModal = () => setIsModalOpen(true)
-  const closeModal = () => setIsModalOpen(false)
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
@@ -148,9 +149,9 @@ export default function BestOffersSection() {
 
             <button
               className="group md:-ml-12 flex w-fit items-center"
-              onClick={(e) => {
-                e.stopPropagation()
-                openModal()
+              onClick={e => {
+                e.stopPropagation();
+                openModal();
               }}
             >
               <div className="hidden md:flex size-14 min-w-14 bg-second rounded-full items-center justify-center opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-in-out">
@@ -185,7 +186,7 @@ export default function BestOffersSection() {
         >
           <div
             className="bg-white w-[34.375rem] h-[48.75rem] rounded-[2.5rem] p-8 overflow-y-auto relative"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             <button
               className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-xl"
@@ -268,5 +269,5 @@ export default function BestOffersSection() {
         <OffersMobile />
       </div>
     </>
-  )
+  );
 }

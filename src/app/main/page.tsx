@@ -13,6 +13,7 @@ import OffersBlock from './_component/OffersBlock';
 import Reception from './_component/Reception';
 import Contact from './_component/Contact';
 import Footer from '@/components/layout/footer';
+import ForWho from './_component/forWho';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
 
 const Main = () => {
@@ -28,7 +29,8 @@ const Main = () => {
       <Advantages />
       <BrandGrid />
       <Appliances />
-      <OffersBlock />
+      <ForWho />
+      {/* <OffersBlock /> */}
       <FaqAccordion />
       <Reception />
       <Contact />
