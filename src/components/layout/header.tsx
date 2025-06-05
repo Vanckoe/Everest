@@ -21,10 +21,10 @@ const Header = () => {
         <div className="flex items-center justify-center size-[3rem] rounded-full bg-accent">
           <CallIcon color="white" width="2rem" />
         </div>
-        <button className="bg-accent text-white px-8 py-3 rounded-4xl font-medium">
+        <button className="bg-accent text-white px-8 py-3 rounded-xl font-medium">
           +1 123 456 78 90
         </button>
-        <button className="bg-second text-white px-8 py-3 rounded-4xl font-medium">
+        <button className="bg-second text-white px-8 py-3 rounded-xl font-medium">
           Schedule Service
         </button>
       </div>

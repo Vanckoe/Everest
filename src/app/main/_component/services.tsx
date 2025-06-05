@@ -75,7 +75,7 @@ export default function Services() {
                 alt={title}
                 width={400}
                 height={240}
-                className="h-[23rem] md:h-64 w-full object-cover rounded-[1.25rem]"
+                className="h-[23rem] md:h-64 w-full object-cover rounded-xl"
               />
               <h3 className="whitespace-pre-line mt-5 text-4xl md:text-3xl leading-[100%] font-semibold">{title}</h3>
               <p className="my-5 md:my-4 text-2xl md:text-base text-[#888]">{subtitle}</p>
@@ -84,7 +84,7 @@ export default function Services() {
             <button className="group mt-auto md:-ml-12 flex w-fit items-center">
               <div
                 className="
-                  hidden md:flex size-12 bg-second rounded-full items-center justify-center
+                  hidden md:flex size-12 bg-second rounded-xl items-center justify-center
                   opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0
                   transition-all duration-300 ease-in-out
                 "

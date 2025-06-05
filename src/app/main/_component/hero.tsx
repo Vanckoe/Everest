@@ -5,8 +5,8 @@ import RightIcon from '@/assets/Right';
 const Hero = () => {
   return (
     <section className="w-full flex px-8 gap-5 flex-col md:flex-row">
-      <div className="flex flex-col text-white px-10 md:px-16 pt-10 md:pt-20 pb-20 bg-accent rounded-[2rem] md:w-1/2">
-        <p className="font-semibold text-base px-5 py-1 border border-neutral-300 rounded-3xl opacity-90 w-fit">
+      <div className="flex flex-col text-white px-10 md:px-16 pt-10 md:pt-20 pb-20 bg-accent rounded-xl md:w-1/2">
+        <p className="font-semibold text-base px-5 py-1 border border-neutral-300 rounded-xl opacity-90 w-fit">
           Your Local Appliance Repair Сompany
         </p>
         <h1 className="font-bold text-[3.125rem] leading-[100%] mt-8">
@@ -47,10 +47,10 @@ const Hero = () => {
           width={300}
           height={300}
           alt="hero image"
-          className="w-full h-[30rem] object-cover rounded-[2rem]"
+          className="w-full h-[30rem] object-cover rounded-xl"
         />
         <div className="flex flex-col md:flex-row gap-5 text-neutral-800">
-          <div className="w-full flex flex-col gap-3 pl-10 py-10 items-start rounded-[2rem] bg-[#D8E7EF]">
+          <div className="w-full flex flex-col gap-3 pl-10 py-10 items-start rounded-xl bg-[#D8E7EF]">
             <div className="flex flex-row items-center gap-2">
               <Image
                 src={'/img/icons/calendar.png'}
@@ -65,7 +65,7 @@ const Hero = () => {
               Years <br /> Experience
             </p>
           </div>
-          <div className="w-full flex flex-col gap-3 pl-10 py-10 items-start rounded-[2rem] bg-[#D8E7EF]">
+          <div className="w-full flex flex-col gap-3 pl-10 py-10 items-start rounded-xl bg-[#D8E7EF]">
             <div className="flex flex-row items-center gap-2">
               <Image
                 src={'/img/icons/document.png'}

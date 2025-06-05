@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
   return (
-    <section id="about" className="w-full bg-accent text-white py-[6rem] px-[0.375rem] md:px-[1.5rem] mt-[2.5rem]">
+    <section id="about" className="w-full bg-accent text-white py-[6rem] px-[0.375rem] md:px-8 mt-[2.5rem]">
       <div className="flex flex-col md:flex-row justify-between items-start gap-[1.875rem]">
         <div className="flex flex-col gap-[0.3125rem] md:w-1/2">
           <p className="font-semibold text-[0.75rem]">// 03 - ABOUT US</p>
@@ -27,7 +27,7 @@ const About = () => {
               width={800}
               height={1000}
               alt="picture 1"
-              className="object-cover w-full h-full"
+              className="rounded-xl object-cover w-full h-full"
             />
           </div>
           <div className="w-1/3 flex flex-col gap-[0.375rem]">
@@ -36,14 +36,14 @@ const About = () => {
               width={400}
               height={400}
               alt="picture 2"
-              className="object-cover w-full h-[50%]"
+              className="rounded-xl object-cover w-full h-[50%]"
             />
             <Image
               src="/img/about/3pic.jpg"
               width={400}
               height={400}
               alt="picture 3"
-              className="object-cover w-full h-[50%]"
+              className="rounded-xl object-cover w-full h-[50%]"
             />
           </div>
         </div>
