@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full px-6 md:px-16 bg-white md:bg-transparent overflow-visible pt-0 md:pt-0 md:pb-[24rem] pb-10"
+      className="relative w-full px-16 bg-white md:bg-transparent overflow-visible pt-0 md:pt-0 md:pb-[24rem] pb-10"
     >
       {/* Google Map — только на десктопе */}
       <div className="hidden md:block absolute inset-0 w-full h-[45rem]">

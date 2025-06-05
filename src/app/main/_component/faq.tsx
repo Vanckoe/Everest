@@ -120,7 +120,7 @@ export default function FaqAccordion() {
   const toggle = (i: number) => setOpenIndex(prev => (prev === i ? null : i));
 
   return (
-    <section className="w-full px-12 md:px-8 pt-[9.375rem] pb-[8.125rem] md:gap-5">
+    <section className="w-full px-18 pt-[9.375rem] pb-[8.125rem] md:gap-5">
       <div className="grid border-t border-neutral-200 gap-20 md:gap-12 md:grid-cols-[minmax(0,20.5rem)_1fr]">
         {/* Левый заголовок */}
         <h2 className="text-5xl py-5 font-bold leading-[100%] text-[#0E203D]">

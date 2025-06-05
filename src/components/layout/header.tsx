@@ -4,7 +4,7 @@ import CallIcon from '@/assets/CallIcon';
 
 const Header = () => {
   return (
-    <div className="flex flex-row items-center justify-between px-8 py-8">
+    <div className="flex flex-row items-center justify-between px-10 py-8">
       <div className="flex flex-row items-center gap-10">
         <Logo />
         <div className="hidden md:flex flex-row text-base font-semibold gap-7">

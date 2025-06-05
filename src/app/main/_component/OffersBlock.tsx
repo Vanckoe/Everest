@@ -97,7 +97,7 @@ export default function BestOffersSection() {
     <>
       {/* Desktop */}
       <section
-        className="hidden md:flex my-[4.375rem] bg-[#d8e7ef] rounded-[2.5rem] w-[87.1875rem] h-[41.5625rem] mx-auto overflow-hidden select-none relative"
+        className="hidden md:flex my-[4.375rem] bg-[#d8e7ef] rounded-[2.5rem] w-[87.1875rem] px-16 h-[41.5625rem] mx-auto overflow-hidden select-none relative"
         onMouseDown={onDragStart}
         onMouseUp={onDragEnd}
         onTouchStart={onTouchStart}

@@ -20,7 +20,7 @@ const RunningLine = () => {
   const duplicatedLogos = [...brandLogos, ...brandLogos];
 
   return (
-    <section className="w-full px-8">
+    <section className="w-full px-10">
       <div className="flex flex-row gap-5 w-full bg-[#F7F8F9] px-8 py-5 mt-5 rounded-xl overflow-hidden">
         <p className="mb-4 text-sm md:text-base font-medium">
           Our team repairs all world- <br className="md:hidden" />

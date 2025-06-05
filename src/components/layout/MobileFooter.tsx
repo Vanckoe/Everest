@@ -10,7 +10,7 @@ const MobileFooter = () => {
   };
 
   return (
-    <footer className="w-full block md:hidden bg-[#000913] text-white pt-[3.75rem] px-6 rounded-tl-3xl rounded-tr-3xl">
+    <footer className="w-full block md:hidden bg-[#000913] text-white pt-[3.75rem] px-16 rounded-tl-3xl rounded-tr-3xl">
       {/* Логотип и описание */}
       <div className="flex flex-col pb-[4rem] items-start">
         <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[12rem] h-[12rem] mb-4" />
@@ -22,8 +22,8 @@ const MobileFooter = () => {
       {/* Ссылки */}
       <div className="flex flex-col pt-[4rem] gap-16 mb-8">
         <div>
-          <h3 className="text-5xl font-semibold mb-2">Company</h3>
-          <ul className="space-y-1 text-3xl text-[#9FAEB6]">
+          <h3 className="text-4xl font-semibold mb-4">Company</h3>
+          <ul className="space-y-2 text-3xl text-[#9FAEB6]">
             <li><a href="#about">About us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#brands">Brands</a></li>
@@ -34,8 +34,8 @@ const MobileFooter = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-5xl font-semibold mb-2">Brands</h3>
-          <ul className="space-y-1 text-3xl text-[#9FAEB6]">
+          <h3 className="text-4xl font-semibold mb-4">Brands</h3>
+          <ul className="space-y-2 text-3xl text-[#9FAEB6]">
             <li><a href="/sub-zero-appliance-repair" target="_blank">Sub-Zero appliance repair</a></li>
             <li><a href="/thermador-appliance-repair" target="_blank">Thermador appliance repair</a></li>
           </ul>

@@ -12,7 +12,7 @@ const DesktopFooter = () => {
 
   return (
     <footer className="relative bg-[#000913] w-full text-white hidden md:block">
-      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row px-8 md:pl-8 relative">
+      <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row px-16 md:pl-8 relative">
 
         {/* Кнопка "GO UP" */}
         <button

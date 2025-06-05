@@ -128,7 +128,7 @@ export default function Services() {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
 
   return (
-    <section id="services" className="px-8 py-[7.5rem]">
+    <section id="services" className="px-10 py-[7.5rem]">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Заголовок */}

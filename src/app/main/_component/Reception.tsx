@@ -3,7 +3,7 @@ import RightIcon from '@/assets/Right';
 
 const Reception = () => {
   return (
-    <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-12 md:px-8 md:h-[24.375rem]">
+    <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-16 md:h-[24.375rem]">
       <p className="font-semibold text-[2.6rem] md:text-[3rem] leading-[120%]">
         Need an expert consultation?<br /> 
         Let's get in touch
