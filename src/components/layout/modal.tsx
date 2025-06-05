@@ -98,7 +98,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-3xl rounded-2xl bg-white px-12 py-8 shadow-xl">
+      <div className="relative w-full max-w-xl rounded-2xl bg-white px-12 py-8 shadow-xl">
         <button
           onClick={onClose}
           className="absolute right-7 top-7 text-4xl font-medium text-gray-600 hover:text-black"
@@ -175,9 +175,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         )}
         {step === 2 && (
           <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <div className="md:w-[70%] flex flex-col gap-3">
+            <div className="flex flex-col gap-3">
               <h2 className="text-3xl font-bold mb-2">Enter your details</h2>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   name="firstName"
@@ -265,9 +264,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 </button>
               </div>
             </div>
-            <div className="w-full flex flex-col">
-                
-            </div>
+            {/* <div className="w-full h-fit mt-14 md:w-[30%] px-4 py-2 border border-gray-300 rounded-lg flex flex-col">
+                <p className="text-2xl font-medium text-gray-700"> Oven repair</p>
+                <p className="text-sm font-medium">65$ - 35mins</p>
+            </div> */}
           </form>
         )}
       </div>
