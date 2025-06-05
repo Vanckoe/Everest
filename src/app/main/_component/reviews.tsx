@@ -105,7 +105,7 @@ const ReviewCard = ({
 
   return (
     <div
-      className="w-[18.375rem] bg-[#f4f4f4] rounded-[0.25rem] p-[1rem] flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-[0.25rem] hover:z-[30]"
+      className="w-[18.375rem] bg-[#f4f4f4] rounded-xl p-[1rem] flex flex-col justify-start mr-[0.9375rem] flex-shrink-0 transition-transform duration-300 ease-in-out relative hover:-translate-y-[0.25rem] hover:z-[30]"
       style={{ zIndex: expanded ? 30 : 10 }}
     >
       <div className="flex justify-between items-start">
@@ -113,7 +113,7 @@ const ReviewCard = ({
           <img
             src={review.avatar}
             alt={review.name}
-            className="w-[2.5rem] h-[2.5rem] rounded-full object-cover"
+            className="w-[2.5rem] h-[2.5rem] rounded-xl object-cover"
           />
           <div className="flex flex-col justify-center overflow-hidden text-left">
             <p className="font-semibold text-[0.875rem] text-gray-900 truncate">{review.name}</p>
@@ -231,7 +231,7 @@ const Reviews = () => {
         {canScrollLeft() && (
           <button
             onClick={scrollLeft}
-            className="absolute left-0 z-[20] p-[0.5rem] bg-white rounded-full shadow hover:bg-gray-100"
+            className="absolute left-0 z-[20] p-[0.5rem] bg-white rounded-full hover:bg-gray-100"
             aria-label="Scroll left"
           >
             <ChevronLeft size={24} />
@@ -240,7 +240,7 @@ const Reviews = () => {
 
         <div
           ref={containerRef}
-          className="flex overflow-x-auto no-scrollbar scroll-smooth pb-[1.5rem] px-[1rem] max-w-full"
+          className="flex overflow-x-auto no-scrollbar scroll-smooth pb-[1.5rem] px-8 max-w-full"
         >
           {reviewsData.map(review => (
             <ReviewCard

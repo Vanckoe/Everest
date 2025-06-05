@@ -162,7 +162,9 @@ export default function Services() {
                 alt={title}
                 width={400}
                 height={240}
+
                 className="h-[20rem] md:h-64 w-full object-contain rounded-[1.25rem]"
+
               />
             </div>
             <div className="h-full flex flex-col gap-3 md:gap-6">
@@ -181,7 +183,6 @@ export default function Services() {
                   {subtitle}
                 </p>
               </div>
-
               <button
                 onClick={() => setIsModalOpen(true)}
                 className="group mt-auto md:-ml-12 flex w-full items-center"
@@ -189,6 +190,7 @@ export default function Services() {
                 <div
                   className="
                   hidden md:flex size-20 min-w-20 md:size-12 md:min-w-12 bg-second rounded-full items-center justify-center
+
                   opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0
                   transition-all duration-300 ease-in-out
                 "

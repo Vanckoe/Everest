@@ -3,7 +3,6 @@ import React from 'react'
 import StarIcon from '@/assets/Star'
 import VerifiedIcon from '@/assets/verified'
 import GoogleLogo from '@/assets/google'
-import GoogleIcon from '@/assets/google-icon'
 
 const reviewsData = [
   {
@@ -71,9 +70,6 @@ const reviewsData = [
   },
 ]
 
-const CARD_WIDTH_REM = 20
-const CARD_HEIGHT_REM = 13.75
-
 const ReviewCard = ({
   review,
 }: {
@@ -81,10 +77,8 @@ const ReviewCard = ({
 }) => {
   return (
     <div
-      className="bg-[#f4f4f4] rounded-[0.25rem] p-8 flex flex-col justify-start flex-shrink-0 relative"
+      className="bg-[#f4f4f4] rounded-[0.25rem] px-8 py-6 flex flex-col justify-start flex-shrink-0 relative w-full h-[200px]"
       style={{
-        width: `${CARD_WIDTH_REM}rem`,
-        height: `${CARD_HEIGHT_REM}rem`,
         scrollSnapAlign: 'start',
         overflow: 'visible',
       }}
@@ -110,12 +104,12 @@ const ReviewCard = ({
           ))}
         </div>
         <div className="ml-2">
-          <VerifiedIcon width="2rem" height="2rem" />
+          <VerifiedIcon width="1.5rem" height="1.5rem" />
         </div>
       </div>
 
       <div className="text-2xl text-black relative" style={{ whiteSpace: 'normal' }}>
-        <p>{review.text}</p>
+        <p className="line-clamp-3">{review.text}</p>
       </div>
     </div>
   )
@@ -124,33 +118,27 @@ const ReviewCard = ({
 export default function ReviewsMobileSwipe() {
   return (
     <div className="flex flex-col items-center justify-center py-8 bg-gray-50">
-      <h2 className="text-[3rem] font-bold mb-2">EXCELLENT</h2>
+      <h2 className="text-4xl font-bold mb-2">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (
-          <StarIcon key={i} color="#fbbf24" width="3.5rem" height="3.5rem" />
+          <StarIcon key={i} color="#fbbf24" width="3rem" height="3rem" />
         ))}
       </div>
       <p className="text-2xl text-gray-800 mb-6">
         Based on <span className="font-bold">22 reviews</span>
       </p>
       <div className="mb-4">
-        <GoogleLogo width="6.875rem" height="2.1875rem" />
+        <GoogleLogo width="110px" height="35px" />
       </div>
 
       <div
-        className="overflow-x-auto no-scrollbar"
+        className="overflow-x-auto no-scrollbar w-full px-4"
         style={{
-          width: `${CARD_WIDTH_REM}rem`,
           scrollSnapType: 'x mandatory',
           WebkitOverflowScrolling: 'touch',
         }}
       >
-        <div
-          className="flex flex-nowrap"
-          style={{
-            gap: '1rem',
-          }}
-        >
+        <div className="flex flex-nowrap" style={{ gap: '1rem' }}>
           {reviewsData.map((review) => (
             <ReviewCard key={review.id} review={review} />
           ))}

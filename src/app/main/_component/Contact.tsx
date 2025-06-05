@@ -19,7 +19,7 @@ const ContactSection = () => {
 
       {/* Contact Card */}
       <div
-        className="relative z-10 rounded-[2rem] bg-[#d8e7ef]
+        className="relative z-10 rounded-xl bg-[#d8e7ef]
           w-[24.0625rem] md:w-[25.625rem]
           min-h-[17.5rem] md:min-h-[25rem]
           px-8 py-10 md:px-8 md:py-16
