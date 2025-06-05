@@ -13,12 +13,12 @@ import OffersBlock from './_component/OffersBlock';
 import Reception from './_component/Reception';
 import Contact from './_component/Contact';
 import Footer from '@/components/layout/footer';
-import ColorPalettes from '@/components/layout/ColorPalettes';
+// import ColorPalettes from '@/components/layout/ColorPalettes';
 
 const Main = () => {
   return (
     <div className="flex flex-col">
-      <ColorPalettes />
+      {/* <ColorPalettes /> */}
       <Header />
       <Hero />
       <RunningLine />
