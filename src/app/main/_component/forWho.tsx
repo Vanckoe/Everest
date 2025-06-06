@@ -104,12 +104,12 @@ const ForWho = () => {
   return (
     <div className="px-16 mx-auto mt-[16.125rem] flex flex-col">
       {/* ───────────── Заголовок + описание + кнопки ───────────── */}
-      <div className="mb-20 flex flex-row items-center">
+      <div className=" order-1 mb-20 flex flex-row items-center">
         <p className="text-[4rem] font-bold lowercase leading-[94%]">
           Для кого працює <br /> наша спільнота
         </p>
 
-        <div className="flex flex-col gap-3 pl-[5.625rem]">
+        <div className="hidden md:flex flex-col gap-3 pl-[5.625rem]">
           <MouseEmpty color="#FFFFFF" />
           <p className="text-xs font-light text-[#979797]">
             Регулярно публікуємо практичні
@@ -121,7 +121,7 @@ const ForWho = () => {
         </div>
 
         {/* ──────────── Кнопки слайдера ──────────── */}
-        <div className="ml-auto flex flex-row items-stretch gap-4 rounded-xl border border-[#191919] p-3.5">
+        <div className="order-3 md:order-2 ml-auto flex flex-row items-stretch gap-4 rounded-xl border border-[#191919] p-3.5">
           <button
             onClick={prev}
             disabled={index === 0}
@@ -145,7 +145,7 @@ const ForWho = () => {
       </div>
 
       {/* ───────────── Слайдер карточек ───────────── */}
-      <div className="overflow-hidden">
+      <div className="order-2 md:order-3 overflow-hidden">
         <div
           className="flex max-w-[87.5rem] transition-transform duration-500 ease-out"
           style={{
