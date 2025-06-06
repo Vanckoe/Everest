@@ -1,127 +1,105 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import React, { useState, useMemo } from 'react';
-
 import Right from '@/assets/right copy';
-import MouseEmpty from '@/assets/MouseEmpty';
-import Logo from '@/assets/Logo';
-import Image from 'next/image';
-import Micsher from '@/assets/micsher';
 
 /* --------------------------------------------------------------------------
-   Данные карточек: номер, текст, SVG-иконка
+   Шаги бронирования/ремонта
    -------------------------------------------------------------------------- */
-const cards = [
+interface Step {
+  number: string;
+  title: string;
+  description: string;
+}
+
+const bookingSteps: Step[] = [
   {
     number: '01',
-    text: 'Неприбуткові організації\n та фонди, яким складно\n залучати донорів та\n волонтерів онлайн',
-    Icon: Logo,
+    title: 'Choose service',
+    description:
+      'Укажите, какая техника сломалась и опишите проблему в нескольких словах.',
   },
   {
     number: '02',
-    text: 'Малі підприємці-\nпочатківці, які не мають\nдосвіду в цифровому\nпросуванні',
-    Icon: Logo,
+    title: 'Pick date & time',
+    description:
+      'Выберите удобный день и временной слот в онлайн-календаре (доступна «сегодня/завтра»).',
   },
   {
     number: '03',
-    text: 'Громадські ініціативи,\nяким бракує ресурсів на\nефективний онлайн-\nмаркетинг',
-    Icon: Logo,
+    title: 'Confirm details',
+    description:
+      'Мы пришлём SMS / e-mail с именем мастера, временем прибытия и фиксированной ценой выезда.',
   },
   {
     number: '04',
-    text: 'Представники бізнесу,\nякі хочуть навчитись\nсамостійно просуватись\nонлайн',
-    Icon: Logo,
+    title: 'On-site diagnosis',
+    description:
+      'Сертифицированный техник приезжает, проводит диагностику и называет окончательную смету.',
   },
   {
     number: '05',
-    text: 'Неприбуткові організації\n та фонди, яким складно\n залучати донорів та\n волонтерів онлайн',
-    Icon: Logo,
+    title: 'Repair & test',
+    description:
+      'После вашего одобрения мастер выполняет ремонт (или приезжает с деталями позже) и тестирует работу.',
   },
   {
     number: '06',
-    text: 'Малі підприємці-\nпочатківці, які не мають\nдосвіду в цифровому\nпросуванні',
-    Icon: Logo,
-  },
-  {
-    number: '07',
-    text: 'Громадські ініціативи,\nяким бракує ресурсів на\nефективний онлайн-\nмаркетинг',
-    Icon: Logo,
-  },
-  {
-    number: '08',
-    text: 'Представники бізнесу,\nякі хочуть навчитись\nсамостійно просуватись\nонлайн',
-    Icon: Logo,
+    title: 'Pay & warranty',
+    description:
+      'Оплата картой/наличными на месте. Вы получаете квитанцию и гарантию 90 дней на работу и запчасти.',
   },
 ] as const;
 
-type Card = (typeof cards)[number];
-
 /* --------------------------------------------------------------------------
-   Компонент одной карточки (переиспользуемый)                                   
+   Переиспользуемая карточка одного шага                                        
    -------------------------------------------------------------------------- */
-const Card = ({ number, text, Icon }: Card) => (
-  <div className="relative w-full  flex-none px-4 md:max-w-[22.25rem]">
+const StepCard = ({ number, title, description }: Step) => (
+  <div className="relative w-full flex-none px-4 md:max-w-[22.25rem]">
     {/* Карточка */}
-    <div className="relative z-10 flex flex-col items-center rounded-2xl border border-neutral-300 pt-12">
-      <p className="text-lg font-medium text-[#001F3F]">{number}</p>
-      <p className="mb-10 mt-5 whitespace-pre-line text-center text-lg font-light text-[#979797]">
-        {text}
+    <div className="relative z-10 flex flex-col items-center rounded-2xl border border-neutral-300 pt-12 pb-14 bg-white shadow-sm">
+      <p className="text-lg font-medium text-accent">{number}</p>
+      <h3 className="mt-4 mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">
+        {title}
+      </h3>
+      <p className="mb-8 whitespace-pre-line text-center text-lg font-light text-[#979797] max-w-[16rem]">
+        {description}
       </p>
-      <div className="mb-[1.875rem] flex h-[4.75rem] w-[5.375rem] items-center justify-center bg-[url('/bg/forIconBg.png')] bg-cover bg-center bg-no-repeat">
-        <Icon width="2rem" />
-      </div>
-      <div className="mb-8 ml-auto mr-8">
-        <Micsher color='black'/>
-      </div>
-    </div>
-
-    {/* Тень — за пределами карточки */}
-    <div className="pointer-events-none absolute -bottom-16">
-      <Image
-        width={241}
-        height={68}
-        src="/draws/greenShadow.png"
-        alt="green shadow"
-        className="h-auto w-[130rem] select-none"
-      />
     </div>
   </div>
 );
 
 /* --------------------------------------------------------------------------
-   Основной блок "Для кого працює наша спільнота"                                
+   Desktop-only слайдер «Как это работает?»                                     
    -------------------------------------------------------------------------- */
-const ForWho = () => {
-  const visibleCount = 4; // количество карточек, видимое одновременно (на desktop)
-  const maxIndex = Math.max(cards.length - visibleCount, 0);
+const BookingStepsDesktop = () => {
+  const visibleCount = 4; // одновременно видимых карточек
+  const maxIndex = Math.max(bookingSteps.length - visibleCount, 0);
   const [index, setIndex] = useState(0);
 
-  /* pre-вычислим translate-value в %, чтобы не считать в JSX */
-  const translate = useMemo(() => `translateX(-${index * (112.5 / visibleCount)}%)`, [index]);
+  const translate = useMemo(
+    () => `translateX(-${index * (125 / visibleCount)}%)`,
+    [index, visibleCount],
+  );
 
-  const next = () => setIndex(i => Math.min(i + 1, maxIndex));
-  const prev = () => setIndex(i => Math.max(i - 1, 0));
+  const next = () => setIndex((i) => Math.min(i + 1, maxIndex));
+  const prev = () => setIndex((i) => Math.max(i - 1, 0));
 
   return (
-    <div className="px-16 mx-auto mt-[16.125rem] flex flex-col">
-      {/* ───────────── Заголовок + описание + кнопки ───────────── */}
-      <div className=" order-1 mb-20 flex flex-row items-center">
-        <p className="text-[4rem] font-bold lowercase leading-[94%]">
-          Для кого працює <br /> наша спільнота
+    <section className="hidden md:flex mx-auto mt-64 flex-col px-16" id="booking-steps-desktop">
+      {/* ───────── Заголовок + описание + кнопки ───────── */}
+      <header className="order-1 mb-20 flex flex-row items-center">
+        <h2 className="text-[4rem] font-bold lowercase leading-[94%]">
+          How it works
+        </h2>
+
+        <p className="ml-24 hidden max-w-sm flex-col gap-3 text-xs font-light text-[#979797] md:flex">
+          Пошаговая схема вашего сервис-заказа
+          <br /> от онлайн-бронирования до гарантии после ремонта.
         </p>
 
-        <div className="hidden md:flex flex-col gap-3 pl-[5.625rem]">
-          <MouseEmpty color="#FFFFFF" />
-          <p className="text-xs font-light text-[#979797]">
-            Регулярно публікуємо практичні
-            <br /> матеріали, статті та кейси{' '}
-            <span className="font-medium text-white">
-              для <br /> покращення ваших навичок у сфері <br /> цифрового маркетингу
-            </span>
-          </p>
-        </div>
-
-        {/* ──────────── Кнопки слайдера ──────────── */}
-        <div className="order-3 md:order-2 ml-auto flex flex-row items-stretch gap-4 rounded-xl border border-[#191919] p-3.5">
+        {/* ──────── Кнопки навигации ──────── */}
+        <div className="order-3 ml-auto flex flex-row items-stretch gap-4 rounded-xl border border-[#191919] p-3.5 md:order-2">
           <button
             onClick={prev}
             disabled={index === 0}
@@ -142,24 +120,24 @@ const ForWho = () => {
             <Right color={index === maxIndex ? '#001F3F' : '#FFFFFF'} />
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* ───────────── Слайдер карточек ───────────── */}
-      <div className="order-2 md:order-3 overflow-hidden">
+      {/* ───────── Слайдер карточек ───────── */}
+      <div className="order-2 overflow-hidden md:order-3">
         <div
           className="flex max-w-[87.5rem] transition-transform duration-500 ease-out"
           style={{
             transform: translate,
-            width: `${(cards.length / visibleCount) * 100}%`,
+            width: `${(bookingSteps.length / visibleCount) * 100}%`,
           }}
         >
-          {cards.map(card => (
-            <Card key={card.number} {...card} />
+          {bookingSteps.map((step) => (
+            <StepCard key={step.number} {...step} />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default ForWho;
+export default BookingStepsDesktop;

@@ -14,6 +14,7 @@ import Reception from './_component/Reception';
 import Contact from './_component/Contact';
 import Footer from '@/components/layout/footer';
 import ForWho from './_component/forWho';
+import ForWhoMobile from './_component/forWhoMobile';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
 
 const Main = () => {
@@ -30,6 +31,7 @@ const Main = () => {
       <BrandGrid />
       <Appliances />
       <ForWho />
+      <ForWhoMobile />
       {/* <OffersBlock /> */}
       <FaqAccordion />
       <Reception />
