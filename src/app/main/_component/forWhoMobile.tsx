@@ -63,7 +63,7 @@ const BookingStepsMobile = () => {
 
   return (
     <section
-      id="booking-steps"
+      id="booking-steps-mobile"
       className="flex flex-col items-center md:hidden"
     >
       <h2 className="mt-20 mb-16 text-[3.75rem] font-semibold leading-[84%] tracking-tighter">

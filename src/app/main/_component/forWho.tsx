@@ -86,11 +86,11 @@ const BookingStepsDesktop = () => {
   const prev = () => setIndex(i => Math.max(i - 1, 0));
 
   return (
-    <section className="hidden md:flex mx-auto mt-64 flex-col px-16" id="booking-steps-desktop">
+    <section className="hidden md:flex mx-auto mt-64 flex-col px-16" id="booking-steps">
       {/* ───────── Заголовок + описание + кнопки ───────── */}
       <header className="order-1 mb-14 flex flex-row items-center">
         <div className="flex flex-col gap-2">
-          <h2 className="text-[4rem] font-bold lowercase leading-[94%]">How it works</h2>
+          <h2 className="text-[4rem] font-bold leading-[94%]">How it works</h2>
 
           <p className="hidden flex-col gap-3 text-xl font-light text-[#979797] md:flex">
           A step-by-step diagram of your service order <br />

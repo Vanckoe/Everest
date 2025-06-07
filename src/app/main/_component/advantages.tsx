@@ -47,10 +47,9 @@ export default function Advantages() {
         {/* Левая часть */}
         <div className="w-1/2 flex flex-col pr-[2rem]">
           <div className="md:sticky md:top-[6rem] flex flex-col gap-[1rem]">
-            <span className="text-[1.875rem] md:text-[1.25rem] font-semibold">
-              <span className="text-[#FE5B2C]">//</span>{' '}
-              <span className="text-[#001f3f]">04 - Advantages</span>
-            </span>
+            <div className="text-2xl font-semibold italic md:text-base">
+              <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 04 - Advantages
+            </div>
             <h2 className="text-[#001f3f] text-[3rem] md:text-[2.75rem] font-bold leading-tight w-[28.125rem]">
               Why 92% of clients recommend us to their friends?
             </h2>

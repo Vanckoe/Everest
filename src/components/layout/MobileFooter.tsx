@@ -15,7 +15,7 @@ const MobileFooter = () => {
       {/* Логотип и описание */}
       <div className="flex flex-col pb-[1rem] items-start">
         {/* <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[12rem] h-[12rem] mb-4" /> */}
-        <Logo className='md:size-28 rounded-2xl mb-5'/>
+        <Logo className="md:size-28 rounded-2xl mb-5" />
         <p className="text-3xl text-[#9FAEB6] mb-6">
           We are always here to assist you with any <br /> questions or requests. Reach out to us in{' '}
           <br />
@@ -43,6 +43,12 @@ const MobileFooter = () => {
             <li>
               <a href="#faq">FAQ</a>
             </li>
+            <li>
+              <a href="#booking-steps-mobile">
+                Steps
+              </a>
+            </li>
+
             <li>
               <a href="#privacy">Privacy Policy</a>
             </li>

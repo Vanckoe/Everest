@@ -24,10 +24,18 @@ type ModalProps = {
 };
 
 const services = [
-  { title: 'Washer Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Refrigerator Repair', cost: '65.00 $', duration: '45 mins' },
   { title: 'Oven Repair', cost: '65.00 $', duration: '30 mins' },
   { title: 'Dryer Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Washer Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Dishwasher Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Range Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Garbage Disposal Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Washer/Dryer Installation', cost: '160.00 $', duration: '1 hr 15 mins' },
+  { title: 'Dryer Vent Cleaning', cost: '160.00 $', duration: '1 hr 15 mins' },
   { title: 'Built-in Oven Installation', cost: 'Price varies', duration: '1 hr 30 mins' },
+  { title: 'Dishwasher Installation', cost: '160.00 $', duration: '1 hr 15 mins' },
+  { title: 'Commercial Appliances Repair', cost: '100.00 $', duration: '1 hr 15 mins' },
 ];
 
 const timeSlots = [

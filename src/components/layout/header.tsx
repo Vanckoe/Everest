@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Modal from '@/components/layout/modal';
 import Logo from '@/assets/Logo';
 import CallIcon from '@/assets/CallIcon';
+import Link from 'next/link';
+import BurgerMenu from './burger';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,12 +30,6 @@ const Header = () => {
             About
           </button>
           <button
-            onClick={() => handleScrollToSection('company')}
-            className="hover:text-accent transition opacity-80 hover:opacity-100"
-          >
-            Company
-          </button>
-          <button
             onClick={() => handleScrollToSection('services')}
             className="hover:text-accent transition opacity-80 hover:opacity-100"
           >
@@ -52,6 +48,12 @@ const Header = () => {
             Reviews
           </button>
           <button
+            onClick={() => handleScrollToSection('booking-steps')}
+            className="hover:text-accent transition opacity-80 hover:opacity-100"
+          >
+            Steps
+          </button>
+          <button
             onClick={() => handleScrollToSection('faq')}
             className="hover:text-accent transition opacity-80 hover:opacity-100"
           >
@@ -65,16 +67,23 @@ const Header = () => {
           </button>
         </div>
       </div>
-      <div className="flex flex-row items-center gap-2">
-        <button className="bg-accent text-white px-8 py-3 rounded-xl font-medium hover:bg-accent/90 transition">
+      <div className="flex flex-row items-center gap-10 md:gap-2">
+        <Link
+          href="tel:+11234567890"
+          className="bg-accent text-white px-8 py-4 rounded-2xl font-medium hover:bg-accent/90 transition inline-flex items-center"
+        >
+          {/* <CallIcon /> */}
           +1 123 456 78 90
-        </button>
+        </Link>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-second text-white px-8 py-3 rounded-xl font-medium hover:bg-second/90 transition"
+          className="bg-second hidden md:block text-white px-8 py-3 rounded-xl font-medium hover:bg-second/90 transition"
         >
           Schedule Service
         </button>
+        <div className="md:hidden">
+          <BurgerMenu />
+        </div>
       </div>
     </div>
   );

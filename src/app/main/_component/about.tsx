@@ -7,7 +7,7 @@ const About = () => {
       <div className="flex flex-col md:flex-row justify-between items-start gap-[1.875rem]">
         <div className="flex flex-col gap-[0.3125rem] md:w-1/2">
           <div className="text-2xl font-semibold italic md:text-base">
-            <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 02 - About us
+            <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 03 - About us
           </div>
           <h1 className="font-bold text-[3rem]">Trusted Appliance Repair Company in Chicago</h1>
           <p className="font-medium text-xl text-[#A8ABB8]">
