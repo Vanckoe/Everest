@@ -70,14 +70,14 @@ const Header = () => {
       <div className="flex flex-row items-center gap-10 md:gap-2">
         <Link
           href="tel:+11234567890"
-          className="bg-accent text-white px-8 py-4 rounded-2xl font-medium hover:bg-accent/90 transition inline-flex items-center"
+          className="bg-accent text-white px-8 py-4 md:py-3 text-2xl md:text-base font-semibold md:font-medium rounded-2xl hover:bg-accent/90 transition inline-flex items-center"
         >
           {/* <CallIcon /> */}
           +1 123 456 78 90
         </Link>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-second hidden md:block text-white px-8 py-4 rounded-xl font-medium hover:bg-second/90 transition"
+          className="bg-second hidden md:block text-white px-8 py-3 rounded-2xl text-2xl md:text-base font-semibold md:font-medium hover:bg-second/90 transition"
         >
           Schedule Service
         </button>
