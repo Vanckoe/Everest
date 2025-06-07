@@ -14,14 +14,14 @@ const Hero = () => {
 
       <div className="flex flex-col text-white px-10 md:px-20 pt-10 md:p-24 pb-20 bg-accent rounded-xl md:w-1/2">
         <p className="font-semibold text-base px-5 py-1 border border-neutral-300 rounded-xl opacity-90 w-fit">
-          Your Local Appliance Repair Сompany
+          Customer satisfaction is our priority above anything!
         </p>
         <h1 className="font-bold text-[3.125rem] leading-[100%] mt-8">
-          Home appliance repair services in Chicago and the surrounding area
+          From small family owned business, to a company with big mission!
         </h1>
         <p className="text-lg font-normal mt-3">
-          Schedule your service today and enjoy <br /> peace of mind with Midwest Standards expert
-          care
+          All specialists are licensed, insured, secured by collateral and have passed a background
+          check.
         </p>
         <button
           onClick={() => setIsModalOpen(true)}

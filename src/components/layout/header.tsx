@@ -77,7 +77,7 @@ const Header = () => {
         </Link>
         <button
           onClick={() => setIsModalOpen(true)}
-          className="bg-second hidden md:block text-white px-8 py-3 rounded-xl font-medium hover:bg-second/90 transition"
+          className="bg-second hidden md:block text-white px-8 py-4 rounded-xl font-medium hover:bg-second/90 transition"
         >
           Schedule Service
         </button>

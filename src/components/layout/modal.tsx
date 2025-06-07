@@ -115,7 +115,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </button>
         {step === 1 && (
           <div className="flex flex-col gap-6">
-            <h2 className="text-3xl font-bold mb-2">Select a time</h2>
+            <h2 className="text-3xl font-bold mb-2">Request an appointment</h2>
             <div>
               <label className="mt-4 mb-2 block text-sm font-medium text-gray-700">
                 Select date
