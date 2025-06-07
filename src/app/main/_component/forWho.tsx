@@ -97,9 +97,19 @@ const BookingStepsDesktop = () => {
       {/* ───────── Заголовок + описание + кнопки ───────── */}
       <header className="order-1 mb-14 flex flex-row items-center">
         <div className="flex flex-col gap-2">
-          <h2 className="text-[4rem] font-bold leading-[94%]">How it works</h2>
+          <h2
+            data-aos="fade-up"
+            data-aos-delay={300}
+            className="text-[4rem] font-bold leading-[94%]"
+          >
+            How it works
+          </h2>
 
-          <p className="hidden flex-col gap-3 text-xl font-light text-[#979797] md:flex">
+          <p
+            data-aos="fade-up"
+            data-aos-delay={300}
+            className="hidden flex-col gap-3 text-xl font-light text-[#979797] md:flex"
+          >
             A step-by-step diagram of your service order <br />
             from online booking to warranty after repair.
           </p>

@@ -1,11 +1,13 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Modal from '@/components/layout/modal';
 import Logo from '@/assets/Logo';
 import CallIcon from '@/assets/CallIcon';
 import Link from 'next/link';
 import BurgerMenu from './burger';
 import Image from 'next/image';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,9 +18,29 @@ const Header = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      easing: 'ease-out',
+    });
+  }, []);
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 md:px-10 pb-5 pt-10 md:pt-5">
+    <div
+      // data-aos="fade-down"
+      className="flex flex-row items-center justify-between px-10 md:px-10 pb-5 pt-10 md:pt-5"
+    >
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       <div className="flex flex-row items-center justify-between w-full gap-10">

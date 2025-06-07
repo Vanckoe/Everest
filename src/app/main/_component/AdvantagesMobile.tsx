@@ -48,7 +48,10 @@ export default function AdvantagesMobile() {
       </span>
 
       {/* Основной заголовок */}
-      <h2 className="text-[#001f3f] text-[2rem] font-bold leading-tight text-left w-full max-w-3xl">
+      <h2
+        data-aos="fade-up"
+        className="text-[#001f3f] text-[2rem] font-bold leading-tight text-left w-full max-w-3xl"
+      >
         Why 92% of clients recommend us to their friends?
       </h2>
 
@@ -59,15 +62,15 @@ export default function AdvantagesMobile() {
         <div className="absolute bottom-0 left-0 w-full h-px bg-[#1212120F]"></div> {/* bottom */}
         <div className="absolute top-0 bottom-0 left-0 w-px bg-[#1212120F]"></div> {/* left */}
         <div className="absolute top-0 bottom-0 right-0 w-px bg-[#1212120F]"></div> {/* right */}
-
         {/* Внутренние горизонтальные линии */}
         <div className="absolute top-[25%] left-0 w-full h-px bg-[#1212120F]"></div>
         <div className="absolute top-[50%] left-0 w-full h-px bg-[#1212120F]"></div>
         <div className="absolute top-[75%] left-0 w-full h-px bg-[#1212120F]"></div>
-
         {/* Элементы преимуществ */}
         {advantages.map(({ Icon, title, subtitle }, idx) => (
           <div
+            data-aos="fade-up"
+            data-aos-delay={idx * 100}
             key={idx}
             className={`
               flex flex-col gap-[1rem] px-[1.875rem] py-[1.5625rem] items-start

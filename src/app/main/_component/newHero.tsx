@@ -42,10 +42,13 @@ const NewHero = () => {
 
       <div className="px-10 mt-10 md:mt-8">
         <div className="flex w-full flex-col md:w-[55.125rem]">
-          <p className="text-xl md:text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]">
+          <p
+            data-aos="fade-up"
+            className="text-xl md:text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
+          >
             [ Small Roots, Big Mission ]
           </p>
-          <div className="mt-5 flex flex-row items-center gap-5">
+          <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
             <p className="text-[6.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
               Chicago <br /> Appliance <br /> Repair, <br className="md:hidden" /> Fast{' '}
               <span className="md:hidden">&</span>
@@ -57,10 +60,16 @@ const NewHero = () => {
           <span className="text-[7.125rem] font-extralight text-[#31A301]">]</span>
         </p> */}
           <div className="flex flex-row items-end">
-            <p className="text-[6.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider">
+            <p
+              data-aos="fade-up"
+              className="text-[6.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
+            >
               <span className="hidden md:inline">&</span> Local
             </p>
-            <p className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40">
+            <p
+              data-aos="fade-right"
+              className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40"
+            >
               All specialists are licensed,
               <br /> insured, secured by collateral and
               <br /> have passed a background check.
@@ -87,6 +96,8 @@ const NewHero = () => {
 
               {/* Правая иконка — видна по умолчанию, исчезает при hover */}
               <div
+                // data-aos="fade-right"
+                // data-aos-delay={300}
                 className="size-[4.5rem] bg-accent rounded-full hidden md:flex items-center justify-center 
                   opacity-100 translate-x-0 group-hover:opacity-0 group-hover:-translate-x-4 
                   transition-all duration-300 ease-in-out"
@@ -102,9 +113,11 @@ const NewHero = () => {
             background check.
           </p>
           <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-3 tracking-wide">
-            {items.map(item => (
+            {items.map((item, index) => (
               <div
                 key={item.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 300}
                 className="flex items-start border border-neutral-300 bg-white px-8 py-6 rounded-xl gap-6"
               >
                 <div className="flex flex-row items-center gap-6 md:gap-4">

@@ -10,7 +10,11 @@ const Appliances = () => {
   return (
     <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-12 md:px-16">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <p className="font-semibold text-[2.6rem] md:text-[3rem] leading-[120%]">
+      <p
+        data-aos="fade-up"
+        // data-aos-delay={100}
+        className="font-semibold text-[2.6rem] md:text-[3rem] leading-[120%]"
+      >
         Give a second life to your <br />
         appliances with same day <br />
         appliance repair expert
@@ -32,6 +36,8 @@ const Appliances = () => {
           Schedule an appointment
         </span>
         <div
+          // data-aos="fade-right"
+          // data-aos-delay={100}
           className="
                   flex size-20 min-w-20 md:size-14 md:min-w-14 bg-second rounded-full items-center justify-center
                   opacity-100 translate-x-0 group-hover:-mr-12 group-hover:opacity-0 group-hover:-translate-x-4
