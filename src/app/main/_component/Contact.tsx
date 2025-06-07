@@ -29,19 +29,23 @@ const ContactSection = () => {
         <h2 className="text-4xl md:text-3xl font-semibold mb-6 text-black">Contact info:</h2>
         <ul className="space-y-4 text-xl">
           <li>
-            <a href="tel:+13124898566" className="text-[#121212] hover:underline text-2xl md:text-xl">
-              +1 (312) 489-8566
+            <a
+              href="tel:+18132901625"
+              className="text-[#121212] hover:underline text-2xl md:text-xl"
+            >
+              +1(813) 290-1625
             </a>
           </li>
           <li>
-            <a href="mailto:info@midweststandards.com" className="text-[#121212] hover:underline text-2xl md:text-xl">
-              info@midweststandards.com
+            <a
+              href="mailto:info@midweststandards.com"
+              className="text-[#121212] hover:underline text-2xl md:text-xl"
+            >
+              everestprimeservices@gmail.com
             </a>
           </li>
           <li>
-            <p>
-              1918 Morning Song Ct, <br /> Schaumburg, IL 60194
-            </p>
+            <p>EVEREST APPLIANCE REPAIR <br /> 197 S Pick Ave <br /> ELMHURST, Illinois 60126</p>
           </li>
           <li>
             <a
