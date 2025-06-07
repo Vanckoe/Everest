@@ -10,19 +10,19 @@ import Right from '@/assets/right copy';
 const items = [
   {
     id: '01',
-    icon: <BadgeCheck className="text-[#31A301] size-8" />,
+    icon: <BadgeCheck className="text-[#31A301] size-10" />,
     boldText: '10+ Years Experience',
     fadedText: ' in appliance repair industry.',
   },
   {
     id: '02',
-    icon: <ShieldCheck className="text-[#31A301] size-8" />,
+    icon: <ShieldCheck className="text-[#31A301] size-10" />,
     boldText: '12-month Labor Warranty',
     fadedText: ' on all completed jobs.',
   },
   {
     id: '03',
-    icon: <Lightbulb className="text-[#31A301] size-8" />,
+    icon: <Lightbulb className="text-[#31A301] size-10" />,
     boldText: 'Same-Day Repairs Available',
     fadedText: ' for most major brands.',
   },
@@ -33,20 +33,21 @@ const NewHero = () => {
 
   return (
     <div
-      className="w-full relative bg-no-repeat bg-[length:55%] md:bg-[length:55%] md:bg-right-top"
+      className="w-full relative bg-no-repeat bg-[length:65%] md:bg-[length:55%] bg-[position:right_16rem] md:bg-right-top"
       style={{
         backgroundImage: "url('/bg/nemHeroBg-(1).png')",
-        backgroundPosition: 'right 19rem',
       }}
     >
-      <div className="px-10  mt-20">
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+      <div className="px-10 mt-20 md:mt-8">
         <div className="flex w-full flex-col md:w-[55.125rem]">
-          <p className="text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]">
+          <p className="text-xl md:text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]">
             [ Small Roots, Big Mission ]
           </p>
           <div className="mt-5 flex flex-row items-center gap-5">
-            <p className="text-[7.125rem] font-bold  leading-[82%] -tracking-wider">
-              Chicago Appliance <br /> Repair, Fast <span className="md:hidden">&</span>
+            <p className="text-[6.125rem] md:text-[7.125rem] font-bold  leading-[82%] -tracking-wider">
+              Chicago Appliance <br /> Repair, <br className='md:hidden'/> Fast <span className="md:hidden">&</span>
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -55,7 +56,7 @@ const NewHero = () => {
           <span className="text-[7.125rem] font-extralight text-[#31A301]">]</span>
         </p> */}
           <div className="flex flex-row items-end">
-            <p className="text-[6.825rem] font-bold leading-[82%] -tracking-wider">
+            <p className="text-[6.125rem] md:text-[7.825rem] font-bold leading-[82%] -tracking-wider">
               <span className="hidden md:inline">&</span> Local
             </p>
             <p className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40">
@@ -79,13 +80,13 @@ const NewHero = () => {
               </div>
 
               {/* Текст */}
-              <p className="bg-second text-white px-12 w-fit py-5 text-3xl rounded-4xl font-semibold">
+              <p className="bg-second text-white px-12 w-fit py-7 md:py-5 text-3xl rounded-2xl md:rounded-4xl font-semibold">
                 Schedule Service
               </p>
 
               {/* Правая иконка — видна по умолчанию, исчезает при hover */}
               <div
-                className="size-[4.5rem] bg-second rounded-full flex items-center justify-center 
+                className="size-[4.5rem] bg-second rounded-full hidden md:flex items-center justify-center 
                   opacity-100 translate-x-0 group-hover:opacity-0 group-hover:-translate-x-4 
                   transition-all duration-300 ease-in-out"
               >
@@ -94,22 +95,22 @@ const NewHero = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col mt-14 md:mt-[5.75rem] gap-6">
+        <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
           <p className=" md:hidden text-center mx-auto mt-2 text-2xl font-normal opacity-70">
             All specialists are licensed, insured, secured by <br /> collateral and have passed a
             background check.
           </p>
-          <div className=" ml-3 grid gap-5 md:gap-10 grid-cols-1 md:grid-cols-3 tracking-wide">
+          <div className="grid gap-5 md:gap-10 grid-cols-1 md:grid-cols-3 tracking-wide">
             {items.map(item => (
               <div
                 key={item.id}
-                className="flex items-start border border-neutral-300 bg-white px-5 py-6 rounded-xl gap-6"
+                className="flex items-start border border-neutral-300 bg-white px-8 py-6 rounded-xl gap-6"
               >
-                <div className="flex flex-row items-center gap-4">
+                <div className="flex flex-row items-center gap-6 md:gap-4">
                   {item.icon}
                   <div className="flex flex-col">
-                    <p className="text-lg font-semibold">{item.boldText}</p>
-                    <p className="text-lg font-medium">{item.fadedText}</p>
+                    <p className="text-2xl font-semibold">{item.boldText}</p>
+                    <p className="text-2xl font-medium">{item.fadedText}</p>
                   </div>
                 </div>
               </div>

@@ -2,6 +2,7 @@
 'use client';
 import React, { useState, useMemo } from 'react';
 import Right from '@/assets/right copy';
+import Image from 'next/image';
 import Logo from '@/assets/Logo';
 /* --------------------------------------------------------------------------
    Шаги бронирования/ремонта
@@ -57,15 +58,21 @@ const StepCard = ({ number, title, description }: Step) => (
   <div className="relative w-full flex-none px-4 md:max-w-[22.25rem]">
     {/* Карточка */}
     <div className="relative z-10 flex flex-col items-center rounded-2xl border border-neutral-300 pt-12 pb-14 bg-white shadow-sm">
-      <p className="text-lg font-medium text-accent">{number}</p>
-      <h3 className="mt-4 mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">
+      <Image
+        src="/img/icons/logoBlack.png"
+        width={100}
+        height={100}
+        alt="Logo"
+        className="size-16 rounded-xl"
+      />
+      {/* <p className="text-lg font-medium text-accent">{number}</p> */}
+      <h3 className=" mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">
         {title}
       </h3>
       <p className="mb-8 whitespace-pre-line text-center text-lg font-light text-[#979797] max-w-[16rem]">
         {description}
       </p>
-      <Logo className='md:size-16 rounded-xl'/>
-      </div>
+    </div>
   </div>
 );
 
@@ -93,8 +100,8 @@ const BookingStepsDesktop = () => {
           <h2 className="text-[4rem] font-bold leading-[94%]">How it works</h2>
 
           <p className="hidden flex-col gap-3 text-xl font-light text-[#979797] md:flex">
-          A step-by-step diagram of your service order <br />
-          from online booking to warranty after repair.
+            A step-by-step diagram of your service order <br />
+            from online booking to warranty after repair.
           </p>
         </div>
 
