@@ -5,6 +5,7 @@ import Logo from '@/assets/Logo';
 import CallIcon from '@/assets/CallIcon';
 import Link from 'next/link';
 import BurgerMenu from './burger';
+import Image from 'next/image';
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,11 +18,18 @@ const Header = () => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 md:px-10 py-8">
+    <div className="flex flex-row items-center justify-between px-10 md:px-10 pb-5 pt-8 md:pt-3">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      <div className="flex flex-row items-center gap-10">
-        <Logo />
+      <div className="flex flex-row items-center justify-between w-full gap-10">
+        <Image
+          src="/img/icons/logoBlack.png"
+          width={100}
+          height={100}
+          alt="Logo"
+          className="size-40 md:size-24 md:mt-0 -mt-4 mr-full"
+        />
+
         <div className="hidden md:flex flex-row text-base font-semibold gap-7">
           <button
             onClick={() => handleScrollToSection('about')}
@@ -66,23 +74,24 @@ const Header = () => {
             Contacts
           </button>
         </div>
-      </div>
-      <div className="flex flex-row items-center gap-10 md:gap-2">
-        <Link
-          href="tel:+11234567890"
-          className="bg-accent text-white px-8 py-4 md:py-3 text-2xl md:text-base font-semibold md:font-medium rounded-2xl hover:bg-accent/90 transition inline-flex items-center"
-        >
-          {/* <CallIcon /> */}
-          +1 123 456 78 90
-        </Link>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-second hidden md:block text-white px-8 py-3 rounded-2xl text-2xl md:text-base font-semibold md:font-medium hover:bg-second/90 transition"
-        >
-          Schedule Service
-        </button>
-        <div className="md:hidden">
-          <BurgerMenu />
+
+        <div className="flex flex-row items-center gap-10 md:gap-2">
+          <Link
+            href="tel:+11234567890"
+            className="bg-accent text-white px-8 py-4 md:py-3 text-2xl md:text-base font-semibold md:font-medium rounded-2xl hover:bg-accent/90 transition inline-flex items-center"
+          >
+            {/* <CallIcon /> */}
+            +1 123 456 78 90
+          </Link>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-second hidden md:block text-white px-8 py-3 rounded-2xl text-2xl md:text-base font-semibold md:font-medium hover:bg-second/90 transition"
+          >
+            Schedule Service
+          </button>
+          <div className="md:hidden">
+            <BurgerMenu />
+          </div>
         </div>
       </div>
     </div>

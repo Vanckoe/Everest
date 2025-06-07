@@ -156,7 +156,7 @@ export default function Services() {
       >
         {cards.map(({ image, title, subtitle, cost, time }, i) => (
           <div key={i} className="h-full flex flex-row-reverse items-center md:flex-col py-10 md:p-8">
-            <div className="relative min-w-40 mr-5 -mt-5">
+            <div className="relative min-w-40 md:mr-5 -mt-5">
               <Image
                 src={image}
                 alt={title}

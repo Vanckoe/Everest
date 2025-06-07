@@ -3,11 +3,14 @@ import lineClamp from '@tailwindcss/line-clamp';
 
 const config: Config = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',   // Next 13 App Router
-    './pages/**/*.{js,ts,jsx,tsx,mdx}', // Pages Router (если используется)
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // Next 13 App Router
-    './pages/**/*.{js,ts,jsx,tsx,mdx}', // (если используете Pages Router)
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}',
+
   ],
   theme: {
     extend: {
