@@ -16,14 +16,16 @@ import Footer from '@/components/layout/footer';
 import ForWho from './_component/forWho';
 import ForWhoMobile from './_component/forWhoMobile';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
+import NewHero from './_component/newHero';
 
 const Main = () => {
   return (
     <div className="flex flex-col">
       {/* <ColorPalettes /> */}
-      <Header />
-      <Hero />
-      <RunningLine />
+      {/* <Header /> */}
+      {/* <Hero /> */}
+      <NewHero/>
+      {/* <RunningLine /> */}
       <Services />
       <About />
       <Reviews />
