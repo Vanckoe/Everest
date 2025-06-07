@@ -18,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-between px-10 md:px-10 pb-5 pt-8 md:pt-3">
+    <div className="flex flex-row items-center justify-between px-10 md:px-10 pb-5 pt-10 md:pt-5">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       <div className="flex flex-row items-center justify-between w-full gap-10">
@@ -27,7 +27,7 @@ const Header = () => {
           width={100}
           height={100}
           alt="Logo"
-          className="size-40 md:size-24 md:mt-0 -mt-4 mr-full"
+          className="size-32 -ml-2 md:ml-0 md:size-24 md:mt-0 -mt-4 mr-full"
         />
 
         <div className="hidden md:flex flex-row text-base font-semibold gap-7">
