@@ -19,7 +19,7 @@ const brandLogos = [
 
 const BrandMarquee = () => {
   return (
-    <div className="w-full bg-[#F7F8F9] py-5">
+    <div className="w-full bg-[#F7F8F9] py-5 md:py-10">
       <Marquee gradient={false} speed={50} pauseOnHover={true}>
         {brandLogos.map((src, idx) => (
           <div key={idx} className="mx-8">
@@ -28,7 +28,7 @@ const BrandMarquee = () => {
               alt={`brand-${idx}`}
               width={120}
               height={60}
-              className="h-[2rem] w-auto object-contain"
+              className="h-[2rem] w-auto object-contain md:h-[2.5rem]"
             />
           </div>
         ))}

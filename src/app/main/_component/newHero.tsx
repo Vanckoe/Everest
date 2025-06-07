@@ -69,11 +69,11 @@ const NewHero = () => {
           <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="group cursor-pointer md:-ml-16 flex flex-row  w-full md:w-fit items-center"
+              className="group cursor-pointer md:-ml-16 flex flex-row  items-center"
             >
               {/* Левая иконка — скрыта по умолчанию, появляется при hover */}
               <div
-                className="size-[4.5rem] hidden md:flex bg-second rounded-full items-center justify-center 
+                className="size-[4.5rem] hidden md:flex bg-accent rounded-full items-center justify-center 
                   opacity-0 translate-x-8 group-hover:ml-16 group-hover:opacity-100 group-hover:translate-x-0 
                   transition-all duration-300 ease-in-out"
               >
@@ -81,13 +81,13 @@ const NewHero = () => {
               </div>
 
               {/* Текст */}
-              <p className="bg-accent md:bg-second text-white px-8 w-full md:px-12 md:w-fit py-7 md:py-5 text-3xl rounded-2xl md:rounded-4xl font-semibold">
+              <p className="bg-accent text-white px-8 w-full md:px-12 md:w-fit py-7 md:py-5 text-3xl rounded-2xl md:rounded-4xl font-semibold">
                 Schedule Service
               </p>
 
               {/* Правая иконка — видна по умолчанию, исчезает при hover */}
               <div
-                className="size-[4.5rem] bg-second rounded-full hidden md:flex items-center justify-center 
+                className="size-[4.5rem] bg-accent rounded-full hidden md:flex items-center justify-center 
                   opacity-100 translate-x-0 group-hover:opacity-0 group-hover:-translate-x-4 
                   transition-all duration-300 ease-in-out"
               >
