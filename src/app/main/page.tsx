@@ -41,7 +41,7 @@ const Main = () => {
       <ForWhoMobile />
       {/* <OffersBlock /> */}
       <FaqAccordion />
-      <Reception />
+      {/* <Reception /> */}
       <Contact />
       <Footer />
     </div>
