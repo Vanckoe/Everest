@@ -27,7 +27,7 @@ const Header = () => {
           width={100}
           height={100}
           alt="Logo"
-          className="size-24 mr-full"
+          className="size-40 md:size-24 md:mt-0 -mt-4 mr-full"
         />
 
         <div className="hidden md:flex flex-row text-base font-semibold gap-7">

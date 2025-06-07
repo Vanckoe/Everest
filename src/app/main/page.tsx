@@ -24,8 +24,8 @@ const Main = () => {
       {/* <ColorPalettes /> */}
       <Header />
       {/* <Hero /> */}
-      <NewHero/>
-      {/* <RunningLine /> */}
+      <RunningLine />
+      <NewHero />
       <Services />
       <About />
       <Reviews />
