@@ -1,15 +1,24 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import Modal from '@/components/layout/modal';
 import RightIcon from '@/assets/Right';
 
 const Appliances = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+
   return (
     <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-12 md:px-16">
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       <p className="font-semibold text-[2.6rem] md:text-[3rem] leading-[120%]">
         Give a second life to your <br />
         appliances with same day <br />
         appliance repair expert
       </p>
-      <button className="group md:-ml-12 flex w-fit items-center">
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="group md:-ml-12 flex w-fit items-center"
+      >
         <div
           className="
                   hidden md:flex size-14 min-w-14 bg-second rounded-full items-center justify-center

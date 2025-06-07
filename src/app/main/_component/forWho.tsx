@@ -2,7 +2,7 @@
 'use client';
 import React, { useState, useMemo } from 'react';
 import Right from '@/assets/right copy';
-
+import Logo from '@/assets/Logo';
 /* --------------------------------------------------------------------------
    Шаги бронирования/ремонта
    -------------------------------------------------------------------------- */
@@ -16,8 +16,7 @@ const bookingSteps: Step[] = [
   {
     number: '01',
     title: 'Choose service',
-    description:
-      'Укажите, какая техника сломалась и опишите проблему в нескольких словах.',
+    description: 'Укажите, какая техника сломалась и опишите проблему в нескольких словах.',
   },
   {
     number: '02',
@@ -65,7 +64,8 @@ const StepCard = ({ number, title, description }: Step) => (
       <p className="mb-8 whitespace-pre-line text-center text-lg font-light text-[#979797] max-w-[16rem]">
         {description}
       </p>
-    </div>
+      <Logo className='md:size-16 rounded-xl'/>
+      </div>
   </div>
 );
 
@@ -79,24 +79,24 @@ const BookingStepsDesktop = () => {
 
   const translate = useMemo(
     () => `translateX(-${index * (125 / visibleCount)}%)`,
-    [index, visibleCount],
+    [index, visibleCount]
   );
 
-  const next = () => setIndex((i) => Math.min(i + 1, maxIndex));
-  const prev = () => setIndex((i) => Math.max(i - 1, 0));
+  const next = () => setIndex(i => Math.min(i + 1, maxIndex));
+  const prev = () => setIndex(i => Math.max(i - 1, 0));
 
   return (
     <section className="hidden md:flex mx-auto mt-64 flex-col px-16" id="booking-steps-desktop">
       {/* ───────── Заголовок + описание + кнопки ───────── */}
-      <header className="order-1 mb-20 flex flex-row items-center">
-        <h2 className="text-[4rem] font-bold lowercase leading-[94%]">
-          How it works
-        </h2>
+      <header className="order-1 mb-14 flex flex-row items-center">
+        <div className="flex flex-col gap-2">
+          <h2 className="text-[4rem] font-bold lowercase leading-[94%]">How it works</h2>
 
-        <p className="ml-24 hidden max-w-sm flex-col gap-3 text-xs font-light text-[#979797] md:flex">
-          Пошаговая схема вашего сервис-заказа
-          <br /> от онлайн-бронирования до гарантии после ремонта.
-        </p>
+          <p className="hidden flex-col gap-3 text-xl font-light text-[#979797] md:flex">
+          A step-by-step diagram of your service order <br />
+          from online booking to warranty after repair.
+          </p>
+        </div>
 
         {/* ──────── Кнопки навигации ──────── */}
         <div className="order-3 ml-auto flex flex-row items-stretch gap-4 rounded-xl border border-[#191919] p-3.5 md:order-2">
@@ -131,7 +131,7 @@ const BookingStepsDesktop = () => {
             width: `${(bookingSteps.length / visibleCount) * 100}%`,
           }}
         >
-          {bookingSteps.map((step) => (
+          {bookingSteps.map(step => (
             <StepCard key={step.number} {...step} />
           ))}
         </div>

@@ -93,7 +93,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+      className="fixed text-black inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
       onClick={e => {
         if (e.target === e.currentTarget) onClose();
       }}
