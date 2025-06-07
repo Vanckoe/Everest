@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <div className="flex flex-col">
       {/* <ColorPalettes /> */}
-      {/* <Header /> */}
+      <Header />
       {/* <Hero /> */}
       <NewHero/>
       {/* <RunningLine /> */}

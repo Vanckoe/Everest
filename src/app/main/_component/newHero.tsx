@@ -33,13 +33,15 @@ const NewHero = () => {
 
   return (
     <div
-      className="w-full relative bg-right-bottom md:bg-right bg-gradient-to-b from-[#f5f5f5] to-[#FBFAFB] bg-no-repeat bg-[length:55%]"
-      style={{ backgroundImage: "url('/bg/nemHeroBg-(1).png')" }}
+      className="w-full relative bg-no-repeat bg-[length:55%] md:bg-[length:55%] md:bg-right-top"
+      style={{
+        backgroundImage: "url('/bg/nemHeroBg-(1).png')",
+        backgroundPosition: 'right 19rem',
+      }}
     >
-      <Header />
-      <div className="px-10  mt-10">
+      <div className="px-10  mt-20">
         <div className="flex w-full flex-col md:w-[55.125rem]">
-          <p className="text-base font-light uppercase leading-[150%] tracking-[0.1rem] text-[#CACACA]">
+          <p className="text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]">
             [ Small Roots, Big Mission ]
           </p>
           <div className="mt-5 flex flex-row items-center gap-5">
@@ -52,58 +54,67 @@ const NewHero = () => {
           seo
           <span className="text-[7.125rem] font-extralight text-[#31A301]">]</span>
         </p> */}
-          <div className="mt-2 flex flex-row items-center">
-            <p className="text-[8.125rem] font-bold leading-[82%] -tracking-wider">
+          <div className="flex flex-row items-end">
+            <p className="text-[6.825rem] font-bold leading-[82%] -tracking-wider">
               <span className="hidden md:inline">&</span> Local
             </p>
-            <p className="mt-5 ml-10 text-xl font-normal opacity-40">
+            <p className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40">
               All specialists are licensed,
               <br /> insured, secured by collateral and
               <br /> have passed a background check.
             </p>
           </div>
-          <div className="mt-[3.625rem] flex flex-row items-center gap-[1.875rem]">
+          <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">
             <button
               onClick={() => setIsModalOpen(true)}
-              className="group cursor-pointer mt-10 -ml-12 flex flex-row w-fit items-center"
+              className="group cursor-pointer -ml-16 flex flex-row w-fit items-center"
             >
               {/* Левая иконка — скрыта по умолчанию, появляется при hover */}
               <div
-                className="size-12 bg-second rounded-full flex items-center justify-center 
-                  opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0 
+                className="size-[4.5rem] bg-second rounded-full flex items-center justify-center 
+                  opacity-0 translate-x-8 group-hover:ml-16 group-hover:opacity-100 group-hover:translate-x-0 
                   transition-all duration-300 ease-in-out"
               >
-                <RightIcon color="white" width="1.5rem" height="1.5rem" />
+                <RightIcon color="white" width="2.5rem" height="2.5rem" />
               </div>
 
               {/* Текст */}
-              <p className="bg-second text-white px-8 w-fit py-3 rounded-4xl font-semibold">
+              <p className="bg-second text-white px-12 w-fit py-5 text-3xl rounded-4xl font-semibold">
                 Schedule Service
               </p>
 
               {/* Правая иконка — видна по умолчанию, исчезает при hover */}
               <div
-                className="size-12 bg-second rounded-full flex items-center justify-center 
+                className="size-[4.5rem] bg-second rounded-full flex items-center justify-center 
                   opacity-100 translate-x-0 group-hover:opacity-0 group-hover:-translate-x-4 
                   transition-all duration-300 ease-in-out"
               >
-                <RightIcon color="white" width="1.5rem" height="1.5rem" />
+                <RightIcon color="white" width="2.5rem" height="2.5rem" />
               </div>
             </button>
           </div>
         </div>
-        <div className=" ml-3 mt-[4.75rem] grid grid-cols-3 tracking-wide">
-          {items.map(item => (
-            <div key={item.id} className="flex items-start gap-6">
-              <div className="flex flex-row items-center gap-4">
-                {item.icon}
-                <div className="flex flex-col">
-                  <p className="text-lg font-medium">{item.boldText}</p>
-                  <p className="text-lg font-medium">{item.fadedText}</p>
+        <div className="flex flex-col mt-14 md:mt-[5.75rem] gap-6">
+          <p className=" md:hidden text-center mx-auto mt-2 text-2xl font-normal opacity-70">
+            All specialists are licensed, insured, secured by <br /> collateral and have passed a
+            background check.
+          </p>
+          <div className=" ml-3 grid gap-5 md:gap-10 grid-cols-1 md:grid-cols-3 tracking-wide">
+            {items.map(item => (
+              <div
+                key={item.id}
+                className="flex items-start border border-neutral-300 bg-white px-5 py-6 rounded-xl gap-6"
+              >
+                <div className="flex flex-row items-center gap-4">
+                  {item.icon}
+                  <div className="flex flex-col">
+                    <p className="text-lg font-semibold">{item.boldText}</p>
+                    <p className="text-lg font-medium">{item.fadedText}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
