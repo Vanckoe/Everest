@@ -101,7 +101,7 @@ const NewHero = () => {
             All specialists are licensed, insured, secured by <br /> collateral and have passed a
             background check.
           </p>
-          <div className="grid gap-5 md:gap-10 grid-cols-1 md:grid-cols-3 tracking-wide">
+          <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-3 tracking-wide">
             {items.map(item => (
               <div
                 key={item.id}
