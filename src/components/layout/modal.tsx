@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { z } from 'zod';
+import CustomDatePicker from '../ui/CustomDatePicker';
+import ServiceSelect from '../ui/ServiceSelect';
 
 export const appointmentSchema = z.object({
   date: z.string({ required_error: 'Выберите дату' }),
@@ -114,32 +116,29 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
           ×
         </button>
         {step === 1 && (
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 md:gap-3">
             <h2 className="text-3xl font-bold mb-2">Request an appointment</h2>
             <div>
-              <label className="mt-4 mb-2 block text-xl font-semibold text-gray-700">
+              <label className="mt-4 mb-2 block text-3xl md:text-2xl  font-semibold text-gray-700">
                 Select date
               </label>
-              <input
-                type="date"
-                value={date}
-                onChange={e => setDate(e.target.value)}
-                className={`w-full rounded-lg border px-4 py-2 ${
-                  errors.date ? 'border-red-500' : 'border-gray-300'
-                }`}
+              <CustomDatePicker
+                value={date ? new Date(date) : null}
+                onChange={(date: Date | null) => date && setDate(date.toISOString())}
+                error={errors.date}
               />
               {errors.date && <p className="text-xl text-red-500 mt-1">{errors.date}</p>}
             </div>
             <div className="">
-              <p className="mt-4 mb-2 block text-xl font-semibold text-gray-700">Select time</p>
+              <p className="mt-4 mb-2 block text-3xl md:text-2xl font-semibold text-gray-700">Select time</p>
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
                 {timeSlots.map(slot => (
                   <button
                     key={slot}
                     onClick={() => setTime(slot)}
-                    className={`rounded-lg border px-4 py-3 text-xl font-medium transition ${
-                      time === slot ? 'bg-black text-white' : 'bg-white text-black'
-                    } ${errors.time ? 'border-red-500' : 'border-gray-300'}`}
+                    className={`rounded-[1.25rem] text-3xl md:text-xl bg-[#dfdddd] py-4 px-9 text-black placeholder:text-base placeholder:font-normal placeholder:text-[#9A9A9A] ${
+                      errors.time ? 'border-2 border-red-500' : ''
+                    }`}
                   >
                     {slot}
                   </button>
@@ -149,34 +148,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
             {errors.time && <p className="text-xl text-red-500 mt-1">{errors.time}</p>}
 
-            <div>
-              <label className="mt-4 mb-2 block text-xl font-semibold text-gray-700">
-                Select service
-              </label>
-              <select
-                value={service}
-                onChange={e => setService(e.target.value)}
-                className={`w-full rounded-lg border px-4 py-2 ${
-                  errors.service ? 'border-red-500' : 'border-gray-300'
-                }`}
-              >
-                <option value="" disabled>
-                  Select a service
-                </option>
-                {services.map(({ title }) => (
-                  <option key={title} value={title} className='text-xl'>
-                    {title}
-                  </option>
-                ))}
-              </select>
-              {errors.service && <p className="text-xl text-red-500 mt-1">{errors.service}</p>}
-            </div>
+            <ServiceSelect
+              options={services}
+              value={service}
+              onChange={setService}
+              error={errors.service}
+            />
 
             <button
               onClick={() => setStep(2)}
               disabled={!date || !time || !service}
-              className="mt-6 w-full rounded-md bg-black px-6 py-3 text-white text-xl font-semibold transition hover:opacity-90"
-            >
+              className="font-bold w-full text-nowrap mx-auto text-3xl md:text-2xl text-[#FF0000] flex flex-row text-center justify-center items-center gap-6 bg-black rounded-[1.5rem] py-8 px-10 transition-all duration-200 active:scale-[0.97]"
+              >
               Continue
             </button>
           </div>
@@ -266,7 +249,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 </button>
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-black px-6 py-3 text-white text-xl font-semibold hover:opacity-90"
+                  className="font-bold text-nowrap mx-auto text-xl text-start md:text-2xl text-[#FF0000] flex flex-row items-center gap-6 bg-black rounded-[1.5rem] py-8 px-10 transition-all duration-200 active:scale-[0.97]"
                 >
                   Book Appointment
                 </button>
