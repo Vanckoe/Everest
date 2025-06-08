@@ -1,150 +1,107 @@
 'use client';
 import React, { useState, useMemo } from 'react';
-
-import Right from '@/assets/right copy';
-import MouseEmpty from '@/assets/MouseEmpty';
 import Logo from '@/assets/Logo';
 import Image from 'next/image';
-import Micsher from '@/assets/micsher';
+import RightIcon from '@/assets/Right';
 
-/* --------------------------------------------------------------------------
-   Данные карточек: номер, текст, SVG-иконка
-   -------------------------------------------------------------------------- */
 const cards = [
   {
     number: '01',
-    text: 'Неприбуткові організації\n та фонди, яким складно\n залучати донорів та\n волонтерів онлайн',
+    title: '$30off',
+    subtitle: 'New customers discount Book a repair service day online and get $30 welcome discount for your first service call',
     Icon: Logo,
   },
   {
     number: '02',
-    text: 'Малі підприємці-\nпочатківці, які не мають\nдосвіду в цифровому\nпросуванні',
+    title: '$15off',
+    subtitle: 'For returning customers Book a repair service day online and get $15 discount for returning service call',
     Icon: Logo,
   },
   {
     number: '03',
-    text: 'Громадські ініціативи,\nяким бракує ресурсів на\nефективний онлайн-\nмаркетинг',
-    Icon: Logo,
-  },
-  {
-    number: '04',
-    text: 'Представники бізнесу,\nякі хочуть навчитись\nсамостійно просуватись\nонлайн',
-    Icon: Logo,
-  },
-  {
-    number: '05',
-    text: 'Неприбуткові організації\n та фонди, яким складно\n залучати донорів та\n волонтерів онлайн',
-    Icon: Logo,
-  },
-  {
-    number: '06',
-    text: 'Малі підприємці-\nпочатківці, які не мають\nдосвіду в цифровому\nпросуванні',
-    Icon: Logo,
-  },
-  {
-    number: '07',
-    text: 'Громадські ініціативи,\nяким бракує ресурсів на\nефективний онлайн-\nмаркетинг',
-    Icon: Logo,
-  },
-  {
-    number: '08',
-    text: 'Представники бізнесу,\nякі хочуть навчитись\nсамостійно просуватись\nонлайн',
+    title: '$30off',
+    subtitle: 'Senior customer discount Book a repair service day online and get $30 senior costumer discount',
     Icon: Logo,
   },
 ] as const;
 
 type Card = (typeof cards)[number];
 
-/* --------------------------------------------------------------------------
-   Компонент одной карточки (переиспользуемый)                                   
-   -------------------------------------------------------------------------- */
-const Card = ({ number, text, Icon }: Card) => (
-  <div className="relative w-full  flex-none px-4 md:max-w-[22.25rem]">
-    {/* Карточка */}
-    <div className="relative z-10 flex flex-col items-center rounded-2xl border border-neutral-300 pt-12">
-      <p className="text-lg font-medium text-[#001F3F]">{number}</p>
-      <p className="mb-10 mt-5 whitespace-pre-line text-center text-lg font-light text-[#979797]">
-        {text}
-      </p>
-      <div className="mb-[1.875rem] flex h-[4.75rem] w-[5.375rem] items-center justify-center bg-[url('/bg/forIconBg.png')] bg-cover bg-center bg-no-repeat">
-        <Icon width="2rem" />
+// Компонент одной карточки
+const Card = ({ number, title, subtitle, Icon }: Card) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <div className="relative w-full flex-none px-4 md:w-1/3">
+      <div className="relative z-10 flex flex-col items-center rounded-2xl border border-[#001f3f] pt-12 px-6 text-center pb-8">
+        <p className="text-lg font-medium text-[#001F3F]">{number}</p>
+        <p className="mt-5 text-3xl font-semibold text-[#001F3F]">{title}</p>
+        <p className="mt-2 text-lg font-light text-[#979797]">{subtitle}</p>
+
+        <div className="my-6 flex h-[4.75rem] w-[5.375rem] items-center justify-center bg-[url('/bg/forIconBg.png')] bg-cover bg-center bg-no-repeat">
+          <Icon width="2rem" />
+        </div>
+
+        {/* Кнопка внутри карточки */}
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="group mt-auto md:-ml-12 flex w-full items-center justify-center"
+        >
+          <div
+            className="
+              hidden md:flex size-20 min-w-20 md:size-12 md:min-w-12 bg-second rounded-full items-center justify-center
+              opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0
+              transition-all duration-300 ease-in-out
+            "
+          >
+            <RightIcon color="white" width="1.25rem" height="1.25rem" />
+          </div>
+          <span className="bg-second w-full text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-base text-center">
+            Use Coupon
+          </span>
+          <div
+            className="
+              flex size-20 min-w-20 md:size-12 md:min-w-12 bg-second rounded-full items-center justify-center
+              opacity-100 translate-x-0 group-hover:-mr-12 group-hover:opacity-0 group-hover:-translate-x-4
+              transition-all duration-300 ease-in-out
+            "
+          >
+            <RightIcon color="white" width="1.25rem" height="1.25rem" />
+          </div>
+        </button>
       </div>
-      <div className="mb-8 ml-auto mr-8">
-        <Micsher color='black'/>
+
+      <div className="pointer-events-none absolute -bottom-16">
+        <Image
+          width={241}
+          height={68}
+          src="/draws/greenShadow.png"
+          alt="green shadow"
+          className="h-auto w-[130rem] select-none"
+        />
       </div>
     </div>
+  );
+};
 
-    {/* Тень — за пределами карточки */}
-    <div className="pointer-events-none absolute -bottom-16">
-      <Image
-        width={241}
-        height={68}
-        src="/draws/greenShadow.png"
-        alt="green shadow"
-        className="h-auto w-[130rem] select-none"
-      />
-    </div>
-  </div>
-);
-
-/* --------------------------------------------------------------------------
-   Основной блок "Для кого працює наша спільнота"                                
-   -------------------------------------------------------------------------- */
 const ForWho = () => {
-  const visibleCount = 4; // количество карточек, видимое одновременно (на desktop)
+  const visibleCount = 3;
   const maxIndex = Math.max(cards.length - visibleCount, 0);
   const [index, setIndex] = useState(0);
 
-  /* pre-вычислим translate-value в %, чтобы не считать в JSX */
   const translate = useMemo(() => `translateX(-${index * (112.5 / visibleCount)}%)`, [index]);
 
-  const next = () => setIndex(i => Math.min(i + 1, maxIndex));
-  const prev = () => setIndex(i => Math.max(i - 1, 0));
-
   return (
-    <div className="px-16 mx-auto mt-[16.125rem] flex flex-col">
-      {/* ───────────── Заголовок + описание + кнопки ───────────── */}
-      <div className="mb-20 flex flex-row items-center">
-        <p className="text-[4rem] font-bold lowercase leading-[94%]">
-          Для кого працює <br /> наша спільнота
-        </p>
-
-        <div className="flex flex-col gap-3 pl-[5.625rem]">
-          <MouseEmpty color="#FFFFFF" />
-          <p className="text-xs font-light text-[#979797]">
-            Регулярно публікуємо практичні
-            <br /> матеріали, статті та кейси{' '}
-            <span className="font-medium text-white">
-              для <br /> покращення ваших навичок у сфері <br /> цифрового маркетингу
-            </span>
-          </p>
-        </div>
-
-        {/* ──────────── Кнопки слайдера ──────────── */}
-        <div className="ml-auto flex flex-row items-stretch gap-4 rounded-xl border border-[#191919] p-3.5">
-          <button
-            onClick={prev}
-            disabled={index === 0}
-            className={`rotate-180 rounded-lg px-20 py-[1.875rem] transition-opacity ${
-              index === 0 ? 'cursor-not-allowed' : 'bg-[#001F3F]'
-            }`}
-          >
-            <Right color={index === 0 ? '#001F3F' : '#FFFFFF'} />
-          </button>
-          <div className="h-20 w-0 border border-[#191919]" />
-          <button
-            onClick={next}
-            disabled={index === maxIndex}
-            className={`rounded-lg px-20 py-[1.875rem] transition-opacity ${
-              index === maxIndex ? 'cursor-not-allowed' : 'bg-[#001F3F]'
-            }`}
-          >
-            <Right color={index === maxIndex ? '#001F3F' : '#FFFFFF'} />
-          </button>
-        </div>
+    <div className="px-8 mt-[8.125rem] flex flex-col">
+      {/* Заголовок секции */}
+      <div className="mb-12 flex flex-row items-center">
+        <span className="text-[1.875rem] md:text-[1.25rem] font-semibold">
+          <span className="text-[#FE5B2C]">//</span>{' '}
+          <span className="text-[#001f3f]">06 - Best Offers</span>
+        </span>
       </div>
 
-      {/* ───────────── Слайдер карточек ───────────── */}
+      {/* Карточки */}
       <div className="overflow-hidden">
         <div
           className="flex max-w-[87.5rem] transition-transform duration-500 ease-out"

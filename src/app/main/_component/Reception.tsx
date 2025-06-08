@@ -3,9 +3,9 @@ import RightIcon from '@/assets/Right';
 
 const Reception = () => {
   return (
-    <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-16 md:h-[24.375rem]">
+    <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-16 md:h-[23,5625rem]">
       <p className="font-semibold text-[2.6rem] md:text-[3rem] leading-[120%]">
-        Need an expert consultation?<br /> 
+        Need an expert consultation?<br />
         Let's get in touch
       </p>
       <button className="group md:-ml-12 flex w-fit items-center">
