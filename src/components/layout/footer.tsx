@@ -4,6 +4,7 @@ import GoUpIcon from '@/assets/GoUp';
 import CustomIcon from '@/assets/Google-footer';
 import WhatsAppIcon from '@/assets/WhatsAppIcon';
 import MobileFooter from './MobileFooter';
+import Logo from '@/assets/Logo';
 
 const DesktopFooter = () => {
   const handleScrollToTop = () => {
@@ -47,7 +48,7 @@ const DesktopFooter = () => {
         {/* Левая секция */}
         <div className="w-[33.125rem] h-[31rem] pr-8 border-r border-[#234151] flex flex-col justify-start md:pt-20 z-10">
           <div className="mb-6">
-            <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[7rem] h-[7rem]" />
+            <Logo className='md:size-28 rounded-2xl'/>
           </div>
           <p className="text-lg leading-relaxed text-[#9FAEB6] mb-8">
             We are always here to assist you with any <br />
@@ -67,6 +68,7 @@ const DesktopFooter = () => {
                 <li><a href="#services" className="hover:underline">Services</a></li>
                 <li><a href="#brands" className="hover:underline">Brands</a></li>
                 <li><a href="#reviews" className="hover:underline">Reviews</a></li>
+                <li><a href="#booking-steps" className="hover:underline">Steps</a></li>
                 <li><a href="#faq" className="hover:underline">FAQ</a></li>
                 <li><a href="#privacy" className="hover:underline">Privacy Policy</a></li>
                 <li><a href="#terms" className="hover:underline">Terms of use</a></li>
@@ -125,7 +127,7 @@ const DesktopFooter = () => {
             >
               <WhatsAppIcon className="w-10 h-10 text-[#9FAEB6]" />
             </a>
-            <p className="text-[#9FAEB6] text-base font-medium">© 2025 Midwest Standards</p>
+            <p className="text-[#9FAEB6] text-base font-medium">© 2025 EVEREST APPLIANCE REPAIR </p>
           </div>
         </div>
       </div>

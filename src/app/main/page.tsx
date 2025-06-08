@@ -14,15 +14,23 @@ import Reception from './_component/Reception';
 import Contact from './_component/Contact';
 import Footer from '@/components/layout/footer';
 import ForWho from './_component/forWho';
+import ForWhoMobile from './_component/forWhoMobile';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
+import NewHero from './_component/newHero';
 
 const Main = () => {
   return (
     <div className="flex flex-col">
       {/* <ColorPalettes /> */}
       <Header />
-      <Hero />
-      <RunningLine />
+      {/* <Hero /> */}
+      <div className="md:hidden">
+        <RunningLine />
+      </div>
+      <NewHero />
+      <div className="hidden mt-12 md:block">
+        <RunningLine />
+      </div>
       <Services />
       <About />
       <Reviews />
@@ -30,9 +38,10 @@ const Main = () => {
       <BrandGrid />
       <Appliances />
       <ForWho />
+      <ForWhoMobile />
       {/* <OffersBlock /> */}
       <FaqAccordion />
-      <Reception />
+      {/* <Reception /> */}
       <Contact />
       <Footer />
     </div>

@@ -1,22 +1,32 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import Modal from '@/components/layout/modal';
 import Image from 'next/image';
 import RightIcon from '@/assets/Right';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+
   return (
     <section className="w-full flex px-10 gap-5 flex-col md:flex-row">
-      <div className="flex flex-col text-white px-10 md:px-16 pt-10 md:pt-20 pb-20 bg-accent rounded-xl md:w-1/2">
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
+      <div className="flex flex-col text-white px-10 md:px-20 pt-10 md:p-24 pb-20 bg-accent rounded-xl md:w-1/2">
         <p className="font-semibold text-base px-5 py-1 border border-neutral-300 rounded-xl opacity-90 w-fit">
-          Your Local Appliance Repair Сompany
+          Customer satisfaction is our priority above anything!
         </p>
         <h1 className="font-bold text-[3.125rem] leading-[100%] mt-8">
-          Same Day Appliance Repair Services in Chicago
+          From small family owned business, to a company with big mission!
         </h1>
         <p className="text-lg font-normal mt-3">
-          Schedule your service today and enjoy <br /> peace of mind with Midwest Standards expert
-          care
+          All specialists are licensed, insured, secured by collateral and have passed a background
+          check.
         </p>
-        <button className="group cursor-pointer mt-10 -ml-12 flex flex-row w-fit items-center">
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="group cursor-pointer mt-10 -ml-12 flex flex-row w-fit items-center"
+        >
           {/* Левая иконка — скрыта по умолчанию, появляется при hover */}
           <div
             className="size-12 bg-second rounded-full flex items-center justify-center 
@@ -28,7 +38,7 @@ const Hero = () => {
 
           {/* Текст */}
           <p className="bg-second text-white px-8 w-fit py-3 rounded-4xl font-semibold">
-            Get a consultation
+            Schedule Service
           </p>
 
           {/* Правая иконка — видна по умолчанию, исчезает при hover */}

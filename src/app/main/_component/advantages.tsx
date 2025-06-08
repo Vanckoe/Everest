@@ -47,11 +47,14 @@ export default function Advantages() {
         {/* Левая часть */}
         <div className="w-1/2 flex flex-col pr-[2rem]">
           <div className="md:sticky md:top-[6rem] flex flex-col gap-[1rem]">
-            <span className="text-[1.875rem] md:text-[1.25rem] font-semibold">
-              <span className="text-[#FE5B2C]">//</span>{' '}
-              <span className="text-[#001f3f]">04 - Advantages</span>
-            </span>
-            <h2 className="text-[#001f3f] text-[3rem] md:text-[2.75rem] font-bold leading-tight w-[28.125rem]">
+            <div className="text-2xl font-semibold italic md:text-base">
+              <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 04 - Advantages
+            </div>
+            <h2
+              data-aos="fade-up"
+              // data-aos-delay={500}
+              className="text-[#001f3f] text-[3rem] md:text-[2.75rem] font-bold leading-tight w-[28.125rem]"
+            >
               Why 92% of clients recommend us to their friends?
             </h2>
           </div>
@@ -67,7 +70,12 @@ export default function Advantages() {
           <div className="absolute top-0 bottom-0 left-0 w-px bg-[#1212120F]"></div>
 
           {advantages.map(({ Icon, title, subtitle }, idx) => (
-            <div key={idx} className="flex flex-col items-start gap-[1rem] px-[3rem] py-[2rem]">
+            <div
+              data-aos="fade-up"
+              data-aos-delay={idx * 100}
+              key={idx}
+              className="flex flex-col items-start gap-[1rem] px-[3rem] py-[2rem]"
+            >
               <Icon className="text-[#001f3f] w-[2.5rem] h-[2.5rem]" />
               <h3 className="text-[1.5rem] font-semibold text-[#121212] leading-snug">{title}</h3>
               <p className="text-[#888888] text-[1.125rem] leading-normal">{subtitle}</p>

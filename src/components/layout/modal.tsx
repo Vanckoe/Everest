@@ -24,10 +24,18 @@ type ModalProps = {
 };
 
 const services = [
-  { title: 'Washer Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Refrigerator Repair', cost: '65.00 $', duration: '45 mins' },
   { title: 'Oven Repair', cost: '65.00 $', duration: '30 mins' },
   { title: 'Dryer Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Washer Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Dishwasher Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Range Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Garbage Disposal Repair', cost: '65.00 $', duration: '30 mins' },
+  { title: 'Washer/Dryer Installation', cost: '160.00 $', duration: '1 hr 15 mins' },
+  { title: 'Dryer Vent Cleaning', cost: '160.00 $', duration: '1 hr 15 mins' },
   { title: 'Built-in Oven Installation', cost: 'Price varies', duration: '1 hr 30 mins' },
+  { title: 'Dishwasher Installation', cost: '160.00 $', duration: '1 hr 15 mins' },
+  { title: 'Commercial Appliances Repair', cost: '100.00 $', duration: '1 hr 15 mins' },
 ];
 
 const timeSlots = [
@@ -93,7 +101,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+      className="fixed text-black inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
       onClick={e => {
         if (e.target === e.currentTarget) onClose();
       }}
@@ -107,9 +115,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         </button>
         {step === 1 && (
           <div className="flex flex-col gap-6">
-            <h2 className="text-3xl font-bold mb-2">Select a time</h2>
+            <h2 className="text-3xl font-bold mb-2">Request an appointment</h2>
             <div>
-              <label className="mt-4 mb-2 block text-sm font-medium text-gray-700">
+              <label className="mt-4 mb-2 block text-xl font-semibold text-gray-700">
                 Select date
               </label>
               <input
@@ -120,16 +128,16 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   errors.date ? 'border-red-500' : 'border-gray-300'
                 }`}
               />
-              {errors.date && <p className="text-sm text-red-500 mt-1">{errors.date}</p>}
+              {errors.date && <p className="text-xl text-red-500 mt-1">{errors.date}</p>}
             </div>
             <div className="">
-              <p className="mt-4 mb-2 block text-sm font-medium text-gray-700">Select time</p>
+              <p className="mt-4 mb-2 block text-xl font-semibold text-gray-700">Select time</p>
               <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
                 {timeSlots.map(slot => (
                   <button
                     key={slot}
                     onClick={() => setTime(slot)}
-                    className={`rounded-lg border px-4 py-3 text-sm font-medium transition ${
+                    className={`rounded-lg border px-4 py-3 text-xl font-medium transition ${
                       time === slot ? 'bg-black text-white' : 'bg-white text-black'
                     } ${errors.time ? 'border-red-500' : 'border-gray-300'}`}
                   >
@@ -139,10 +147,10 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
 
-            {errors.time && <p className="text-sm text-red-500 mt-1">{errors.time}</p>}
+            {errors.time && <p className="text-xl text-red-500 mt-1">{errors.time}</p>}
 
             <div>
-              <label className="mt-4 mb-2 block text-sm font-medium text-gray-700">
+              <label className="mt-4 mb-2 block text-xl font-semibold text-gray-700">
                 Select service
               </label>
               <select
@@ -156,18 +164,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                   Select a service
                 </option>
                 {services.map(({ title }) => (
-                  <option key={title} value={title}>
+                  <option key={title} value={title} className='text-xl'>
                     {title}
                   </option>
                 ))}
               </select>
-              {errors.service && <p className="text-sm text-red-500 mt-1">{errors.service}</p>}
+              {errors.service && <p className="text-xl text-red-500 mt-1">{errors.service}</p>}
             </div>
 
             <button
               onClick={() => setStep(2)}
               disabled={!date || !time || !service}
-              className="mt-6 w-full rounded-md bg-black px-6 py-3 text-white text-lg font-semibold transition hover:opacity-90"
+              className="mt-6 w-full rounded-md bg-black px-6 py-3 text-white text-xl font-semibold transition hover:opacity-90"
             >
               Continue
             </button>
@@ -252,13 +260,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={() => setStep(1)}
-                  className="w-full rounded-md border border-black px-6 py-3 text-black text-lg font-medium"
+                  className="w-full rounded-md border border-black px-6 py-3 text-black text-xl font-medium"
                 >
                   Back
                 </button>
                 <button
                   type="submit"
-                  className="w-full rounded-md bg-black px-6 py-3 text-white text-lg font-semibold hover:opacity-90"
+                  className="w-full rounded-md bg-black px-6 py-3 text-white text-xl font-semibold hover:opacity-90"
                 >
                   Book Appointment
                 </button>
@@ -266,7 +274,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
             {/* <div className="w-full h-fit mt-14 md:w-[30%] px-4 py-2 border border-gray-300 rounded-lg flex flex-col">
                 <p className="text-2xl font-medium text-gray-700"> Oven repair</p>
-                <p className="text-sm font-medium">65$ - 35mins</p>
+                <p className="text-xl font-medium">65$ - 35mins</p>
             </div> */}
           </form>
         )}

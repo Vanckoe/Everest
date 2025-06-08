@@ -136,7 +136,10 @@ export default function Services() {
         <div className="text-2xl font-semibold italic md:text-base">
           <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 02 - Services
         </div>
-        <p className="text-[3rem] md:text-[2.75rem] leading-[100%] font-semibold">
+        <p
+          data-aos="fade-up"
+          className="text-[3rem] md:text-[2.75rem] leading-[100%] font-semibold"
+        >
           Broken Appliance? <br className="md:hidden" />
           We’ll Fix It Today! <br />
           Choose Top-level <br className="md:hidden" />
@@ -155,16 +158,20 @@ export default function Services() {
         "
       >
         {cards.map(({ image, title, subtitle, cost, time }, i) => (
-          <div key={i} className="h-full flex flex-row-reverse  md:flex-col py-10 md:p-8">
-            <div className="relative min-w-40 mr-5 -mt-5">
+          <div
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay={i * 50}
+            key={i}
+            className="h-full flex flex-row-reverse items-center md:flex-col py-10 md:p-8"
+          >
+            <div className="relative min-w-40 md:mr-5 -mt-5">
               <Image
                 src={image}
                 alt={title}
                 width={400}
                 height={240}
-
-                className="h-[20rem] md:h-64 w-full object-contain rounded-[1.25rem]"
-
+                className="w-[20rem]  md:h-64 md:w-full object-contain rounded-[1.25rem]"
               />
             </div>
             <div className="h-full flex flex-col gap-3 md:gap-6">

@@ -1,58 +1,22 @@
-import React from "react";
+import React from 'react'
+import Image from 'next/image'
 
-type LogoProps = {
-  color?: string;
-  width?: string;
-  height?: string;
-  className?: string;  // Add this line
-};
+interface LogoProps {
+  className?: string;
+}
 
-const Logo: React.FC<LogoProps> = ({
-  color = "black",
-  width = "2.1875rem",
-  height = "2.4375rem",
-  className = "",  // Add this line
-}) => {
+const Logo = ({ className = 'size-16 md:size-14 rounded-2xl md:rounded-[0.7rem]' }: LogoProps) => {
   return (
-    <svg
-      width={width}
-      height={height}
-      viewBox="0 0 53 60"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}  // Add this line
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M47.0352 13.8785C47.348 14.2697 47.6091 14.5977 47.8678 14.9219C40.6386 27.4427 33.481 39.8386 26.1574 52.5215C25.0988 50.7528 24.305 49.4255 23.5052 48.0891C30.0418 36.729 36.5488 25.4198 43.1897 13.8785H37.9971C38.3076 14.2834 38.5595 14.6122 38.7977 14.9227C32.3546 26.1093 26.0106 37.1247 19.7068 48.0686C21.8507 51.7672 23.8469 55.2095 26.1506 59.1837C34.9818 43.8569 43.5306 29.0211 52.2568 13.8785H47.0352Z"
-        fill={color}
+    <div>
+      <Image 
+        src="/img/icons/logo.jpeg" 
+        width={100} 
+        height={100} 
+        alt="Logo" 
+        className={className}
       />
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M14.1897 13.8772H9.0694C12.7118 20.2206 16.186 26.2701 19.6944 32.3806C18.8557 33.7817 18.0338 35.1576 17.0391 36.8198C12.7103 29.3257 8.54428 22.1125 4.3783 14.8993C4.62565 14.5637 4.86994 14.2326 5.13327 13.8772H0C5.73145 23.8211 11.2871 33.4582 17.0589 43.4728C19.3527 39.5116 21.4174 35.9461 23.4989 32.3539C20.1487 26.5357 16.8564 20.8172 13.4941 14.9792C13.7164 14.6269 13.9432 14.2684 14.1897 13.8772Z"
-        fill={color}
-      />
-      <mask
-        id="mask0_209_2564"
-        style={{ maskType: "luminance" }}
-        maskUnits="userSpaceOnUse"
-        x="18"
-        y="0"
-        width="17"
-        height="28"
-      >
-        <path
-          d="M21.533 13.8793C23.0856 11.1967 24.5483 8.66846 26.1275 5.93934C27.7104 8.67683 29.1625 11.1868 30.7196 13.8793C29.1679 16.562 27.7051 19.0902 26.1259 21.8194C24.5422 19.0811 23.0909 16.5712 21.533 13.8793ZM26.1275 0.000125885C23.3679 4.77037 20.8108 9.18977 18.0977 13.8793C20.8199 18.5857 23.3573 22.9723 26.1252 27.7578C28.8855 22.9876 31.4419 18.5689 34.1558 13.8793C31.4335 9.17303 28.8962 4.78559 26.1275 0.000125885Z"
-          fill="white"
-        />
-      </mask>
-      <g mask="url(#mask0_209_2564)">
-        <rect x="18.0977" y="-0.151" width="16.0581" height="27.92" fill={color} />
-      </g>
-    </svg>
-  );
-};
+    </div>
+  )
+}
 
-export default Logo;
+export default Logo
