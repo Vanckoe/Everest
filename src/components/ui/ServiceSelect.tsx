@@ -23,13 +23,13 @@ const ServiceSelect = ({ options, value, onChange, error }: Props) => {
 
   return (
     <div className="w-full">
-      <p className="mt-4 mb-2 block text-3xl md:text-2xl font-semibold text-gray-700">
+      <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
         Choose services
       </p>
       <Listbox value={value} onChange={onChange}>
         <div className="relative">
           <Listbox.Button
-            className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-6 px-9 pr-12 text-left text-black text-2xl md:text-xl  ${
+            className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 pr-12 text-left text-black text-2xl md:text-xl  ${
               error ? 'border-2 border-red-500' : ''
             }`}
           >
@@ -60,7 +60,7 @@ const ServiceSelect = ({ options, value, onChange, error }: Props) => {
           </Listbox.Options>
         </div>
       </Listbox>
-      {error && <p className="text-xl text-red-500 mt-1">{error}</p>}
+      {/* {error && <p className="text-xl text-red-500 mt-1">{error}</p>} */}
     </div>
   );
 };

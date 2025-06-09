@@ -20,7 +20,7 @@ const CustomDatePicker: React.FC<Props> = ({ value, onChange, error }) => {
           onChange={onChange}
           placeholderText="Select a date"
           dateFormat="yyyy-MM-dd"
-          className={`w-full rounded-[1.25rem] bg-[#e0e0e0] text-3xl md:text-2xl py-4 px-9 text-black placeholder:text-2xl active:outline-none  placeholder:font-normal placeholder:text-[#9A9A9A] ${
+          className={`w-full rounded-[1.25rem] bg-[#e0e0e0] text-2xl md:text-xl py-3 px-9 text-black placeholder:text-2xl active:outline-none  placeholder:font-normal placeholder:text-[#9A9A9A] ${
             error ? 'border-2 border-red-500' : ''
           }`}
         />
