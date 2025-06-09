@@ -20,8 +20,8 @@ const ContactSection = () => {
       {/* Contact Card */}
       <div
         className="relative z-10 rounded-xl bg-[#d8e7ef]
-          w-[24.0625rem] md:w-[25.625rem]
-          min-h-[17.5rem] md:min-h-[25rem]
+          md:w-[25.625rem]
+          md:min-h-[25rem]
           px-8 py-10 md:px-8 md:py-16
           mx-auto md:mx-0 
           mt-10 md:mt-[-4rem]"
@@ -31,7 +31,7 @@ const ContactSection = () => {
           <li>
             <a
               href="tel:+18132901625"
-              className="text-[#121212] hover:underline text-2xl md:text-xl"
+              className="text-[#121212] underline text-2xl md:text-xl"
             >
               +1(813) 290-1625
             </a>

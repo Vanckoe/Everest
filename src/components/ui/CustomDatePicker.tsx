@@ -4,7 +4,7 @@ import React from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Calendar } from 'lucide-react';
-import { format } from 'date-fns';
+import { format, parse } from 'date-fns';
 
 interface Props {
   value: Date | null;
@@ -28,7 +28,7 @@ const CustomDatePicker: React.FC<Props> = ({ value, onChange, error }) => {
           }}
           placeholderText="Select a date"
           dateFormat="dd-MM-yyyy" 
-          className={`focus:outline-none w-full rounded-[1.25rem] bg-[#e0e0e0] text-2xl md:text-xl py-3 px-9 text-black placeholder:text-2xl active:outline-none ${
+          className={`focus:outline-none w-full rounded-[1.25rem] bg-[#e0e0e0] text-2xl md:text-xl py-4 md:py-3 px-9 text-black placeholder:text-2xl active:outline-none ${
             error ? 'border-2 border-red-500' : ''
           }`}
         />

@@ -6,6 +6,7 @@ import { z } from 'zod';
 import CustomDatePicker from '../ui/CustomDatePicker';
 import ServiceSelect from '../ui/ServiceSelect';
 import { sendToTelegram } from '@/api/queries';
+import { parse } from 'date-fns';
 
 /* ---------- schema ---------- */
 export const appointmentSchema = z.object({
@@ -160,8 +161,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <label className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
               Select date
             </label>
+
             <CustomDatePicker
-              value={date ? new Date(date) : null}
+              value={date ? parse(date, 'dd-MM-yyyy', new Date()) : null}
               onChange={(formatted: string | null) => {
                 if (formatted) setDate(formatted);
               }}
@@ -179,7 +181,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <button
                   key={slot}
                   onClick={() => setTime(slot)}
-                  className={`rounded-[1.25rem] text-3xl md:text-xl py-3 flex items-center justify-center
+                  className={`rounded-[1.25rem] text-2xl md:text-xl py-3 flex items-center justify-center
                     ${time === slot ? 'bg-accent text-white' : 'bg-[#dfdddd] text-black'}
                     ${errors.time ? 'border-2 border-red-500' : ''} transition-colors`}
                 >
@@ -214,7 +216,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {/* -------- STEP 2 -------- */}
         {step === 2 && (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-3">
-            <h2 className="text-3xl md:text-2xl font-bold mb-2">Enter your details</h2>
+            <h2 className="text-4xl md:text-2xl font-bold mb-2">Enter your details</h2>
 
             {/* имя / фамилия */}
             <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
