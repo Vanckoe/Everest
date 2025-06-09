@@ -5,6 +5,7 @@ import toast from 'react-hot-toast';
 import { z } from 'zod';
 import CustomDatePicker from '../ui/CustomDatePicker';
 import ServiceSelect from '../ui/ServiceSelect';
+import { sendToTelegram } from '@/api/queries';
 
 /* ---------- schema ---------- */
 export const appointmentSchema = z.object({
@@ -116,10 +117,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       date,
       time,
       service,
-      ...data
+      ...data,
     };
 
     console.log(combinedData);
+
+    // Send data to Telegram
+    await sendToTelegram(combinedData);
 
     await toast.promise(new Promise(res => setTimeout(res, 600)), {
       loading: 'Booking...',
@@ -148,7 +152,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {/* -------- STEP 1 -------- */}
         {step === 1 && (
           <div className="flex flex-col gap-2 md:gap-0">
-            <h2 className="text-4xl md:text-2xl font-bold mb-2">Request <br className='md:hidden'/> an appointment</h2>
+            <h2 className="text-4xl md:text-2xl font-bold mb-2">
+              Request <br className="md:hidden" /> an appointment
+            </h2>
 
             {/* date */}
             <label className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
