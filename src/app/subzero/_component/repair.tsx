@@ -24,23 +24,21 @@ export default function SubZeroRepairSection() {
             employ the best technicians to handle repair of such luxury brands as Sub-Zero. Here’s why <br /> 
             you should choose us:
           </p>
-
-          <ul className="mt-6 space-y-4">
+            <ul className="mt-6 space-y-4">
             {[
-              "We use genuine parts. Thus, we guarantee high-quality repairs + a longer lifespan of appliances afterward.",
-              "Our technicians arrive in under 24 hours. You avoid unnecessary delays and save time, so that your appliances are up and running.",
-              "We guarantee accurate diagnostics. It helps identify and fix problems without mistakes.",
-              "Preventative maintenance and factory updates. You can call us if you want to make sure that your devices work properly.",
-              "We have a clear fee structure. Midwest Standards provides data on the prices for part replacement, repairs, maintenance, and so on. Thus, you can plan your budget for the repair properly and won't have surprises in the future.",
+                "We use genuine parts. Thus, we guarantee high-quality repairs + a longer lifespan of appliances afterward.",
+                "Our technicians arrive in under 24 hours. You avoid unnecessary delays and save time, so that your appliances are up and running.",
+                "We guarantee accurate diagnostics. It helps identify and fix problems without mistakes.",
+                "Preventative maintenance and factory updates. You can call us if you want to make sure that your devices work properly.",
+                "We have a clear fee structure. Midwest Standards provides data on the prices for part replacement, repairs, maintenance, and so on. Thus, you can plan your budget for the repair properly and won't have surprises in the future.",
             ].map((text, idx) => (
-              <li key={idx} className="flex items-start">
-                <Repair className="bg-[#ececec] rounded-full w-4 h-4 mt-1 mr-3 shrink-0" />
-                <p className="text-left text-[1.45rem] md:text-base text-[#888888]">{text}</p>
-              </li>
+                <li key={idx} className="flex items-start gap-10 md:gap-4">
+                <Repair className="bg-[#ececec] rounded-full w-10 h-10 md:w-6 md:h-6 shrink-0" />
+                <p className="text-left text-[1.65rem] leading-snug md:text-base text-[#888888]">{text}</p>
+                </li>
             ))}
-          </ul>
-
-          <p className="mt-6 text-left text-[1.65rem] md:text-base text-gray-700">
+            </ul>
+          <p className="mt-6 text-left text-[1.65rem] md:text-base text-#555555">
             All our technicians have the right skills and also receive advanced training. They handle modern devices and follow the latest industry standards for Sub-Zero repair.
           </p>
         </div>
@@ -55,12 +53,12 @@ export default function SubZeroRepairSection() {
         </div>
 
         {/* Мобильная версия картинки */}
-        <div className="block md:hidden mt-[60px]">
-          <img
+        <div className="block md:hidden mt-[60px] overflow-hidden px-[2,5rem]">
+        <img
             src="img/Subzero/repair.jpg"
             alt="Sub-Zero Appliance"
-            className="mx-auto w-full h-[480px] rounded-[20px] px-[15px] object-cover"
-          />
+            className="mx-auto w-full h-[480px] rounded-[20px] object-cover"
+        />
         </div>
       </div>
     </section>
