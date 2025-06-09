@@ -162,9 +162,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </label>
             <CustomDatePicker
               value={date ? new Date(date) : null}
-              onChange={d => d && setDate(d.toISOString())}
+              onChange={(formatted: string | null) => {
+                if (formatted) setDate(formatted);
+              }}
               error={errors.date}
             />
+
             {/* {errors.date && <p className="text-xl text-red-500 mt-1">{errors.date}</p>} */}
 
             {/* time */}
@@ -218,7 +221,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <input
                 name="firstName"
                 placeholder="First name"
-                className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+                className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                              errors.firstName ? 'border-2 border-red-500' : ''
                            }`}
@@ -226,7 +229,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <input
                 name="lastName"
                 placeholder="Last name"
-                className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+                className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                              errors.lastName ? 'border-2 border-red-500' : ''
                            }`}
@@ -237,7 +240,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <input
               name="phone"
               placeholder="Phone number"
-              className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+              className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                          text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                            errors.phone ? 'border-2 border-red-500' : ''
                          }`}
@@ -245,7 +248,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <input
               name="email"
               placeholder="Email"
-              className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+              className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                          text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                            errors.email ? 'border-2 border-red-500' : ''
                          }`}
@@ -256,7 +259,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <input
               name="street"
               placeholder="Street Address"
-              className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+              className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                          text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                            errors.street ? 'border-2 border-red-500' : ''
                          }`}
@@ -264,7 +267,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             <input
               name="apt"
               placeholder="Apt / Suite (optional)"
-              className="w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+              className="focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                          text-black placeholder:text-2xl placeholder:text-[#9A9A9A]"
             />
 
@@ -272,7 +275,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <input
                 name="city"
                 placeholder="City"
-                className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+                className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                              errors.city ? 'border-2 border-red-500' : ''
                            }`}
@@ -280,7 +283,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <input
                 name="state"
                 placeholder="State"
-                className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 text-3xl md:text-2xl
+                className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                              errors.state ? 'border-2 border-red-500' : ''
                            }`}
@@ -288,12 +291,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* кнопки */}
-            <div className="mt-6 flex flex-col md:flex-row gap-4">
+            <div className="mt-4 flex flex-col md:flex-row gap-4">
               <button
                 type="button"
                 onClick={() => setStep(1)}
                 className="md:w-[30%] font-bold text-3xl md:text-2xl text-black border border-black
-                           rounded-[1.5rem] py-5 active:scale-[0.97]"
+                           rounded-[1.125rem] py-4 active:scale-[0.97]"
               >
                 Back
               </button>
@@ -301,7 +304,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               <button
                 type="submit"
                 className="md:w-[70%] font-bold text-3xl md:text-2xl text-white flex justify-center items-center
-                           gap-6 bg-accent rounded-[1.5rem] py-5 active:scale-[0.97]"
+                           gap-6 bg-accent rounded-[1.125rem] py-5 md:py-4 active:scale-[0.97]"
               >
                 Book Appointment
               </button>
