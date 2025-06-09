@@ -51,8 +51,8 @@ const DesktopFooter = () => {
             <Logo className='md:size-28 rounded-2xl'/>
           </div>
           <p className="text-lg leading-relaxed text-[#9FAEB6] mb-8">
-            We are always here to assist you with any <br />
-            questions or requests. Reach out to us in the <br />
+            We are always here to assist you with any <br className='hidden md:block'/>
+            questions or requests. Reach out to us in the <br className='hidden md:block'/>
             way that suits you best.
           </p>
         </div>
