@@ -7,6 +7,7 @@ import CustomDatePicker from '../ui/CustomDatePicker';
 import ServiceSelect from '../ui/ServiceSelect';
 import { sendToTelegram } from '@/api/queries';
 import { parse } from 'date-fns';
+// import InputMask from 'react-input-mask';
 
 /* ---------- schema ---------- */
 export const appointmentSchema = z.object({
@@ -56,6 +57,7 @@ const timeSlots = [
 
 /* ───────────────────────────────────────────────────────── */
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
+  const [phone, setPhone] = useState('');
   const [step, setStep] = useState(1);
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -77,6 +79,18 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       document.body.style.overflow = 'unset';
     };
   }, [isOpen]);
+  const formatPhoneNumber = (value: string) => {
+    const digits = value.replace(/\D/g, '').slice(0, 10);
+    const match = digits.match(/^(\d{0,3})(\d{0,3})(\d{0,4})$/);
+
+    if (!match) return value;
+
+    const [, area, middle, last] = match;
+
+    if (digits.length <= 3) return `(${area}`;
+    if (digits.length <= 6) return `(${area}) ${middle}`;
+    return `(${area}) ${middle}-${last}`;
+  };
 
   /* validation step-1 */
   const validateStep1 = () => {
@@ -113,7 +127,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       return;
     }
 
-    // Combine step 1 and step 2 data
     const combinedData = {
       date,
       time,
@@ -122,8 +135,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     };
 
     console.log(combinedData);
-
-    // Send data to Telegram
     await sendToTelegram(combinedData);
 
     await toast.promise(new Promise(res => setTimeout(res, 600)), {
@@ -157,11 +168,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               Request <br className="md:hidden" /> an appointment
             </h2>
 
-            {/* date */}
             <label className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
               Select date
             </label>
-
             <CustomDatePicker
               value={date ? parse(date, 'dd-MM-yyyy', new Date()) : null}
               onChange={(formatted: string | null) => {
@@ -169,10 +178,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               }}
               error={errors.date}
             />
-
             {/* {errors.date && <p className="text-xl text-red-500 mt-1">{errors.date}</p>} */}
-
-            {/* time */}
             <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
               Select time
             </p>
@@ -190,8 +196,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               ))}
             </div>
             {/* {errors.time && <p className="text-xl text-red-500 mt-1">{errors.time}</p>} */}
-
-            {/* service */}
             <ServiceSelect
               options={services}
               value={service}
@@ -217,8 +221,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         {step === 2 && (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4 md:gap-3">
             <h2 className="text-4xl md:text-2xl font-bold mb-2">Enter your details</h2>
-
-            {/* имя / фамилия */}
             <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
               <input
                 name="firstName"
@@ -237,16 +239,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                            }`}
               />
             </div>
-
-            {/* phone / email */}
             <input
               name="phone"
               placeholder="Phone number"
+              value={phone}
+              onChange={e => setPhone(formatPhoneNumber(e.target.value))}
               className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
-                         text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
-                           errors.phone ? 'border-2 border-red-500' : ''
-                         }`}
+             text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
+               errors.phone ? 'border-2 border-red-500' : ''
+             }`}
             />
+
             <input
               name="email"
               placeholder="Email"
@@ -255,8 +258,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                            errors.email ? 'border-2 border-red-500' : ''
                          }`}
             />
-
-            {/* адрес */}
             <h3 className="text-3xl md:text-2xl font-semibold mt-2">Address</h3>
             <input
               name="street"
@@ -291,8 +292,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                            }`}
               />
             </div>
-
-            {/* кнопки */}
             <div className="mt-4 flex flex-col md:flex-row gap-4">
               <button
                 type="button"

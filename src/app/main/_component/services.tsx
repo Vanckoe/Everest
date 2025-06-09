@@ -159,9 +159,9 @@ export default function Services() {
       >
         {cards.map(({ image, title, subtitle, cost, time }, i) => (
           <div
-            data-aos="fade-up"
-            data-aos-offset="50"
-            data-aos-delay={i * 50}
+            // data-aos="fade-up"
+            // data-aos-offset="50"
+            // data-aos-delay={i * 50}
             key={i}
             className="h-full flex flex-row-reverse items-center md:flex-col py-10 md:p-8"
           >
