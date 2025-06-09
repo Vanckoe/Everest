@@ -3,6 +3,7 @@
 import { Listbox } from '@headlessui/react';
 import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import Services from '../../app/main/_component/services';
 
 type Service = {
   title: string;
@@ -22,6 +23,9 @@ const ServiceSelect = ({ options, value, onChange, error }: Props) => {
 
   return (
     <div className="w-full">
+      <p className="mt-4 mb-2 block text-3xl md:text-2xl font-semibold text-gray-700">
+        Choose services
+      </p>
       <Listbox value={value} onChange={onChange}>
         <div className="relative">
           <Listbox.Button
@@ -34,8 +38,8 @@ const ServiceSelect = ({ options, value, onChange, error }: Props) => {
               <ChevronDown size={20} />
             </span>
           </Listbox.Button>
-          <Listbox.Options className="absolute z-10 mt-2 max-h-60 w-full overflow-auto rounded-xl bg-white py-1 shadow-xl ring-1 ring-black/5 focus:outline-none">
-            {options.map((option) => (
+          <Listbox.Options className="absolute -top-[16rem] left-0 z-10 mt-2 max-h-60 w-full overflow-auto rounded-xl bg-white py-1 shadow-xl ring-1 ring-black/5 focus:outline-none">
+            {options.map(option => (
               <Listbox.Option
                 key={option.title}
                 value={option.title}
@@ -56,7 +60,7 @@ const ServiceSelect = ({ options, value, onChange, error }: Props) => {
           </Listbox.Options>
         </div>
       </Listbox>
-      {error && <p className="text-2xl md:text-2xl  text-red-500 mt-1">{error}</p>}
+      {error && <p className="text-xl text-red-500 mt-1">{error}</p>}
     </div>
   );
 };
