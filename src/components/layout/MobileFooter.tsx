@@ -15,19 +15,18 @@ const MobileFooter = () => {
       {/* Логотип и описание */}
       <div className="flex flex-col pb-[1rem] items-start">
         {/* <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[12rem] h-[12rem] mb-4" /> */}
-        <Logo className="md:size-28 rounded-2xl mb-5" />
-        <p className="text-3xl text-[#9FAEB6] mb-6">
-          We are always here to assist you with any <br /> questions or requests. Reach out to us in{' '}
-          <br />
-          the way that suits you best.
+        <Logo className="md:size-28 rounded-2xl mb-9" />
+        <p className="text-3xl text-[#9FAEB6]">
+          We are always here to assist you with any questions or requests. Reach out to us in the
+          way that suits you best.
         </p>
       </div>
 
       {/* Ссылки */}
       <div className="flex flex-col pt-[4rem] gap-16 mb-8">
         <div>
-          <h3 className="text-4xl font-semibold mb-4">Company</h3>
-          <ul className="space-y-2 text-3xl text-[#9FAEB6]">
+          <h3 className="text-4xl font-semibold mb-7">Company</h3>
+          <ul className="grid grid-cols-2 space-y-2 text-3xl text-[#9FAEB6]">
             <li>
               <a href="#about">About us</a>
             </li>
@@ -44,11 +43,8 @@ const MobileFooter = () => {
               <a href="#faq">FAQ</a>
             </li>
             <li>
-              <a href="#booking-steps-mobile">
-                Steps
-              </a>
+              <a href="#booking-steps-mobile">Steps</a>
             </li>
-
             <li>
               <a href="#privacy">Privacy Policy</a>
             </li>
@@ -58,7 +54,7 @@ const MobileFooter = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-4xl font-semibold mb-4">Brands</h3>
+          <h3 className="text-4xl font-semibold mb-7">Brands</h3>
           <ul className="space-y-2 text-3xl text-[#9FAEB6]">
             <li>
               <a href="/sub-zero-appliance-repair" target="_blank">
@@ -100,11 +96,11 @@ const MobileFooter = () => {
         </a>
       </div>
 
-      <div className="w-full h-px bg-[#234151] mb-6"></div>
+      <div className="w-full h-px bg-[#234151] mb-16"></div>
 
       {/* WhatsApp и копирайт */}
       <div className="flex flex-col items-center space-y-2 gap-4">
-        <p className="text-[#9FAEB6] text-2xl pb-[2.5rem] font-medium text-center">
+        <p className="text-[#9FAEB6] text-2xl pb-[3.5rem] font-medium text-center">
           © 2025 EVEREST APPLIANCE REPAIR
         </p>
       </div>
