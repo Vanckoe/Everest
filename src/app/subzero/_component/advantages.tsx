@@ -76,7 +76,7 @@ export default function Advantages() {
   return (
     <>
       {/* ПК версия */}
-      <div className="hidden md:flex px-16 py-[4.5rem]">
+      <div className="hidden md:flex px-10 py-[4.5rem]">
         {/* Левая часть */}
         <div className="w-1/2 flex flex-col pr-[2rem]">
           <div className="md:sticky md:top-[6rem] flex flex-col gap-[1rem]">

@@ -16,6 +16,7 @@ import ForWho from './_component/forWho';
 import ForWhoMobile from './_component/forWhoMobile';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
 import NewHero from './_component/newHero';
+import Repair from './_component/repair';
 
 const Subzero = () => {
   return (
@@ -34,6 +35,7 @@ const Subzero = () => {
       <About />
       <Reviews />
       <Advantages />
+      <Repair/>
       <BrandGrid />
       <Appliances />
       <ForWho />
