@@ -33,7 +33,7 @@ const NewHero = () => {
 
   return (
     <div
-      className="w-full relative bg-no-repeat bg-[length:65%] md:bg-[length:55%] bg-[position:right_14rem] md:bg-right-top"
+      className="w-full relative bg-no-repeat bg-[length:65%] md:bg-[length:55%] bg-[position:right_15rem] md:bg-right-top"
       style={{
         backgroundImage: "url('/bg/nemHeroBg-(1).png')",
       }}
@@ -49,9 +49,8 @@ const NewHero = () => {
             [ Brand appliance service ]
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
-            <p className="text-[6.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
+            <p className="text-[5.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
               Professional <br /> Sub-Zero appliance <br /> repair in Chicago, <br className="md:hidden" /> {' '}
-              <span className="md:hidden">&</span>
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -62,9 +61,9 @@ const NewHero = () => {
           <div className="flex flex-row items-end">
             <p
               data-aos="fade-up"
-              className="text-[6.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
+              className="text-[5.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
             >
-              <span className="hidden md:inline">&</span> Local
+              <span className="hidden md:inline"></span> Local
             </p>
             <p
               data-aos="fade-right"
