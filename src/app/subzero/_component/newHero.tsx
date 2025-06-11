@@ -40,7 +40,7 @@ const NewHero = () => {
     >
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      <div className="px-10 mt-10 md:mt-8">
+      <div className="px-10 mt-10 md:mt-8 py-[7.5rem]">
         <div className="flex w-full flex-col md:w-[55.125rem]">
           <p
             data-aos="fade-up"
@@ -50,7 +50,7 @@ const NewHero = () => {
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
             <p className="text-[5.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
-              Professional <br /> Sub-Zero appliance <br /> repair in Chicago, <br className="md:hidden" /> {' '}
+              Professional <br /> Sub-Zero appliance <br /> repair in <br className="md:hidden" /> {' '}
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -63,7 +63,7 @@ const NewHero = () => {
               data-aos="fade-up"
               className="text-[5.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
             >
-              <span className="hidden md:inline"></span> Local
+              <span className="hidden md:inline"></span> Chicago
             </p>
             <p
               data-aos="fade-right"
@@ -107,7 +107,7 @@ const NewHero = () => {
           </div>
         </div>
         <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
-          <p className=" md:hidden text-center mx-auto mt-2 text-[1.6rem] font-normal opacity-70">
+          <p className=" md:hidden text-center mx-auto mt-10 text-[1.6rem] font-normal opacity-70">
             All specialists are licensed, insured, secured by <br /> collateral and have passed a
             background check.
           </p>

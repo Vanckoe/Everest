@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative w-full px-16 bg-white md:bg-transparent overflow-visible pt-0 md:pt-0 md:pb-[24rem] pb-10"
+      className="relative w-full px-6 md:px-16 bg-white md:bg-transparent overflow-visible md:pt-0 md:pb-[24rem] py-[4.5rem]"
     >
       {/* Google Map — только на десктопе */}
       <div className="hidden md:block absolute inset-0 w-full h-[45rem]">
@@ -16,48 +16,57 @@ const ContactSection = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-
-      {/* Contact Card */}
-      <div
-        className="relative z-10 rounded-xl bg-[#d8e7ef]
-          w-[24.0625rem] md:w-[25.625rem]
-          min-h-[17.5rem] md:min-h-[25rem]
-          px-8 py-10 md:px-8 md:py-16
-          mx-auto md:mx-0 
-          mt-10 md:mt-[-4rem]"
-      >
-        <h2 className="text-4xl md:text-3xl font-semibold mb-6 text-black">Contact info:</h2>
-        <ul className="space-y-4 text-xl">
-          <li>
-            <a
-              href="tel:+18132901625"
-              className="text-[#121212] hover:underline text-2xl md:text-xl"
-            >
-              +1(813) 290-1625
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto:info@midweststandards.com"
-              className="text-[#121212] hover:underline text-2xl md:text-xl"
-            >
-              everestprimeservices@gmail.com
-            </a>
-          </li>
-          <li>
-            <p>EVEREST APPLIANCE REPAIR <br /> 197 S Pick Ave <br /> ELMHURST, Illinois 60126</p>
-          </li>
-          <li>
-            <a
-              href="https://www.google.com/maps/place/Midwest+Standards/@42.046494,-88.132977,17z"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#121212] font-bold hover:underline text-2xl md:text-xl"
-            >
-              → Open the map
-            </a>
-          </li>
-        </ul>
+      
+      {/* Контактная карточка по центру */}
+      <div className="relative z-10">
+        <div
+          className="
+            w-full md:w-[25.625rem]
+            bg-[#d8e7ef] rounded-xl
+            px-4 sm:px-6 md:px-8
+            py-12 md:py-8
+            md:mt-[-3.85rem]
+          "
+        >
+          <h2 className="text-5xl md:text-3xl font-semibold mb-6 text-black">
+            Contact info:
+          </h2>
+          <ul className="space-y-4 text-xl">
+            <li>
+              <a
+                href="tel:+18132901625"
+                className="text-[#121212] hover:underline text-3xl md:text-xl"
+              >
+                +1(813) 290-1625
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:info@midweststandards.com"
+                className="text-[#121212] hover:underline text-3xl md:text-xl"
+              >
+                everestprimeservices@gmail.com
+              </a>
+            </li>
+            <li>
+              <p className="text-2xl md:text-xl">
+                EVEREST APPLIANCE REPAIR <br />
+                197 S Pick Ave <br />
+                ELMHURST, Illinois 60126
+              </p>
+            </li>
+            <li>
+              <a
+                href="https://www.google.com/maps/place/Midwest+Standards/@42.046494,-88.132977,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#121212] font-bold hover:underline text-3xl md:text-xl"
+              >
+                → Open the map
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );

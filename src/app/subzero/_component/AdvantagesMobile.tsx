@@ -60,7 +60,7 @@ const advantages = [
 
 export default function AdvantagesMobile() {
   return (
-    <div className="block md:hidden px-6 py-8">
+    <div className="block md:hidden px-6 py-[7.5rem]">
       {/* Заголовок и описание */}
       <div className="mb-10">
         <h2 className="text-[#001f3f] text-[3.65rem] font-bold leading-tight mb-4">
