@@ -10,7 +10,6 @@ const AboutRepairCompany = () => {
       <div className="flex flex-col md:flex-row justify-between items-start gap-[1.875rem]">
         <div className="flex flex-col gap-[0.3125rem] md:w-1/2">
           <div className="text-2xl font-semibold italic md:text-base">
-            <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 03 - About us
           </div>
           <h1 data-aos="fade-up" className="font-bold mt-5 leading-[100%] text-[3rem]">
             Trusted Appliance Repair Company in Chicago
@@ -20,32 +19,32 @@ const AboutRepairCompany = () => {
             data-aos-delay={300}
             className="font-medium mt-6 text-xl text-[#A8ABB8]"
           >
-            At Everest Appliance Repair, we specialize in fast and reliable appliance repair
-            services in Chicago and surrounding areas. With years of hands-on experience, we help
-            homeowners restore the performance of their most essential appliances.
+            Investing in high-end home appliances is an investment in 
+            comfort and convenience for years to come. At Midwest Standards, we understand the 
+            importance of maintaining these valuable assets.
           </p>
           <p
             data-aos="fade-up"
             data-aos-delay={500}
             className="font-medium text-xl my-5 text-[#A8ABB8]"
           >
-            Whether you need refrigerator repair, washer and dryer repair, oven or stove repair, or
-            dishwasher troubleshooting, our certified technicians are here to help — often with
-            same-day appliance service.
+            Our professional repair services are designed to ensure that your 
+            luxury appliances receive the best care possible. Whether you need diagnostic
+            and repair services, preventative maintenance, customer instruction, or factory updates,
+            our team of highly-trained experts is here to help.
           </p>
           <p data-aos="fade-up" data-aos-delay={700} className="font-medium text-xl text-[#A8ABB8]">
             {/* We work with all major brands and provide: <br /> ✅ Accurate diagnostics and
             professional repair <br />✅ Affordable pricing and transparent service <br />✅
             Preventative maintenance and installation help <br />✅ Warranty on labor and parts{' '}
             <br />*/}
-             Don’t let a broken appliance disrupt your day — choose Everest Appliance Repair, 
-            your trusted local expert in home appliance repairs in Chicago.
+            Trust your luxury appliances to the experts at Midwest Standards!
           </p>
         </div>
         <div className="flex md:w-1/2 gap-[0.375rem]">
           <div className="w-2/3">
             <Image
-              src="/img/about/1pic.jpg"
+              src="/img/Subzero/AboutRepair-1.jpg"
               width={800}
               height={1000}
               alt="picture 1"
@@ -54,14 +53,14 @@ const AboutRepairCompany = () => {
           </div>
           <div className="w-1/3 flex flex-col gap-[0.375rem]">
             <Image
-              src="/img/about/2pic.jpg"
+              src="/img/Subzero/AboutRepair-2.jpg"
               width={400}
               height={400}
               alt="picture 2"
               className="rounded-xl object-cover w-full h-[50%]"
             />
             <Image
-              src="/img/about/3pic.jpg"
+              src="/img/Subzero/AboutRepair-3.jpg"
               width={400}
               height={400}
               alt="picture 3"

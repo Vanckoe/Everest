@@ -12,6 +12,7 @@ import NewHero from './_component/newHero';
 import Repair from './_component/repair';
 import AboutRepairCompany from './_component/AboutRepairCompany';
 import Issues from './_component/Issues';
+import Experience from './_component/experience';
 
 const Subzero = () => {
   return (
@@ -32,6 +33,7 @@ const Subzero = () => {
       <Issues/>
       <AboutRepairCompany/>
       <BrandGrid />
+      <Experience/>
       <FaqAccordion />
       <Appliances />
       <Contact />
