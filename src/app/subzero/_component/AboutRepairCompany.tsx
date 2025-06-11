@@ -5,7 +5,7 @@ const AboutRepairCompany = () => {
   return (
     <section
       id="about"
-      className="w-full bg-accent text-white py-[6rem] px-10 md:px-16 mt-[2.5rem]"
+      className="w-full bg-accent text-white py-[6rem] px-10 md:px-10 mt-[2.5rem]"
     >
       <div className="flex flex-col md:flex-row justify-between items-start gap-[1.875rem]">
         <div className="flex flex-col gap-[0.3125rem] md:w-1/2">
