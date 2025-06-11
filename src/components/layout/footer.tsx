@@ -85,7 +85,7 @@ const DesktopFooter = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="/thermador-appliance-repair" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  <a href="/Thermador" className="hover:underline" target="_blank" rel="noopener noreferrer">
                     Thermador appliance <br /> repair
                   </a>
                 </li>
