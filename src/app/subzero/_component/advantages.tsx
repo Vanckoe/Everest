@@ -78,7 +78,7 @@ export default function Advantages() {
       {/* ПК версия */}
       <div className="hidden md:flex px-10 py-[4.5rem]">
         {/* Левая часть */}
-        <div className="w-1/2 flex flex-col pr-[2rem]">
+        <div className="w-1/2 flex flex-col pr-[10rem]">
           <div className="md:sticky md:top-[6rem] flex flex-col gap-[1rem]">
             <h2
               data-aos="fade-up"
@@ -109,7 +109,7 @@ export default function Advantages() {
               </span>
 
               {/* Контент: title + subtitle */}
-              <div className="flex flex-1 items-start justify-between gap-8">
+              <div className="flex items-start justify-between gap-30">
                 {/* Заголовок */}
                 <h3 className="text-black text-2xl font-semibold leading-snug max-w-[22rem]">
                   {title}
