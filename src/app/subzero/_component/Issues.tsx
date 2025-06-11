@@ -24,7 +24,7 @@ const Issues = () => {
         ].map((text, idx) => (
           <div key={idx} className="flex items-center gap-3 text-[#555555]">
             <PlusIcon className="w-6 h-6 md:w-4 md:h-4 flex-shrink-0" />
-            <p className="text-[#888888] text-2xl md:text-[1,125rem]">{text}</p>
+            <p className="text-[#888888] text-2xl md:text-base">{text}</p>
           </div>
         ))}
       </div>
