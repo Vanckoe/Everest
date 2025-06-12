@@ -35,7 +35,6 @@ const Subzero = () => {
       <BrandGrid />
       <Experience/>
       <FaqAccordion />
-      <Appliances />
       <Contact />
       <Footer />
     </div>

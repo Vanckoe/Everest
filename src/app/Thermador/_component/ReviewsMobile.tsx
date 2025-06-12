@@ -77,7 +77,7 @@ const ReviewCard = ({
 }) => {
   return (
     <div
-      className="bg-[#f4f4f4] rounded-[0.25rem] px-8 py-6 flex flex-col justify-start flex-shrink-0 relative w-full h-[200px]"
+      className="bg-[#f4f4f4] rounded-[0.25rem] py-6 px-10 flex flex-col justify-start flex-shrink-0 relative w-full h-[200px]"
       style={{
         scrollSnapAlign: 'start',
         overflow: 'visible',
@@ -117,7 +117,7 @@ const ReviewCard = ({
 
 export default function ReviewsMobileSwipe() {
   return (
-    <div className="flex flex-col items-center py-[7.5rem] justify-center bg-gray-50">
+    <div className="flex flex-col items-center py-[7.5rem] px-10 justify-center bg-gray-50">
       <h2 className="text-4xl font-bold mb-2">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (

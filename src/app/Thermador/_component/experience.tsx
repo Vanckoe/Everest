@@ -31,7 +31,7 @@ const ExperienceSection = () => {
       </div>
 
       {/* Мобилка */}
-      <div className="block md:hidden px-4">
+      <div className="block md:hidden">
         <div className="relative w-full overflow-hidden">
           <img
             src="/img/Subzero/experience-img.jpg"

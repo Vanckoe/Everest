@@ -71,7 +71,7 @@ export default function ApplianceRepairBlock() {
   className="group cursor-pointer flex items-center md:hidden max-w-[17,5rem] w-full"
 >
   {/* Текст кнопки */}
-  <p className="bg-[#fe5b2c] text-white px-4 py-5 text-3xl rounded-2xl font-semibold whitespace-nowrap">
+  <p className="bg-[#fe5b2c] text-white px-10 py-5 text-3xl rounded-2xl font-semibold whitespace-nowrap">
     Schedule Service
   </p>
 </button>

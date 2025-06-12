@@ -61,7 +61,7 @@ export default function ApplianceRepairBlock() {
     alt="Appliance repair"
     className="w-full h-[300px] object-cover rounded-t-lg"
   />
-  <div className="bg-[#d8e7ef] w-full h-[350px] flex flex-col px-6">
+  <div className="bg-[#d8e7ef] w-full h-[350px] flex flex-col px-10">
     <h2 className="text-[#001f3f] text-[3rem] py-20 font-bold mb-6 leading-tight text-left">
       Restore Your Appliances <br /> Today with Same-Day <br /> repair expert
     </h2>

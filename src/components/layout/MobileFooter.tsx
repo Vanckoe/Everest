@@ -11,7 +11,7 @@ const MobileFooter = () => {
   };
 
   return (
-    <footer className="w-full block md:hidden bg-[#000913] text-white pb-10 pt-[3.75rem] px-16 rounded-tl-3xl rounded-tr-3xl">
+    <footer className="w-full block md:hidden bg-[#000913] text-white pb-10 pt-[3.75rem] px-10 rounded-tl-3xl rounded-tr-3xl">
       {/* Логотип и описание */}
       <div className="flex flex-col pb-[1rem] items-start">
         {/* <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[12rem] h-[12rem] mb-4" /> */}
@@ -61,12 +61,12 @@ const MobileFooter = () => {
           <h3 className="text-4xl font-semibold mb-4">Brands</h3>
           <ul className="space-y-2 text-3xl text-[#9FAEB6]">
             <li>
-              <a href="/sub-zero-appliance-repair" target="_blank">
+              <a href="/subzero">
                 Sub-Zero appliance repair
               </a>
             </li>
             <li>
-              <a href="/thermador-appliance-repair" target="_blank">
+              <a href="/Thermador">
                 Thermador appliance repair
               </a>
             </li>

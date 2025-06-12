@@ -3,7 +3,7 @@ import PlusIcon from '@/assets/PlusIcon';
 
 const Issues = () => {
   return (
-    <section className="px-4 md:px-10 py-10">
+    <section className="px-10 md:px-10 py-10">
       {/* Заголовок и подзаголовок */}
       <h2 className="text-[#121212] text-4xl md:text-3xl font-bold mb-4 text-left">
         Why do 10 out of 10 customers choose Midwest Standards?
