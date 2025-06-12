@@ -3,7 +3,6 @@
 import { Listbox } from '@headlessui/react';
 import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import Services from '../../app/main/_component/services';
 
 type Service = {
   title: string;
@@ -43,13 +42,13 @@ const ServiceSelect = ({ options, value, onChange, error }: Props) => {
               <Listbox.Option
                 key={option.title}
                 value={option.title}
-                className={({ active }) =>
+                className={({ active }: { active: boolean }) =>
                   `cursor-pointer select-none px-6 py-3 text-2xl md:text-xl  ${
                     active ? 'bg-gray-100 text-black' : 'text-gray-800'
                   }`
                 }
               >
-                {({ selected }) => (
+                {({ selected }: { selected: boolean }) => (
                   <div className="flex items-center justify-between">
                     <span>{option.title}</span>
                     {selected && <Check className="h-5 w-5 text-[#31A301]" />}
