@@ -24,7 +24,7 @@ const items = [
     id: '03',
     icon: <Lightbulb className="text-[#31A301] size-10" />,
     boldText: 'Same-Day Repairs Available',
-    fadedText: ' for most major brands.',
+    fadedText: ' for most major brands, including Thermador.',
   },
 ];
 const NewHero = () => {
@@ -50,7 +50,7 @@ const NewHero = () => {
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
             <p className="text-[5.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
-              Professional <br /> Sub-Zero appliance <br /> repair in <br className="md:hidden" /> {' '}
+              Thermador <br /> appliance repair <br />
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -63,14 +63,15 @@ const NewHero = () => {
               data-aos="fade-up"
               className="text-[5.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
             >
-              <span className="hidden md:inline"></span> Chicago
+              <span className="hidden md:inline"></span> in Chicago
             </p>
             <p
               data-aos="fade-right"
-              className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40"
+              className="hidden md:block ml-10 mt-8 text-xl font-normal opacity-40"
             >
-              Schedule your service today <br /> and enjoy peace of mind with Everest’s <br />
-              expert care and certified technicians.
+              Fast, Reliable Service
+              <br /> by EVEREST <br />
+              Appliance Experts
             </p>
           </div>
           <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">
@@ -89,7 +90,7 @@ const NewHero = () => {
 
               {/* Текст */}
               <p className="bg-accent text-white px-8 w-full md:px-12 md:w-fit py-7 md:py-5 text-3xl rounded-2xl md:rounded-4xl font-semibold">
-                Schedule Service
+                Get a consultation
               </p>
 
               {/* Правая иконка — видна по умолчанию, исчезает при hover */}

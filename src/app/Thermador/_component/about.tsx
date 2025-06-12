@@ -14,7 +14,7 @@ export default function ApplianceRepairBlock() {
       <div className="hidden md:flex md:h-[565px]">
         <div className="w-[782px] h-[565px] shrink-0">
           <img
-            src="/img/Subzero/subzero-1.jpg"
+            src="/img/Thermador/Advantage.jpg"
             alt="Appliance repair"
             className="w-full h-full object-cover"
           />
@@ -22,7 +22,7 @@ export default function ApplianceRepairBlock() {
 
         <div className="w-1/2 bg-[#d8e7ef] px-30 py-30 flex flex-col">
           <h2 className="text-[#001f3f] text-4xl font-bold mb-6 leading-tight">
-            Give a second life to your appliances with same day appliance repair expert
+            Restore Your Appliances Today <br />with Same-Day <br /> Repair Experts
           </h2>
           <button
             onClick={() => setIsModalOpen(true)}
@@ -57,13 +57,13 @@ export default function ApplianceRepairBlock() {
 {/* Мобильная версия */}
 <div className="md:hidden w-full">
   <img
-    src="/img/Subzero/subzero-1.jpg"
+    src="/img/Thermador/Advantage.jpg"
     alt="Appliance repair"
     className="w-full h-[300px] object-cover rounded-t-lg"
   />
-  <div className="bg-[#d8e7ef] w-full h-[350px] flex flex-col px-6">
+  <div className="bg-[#d8e7ef] w-full h-[350px] flex flex-col px-10">
     <h2 className="text-[#001f3f] text-[3rem] py-20 font-bold mb-6 leading-tight text-left">
-      Give a second life to <br /> your appliances with <br /> same day appliance <br /> repair expert
+      Restore Your Appliances <br /> Today with Same-Day <br /> repair expert
     </h2>
 
 <button
@@ -71,7 +71,7 @@ export default function ApplianceRepairBlock() {
   className="group cursor-pointer flex items-center md:hidden max-w-[17,5rem] w-full"
 >
   {/* Текст кнопки */}
-  <p className="bg-[#fe5b2c] text-white px-10 py-5 text-3xl rounded-2xl font-semibold whitespace-nowrap">
+  <p className="bg-[#fe5b2c] text-white px-4 py-5 text-3xl rounded-2xl font-semibold whitespace-nowrap">
     Schedule Service
   </p>
 </button>

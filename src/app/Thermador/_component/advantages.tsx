@@ -10,47 +10,17 @@ const advantages: Advantage[] = [
   {
     title: (
       <>
-        Sub-Zero Full-<br />
-        Size<br />
-        Refrigerators
+        Thermador<br />
+        Refrigerators<br />
       </>
     ),
     subtitle: (
       <>
-        The range includes customizable <br />
-        models with innovative cooling <br />
-        mechanisms.
-      </>
-    ),
-  },
-  {
-    title: (
-      <>
-        Sub-Zero <br />
-        Wine Storage
-      </>
-    ),
-    subtitle: (
-      <>
-        The selection has energy-efficient <br />
-        freezers with different temperature <br />
-        settings.
-      </>
-    ),
-  },
-  {
-    title: (
-      <>
-        Sub-Zero <br />
-        Undercounter <br />
-        Refrigerators
-      </>
-    ),
-    subtitle: (
-      <>
-        The company also has a wide range <br />
-        of customizable refrigerators that <br />
-        fit perfectly into the interior of the <br />
+        Built-in units designed to maintain <br />
+        consistent temperature and <br />
+        humidity, with customizable <br />
+        storage and panel-ready doors for <br />
+        seamless integration into your <br />
         kitchen.
       </>
     ),
@@ -58,15 +28,51 @@ const advantages: Advantage[] = [
   {
     title: (
       <>
-        Sub-Zero <br />
-        Outdoor <br />
-        Refrigerators
+        Thermador <br />
+        Ranges
       </>
     ),
     subtitle: (
       <>
-        The brand produces compact <br />
-        outdoor refrigerators.
+        High-performance cooking <br />
+        appliances featuring Star® Burners <br />
+        for even heat, large-capacity ovens, <br />
+        and durable construction suited for <br />
+        frequent use.
+      </>
+    ),
+  },
+  {
+    title: (
+      <>
+        Thermador <br />
+        Cooktops <br />
+      </>
+    ),
+    subtitle: (
+      <>
+        Available in gas and induction <br />
+        models, offering precise <br />
+        temperature control and easy-clean <br />
+        surfaces, ideal for a variety of <br />
+        cooking styles.
+      </>
+    ),
+  },
+  {
+    title: (
+      <>
+        Thermador <br />
+        Ovens <br />
+      </>
+    ),
+    subtitle: (
+      <>
+        Equipped with convection <br />
+        technology and smart features,<br />
+        these ovens ensure even baking <br />
+        and roasting, with smooth-glide <br />
+        racks and user-friendly controls.
       </>
     ),
   },
@@ -84,14 +90,15 @@ export default function Advantages() {
               data-aos="fade-up"
               className="text-[#001f3f] text-[2.75rem] font-bold leading-tight w-[28.125rem]"
             >
-              We repair all <br /> types of Sub- <br />Zero Appliances
+              We repair all <br /> types of Thermador <br />Appliances
             </h2>
             <p
               data-aos="fade-up"
               className="text-[#001f3f] text-base leading-relaxed mt-4"
             >
-              If your Sub-Zero appliance isn’t working right, don’t replace it; fix it instead! To learn more about our
-              services or if you do not see your appliance listed above, please reach out online today.
+              If your Thermador appliance isn’t functioning properly, don’t rush to replace 
+              it—repair it! To find out more about our services or if your appliance isn’t listed above, 
+              feel free to contact us online today.
             </p>
           </div>
         </div>

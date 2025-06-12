@@ -4,55 +4,64 @@ const advantages = [
   {
     title: (
       <>
-        Sub-Zero Full-Size<br />
-        Refrigerators
+        Thermador Refrigerators
       </>
     ),
     subtitle: (
       <>
-        The range includes customizable models with <br /> 
-        innovative cooling mechanisms.
+        Built-in units designed to maintain consistent
+        temperature and humidity, with customizable
+        storage and panel-ready doors for
+        seamless integration into your
+        kitchen.
       </>
     ),
   },
   {
     title: (
       <>
-        Sub-Zero Wine Storage
+        Thermador Ranges
       </>
     ),
     subtitle: (
       <>
-        The selection has energy-efficient freezers with <br /> 
-        different temperature settings.
+        High-performance cooking
+        appliances featuring Star® Burners
+        for even heat, large-capacity ovens,
+        and durable construction suited for
+        frequent use.
       </>
     ),
   },
   {
     title: (
       <>
-        Sub-Zero Undercounter <br />
-        Refrigerators
+        Thermador Cooktops
       </>
     ),
     subtitle: (
       <>
-        The company also has a wide range of <br /> 
-        customizable refrigerators that fit perfectly into <br /> 
-        the interior of the kitchen.
+        Available in gas and induction
+        models, offering precise
+        temperature control and easy-clean
+        surfaces, ideal for a variety of
+        cooking styles.
       </>
     ),
   },
   {
     title: (
       <>
-        Sub-Zero Outdoor <br />
-        Refrigerators
+        Thermador Ovens
       </>
     ),
     subtitle: (
       <>
-        The brand produces compact outdoor <br /> refrigerators.
+        Equipped with convection
+        technology and smart features
+        these ovens ensure even baking
+        and roasting, with smooth-glide
+        racks and user-friendly controls.
       </>
     ),
   },
@@ -63,16 +72,14 @@ export default function AdvantagesMobile() {
     <div className="block md:hidden px-10 py-[7.5rem]">
       {/* Заголовок и описание */}
       <div className="mb-10">
-        <h2 className="text-[#001f3f] text-[3.65rem] font-bold leading-tight mb-4">
-          We repair all types <br />
-          of Sub-Zero Appliances
+        <h2 className="text-[#001f3f] text-[3.25rem] font-bold leading-tight mb-4">
+          We repair all types of <br />
+          Thermador Appliances
         </h2>
         <p className="text-[#001f3f] text-[1.65rem] leading-relaxed">
-          If your Sub-Zero appliance isn’t working right, <br />
-          don’t replace it; fix it instead! To learn more <br /> 
-          about our services or if you do not see your <br /> 
-          appliance listed above, please reach out online <br /> 
-          today.
+            If your Thermador appliance isn’t functioning properly, don’t rush to replace 
+            it—repair it! To find out more about our services or if your appliance isn’t listed above, 
+            feel free to contact us online today.
         </p>
       </div>
 

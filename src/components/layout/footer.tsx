@@ -80,12 +80,12 @@ const DesktopFooter = () => {
               <h3 className="text-xl font-semibold mb-4">Brands</h3>
               <ul className="space-y-2 text-base text-[#9FAEB6]">
                 <li>
-                  <a href="/subzero" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  <a href="/subzero" className="hover:underline" rel="noopener noreferrer">
                     Sub-Zero appliance <br /> repair
                   </a>
                 </li>
                 <li>
-                  <a href="/thermador-appliance-repair" className="hover:underline" target="_blank" rel="noopener noreferrer">
+                  <a href="/Thermador" className="hover:underline" rel="noopener noreferrer">
                     Thermador appliance <br /> repair
                   </a>
                 </li>
