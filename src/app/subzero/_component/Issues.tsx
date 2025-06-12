@@ -9,18 +9,18 @@ const Issues = () => {
         Common Issues With Sub-Zero Appliances
       </h2>
       <p className="text-[#555555] text-2xl md:text-lg mb-8 text-left max-w-3xl">
-        Issues aren’t out of the ordinary even for luxury brands, so over time it’s possible to experience certain problems. Here’s a list of the most common issues:
+        Even luxury appliances like Sub-Zero can experience wear and tear over time. While known for their quality and performance, certain problems may still arise due to usage, aging, or lack of maintenance.
       </p>
 
       {/* Список проблем с иконкой плюса */}
       <div className="flex flex-col gap-3 mb-8">
         {[
-          "Temperature fluctuations. Refrigerators may fail to maintain a consistent temperature, which affects food storage.",
-          "Faulty seals. Door seals may weaken, causing air leaks that reduce cooling efficiency.",
-          "Ice maker malfunctions. The ice maker may stop producing ice due to a clogged water line, faulty components, and so on.",
-          "Water leaks. Refrigerators often leak due to damaged hoses or clogged drain lines.",
-          "Defrost problems. Frost buildup inside freezers occurs when systems malfunction or because of certain components.",
-          "Control panel failure. The control panel may stop working due to electrical issues or worn-out circuits, which potentially need to be replaced.",
+          "Temperature fluctuations. Refrigerators may fail to maintain a consistent internal temperature, putting food at risk of spoiling. Common causes include faulty sensors or compressor problems.",
+          "Faulty Door Seals. Worn or damaged door gaskets lead to air leaks, reducing cooling efficiency and increasing energy consumption.",
+          "Ice maker malfunctions. Your Sub-Zero ice maker may stop producing ice due to a clogged water line, malfunctioning valve, or defective internal component.",
+          "Water leaks. Leaks often result from damaged hoses, cracked water tanks, or clogged drain lines, and can cause damage to flooring or cabinets.",
+          "Defrost System Issues. Frost buildup inside the freezer usually indicates a problem with the defrost heater, thermostat, or control board.",
+          "Control panel failure. If the digital control panel stops responding, it may be due to electrical faults, worn-out circuits, or power surges, requiring professional repair or replacement.",
         ].map((text, idx) => (
           <div key={idx} className="flex items-center gap-3 text-[#555555]">
             <PlusIcon className="w-6 h-6 md:w-4 md:h-4 flex-shrink-0" />
@@ -31,7 +31,7 @@ const Issues = () => {
 
       {/* Дополнительный текст */}
       <p className="text-[#555555] text-2xl md:text-sm mb-8 text-left">
-        Other common issues include lightning inside the oven not working properly, the ignition system won’t set off, and so on. Therefore, if any of these problems arise, it’s best to contact professionals at Midwest Standards. We guarantee fast and high-quality repairs, so that you can continue cooking your favorite meals and keep them fresh.
+        Even premium appliances like Sub-Zero can experience technical issues over time. While they are known for their reliability and advanced features, wear and tear, heavy usage, or lack of maintenance can lead to malfunctions.
       </p>
 
       <div className="flex flex-col md:flex-row md:items-center tracking-wide">
@@ -45,7 +45,7 @@ const Issues = () => {
                 Flexible Scheduling
               </p>
               <p className="text-2xl md:text-sm mt-4 md:mt-4 font-light text-[#888888]">
-                We offer flexible appointment times to fit your busy lifestyle, making it easy to get the help you need when you need it.
+                We offer convenient appointment slots tailored to your busy lifestyle, so you get the help you need exactly when you need it.
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Issues = () => {
                 Genuine Parts
               </p>
               <p className="text-2xl md:text-sm mt-4 md:mt-4 font-light text-[#888888]">
-                We use only genuine Sub-Zero replacement parts, ensuring that your appliances continue to operate at peak performance and maintain their value.
+                All repairs are performed using only original manufacturer parts, ensuring long-term performance, durability, and the preservation of your appliance’s value.
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Issues = () => {
                 Comprehensive Diagnostics
               </p>
               <p className="text-2xl md:text-sm mt-4 md:mt-4 font-light text-[#888888]">
-                Our thorough diagnostic process ensures that we identify the root cause of the problem, preventing future issues and saving you time and money.
+                Our certified technicians perform a deep diagnostic assessment to identify the true cause of the issue, helping prevent future breakdowns and saving you time and money.
               </p>
             </div>
           </div>
@@ -102,7 +102,7 @@ const Issues = () => {
                 Fast Response Times
               </p>
               <p className="text-2xl md:text-sm mt-4 md:mt-4 font-light text-[#888888]">
-                We understand that appliance issues can disrupt your daily life. That’s why we prioritize quick response times to get your appliances back in working order as soon as possible.
+                We know that appliance problems can be stressful and disruptive. That’s why we prioritize rapid service to restore comfort and convenience to your home as soon as possible.
               </p>
             </div>
           </div>

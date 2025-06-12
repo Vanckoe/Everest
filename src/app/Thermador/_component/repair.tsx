@@ -7,29 +7,29 @@ export default function SubZeroRepairSection() {
         {/* Левая сторона (текст) */}
         <div className="md:w-1/2">
           <h2 className="text-5xl font-semibold text-left text-[#121212] md:text-5xl">
-            Thermador appliance <br /> repair in Chicago: fast, <br /> reliable, and with a <br /> guarantee
+            Thermador appliance <br /> repair in Chicago - fast, <br /> reliable, and guarantee
           </h2>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
-            Thermador is a luxury appliance brand offering high-end cooktops, ovens, 
-            hobs, hoods, dishwashers, warming drawers, and refrigerators. Thermador products are known for their 
-            elegant design, smart features, high performance, and innovative technologies. But even the most reliable 
-            appliances can break down. Whatever the cause of the breakdown, Midwest Standards specialists are ready 
-            to solve it as soon as possible, regardless of the type and complexity of the work.
+            If you're looking for professional Thermador appliance repair in Chicago, Midwest Standards 
+            is your trusted local expert. We offer fast, reliable, and affordable repair services for the full range of 
+            Thermador appliances — including cooktops, ovens, hobs, range hoods, dishwashers, warming drawers, and 
+            refrigerators.
           </p>
 
           <h3 className="mt-8 text-left text-4xl md:text-2xl font-semibold">
             The most common causes of Thermador failure
           </h3>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
-            Thermador repair may be required in the following cases:
+            Even premium appliances like Thermador can experience issues over time. 
+            You may need Thermador repair service in the following cases:          
           </p>
             <ul className="mt-6 space-y-4">
             {[
-                "Natural wear and tear. Each part or mechanism has a particular resource. If you do not perform regular maintenance or replace worn-out parts in time, your equipment will break down. Thermador repair, which replaces worn-out parts, will help restore the functionality of your household helpers.",
-                "Increased loads on equipment. The hood overheats due to prolonged operation at maximum power, and the dishwasher stops due to loading too many dishes. These are just a few examples of how people operate their devices. It is important to strictly follow the instructions. Use devices only for their intended purpose and do not overload them. Then, you will not need the Thermador repair Chicago service.",
-                "Short circuit. A damaged wire and poor wiring insulation lead to a sharp drop in resistance values ​and equipment breakdown.",
-                "Ignoring the manufacturer's recommendations. Each device has instructions that describe in detail how to turn it on / off, use specific modes, and clean elements. If you try to adjust the equipment yourself or use its functionality for other purposes, it will soon break down.",
-                "Improper maintenance and lack of service. Despite its innovation and well-thought-out functionality, Thermador equipment needs maintenance. It is imperative to service such devices as refrigerators, dishwashers, and hobs. You should also regularly monitor the condition of the microwave oven, coffee machine, and hood. This is the only way to significantly extend your assistants' service life.",
+                "Natural wear and tear. Every appliance component has a limited lifespan. Without regular maintenance and timely replacement of worn-out parts, your Thermador appliance may stop working properly. Thermador repair services can help restore functionality by replacing defective elements with original parts.",
+                "Overloading and Excessive Use. Running your hood at maximum power for too long or overloading the dishwasher with too many dishes can lead to overheating or system failure. Always follow the manufacturer's usage instructions and avoid excessive loads. Proper use can reduce the need for Thermador appliance repair.",
+                "Electrical Issues and Short Circuits. Damaged wires or poor insulation can cause short circuits, leading to sudden breakdowns. Regular inspection of your home’s wiring and proper installation can help prevent these issues.",
+                "Ignoring Manufacturer Recommendations. Thermador provides detailed instructions for operation, cleaning, and maintenance. If you misuse functions or attempt DIY fixes, it can result in costly damage. Following official guidelines reduces the risk of malfunctions and the need for professional repair.",
+                "Lack of Maintenance. Even though Thermador appliances are built to last, they require periodic service. Refrigerators, dishwashers, hobs, microwaves, coffee machines, and hoods all benefit from professional maintenance. Preventative care extends their service life and helps avoid emergency Thermador repair services.",
             ].map((text, idx) => (
                 <li key={idx} className="flex items-start gap-10 md:gap-4">
                 <Repair className="bg-[#ececec] rounded-full w-10 h-10 md:w-6 md:h-6 shrink-0" />
@@ -37,8 +37,11 @@ export default function SubZeroRepairSection() {
                 </li>
             ))}
             </ul>
-          <p className="mt-6 text-left text-[1.65rem] md:text-base text-#555555">
-            These are just some of the faults that can lead to malfunctions in the device. The actual cause of the breakdown can only be established as a result of professional diagnostics.
+          <p className="mt-6 text-left text-[1.65rem] md:mb-2 md:text-base text-#555555">
+            These are just some of the most common issues that can cause your Thermador appliance to malfunction. However, the exact cause of the breakdown can only be identified through professional diagnostics performed by a qualified technician.
+          </p>
+          <p>
+            At Midwest Standards, we provide comprehensive Thermador appliance diagnostics and repair services in Chicago. Our experts use advanced tools to accurately detect the source of the problem and offer reliable solutions that restore your appliance’s full functionality — all with a service guarantee.
           </p>
         </div>
 

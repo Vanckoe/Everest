@@ -6,23 +6,24 @@ const Issues = () => {
     <section className="px-10 md:px-10 py-10">
       {/* Заголовок и подзаголовок */}
       <h2 className="text-[#121212] text-4xl md:text-3xl font-bold mb-4 text-left">
-        Why do 10 out of 10 customers choose Midwest Standards?
+        Why Do 10 Out of 10 Customers Choose EVEREST?
       </h2>
       <p className="text-[#555555] text-2xl md:text-lg mb-8 text-left max-w-3xl">
-        Thermador repair is a technically complex process that requires the involvement of 
-        highly qualified specialists and the use of specialized equipment. 
-        If your equipment refuses to work, contact Midwest Standards. 
-        Skilled technicians will comprehensively diagnose the equipment, 
-        determine the exact cause of its breakdown, and promptly fix it. <br /> When contacting Midwest Standards, you can count on:
+        Because EVEREST sets the standard for premium appliance repair — especially when it comes to high-end 
+        brands like Thermador. Our clients trust us for our expertise, precision, and commitment to long-term results. <br />
+        Thermador repair is a technically complex process that demands the attention of 
+        highly qualified technicians and the use of specialized diagnostic equipment. That's why, when your 
+        Thermador appliance stops working, customers in Chicago turn to Midwest Standards, the certified service provider 
+        trusted by EVEREST.
       </p>
 
       {/* Список проблем с иконкой плюса */}
       <div className="flex flex-col gap-3 mb-8">
         {[
-          "An effective solution to the problem. Our technicians have solid practical experience (more than 10 years). They quickly eliminate issues of any complexity.",
-          "Original spare parts. When performing Thermador repair Chicago, we use only certified components, which guarantees the equipment's durability and uninterrupted operation.",
-          "Speed. Midwest Standards technicians perform all work quickly without additional charges and delays.",
-          "A personal approach. We take the equipment to the service center for complex repairs and bring it back. All details are agreed upon directly with the client.",
+          "An effective solution to the problem. Our technicians have over 10 years of hands-on experience with Thermador appliances. We quickly diagnose and repair issues of any complexity, restoring your equipment to perfect working condition.",
+          "Original spare parts. We use only genuine Thermador replacement parts for every repair. This ensures the long-term durability and reliable operation of your appliance — no low-quality substitutes.",
+          "Fast Service Without Extra Fees. Speed matters. Our experts work efficiently and without delays, delivering fast Thermador repair in Chicago with no hidden charges or unnecessary wait times.",
+          "Personalized Approach. For complex repairs, we offer pickup and return service — transporting your appliance to our service center and back. Every detail is coordinated directly with the client, ensuring clear communication and full transparency at every stage.",
         ].map((text, idx) => (
           <div key={idx} className="flex items-center gap-3 text-[#555555]">
             <PlusIcon className="w-6 h-6 md:w-4 md:h-4 flex-shrink-0" />
@@ -33,7 +34,7 @@ const Issues = () => {
 
       {/* Дополнительный текст */}
       <p className="text-[#555555] text-2xl md:text-base mb-8 text-left">
-        If you want to use the Thermador repair Chicago service, contact Midwest Standards. We provide a 12-month warranty for all work. The technician’s visit and diagnostics of the device are free, subject to consent to further repairs.      
+        If you’re looking for reliable Thermador repair in Chicago, contact Ereverst today. We stand behind our work with a 12-month warranty on all repairs.      
       </p>
       <div className="flex flex-col md:flex-row md:items-center tracking-wide">
         {/* Item 01 */}
@@ -46,7 +47,7 @@ const Issues = () => {
                 Flexible <br />Scheduling
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
-                We provide convenient appointment options that work around your schedule, so you can get expert help exactly when you need it.              
+                We offer convenient appointment slots tailored to your availability — get expert Thermador repair when it works best for you.              
               </p>
             </div>
           </div>
@@ -62,10 +63,10 @@ const Issues = () => {
             <div className="mt-1"></div>
             <div>
               <p className="md:text-2xl text-3xl font-semibold text-[#121212]">
-                Genuine Parts
+                Genuine Thermador Parts
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
-                Only authentic Thermador parts are used in our repairs, guaranteeing optimal performance and long-term value for your appliances.              
+                Every repair is completed using authentic Thermador components, ensuring optimal performance, manufacturer-grade quality, and extended appliance life.              
               </p>
             </div>
           </div>
@@ -84,7 +85,7 @@ const Issues = () => {
                 Comprehensive Diagnostics
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
-                Our detailed diagnostics allow us to pinpoint the exact issue, helping to avoid repeat problems and saving you both time and money.              
+                Our certified technicians conduct in-depth diagnostics to identify the precise cause of the issue — reducing the risk of repeat problems and saving you time and money.
               </p>
             </div>
           </div>
@@ -103,7 +104,7 @@ const Issues = () => {
                 Fast Response Times
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
-                We know how disruptive a broken appliance can be, which is why we focus on fast response times to restore normalcy to your home quickly.              
+                We understand the urgency of a broken appliance. That’s why we provide quick response times to restore comfort and functionality to your home as fast as possible. 
               </p>
             </div>
           </div>

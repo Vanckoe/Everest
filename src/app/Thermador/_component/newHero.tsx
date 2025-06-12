@@ -24,7 +24,7 @@ const items = [
     id: '03',
     icon: <Lightbulb className="text-[#31A301] size-10" />,
     boldText: 'Same-Day Repairs Available',
-    fadedText: ' for most major brands.',
+    fadedText: ' for most major brands, including Thermador.',
   },
 ];
 const NewHero = () => {
@@ -67,11 +67,11 @@ const NewHero = () => {
             </p>
             <p
               data-aos="fade-right"
-              className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40"
+              className="hidden md:block ml-10 mt-8 text-xl font-normal opacity-40"
             >
-              Schedule your service today
-              <br /> and enjoy peace of mind with
-              <br /> Midwest Standards expert care
+              Fast, Reliable Service
+              <br /> by EVEREST <br />
+              Appliance Experts
             </p>
           </div>
           <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">

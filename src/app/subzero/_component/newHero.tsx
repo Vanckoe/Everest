@@ -69,9 +69,8 @@ const NewHero = () => {
               data-aos="fade-right"
               className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40"
             >
-              Schedule your service today
-              <br /> and enjoy peace of mind with
-              <br /> Midwest Standards expert care
+              Schedule your service today <br /> and enjoy peace of mind with Everest’s <br />
+              expert care and certified technicians.
             </p>
           </div>
           <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">

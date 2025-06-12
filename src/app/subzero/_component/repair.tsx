@@ -10,27 +10,23 @@ export default function SubZeroRepairSection() {
             Same day Sub-Zero <br /> Appliance Repair
           </h2>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
-            Sub-Zero is a famous American company that produces high-end appliances.
-            Clients prefer reliability and smart designs of the brand’s inventions. However, even <br /> 
-            the most luxurious and technically advanced appliances tend to malfunction or <br /> 
-            break. Fortunately, you can contact Midwest Standards for Sub-Zero repair.
+            Sub-Zero is a renowned American brand known for its premium-quality appliances, cutting-edge technologies, 
+            and sleek designs. Homeowners trust Sub-Zero for its reliability, innovation, and performance.
           </p>
 
           <h3 className="mt-8 text-left text-4xl md:text-2xl font-semibold">
-            Benefits Of Luxury Appliance Repair Service with Midwest Standards team
+            Benefits of Choosing Everest for Sub-Zero Appliance Repair in Chicago
           </h3>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
-            There’s no better company for Sub-Zero repair in Chicago than Midwest Standards. We <br />
-            employ the best technicians to handle repair of such luxury brands as Sub-Zero. Here’s why <br /> 
-            you should choose us:
+            There’s no better choice for luxury appliance repair in Chicago than Midwest Standards. We specialize in servicing high-end brands like Sub-Zero, delivering unmatched quality and attention to detail. Here’s why homeowners trust our team:
           </p>
             <ul className="mt-6 space-y-4">
             {[
-                "We use genuine parts. Thus, we guarantee high-quality repairs + a longer lifespan of appliances afterward.",
-                "Our technicians arrive in under 24 hours. You avoid unnecessary delays and save time, so that your appliances are up and running.",
-                "We guarantee accurate diagnostics. It helps identify and fix problems without mistakes.",
-                "Preventative maintenance and factory updates. You can call us if you want to make sure that your devices work properly.",
-                "We have a clear fee structure. Midwest Standards provides data on the prices for part replacement, repairs, maintenance, and so on. Thus, you can plan your budget for the repair properly and won't have surprises in the future.",
+                "Genuine Sub-Zero Parts. We use only authentic manufacturer components, which ensures high-quality repairs and extends the lifespan of your appliances.",
+                "Service Within 24 Hours. Our technicians arrive in under 24 hours, so you avoid delays and restore your Sub-Zero appliance quickly and efficiently.",
+                "Precise Diagnostics. We guarantee accurate, professional diagnostics — identifying the root cause of any issue and fixing it right the first time.",
+                "Preventative Maintenance & Factory Updates. We also offer preventive checkups and apply official factory updates to keep your Sub-Zero appliances running smoothly and efficiently.",
+                "Transparent Pricing Structure. You’ll always know what to expect. Our clear pricing includes detailed costs for parts, repairs, and maintenance, so you can plan your budget with confidence.",
             ].map((text, idx) => (
                 <li key={idx} className="flex items-start gap-10 md:gap-4">
                 <Repair className="bg-[#ececec] rounded-full w-10 h-10 md:w-6 md:h-6 shrink-0" />
@@ -39,7 +35,7 @@ export default function SubZeroRepairSection() {
             ))}
             </ul>
           <p className="mt-6 text-left text-[1.65rem] md:text-base text-#555555">
-            All our technicians have the right skills and also receive advanced training. They handle modern devices and follow the latest industry standards for Sub-Zero repair.
+            All our technicians are certified professionals with extensive experience and ongoing advanced training. They stay up to date with the latest Sub-Zero technologies and follow current industry standards, ensuring precise and reliable repairs for even the most modern appliances.
           </p>
         </div>
 
