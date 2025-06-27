@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import RightIcon from '@/assets/Right';
-import OffersMobile from './OffersMobile';
+import OffersMobile from '@/app/main/_component/OffersMobile';
 
 const slides = [
   {
