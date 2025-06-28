@@ -13,28 +13,39 @@ export async function POST(req: Request) {
 
   const clientHtml = `
   <html>
-    <body style="margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #f4f4f4;">
-      <div style="max-width: 600px; margin: 30px auto; background: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
-        <div style="padding: 30px;">
-          <h2 style="color: #2b6777;">Hello ${firstName},</h2>
-          <p>Thank you for booking an appointment with <strong>Everest Appliance Repair</strong>.</p>
-          <p style="margin-top: 20px;">Here are your appointment details:</p>
-          <ul style="list-style: none; padding: 0; font-size: 16px;">
-            <li><strong>Date:</strong> ${date}</li>
-            <li><strong>Time:</strong> ${time}</li>
-            <li><strong>Service:</strong> ${service}</li>
-            <li><strong>Address:</strong> ${street}${
-    apt ? ', Apt ' + apt : ''
-  }, ${city}, ${state} ${zip || ''}</li>
-            <li><strong>Phone:</strong> ${phone}</li>
-            <li><strong>Email:</strong> ${email}</li>
-          </ul>
-          <p style="margin-top: 20px;">We'll contact you shortly to confirm.</p>
-          <p style="margin-top: 30px;">Best regards,<br><strong>Everest Appliance Repair Team</strong></p>
-        </div>
-        <div style="background-color: #f1f1f1; text-align: center; padding: 15px; font-size: 12px; color: #888;">
-          &copy; ${new Date().getFullYear()} Everest Appliance Repair. All rights reserved.
-        </div>
+    <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
+      <div style="max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+
+        <h2 style="color: #2b6777;">Hi ${firstName},</h2>
+
+        <p style="font-size: 16px; color: #333; margin-bottom: 24px;">
+          Thank you for booking a service with <strong>Everest Appliance Repair</strong> — we’re looking forward to helping you.
+        </p>
+
+        <h3 style="margin-top: 30px; margin-bottom: 10px; color: #2b6777;">🧾 Your Appointment Info:</h3>
+        <ul style="list-style: none; padding-left: 0; font-size: 16px; color: #333;">
+          <li><strong>Service:</strong> ${service}</li>
+          <li><strong>Date:</strong> ${date}</li>
+          <li><strong>Time:</strong> ${time}</li>
+          <li><strong>Address:</strong> ${street}${apt ? ', Apt ' + apt : ''}, ${city}, ${state} ${
+    zip || ''
+  }</li>
+          <li><strong>Phone:</strong> ${phone}</li>
+          <li><strong>Email:</strong> ${email}</li>
+        </ul>
+
+        <h3 style="margin-top: 30px; margin-bottom: 10px; color: #2b6777;">👨‍🔧 What to Expect:</h3>
+        <p style="font-size: 16px; color: #333;">
+          Your assigned technician will call or text you ahead of time before heading your way, so you're never caught off guard.
+        </p>
+
+        <p style="margin-top: 30px; font-size: 16px; color: #333;">
+          If you have any questions, don’t hesitate to reach out — we’re here to help.
+        </p>
+
+        <p style="margin-top: 30px; font-size: 16px; color: #2b6777; font-weight: bold;">
+          Warmly, <br />The Everest Team
+        </p>
       </div>
     </body>
   </html>
