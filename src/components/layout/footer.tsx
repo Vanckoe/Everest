@@ -86,7 +86,7 @@ const DesktopFooter = () => {
                 </li>
                 <li>
                   <a href="/Thermador" className="hover:underline" rel="noopener noreferrer">
-                    Thermador appliance <br /> repair
+                    Viking Appliance <br /> repair
                   </a>
                 </li>
               </ul>

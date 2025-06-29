@@ -18,7 +18,7 @@ export default function SubZeroRepairSection() {
             Benefits of Choosing Everest for Sub-Zero Appliance Repair in Chicago
           </h3>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
-            There’s no better choice for luxury appliance repair in Chicago than Midwest Standards. We specialize in servicing high-end brands like Sub-Zero, delivering unmatched quality and attention to detail. Here’s why homeowners trust our team:
+            There’s no better choice for luxury appliance repair in Chicago than Everest. We specialize in servicing high-end brands like Sub-Zero, delivering unmatched quality and attention to detail. Here’s why homeowners trust our team:
           </p>
             <ul className="mt-6 space-y-4">
             {[

@@ -17,6 +17,7 @@ import ForWho from './_component/forWho';
 import ForWhoMobile from './_component/forWhoMobile';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
 import NewHero from './_component/newHero';
+import ServiceAreaMarquee from './_component/runningLine-text';
 
 const Main = () => {
   return (
@@ -30,6 +31,7 @@ const Main = () => {
       <NewHero />
       <div className="hidden mt-12 md:block">
         <RunningLine />
+        <ServiceAreaMarquee />
       </div>
       <Services />
       <About />
