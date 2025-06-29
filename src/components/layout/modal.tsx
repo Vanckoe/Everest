@@ -194,7 +194,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <button
                   key={slot}
                   onClick={() => setTime(slot)}
-                  className={`rounded-[1.25rem] text-2xl md:text-xl py-3 flex items-center justify-center
+                  className={`rounded-[1.25rem] text-2xl md:text-base py-3 flex items-center justify-center
                     ${time === slot ? 'bg-accent text-white' : 'bg-[#dfdddd] text-black'}
                     ${errors.time ? 'border-2 border-red-500' : ''} transition-colors`}
                 >
