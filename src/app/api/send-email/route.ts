@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const { date, time, service, firstName, lastName, phone, email, street, apt, city, state, zip } =
     data;
 
-  const ownerEmail = 'talasbekadil@gmail.com';
+  const ownerEmail = process.env.SMTP_OWNER;
 
   const fullAddress = `${street}${apt ? ' Apt ' + apt : ''}, ${city}, ${state} ${zip || ''}`;
 
