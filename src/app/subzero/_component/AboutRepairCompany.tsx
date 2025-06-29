@@ -20,7 +20,7 @@ const AboutRepairCompany = () => {
             className="font-medium mt-6 text-xl text-[#A8ABB8]"
           >
             Investing in high-end home appliances is an investment in 
-            comfort and convenience for years to come. At Midwest Standards, we understand the 
+            comfort and convenience for years to come. At Everest, we understand the 
             importance of maintaining these valuable assets.
           </p>
           <p
@@ -38,7 +38,7 @@ const AboutRepairCompany = () => {
             professional repair <br />✅ Affordable pricing and transparent service <br />✅
             Preventative maintenance and installation help <br />✅ Warranty on labor and parts{' '}
             <br />*/}
-            Trust your luxury appliances to the experts at Midwest Standards!
+            Trust your luxury appliances to the experts at Everest!
           </p>
         </div>
         <div className="flex md:w-1/2 gap-[0.375rem]">

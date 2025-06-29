@@ -16,38 +16,38 @@ interface Step {
 const bookingSteps: Step[] = [
   {
     number: '01',
-    title: 'Choose service',
-    description: 'Укажите, какая техника сломалась и опишите проблему в нескольких словах.',
+    title: 'Submit a request on the website',
+    description: 'Specify which appliance is broken and briefly describe the problem.',
   },
   {
     number: '02',
     title: 'Pick date & time',
     description:
-      'Выберите удобный день и временной слот в онлайн-календаре (доступна «сегодня/завтра»).',
+      'Select a convenient day and time slot in the online calendar.',
   },
   {
     number: '03',
     title: 'Confirm details',
     description:
-      'Мы пришлём SMS / e-mail с именем мастера, временем прибытия и фиксированной ценой выезда.',
+      'Our manager will call you to confirm your appointment and answer any questions you may have beforehand.',
   },
   {
     number: '04',
-    title: 'On-site diagnosis',
+    title: 'Pre-Arrival Call',
     description:
-      'Сертифицированный техник приезжает, проводит диагностику и называет окончательную смету.',
+      'You’ll get a heads-up call before your technician arrives.',
   },
   {
     number: '05',
-    title: 'Repair & test',
+    title: 'We Come. We Fix.',
     description:
-      'После вашего одобрения мастер выполняет ремонт (или приезжает с деталями позже) и тестирует работу.',
+      'Fast, reliable service from certified professionals.',
   },
   {
     number: '06',
     title: 'Pay & warranty',
     description:
-      'Оплата картой/наличными на месте. Вы получаете квитанцию и гарантию 90 дней на работу и запчасти.',
+      'The invoice will be issued on site right after the repair is done.',
   },
 ] as const;
 
@@ -57,7 +57,7 @@ const bookingSteps: Step[] = [
 const StepCard = ({ number, title, description }: Step) => (
   <div className="relative w-full flex-none px-4 md:max-w-[22.25rem]">
     {/* Карточка */}
-    <div className="relative z-10 flex flex-col items-center rounded-2xl border border-neutral-300 pt-12 pb-14 bg-white shadow-sm">
+    <div className="relative z-10 flex flex-col items-center rounded-2xl border border-neutral-300 pt-12 pb-14 bg-white shadow-sm h-[23rem]">
       <Image
         src="/img/icons/logoBlack.png"
         width={100}
@@ -65,8 +65,7 @@ const StepCard = ({ number, title, description }: Step) => (
         alt="Logo"
         className="size-16 rounded-xl"
       />
-      {/* <p className="text-lg font-medium text-accent">{number}</p> */}
-      <h3 className=" mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">
+      <h3 className="mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">
         {title}
       </h3>
       <p className="mb-8 whitespace-pre-line text-center text-lg font-light text-[#979797] max-w-[16rem]">

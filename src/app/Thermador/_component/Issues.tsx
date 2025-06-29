@@ -13,7 +13,7 @@ const Issues = () => {
         brands like Thermador. Our clients trust us for our expertise, precision, and commitment to long-term results. <br />
         Thermador repair is a technically complex process that demands the attention of 
         highly qualified technicians and the use of specialized diagnostic equipment. That's why, when your 
-        Thermador appliance stops working, customers in Chicago turn to Midwest Standards, the certified service provider 
+        Thermador appliance stops working, customers in Chicago turn to Everest, the certified service provider 
         trusted by EVEREST.
       </p>
 

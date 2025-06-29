@@ -12,39 +12,33 @@ interface Step {
 const bookingSteps: Step[] = [
   {
     number: '01',
-    title: 'Choose service',
-    description:
-      'Укажите, какая техника сломалась и опишите проблему в нескольких словах.',
+    title: 'Submit a request on the website',
+    description: 'Specify which appliance is broken and briefly describe the problem.',
   },
   {
     number: '02',
     title: 'Pick date & time',
-    description:
-      'Выберите удобный день и временной слот в онлайн-календаре (доступна «сегодня/завтра»).',
+    description: 'Select a convenient day and time slot in the online calendar.',
   },
   {
     number: '03',
     title: 'Confirm details',
-    description:
-      'Мы пришлём SMS / e-mail с именем мастера, временем прибытия и фиксированной ценой выезда.',
+    description: 'Our manager will call you to confirm your appointment and answer any questions you may have beforehand.',
   },
   {
     number: '04',
-    title: 'On-site diagnosis',
-    description:
-      'Сертифицированный техник приезжает, проводит диагностику и называет окончательную смету.',
+    title: 'Pre-Arrival Call',
+    description: 'You’ll get a heads-up call before your technician arrives.',
   },
   {
     number: '05',
-    title: 'Repair & test',
-    description:
-      'После вашего одобрения мастер выполняет ремонт (или приезжает с деталями позже) и тестирует работу.',
+    title: 'We Come. We Fix.',
+    description: 'Fast, reliable service from certified professionals.',
   },
   {
     number: '06',
     title: 'Pay & warranty',
-    description:
-      'Оплата картой/наличными на месте. Вы получаете квитанцию и гарантию 90 дней на работу и запчасти.',
+    description: 'The invoice will be issued on site right after the repair is done.',
   },
 ];
 
@@ -84,7 +78,7 @@ const BookingStepsMobile = () => {
               className="mx-8 w-[55%] flex-shrink-0 transition-opacity duration-300"
               style={{ opacity: currentSlide === index ? 1 : 0.25 }}
             >
-              <article className="flex flex-col items-center rounded-3xl border border-neutral-400 px-10 py-12">
+              <article className="flex flex-col items-center rounded-3xl border border-neutral-400 px-10 py-12" style={{ height: '26.875rem' }}>
                 <p className="mb-4 text-[6rem] font-extrabold leading-none text-accent">
                   {step.number}
                 </p>

@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from 'react';
 const faqs = [
   {
     q: 'How much will an Appliances Repair Service cost?',
-    a: 'This is likely the most common question we get asked, but unfortunately, we can’t give a specific answer on this FAQ page. When you call us +1 (312) 489-8606 and let us know what type of issues your appliance is having, we can offer you an estimate on what the total price may be.',
+    a: 'This is likely the most common question we get asked, but unfortunately, we can’t give a specific answer on this FAQ page. When you call us +1(813) 290-1625 and let us know what type of issues your appliance is having, we can offer you an estimate on what the total price may be.',
   },
   {
     q: 'Is it worth repairing my appliance?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'What kind of warranty do we provide?',
-    a: 'Midwest Standards company offers a 12-month warranty on both labor and replacement parts. What does this mean? It means that for up to 12 months, we stand by our work and the parts we`ve replaced, provided any issues are not caused by misuse, neglect, or insufficient maintenance of the appliance. Keep in mind that cosmetic damage and some electronic failures resulting from improper handling may not fall under this warranty.',
+    a: 'Everest company offers a 12-month warranty on both labor and replacement parts. This means that for up to 12 months, we stand by our work and the parts we ve replaced — provided that any issues are not caused by misuse, neglect, or insufficient maintenance of the appliance. Please note that cosmetic damage and certain electronic failures resulting from improper handling may not be covered under this warranty.',
   },
   {
     q: 'Is there a service call fee, and is it waived if I proceed with the repair?',

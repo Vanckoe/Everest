@@ -10,7 +10,7 @@ export default function SubZeroRepairSection() {
             Thermador appliance <br /> repair in Chicago - fast, <br /> reliable, and guarantee
           </h2>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
-            If you're looking for professional Thermador appliance repair in Chicago, Midwest Standards 
+            If you're looking for professional Thermador appliance repair in Chicago, Everest 
             is your trusted local expert. We offer fast, reliable, and affordable repair services for the full range of 
             Thermador appliances — including cooktops, ovens, hobs, range hoods, dishwashers, warming drawers, and 
             refrigerators.
@@ -41,7 +41,7 @@ export default function SubZeroRepairSection() {
             These are just some of the most common issues that can cause your Thermador appliance to malfunction. However, the exact cause of the breakdown can only be identified through professional diagnostics performed by a qualified technician.
           </p>
           <p>
-            At Midwest Standards, we provide comprehensive Thermador appliance diagnostics and repair services in Chicago. Our experts use advanced tools to accurately detect the source of the problem and offer reliable solutions that restore your appliance’s full functionality — all with a service guarantee.
+            At Everest, we provide comprehensive Thermador appliance diagnostics and repair services in Chicago. Our experts use advanced tools to accurately detect the source of the problem and offer reliable solutions that restore your appliance’s full functionality — all with a service guarantee.
           </p>
         </div>
 
