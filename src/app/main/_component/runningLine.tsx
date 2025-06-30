@@ -7,7 +7,7 @@ const brandLogos = [
   '/img/brands/subzero.avif',
   '/img/brands/viking.avif',
   '/img/brands/thermador.avif',
-  '/img/brands/kitchenaid.avif',
+  '/img/brands/Kitchenaid.png',
   '/img/brands/bosch.avif',
   '/img/brands/dacor.avif',
   '/img/brands/Fisherpaykel.png',
@@ -23,13 +23,23 @@ const BrandMarquee = () => {
       <Marquee gradient={false} speed={50} pauseOnHover={true}>
         {brandLogos.map((src, idx) => (
           <div key={idx} className="mx-8">
-            <Image
-              src={src}
-              alt={`brand-${idx}`}
-              width={120}
-              height={60}
-              className="h-[2rem] w-auto object-contain md:h-[2.5rem]"
-            />
+            {src === '/img/brands/Kitchenaid.png' ? (
+              <Image
+                src={src}
+                alt={`brand-${idx}`}
+                width={160} // индивидуальный размер
+                height={80}
+                className="h-[4rem] md:h-[4rem] w-auto object-contain"
+              />
+            ) : (
+              <Image
+                src={src}
+                alt={`brand-${idx}`}
+                width={120}
+                height={60}
+                className="h-[2rem] md:h-[2.5rem] w-auto object-contain"
+              />
+            )}
           </div>
         ))}
       </Marquee>

@@ -1,11 +1,8 @@
 'use client';
 import React, { useState } from 'react';
 import Modal from '@/components/layout/modal';
-import Image from 'next/image';
 import RightIcon from '@/assets/Right';
-import Header from '@/components/layout/header';
 import { BadgeCheck, ShieldCheck, Lightbulb } from 'lucide-react';
-import Right from '@/assets/right copy';
 
 const items = [
   {
@@ -50,7 +47,7 @@ const NewHero = () => {
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
             <p className="text-[5.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
-              Thermador <br /> appliance repair <br />
+              Viking <br /> appliance repair <br />
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
