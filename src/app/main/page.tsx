@@ -31,8 +31,8 @@ const Main = () => {
       <NewHero />
       <div className="hidden mt-12 md:block">
         <RunningLine />
+        <ServiceAreaMarquee />
       </div>
-      <ServiceAreaMarquee />
 
       <Services />
       <About />

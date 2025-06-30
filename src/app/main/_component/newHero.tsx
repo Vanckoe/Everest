@@ -6,7 +6,7 @@ import RightIcon from '@/assets/Right';
 import Header from '@/components/layout/header';
 import { BadgeCheck, ShieldCheck, Lightbulb } from 'lucide-react';
 import Right from '@/assets/right copy';
-
+import ServiceAreaMarquee from './runningLine-text';
 const items = [
   {
     id: '01',
@@ -93,8 +93,6 @@ const NewHero = () => {
               <p className="bg-accent text-white px-8 w-full md:px-12 md:w-fit py-7 md:py-5 text-3xl rounded-2xl md:rounded-4xl font-semibold">
                 Schedule Service
               </p>
-
-              {/* Правая иконка — видна по умолчанию, исчезает при hover */}
               <div
                 // data-aos="fade-right"
                 // data-aos-delay={300}
@@ -105,6 +103,9 @@ const NewHero = () => {
                 <RightIcon color="white" width="2.5rem" height="2.5rem" />
               </div>
             </button>
+          </div>
+          <div className="md:hidden -mx-10">
+            <ServiceAreaMarquee />
           </div>
         </div>
         <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
