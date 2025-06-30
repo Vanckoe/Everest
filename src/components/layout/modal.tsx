@@ -43,16 +43,18 @@ const services = [
   { title: 'Commercial Appliances Repair', cost: '100.00 $', duration: '1 hr 15 mins' },
 ];
 const timeSlots = [
-  '10:00',
-  '11:00',
-  '12:00',
-  '13:00',
-  '14:00',
-  '15:00',
-  '16:00',
-  '17:00',
-  '18:00',
-  '19:00',
+  '8 AM - 10 AM',
+  '9 AM - 11 AM',
+  '10 AM - 12 PM',
+  '11 AM - 1 PM',
+  '12 PM - 2 PM',
+  '1 PM - 3 PM',
+  '2 PM - 4 PM',
+  '3 PM - 4 PM',
+  '4 PM - 6 PM',
+  '5 PM - 7 PM',
+  '6 PM - 8 PM',
+  '7 PM - 8 PM',
 ];
 
 /* ───────────────────────────────────────────────────────── */
@@ -136,6 +138,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
     console.log(combinedData);
     await sendToTelegram(combinedData);
+    await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(combinedData),
+    });
 
     await toast.promise(new Promise(res => setTimeout(res, 600)), {
       loading: 'Booking...',
@@ -153,7 +160,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
       onClick={e => e.target === e.currentTarget && (resetAll(), onClose())}
     >
-      <div className="relative w-full max-w-xl rounded-2xl bg-white px-12 py-8 shadow-xl">
+      <div className="relative w-full max-w-[37.5rem] rounded-2xl bg-white px-10 py-8 shadow-xl">
         <button
           onClick={() => (resetAll(), onClose())}
           className="absolute right-7 top-6 text-6xl md:text-4xl font-medium text-gray-600 hover:text-black"
@@ -187,7 +194,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 <button
                   key={slot}
                   onClick={() => setTime(slot)}
-                  className={`rounded-[1.25rem] text-2xl md:text-xl py-3 flex items-center justify-center
+                  className={`rounded-[1.25rem] text-2xl md:text-base py-3 flex items-center justify-center
                     ${time === slot ? 'bg-accent text-white' : 'bg-[#dfdddd] text-black'}
                     ${errors.time ? 'border-2 border-red-500' : ''} transition-colors`}
                 >
@@ -269,7 +276,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             />
             <input
               name="apt"
-              placeholder="Apt / Suite (optional)"
+              placeholder="Apt - Suite (optional)"
               className="focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                          text-black placeholder:text-2xl placeholder:text-[#9A9A9A]"
             />
