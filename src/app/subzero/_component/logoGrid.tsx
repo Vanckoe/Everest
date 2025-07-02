@@ -81,13 +81,6 @@ export default function BrandGrid() {
                   <br />
                   world-famous brands
                 </p>
-              ) : cell.alt === 'Kitchenaid' ? (
-                <Image
-                  {...cell}
-                  width={180}
-                  height={70}
-                  className="h-[7.5rem] md:h-[5.5rem] w-fit"
-                />
               ) : (
                 <Image
                   {...cell}
