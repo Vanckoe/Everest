@@ -7,6 +7,7 @@ import ServiceSelect from '../ui/ServiceSelect';
 import AplienceSelect from '../ui/AplienceSelect';
 import { sendToTelegram } from '@/api/queries';
 import { parse } from 'date-fns';
+import { format } from 'date-fns';
 import {
   appointmentSchema,
   step1Schema,
@@ -160,7 +161,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         error: 'Error. Please try again.',
       });
 
-      resetAll();
+      // resetAll();
       onClose();
     } finally {
       setIsSubmitting(false);
@@ -302,8 +303,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </label>
             <CustomDatePicker
               value={date ? parse(date, 'dd-MM-yyyy', new Date()) : null}
-              onChange={(formatted: string | null) => {
-                if (formatted) setDate(formatted);
+              onChange={(dateObj: Date | null) => {
+                if (dateObj) {
+                  const formatted = format(dateObj, 'dd-MM-yyyy');
+                  setDate(formatted);
+                } else {
+                  setDate('');
+                }
               }}
               error={errors.date}
             />
