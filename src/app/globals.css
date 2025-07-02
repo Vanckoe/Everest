@@ -11,7 +11,6 @@
 html {
   font-size: 1.15vw !important;
   scroll-behavior: smooth;
-
 }
 :root {
   --background: #ffffff;
@@ -41,17 +40,17 @@ body {
   max-width: 87.2rem;
 }
 
-.bg-accent{
-  background-color: #001F3F;
+.bg-accent {
+  background-color: #001f3f;
 }
-.accent-color{
-  color: #001F3F;
+.accent-color {
+  color: #001f3f;
 }
-.second-color{
-  color: #FE5B2C;
+.second-color {
+  color: #fe5b2c;
 }
-.bg-second{
-  background-color: #FE5B2C;
+.bg-second {
+  background-color: #fe5b2c;
 }
 
 /* В globals.css */
