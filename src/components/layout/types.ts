@@ -5,6 +5,7 @@ export type ModalProps = { isOpen: boolean; onClose: () => void };
 export const appointmentSchema = z.object({
   date: z.string({ required_error: 'Select a date' }),
   time: z.string({ required_error: 'Select a time' }),
+  versServices: z.string({ required_error: 'Select a appliances' }),
   service: z.string({ required_error: 'Select a service' }),
   firstName: z.string().min(1, 'Enter your first name'),
   lastName: z.string().min(1, 'Enter your last name'),
@@ -13,8 +14,8 @@ export const appointmentSchema = z.object({
   email: z.string().email('Enter a valid email'),
   street: z.string().min(1, 'Enter your street'),
   apt: z.string().optional(),
-  city: z.string().min(1, 'Enter your city'),
-  state: z.string().min(1, 'Enter your state'),
+  city: z.string().min(1, 'Enter your city').optional(),
+  state: z.string().min(1, 'Enter your state').optional(),
   zip: z.string().min(4, 'Enter your postal code').optional(),
 });
 export type AppointmentForm = z.infer<typeof appointmentSchema>;
@@ -25,14 +26,16 @@ export const step1Schema = z.object({
   phone: z.string().min(10, 'Invalid phone'),
   email: z.string().email('Invalid email'),
   street: z.string().min(1, 'Required'),
-  comments: z.string().optional(),
+  comments: z.string().min(1, 'Describe the problem'),
+  service: z.string().min(1, 'Select a service'),
+  versServices: z.string().min(1, 'Select an appliance'),
 });
 
-export const setVersServices = [
-  { title: 'Repair' },
-  { title: 'Installation' },
-  { title: 'Maintenance' },
-  { title: 'Commercial' },
+export const versServices = [
+  { title: 'Repair', cost: '0', duration: '0' },
+  { title: 'Installation', cost: '0', duration: '0' },
+  { title: 'Maintenance', cost: '0', duration: '0' },
+  { title: 'Commercial', cost: '0', duration: '0' },
 ];
 
 export const services = [

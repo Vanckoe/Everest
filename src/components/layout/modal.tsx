@@ -12,6 +12,7 @@ import {
   step1Schema,
   AppointmentForm,
   services,
+  versServices,
   ModalProps,
   timeSlots,
 } from './types';
@@ -22,18 +23,28 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
   const [service, setService] = useState('');
+  const [selectedVersService, setSelectedVersService] = useState('');
   const [errors, setErrors] = useState<Partial<AppointmentForm>>({});
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [street, setStreet] = useState('');
   const [comments, setComments] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasTriedSubmitStep1, setHasTriedSubmitStep1] = useState(false);
 
   const resetAll = () => {
     setStep(1);
     setDate('');
     setTime('');
     setService('');
+    setSelectedVersService('');
+    setFirstName('');
+    setLastName('');
+    setPhone('');
+    setEmail('');
+    setStreet('');
+    setComments('');
     setErrors({});
   };
 
@@ -63,6 +74,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       phone,
       email,
       street,
+      service,
+      versServices: selectedVersService,
       comments,
     };
 
@@ -81,38 +94,77 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     setErrors({});
     return true;
   };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const data = Object.fromEntries(form.entries()) as Record<string, string>;
-    // if (!validateStep2()) {
-    //   toast.error('Check the highlighted fields');
-    //   return;
-    // }
-
-    const combinedData = {
+  const validateStep2 = () => {
+    const fullData = {
       date,
       time,
       service,
-      ...data,
+      versServices: selectedVersService,
+      firstName,
+      lastName,
+      phone,
+      email,
+      street,
+      comments,
+      city: 'dummy', // если ты пока не собираешь city/state — добавь заглушки
+      state: 'dummy',
     };
 
-    console.log(combinedData);
-    // await sendToTelegram(combinedData);
-    // await fetch('/api/send-email', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(combinedData),
-    // });
+    const result = appointmentSchema.safeParse(fullData);
 
-    await toast.promise(new Promise(res => setTimeout(res, 600)), {
-      loading: 'Booking...',
-      success: 'Appointment successfully created!',
-      error: 'Error. Please try again.',
-    });
-    resetAll();
-    onClose();
+    if (!result.success) {
+      const fieldErrors: Partial<AppointmentForm> = {};
+      result.error.errors.forEach(error => {
+        const field = error.path[0] as keyof AppointmentForm;
+        fieldErrors[field] = error.message;
+      });
+      setErrors(fieldErrors);
+      return false;
+    }
+
+    setErrors({});
+    return true;
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (isSubmitting) return;
+
+    if (!validateStep2()) {
+      toast.error('Please fill all required fields correctly');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const combinedData = {
+      firstName,
+      lastName,
+      phone,
+      email,
+      street,
+      comments,
+      service,
+      versServices: selectedVersService,
+      date,
+      time,
+    };
+
+    console.log('✅ FINAL DATA SENT:', combinedData);
+
+    try {
+      await toast.promise(new Promise(res => setTimeout(res, 600)), {
+        loading: 'Booking...',
+        success: 'Appointment successfully created!',
+        error: 'Error. Please try again.',
+      });
+
+      resetAll();
+      onClose();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -199,18 +251,20 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
             <div className="flex flex-row gap-5">
               <ServiceSelect
-                options={services}
-                value={service}
-                onChange={setService}
-                error={errors.service}
+                options={versServices}
+                value={selectedVersService}
+                onChange={setSelectedVersService}
+                error={errors.versServices}
+                placeholder="Select appliances"
               />
-              <AplienceSelect
+              <ServiceSelect
                 options={services}
                 value={service}
                 onChange={setService}
                 error={errors.service}
               />
             </div>
+
             {/* <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
               Comments
             </p> */}
@@ -261,8 +315,9 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               {timeSlots.map(slot => (
                 <button
                   key={slot}
+                  type="button"
                   onClick={() => setTime(slot)}
-                  className={`rounded-[1.25rem] text-2xl md:text-base py-3 flex items-center justify-center
+                  className={`rounded-[0.6rem] text-2xl md:text-base py-3 flex items-center justify-center
                     ${time === slot ? 'bg-accent text-white' : 'bg-[#dfdddd] text-black'}
                     ${errors.time ? 'border-2 border-red-500' : ''} transition-colors`}
                 >
@@ -284,10 +339,38 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
               <button
                 type="submit"
-                className="md:w-[70%] font-bold text-3xl md:text-2xl text-white flex justify-center items-center
-                           gap-6 bg-accent rounded-[1.125rem] py-5 md:py-4 active:scale-[0.97]"
+                disabled={isSubmitting}
+                className={`md:w-[70%] font-bold text-3xl md:text-2xl flex justify-center items-center
+              gap-4 text-white bg-accent rounded-[1.125rem] py-5 md:py-4 active:scale-[0.97]
+              ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                Book Appointment
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      className="animate-spin h-6 w-6 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.372 0 0 5.372 0 12h4z"
+                      ></path>
+                    </svg>
+                    Processing...
+                  </>
+                ) : (
+                  'Book Appointment'
+                )}
               </button>
             </div>
           </form>

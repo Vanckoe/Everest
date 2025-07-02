@@ -3,7 +3,6 @@
 import { Listbox } from '@headlessui/react';
 import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
-import Appliances from '../../app/main/_component/appliances';
 
 type Service = {
   title: string;
@@ -33,7 +32,7 @@ const AplienceSelect = ({ options, value, onChange, error }: Props) => {
               error ? 'border-2 border-red-500' : ''
             }`}
           >
-            {value || 'Select a service'}
+            {value || 'Select appliances'}
             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[#6b7280]">
               <ChevronDown size={20} />
             </span>
