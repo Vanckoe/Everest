@@ -63,7 +63,7 @@ const MobileFooter = () => {
             </li>
             <li>
               <a href="/Thermador">
-                Thermador appliance repair
+                Viking appliance repair
               </a>
             </li>
           </ul>
