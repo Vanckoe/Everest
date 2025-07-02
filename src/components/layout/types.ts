@@ -19,6 +19,22 @@ export const appointmentSchema = z.object({
 });
 export type AppointmentForm = z.infer<typeof appointmentSchema>;
 
+export const step1Schema = z.object({
+  firstName: z.string().min(1, 'Required'),
+  lastName: z.string().min(1, 'Required'),
+  phone: z.string().min(10, 'Invalid phone'),
+  email: z.string().email('Invalid email'),
+  street: z.string().min(1, 'Required'),
+  comments: z.string().optional(),
+});
+
+export const setVersServices = [
+  { title: 'Repair' },
+  { title: 'Installation' },
+  { title: 'Maintenance' },
+  { title: 'Commercial' },
+];
+
 export const services = [
   { title: 'Refrigerator Repair', cost: '65.00 $', duration: '45 mins' },
   { title: 'Oven Repair', cost: '65.00 $', duration: '30 mins' },

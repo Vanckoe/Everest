@@ -2,12 +2,19 @@
 
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
-import { z } from 'zod';
 import CustomDatePicker from '../ui/CustomDatePicker';
 import ServiceSelect from '../ui/ServiceSelect';
+import AplienceSelect from '../ui/AplienceSelect';
 import { sendToTelegram } from '@/api/queries';
 import { parse } from 'date-fns';
-import { appointmentSchema, AppointmentForm, services, ModalProps, timeSlots } from './types';
+import {
+  appointmentSchema,
+  step1Schema,
+  AppointmentForm,
+  services,
+  ModalProps,
+  timeSlots,
+} from './types';
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [phone, setPhone] = useState('');
@@ -16,6 +23,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [time, setTime] = useState('');
   const [service, setService] = useState('');
   const [errors, setErrors] = useState<Partial<AppointmentForm>>({});
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [street, setStreet] = useState('');
+  const [comments, setComments] = useState('');
 
   const resetAll = () => {
     setStep(1);
@@ -44,13 +56,17 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     return `(${area}) ${middle}-${last}`;
   };
 
-  const validateStep1 = (fields: Record<string, string>) => {
-    const result = appointmentSchema.safeParse({
-      date,
-      time,
-      service,
-      ...fields,
-    });
+  const validateStep1 = () => {
+    const step1Data = {
+      firstName,
+      lastName,
+      phone,
+      email,
+      street,
+      comments,
+    };
+
+    const result = step1Schema.safeParse(step1Data);
 
     if (!result.success) {
       const fieldErrors: Partial<AppointmentForm> = {};
@@ -83,12 +99,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     };
 
     console.log(combinedData);
-    await sendToTelegram(combinedData);
-    await fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(combinedData),
-    });
+    // await sendToTelegram(combinedData);
+    // await fetch('/api/send-email', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(combinedData),
+    // });
 
     await toast.promise(new Promise(res => setTimeout(res, 600)), {
       loading: 'Booking...',
@@ -116,11 +132,23 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
         {/* -------- STEP 1 -------- */}
         {step === 1 && (
-          <div className="flex flex-col gap-4 md:gap-3">
+          <form
+            onSubmit={e => {
+              e.preventDefault();
+              if (validateStep1()) {
+                setStep(2);
+              } else {
+                toast.error('Please fill all required fields correctly');
+              }
+            }}
+            className="flex flex-col gap-4 md:gap-3"
+          >
             <h2 className="text-4xl md:text-3xl font-bold mb-2">Enter your details</h2>
             <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
               <input
                 name="firstName"
+                value={firstName}
+                onChange={e => setFirstName(e.target.value)}
                 placeholder="First name"
                 className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
@@ -129,6 +157,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               />
               <input
                 name="lastName"
+                value={lastName}
+                onChange={e => setLastName(e.target.value)}
                 placeholder="Last name"
                 className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
@@ -138,63 +168,72 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             </div>
             <input
               name="phone"
-              placeholder="Phone number"
               value={phone}
               onChange={e => setPhone(formatPhoneNumber(e.target.value))}
+              placeholder="Phone number"
               className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
-             text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
-               errors.phone ? 'border-2 border-red-500' : ''
-             }`}
+                           text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
+                             errors.phone ? 'border-2 border-red-500' : ''
+                           }`}
             />
-
             <input
               name="email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
               placeholder="Email"
               className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
-                         text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
-                           errors.email ? 'border-2 border-red-500' : ''
-                         }`}
+                           text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
+                             errors.email ? 'border-2 border-red-500' : ''
+                           }`}
             />
             <input
               name="street"
+              value={street}
+              onChange={e => setStreet(e.target.value)}
               placeholder="Address"
               className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
-                         text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
-                           errors.street ? 'border-2 border-red-500' : ''
-                         }`}
+                           text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
+                             errors.street ? 'border-2 border-red-500' : ''
+                           }`}
             />
-            <h3 className="text-4xl md:text-3xl font-semibold mt-2">Comments</h3>
+
+            <div className="flex flex-row gap-5">
+              <ServiceSelect
+                options={services}
+                value={service}
+                onChange={setService}
+                error={errors.service}
+              />
+              <AplienceSelect
+                options={services}
+                value={service}
+                onChange={setService}
+                error={errors.service}
+              />
+            </div>
+            {/* <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
+              Comments
+            </p> */}
             <textarea
               name="comments"
-              id="comments"
-              rows={2}
+              value={comments}
+              onChange={e => setComments(e.target.value)}
               placeholder="Describe the problem"
+              rows={2}
               className={`focus:outline-none w-full rounded-[1.25rem] bg-[#dfdddd] py-3 px-9 text-3xl md:text-2xl
-                         text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
-                           errors.comments ? 'border-2 border-red-500' : ''
-                         }`}
-            ></textarea>
+                           text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
+                             errors.comments ? 'border-2 border-red-500' : ''
+                           }`}
+            />
             <button
-              type="button"
-              onClick={() => {
-                const form = document.querySelector('form') as HTMLFormElement;
-                if (form) {
-                  const formData = new FormData(form);
-                  const values = Object.fromEntries(formData.entries()) as Record<string, string>;
-
-                  // Если хотите валидировать, раскомментируйте следующую строку:
-                  if (!validateStep1(values)) return;
-
-                  setStep(2);
-                }
-              }}
+              type="submit"
               className="font-bold w-full mt-3 text-nowrap mx-auto text-3xl md:text-2xl
-                         text-white flex justify-center items-center gap-6 bg-accent
-                         rounded-[1.5rem] py-5 transition-all active:scale-[0.97]"
+               text-white flex justify-center items-center gap-6 bg-accent
+               rounded-[1.5rem] py-5 transition-all active:scale-[0.97]"
             >
               Continue
             </button>
-          </div>
+          </form>
         )}
 
         {/* -------- STEP 2 -------- */}
@@ -232,12 +271,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               ))}
             </div>
             {/* {errors.time && <p className="text-xl text-red-500 mt-1">{errors.time}</p>} */}
-            <ServiceSelect
-              options={services}
-              value={service}
-              onChange={setService}
-              error={errors.service}
-            />
+
             <div className="mt-4 flex flex-col md:flex-row gap-4">
               <button
                 type="button"

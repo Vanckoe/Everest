@@ -3,6 +3,7 @@
 import { Listbox } from '@headlessui/react';
 import { Check, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import Appliances from '../../app/main/_component/appliances';
 
 type Service = {
   title: string;
@@ -15,22 +16,15 @@ interface Props {
   value: string;
   onChange: (value: string) => void;
   error?: string;
-  placeholder?: string;
 }
 
-const ServiceSelect = ({
-  options,
-  value,
-  onChange,
-  error,
-  placeholder = 'Select a service',
-}: Props) => {
+const AplienceSelect = ({ options, value, onChange, error }: Props) => {
   const selected = options.find(option => option.title === value) || options[0];
 
   return (
     <div className="w-full">
       {/* <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold text-gray-700">
-        Choose <br /> services
+        Choose <br /> Appliances
       </p> */}
       <Listbox value={value} onChange={onChange}>
         <div className="relative">
@@ -71,4 +65,4 @@ const ServiceSelect = ({
   );
 };
 
-export default ServiceSelect;
+export default AplienceSelect;
