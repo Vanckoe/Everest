@@ -107,7 +107,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       email,
       street,
       comments,
-      city: 'dummy', // если ты пока не собираешь city/state — добавь заглушки
+      city: 'dummy',
       state: 'dummy',
     };
 
@@ -153,7 +153,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     };
 
     console.log('✅ FINAL DATA SENT:', combinedData);
-
+    await sendToTelegram(combinedData);
+    await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(combinedData),
+    });
     try {
       await toast.promise(new Promise(res => setTimeout(res, 600)), {
         loading: 'Booking...',
@@ -161,7 +166,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
         error: 'Error. Please try again.',
       });
 
-      // resetAll();
+      resetAll();
       onClose();
     } finally {
       setIsSubmitting(false);
