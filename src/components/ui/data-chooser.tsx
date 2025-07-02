@@ -52,7 +52,7 @@ const renderDays = (
         }`}
         onClick={() => !isPast && handleDayClick(date)}
       >
-        <div className="text-base font-medium">{date.date()}</div>
+        <div className="text-lg md:text-base font-medium">{date.date()}</div>
       </div>
     );
   }
@@ -66,7 +66,7 @@ const renderMonth = (
   selectedDate: Dayjs | null
 ) => (
   <div key={month.format('YYYY-MM')} className="mb-6">
-    <div className="mb-3 text-center text-lg font-semibold text-gray-800">
+    <div className="mb-3 text-center text-xl md:text-lg font-semibold text-gray-800">
       {month.format('MMMM YYYY')}
     </div>
     <div className="grid grid-cols-7 gap-0">{renderDays(month, handleDayClick, selectedDate)}</div>
@@ -83,8 +83,8 @@ const CustomCalendarPicker = ({ onDateSelect }: { onDateSelect: (date: Date) => 
   };
 
   return (
-    <div className="absolute z-50 mt-2 w-[25rem] max-h-[22rem] overflow-y-scroll rounded-xl border border-gray-200 bg-white p-4 shadow-md scrollbar-hide">
-      <div className="sticky top-0 z-10 grid grid-cols-7 border-b bg-white py-2 text-center text-sm font-semibold text-gray-700">
+    <div className="absolute z-50 mt-2 min-w-[25rem] w-full md:w-[25rem] max-h-[22rem] overflow-y-scroll rounded-xl border border-gray-200 bg-white p-4 shadow-md scrollbar-hide">
+      <div className="sticky top-0 z-10 grid grid-cols-7 border-b bg-white py-2 text-center text-2xl md:text-sm font-semibold text-gray-700">
         {['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map(day => (
           <div key={day}>{day}</div>
         ))}

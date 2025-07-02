@@ -32,7 +32,7 @@ const ServiceSelect = ({
       <Listbox value={value} onChange={onChange}>
         <div className="relative">
           <Listbox.Button
-            className={`w-full rounded-[1.25rem] bg-[#dfdddd] py-4 px-9 pr-12 text-left text-black text-2xl md:text-xl border-2 ${
+            className={`w-full rounded-[0.6rem] bg-[#dfdddd] py-4 px-6 pr-12 text-left text-black text-2xl md:text-xl border-2 ${
               error ? 'border-red-500' : 'border-transparent'
             }`}
           >
