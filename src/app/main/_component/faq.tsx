@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'What area do you service?',
-    a: 'We provide our services to residents of Chicago.',
+    a: 'Residents of Chicago and all closest suburbs in 30 miles',
   },
   {
     q: 'Do I need to be at home during my appointment?',

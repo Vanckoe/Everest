@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     q: 'What area do you service?',
-    a: 'We provide our services to residents of Chicago.',
+    a: 'Residents of Chicago and all closest suburbs in 30 miles',
   },
   {
     q: 'Do I need to be at home during my appointment?',
@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     q: 'What kind of warranty do we provide?',
-    a: 'Everest company offers a 12-month warranty on both labor and replacement parts. What does this mean? It means that for up to 12 months, we stand by our work and the parts we`ve replaced, provided any issues are not caused by misuse, neglect, or insufficient maintenance of the appliance. Keep in mind that cosmetic damage and some electronic failures resulting from improper handling may not fall under this warranty.',
+    a: 'Everest company offers a 12-month warranty on both labor and replacement parts. This means that for up to 12 months, we stand by our work and the parts we ve replaced — provided that any issues are not caused by misuse, neglect, or insufficient maintenance of the appliance. Please note that cosmetic damage and certain electronic failures resulting from improper handling may not be covered under this warranty.',
   },
   {
     q: 'Is there a service call fee, and is it waived if I proceed with the repair?',
@@ -120,7 +120,7 @@ export default function FaqAccordion() {
   const toggle = (i: number) => setOpenIndex(prev => (prev === i ? null : i));
 
   return (
-    <section id='faq' className="w-full px-10 py-[4.5rem] md:gap-5">
+    <section id='faq' className="w-full px-18 pt-[9.375rem] pb-[8.125rem] md:gap-5">
       <div className="grid border-t border-neutral-200 gap-8 md:gap-12 md:grid-cols-[minmax(0,20.5rem)_1fr]">
         {/* Левый заголовок */}
         <h2 className="text-5xl py-5 font-bold leading-[100%] text-[#0E203D]">

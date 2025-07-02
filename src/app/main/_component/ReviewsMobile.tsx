@@ -24,7 +24,7 @@ const reviewsData = [
     name: 'Tair Mansur',
     time: '1 months ago',
     avatar: '/img/icons/user-2.png',
-    text: 'Excellent service from start to finish. Archie came to fix our Thermador built-in oven and did an amazing job. He’s only 18 but was very polite, professional, and knew exactly what he was doing. He explained the problem clearly and fixed it quickly. Very impressed with his work. Highly recommend EVEREST!',
+    text: 'Excellent service from start to finish. Archie came to fix our Viking built-in oven and did an amazing job. He’s only 18 but was very polite, professional, and knew exactly what he was doing. He explained the problem clearly and fixed it quickly. Very impressed with his work. Highly recommend EVEREST!',
   },
   {
     id: 4,

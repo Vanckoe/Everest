@@ -4,7 +4,7 @@ const advantages = [
   {
     title: (
       <>
-        Thermador Refrigerators
+        Viking Refrigerators
       </>
     ),
     subtitle: (
@@ -20,7 +20,7 @@ const advantages = [
   {
     title: (
       <>
-        Thermador Ranges
+        Viking Ranges
       </>
     ),
     subtitle: (
@@ -36,7 +36,7 @@ const advantages = [
   {
     title: (
       <>
-        Thermador Cooktops
+        Viking Cooktops
       </>
     ),
     subtitle: (
@@ -52,7 +52,7 @@ const advantages = [
   {
     title: (
       <>
-        Thermador Ovens
+        Viking Ovens
       </>
     ),
     subtitle: (
@@ -74,10 +74,10 @@ export default function AdvantagesMobile() {
       <div className="mb-10">
         <h2 className="text-[#001f3f] text-[3.25rem] font-bold leading-tight mb-4">
           We repair all types of <br />
-          Thermador Appliances
+          Viking Appliances
         </h2>
         <p className="text-[#001f3f] text-[1.65rem] leading-relaxed">
-            If your Thermador appliance isn’t functioning properly, don’t rush to replace 
+            If your Viking appliance isn’t functioning properly, don’t rush to replace 
             it—repair it! To find out more about our services or if your appliance isn’t listed above, 
             feel free to contact us online today.
         </p>

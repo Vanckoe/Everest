@@ -21,7 +21,7 @@ const items = [
     id: '03',
     icon: <Lightbulb className="text-[#31A301] size-10" />,
     boldText: 'Same-Day Repairs Available',
-    fadedText: ' for most major brands, including Thermador.',
+    fadedText: ' for most major brands, including Viking.',
   },
 ];
 const NewHero = () => {

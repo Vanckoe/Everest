@@ -10,7 +10,7 @@ const advantages: Advantage[] = [
   {
     title: (
       <>
-        Thermador<br />
+        Viking<br />
         Refrigerators<br />
       </>
     ),
@@ -28,7 +28,7 @@ const advantages: Advantage[] = [
   {
     title: (
       <>
-        Thermador <br />
+        Viking <br />
         Ranges
       </>
     ),
@@ -45,7 +45,7 @@ const advantages: Advantage[] = [
   {
     title: (
       <>
-        Thermador <br />
+        Viking <br />
         Cooktops <br />
       </>
     ),
@@ -62,7 +62,7 @@ const advantages: Advantage[] = [
   {
     title: (
       <>
-        Thermador <br />
+        Viking <br />
         Ovens <br />
       </>
     ),
@@ -90,13 +90,13 @@ export default function Advantages() {
               data-aos="fade-up"
               className="text-[#001f3f] text-[2.75rem] font-bold leading-tight w-[28.125rem]"
             >
-              We repair all <br /> types of Thermador <br />Appliances
+              We repair all <br /> types of Viking <br />Appliances
             </h2>
             <p
               data-aos="fade-up"
               className="text-[#001f3f] text-base leading-relaxed mt-4"
             >
-              If your Thermador appliance isn’t functioning properly, don’t rush to replace 
+              If your Viking appliance isn’t functioning properly, don’t rush to replace 
               it—repair it! To find out more about our services or if your appliance isn’t listed above, 
               feel free to contact us online today.
             </p>
