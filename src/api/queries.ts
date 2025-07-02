@@ -6,7 +6,7 @@ type Lead = Record<string, string>;
 
 export const sendToTelegram = async (data: Lead) => {
   const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
-  const chatId   = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
+  const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID;
 
   if (!botToken || !chatId) {
     console.error('Telegram env vars are missing');
@@ -16,16 +16,16 @@ export const sendToTelegram = async (data: Lead) => {
   const text = `
 🛠️ <b>Новая заявка Everest Appliance Repair</b>
 
-👤 ${data.firstName ?? ''} ${data.lastName ?? ''}
-📞 ${data.phone ?? ''}
-📧 ${data.email ?? ''}
+👤 <b>Имя:</b> ${data.firstName ?? ''} ${data.lastName ?? ''}
+📞 <b>Телефон:</b> ${data.phone ?? ''}
+📧 <b>Email:</b> ${data.email ?? ''}
 
-📅 ${data.date ?? ''}   ⏰ ${data.time ?? ''}
-🔧 ${data.service ?? ''}
+📅 <b>:</b> ${data.date ?? ''}   ⏰ <b>:</b> ${data.time ?? ''}
+🔧 <b>:</b> ${data.service ?? ''} ${data.versServices ?? ''}
+🏠 <b>Адрес:</b> ${data.street ?? ''}
 
-🏠 ${data.street ?? ''}${data.apt ? `, Apt: ${data.apt}` : ''}
-🌆 ${data.city ?? ''}, ${data.state ?? ''}${data.zip ? `, ${data.zip}` : ''}
-  `;
+💬 <b>Комментарий:</b> ${data.comments ?? ''}
+`;
 
   await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
     chat_id: chatId,
