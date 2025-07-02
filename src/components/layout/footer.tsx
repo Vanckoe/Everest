@@ -95,16 +95,7 @@ const DesktopFooter = () => {
             {/* Иконки */}
             <div className="flex items-start gap-4">
               <a
-                href="https://www.yelp.com/biz/midwest-standards-schaumburg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-[3.125rem] h-[3.125rem] bg-[#af0606] rounded-md flex items-center justify-center"
-              >
-                {/* 50px = 3.125rem */}
-                <GoUpIcon color='white' width="25" height="25" />
-              </a>
-              <a
-                href="https://www.google.com/maps/place/Midwest+Standards"
+                href="https://maps.app.goo.gl/CKSmWpotoRx98ASA8?g_st=ipc"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-[3.125rem] h-[3.125rem] bg-[#69727d] rounded-md flex items-center justify-center"
@@ -120,7 +111,7 @@ const DesktopFooter = () => {
           {/* Нижняя строка */}
           <div className="flex justify-between items-start text-sm">
             <a
-              href="https://api.whatsapp.com/send/?phone=12246299583&text&type=phone_number&app_absent=0"
+              href="/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-8 h-8 md:mb-10"

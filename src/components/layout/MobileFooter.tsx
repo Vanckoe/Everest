@@ -73,21 +73,14 @@ const MobileFooter = () => {
       {/* Иконки */}
       <div className="flex gap-4 mt-[2.5rem] mb-[2.5rem]">
         <a
-          href="https://www.yelp.com/biz/midwest-standards-schaumburg"
-          target="_blank"
-          className="w-[5.125rem] h-[5.125rem] bg-[#af0606] rounded-md flex items-center justify-center"
-        >
-          <GoUpIcon color="white" width="25" height="25" />
-        </a>
-        <a
-          href="https://www.google.com/maps/place/Midwest+Standards"
+          href="https://maps.app.goo.gl/CKSmWpotoRx98ASA8?g_st=ipc"
           target="_blank"
           className="w-[5.125rem] h-[5.125rem] bg-white rounded-md flex items-center justify-center"
         >
           <CustomIcon color="#4285F4" width="25" height="25" />
         </a>
         <a
-          href="https://api.whatsapp.com/send/?phone=12246299583&text&type=phone_number&app_absent=0"
+          href="/"
           target="_blank"
           rel="noopener noreferrer"
           className="w-[5.125rem] h-[5.125rem] bg-[#075E54] rounded-md flex items-center justify-center"
