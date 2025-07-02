@@ -18,6 +18,7 @@ const grid: CellData[][] = [
   ],
   // row 1
   [
+    null,
     { type: 'logo', src: '/img/brands/bosch.avif', alt: 'Bosch' },
     { type: 'logo', src: '/img/brands/subzero.avif', alt: 'Sub-Zero' },
     { type: 'logo', src: '/img/brands/Kitchenaid.png', alt: 'Kitchenaid' },
