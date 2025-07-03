@@ -26,7 +26,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [selectedVersService, setSelectedVersService] = useState('');
   const [errors, setErrors] = useState<Partial<AppointmentForm>>({});
   const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  // const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [street, setStreet] = useState('');
   const [comments, setComments] = useState('');
@@ -40,7 +40,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
     setService('');
     setSelectedVersService('');
     setFirstName('');
-    setLastName('');
+    // setLastName('');
     setPhone('');
     setEmail('');
     setStreet('');
@@ -70,13 +70,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const validateStep1 = () => {
     const step1Data = {
       firstName,
-      lastName,
+      // lastName,
       phone,
       email,
       street,
       service,
       versServices: selectedVersService,
-      comments,
+      // comments,
     };
 
     const result = step1Schema.safeParse(step1Data);
@@ -101,7 +101,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       service,
       versServices: selectedVersService,
       firstName,
-      lastName,
+      // lastName,
       phone,
       email,
       street,
@@ -140,7 +140,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
 
     const combinedData = {
       firstName,
-      lastName,
+      // lastName,
       phone,
       email,
       street,
@@ -201,25 +201,15 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
             className="flex flex-col gap-4 md:gap-3"
           >
             <h2 className="text-4xl md:text-2xl font-bold mb-2 text-black">Enter your details</h2>
-            <div className="grid grid-cols-2 md:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-3">
               <input
                 name="firstName"
                 value={firstName}
                 onChange={e => setFirstName(e.target.value)}
-                placeholder="First name"
+                placeholder="Your name"
                 className={`focus:outline-none w-full rounded-[0.6rem] bg-[#dfdddd] py-3 px-6 text-3xl md:text-2xl
                            text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
                              errors.firstName ? 'border-2 border-red-500' : ''
-                           }`}
-              />
-              <input
-                name="lastName"
-                value={lastName}
-                onChange={e => setLastName(e.target.value)}
-                placeholder="Last name"
-                className={`focus:outline-none w-full rounded-[0.6rem] bg-[#dfdddd] py-3 px-6 text-3xl md:text-2xl
-                           text-black placeholder:text-2xl placeholder:text-[#9A9A9A] ${
-                             errors.lastName ? 'border-2 border-red-500' : ''
                            }`}
               />
             </div>
@@ -254,25 +244,21 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                            }`}
             />
 
-            <div className="flex flex-row gap-5">
-              <ServiceSelect
-                options={versServices}
-                value={selectedVersService}
-                onChange={setSelectedVersService}
-                error={errors.versServices}
-                placeholder="Select appliances"
-              />
-              <ServiceSelect
-                options={services}
-                value={service}
-                onChange={setService}
-                error={errors.service}
-              />
-            </div>
-
-            {/* <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold">
-              Comments
-            </p> */}
+            {/* <div className="flex flex-row gap-3"> */}
+            <ServiceSelect
+              options={versServices}
+              value={selectedVersService}
+              onChange={setSelectedVersService}
+              error={errors.versServices}
+            />
+            <ServiceSelect
+              options={services}
+              value={service}
+              onChange={setService}
+              error={errors.service}
+              placeholder="Select appliances"
+            />
+            {/* </div> */}
             <textarea
               name="comments"
               value={comments}
@@ -307,7 +293,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               value={date ? parse(date, 'dd-MM-yyyy', new Date()) : null}
               onChange={(dateObj: Date | null) => {
                 if (dateObj) {
-                  const formatted = format(dateObj, 'dd-MM-yyyy');
+                  const formatted = format(dateObj, 'MM-dd-yyyy');
                   setDate(formatted);
                 } else {
                   setDate('');
@@ -315,7 +301,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
               }}
               error={errors.date}
             />
-            {/* {errors.date && <p className="text-xl text-red-500 mt-1">{errors.date}</p>} */}
             <p className="mt-4 mb-2 block text-3xl md:text-xl font-semibold">Select time</p>
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
               {timeSlots.map(slot => (
@@ -331,8 +316,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
                 </button>
               ))}
             </div>
-            {/* {errors.time && <p className="text-xl text-red-500 mt-1">{errors.time}</p>} */}
-
             <div className="mt-10 flex flex-col md:flex-row gap-4">
               <button
                 type="button"

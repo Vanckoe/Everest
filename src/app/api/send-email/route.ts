@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     service,
     versServices,
     firstName,
-    lastName,
+    // lastName,
     phone,
     email,
     street,
@@ -70,7 +70,7 @@ export async function POST(req: Request) {
         <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <h2 style="color: #2b6777;">🛠️ Новая заявка Everest Appliance Repair</h2>
 
-          <p><strong>👤 Имя:</strong> ${firstName} ${lastName}</p>
+          <p><strong>👤 Имя:</strong> ${firstName}</p>
           <p><strong>📞 Телефон:</strong> ${phone}</p>
           <p><strong>📧 Email:</strong> ${email}</p>
 

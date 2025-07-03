@@ -8,8 +8,8 @@ export const appointmentSchema = z.object({
   versServices: z.string({ required_error: 'Select a appliances' }),
   service: z.string({ required_error: 'Select a service' }),
   firstName: z.string().min(1, 'Enter your first name'),
-  lastName: z.string().min(1, 'Enter your last name'),
-  comments: z.string().min(1, 'Describe the problem'),
+  // lastName: z.string().min(1, 'Enter your last name'),
+  comments: z.string().optional(),
   phone: z.string().min(6, 'Enter your phone number'),
   email: z.string().email('Enter a valid email'),
   street: z.string().min(1, 'Enter your street'),
@@ -22,11 +22,11 @@ export type AppointmentForm = z.infer<typeof appointmentSchema>;
 
 export const step1Schema = z.object({
   firstName: z.string().min(1, 'Required'),
-  lastName: z.string().min(1, 'Required'),
+  // lastName: z.string().min(1, 'Required'),
   phone: z.string().min(10, 'Invalid phone'),
   email: z.string().email('Invalid email'),
   street: z.string().min(1, 'Required'),
-  comments: z.string().min(1, 'Describe the problem'),
+  comments: z.string().optional(),
   service: z.string().min(1, 'Select a service'),
   versServices: z.string().min(1, 'Select an appliance'),
 });

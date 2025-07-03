@@ -15,7 +15,7 @@ interface Props {
   value: string;
   onChange: (value: string) => void;
   error?: string;
-  placeholder?: string; // можно передавать кастомный текст, например: "Выберите услугу"
+  placeholder?: string;
 }
 
 const ServiceSelect = ({
@@ -42,7 +42,7 @@ const ServiceSelect = ({
             </span>
           </Listbox.Button>
 
-          <Listbox.Options className="absolute -top-[16rem] left-0 z-10 mt-2 max-h-60 w-full overflow-auto rounded-xl bg-white py-1 shadow-xl ring-1 ring-black/5 focus:outline-none">
+          <Listbox.Options className="absolute -top-[20rem] left-0 z-10 mt-2 max-h-[18.75rem] w-full overflow-auto rounded-xl bg-white py-1 shadow-xl ring-1 ring-black/5 focus:outline-none">
             {options.map(option => (
               <Listbox.Option
                 key={option.title}

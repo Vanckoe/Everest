@@ -16,7 +16,7 @@ export const sendToTelegram = async (data: Lead) => {
   const text = `
 🛠️ <b>Новая заявка Everest Appliance Repair</b>
 
-👤 <b>Имя:</b> ${data.firstName ?? ''} ${data.lastName ?? ''}
+👤 <b>Имя:</b> ${data.firstName ?? ''} 
 📞 <b>Телефон:</b> ${data.phone ?? ''}
 📧 <b>Email:</b> ${data.email ?? ''}
 
