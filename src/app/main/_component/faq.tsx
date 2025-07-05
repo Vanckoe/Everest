@@ -5,46 +5,41 @@ import { useState, useRef, useEffect } from 'react';
 /* ---------- Данные FAQ ---------- */
 const faqs = [
   {
-    q: 'How much will an Appliances Repair Service cost?',
-    a: 'This is likely the most common question we get asked, but unfortunately, we can’t give a specific answer on this FAQ page. When you call us +1(813) 290-1625 and let us know what type of issues your appliance is having, we can offer you an estimate on what the total price may be.',
+    q: 'What areas do you cover?',
+    a: 'We have a team of 6 technicians covering all of Chicago and suburbs within about a 35-mile radius. Driving is part of our job — just let us know your zip code and we’ll confirm we can help you!',
   },
   {
-    q: 'Is it worth repairing my appliance?',
-    a: 'In many situations, repairing your appliance is both more cost-effective and environmentally friendly than replacing it. Most appliance problems can be resolved at a fraction of the cost of purchasing a new one. Additionally, a quality repair can extend the appliance’s service life for many years, making it a smart and valuable choice.',
+    q: 'How fast can you come out?',
+    a: 'We offer same-day and next-day service whenever possible. Call early in the day and we’ll do everything we can to get to you the same day.',
   },
   {
-    q: 'How long does it take to repair an appliance?',
-    a: 'Our team offers same-day service because we understand how important some household appliances are. Our technicians have most of the parts with them, but sometimes specific models or cases will require details that must be ordered. Due to experience, on average, our techs carry out repairs in 45- 60 minutes if they have the part with them.',
+    q: 'How much does a typical repair cost?',
+    a: 'Every repair is different, but most service visits start with a flat diagnostic fee. Once we identify the issue, we’ll give you a clear, upfront estimate before we start any work — no surprises. ',
   },
   {
-    q: 'What area do you service?',
-    a: 'Residents of Chicago and all closest suburbs in 30 miles',
+    q: 'How is the service call fee waived?',
+    a: 'When you approve the repair estimate after inspection of the unit, the diagnostic/service call fee of $79 is applied toward the total repair cost — effectively waiving it. If you decide not to proceed with the repair, the $79 fee simply covers our time and expertise for diagnosing the problem.',
   },
   {
-    q: 'Do I need to be at home during my appointment?',
-    a: 'Yes. It is a requirement for all our customers to be present during the time of a service appointment. If you are not able to be present, make sure to give us a call and we will reschedule to a more suitable time.',
+    q: 'What forms of payment do you accept?',
+    a: 'We accept all major forms of payment, including credit cards, debit cards, cash, checks, and Zelle. Invoice is sent on site and completed job has to be paid right after the repair. ',
   },
   {
-    q: 'What kind of warranty do we provide?',
-    a: 'Everest company offers a 12-month warranty on both labor and replacement parts. This means that for up to 12 months, we stand by our work and the parts we ve replaced — provided that any issues are not caused by misuse, neglect, or insufficient maintenance of the appliance. Please note that cosmetic damage and certain electronic failures resulting from improper handling may not be covered under this warranty.',
+    q: 'Do you require upfront payment for parts?',
+    a: 'Yes — when a repair requires ordering parts, we collect 50% of the total balance upfront to cover the parts cost. The remaining balance is due after the repair is completed.',
   },
   {
-    q: 'Is there a service call fee, and is it waived if I proceed with the repair?',
-    a: 'Yes, we charge a service call fee, which is typically waived if you approve the repair during the visit.',
+    q: 'I’m a landlord and don’t live there. How should we proceed?',
+    a: 'No problem — we work with many landlords and property managers. Just provide us with your tenant’s contact information and get their permission for entry. We’ll schedule directly with them and keep you updated every step of the way. Payment can be handled remotely after the repair.',
   },
   {
-    q: 'Are your repairs covered by a warranty?',
-    a: 'Absolutely! We offer a warranty on both parts and labor. Specific terms depend on the type of repair.',
+    q: 'Do you repair all brands?',
+    a: 'Yes — our technicians are experienced with all major appliance brands and models, and we stock common parts to avoid delays.',
   },
   {
-    q: 'Do you provide estimates before starting a repair?',
-    a: 'Yes, we offer detailed upfront estimates so you know the cost before we begin any work.',
+    q: 'Is your work guaranteed?',
+    a: 'Absolutely — all our repairs come with a 12-month labor warranty, so you can feel confident the job is done right.',
   },
-  {
-    q: 'How can I prevent my appliance from breaking down again?',
-    a: 'Our technicians will provide maintenance tips and recommendations to keep your appliance running efficiently. Regular care is key!',
-  },
-
 
 
 ] as const;
@@ -123,10 +118,8 @@ export default function FaqAccordion() {
     <section id='faq' className="w-full px-18 pt-[9.375rem] pb-[8.125rem] md:gap-5">
       <div className="grid border-t border-neutral-200 gap-8 md:gap-12 md:grid-cols-[minmax(0,20.5rem)_1fr]">
         {/* Левый заголовок */}
-        <h2 className="text-5xl py-5 font-bold leading-[100%] text-[#0E203D]">
-          Frequently <br className="hidden md:block" />
-          Asked <br />
-          Question
+        <h2 className="text-5xl md:text-7xl py-5 font-bold leading-[100%] text-[#0E203D]">
+          FAQ <br className="hidden md:block" />
         </h2>
 
         {/* Правый аккордеон */}
