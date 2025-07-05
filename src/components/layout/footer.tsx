@@ -1,10 +1,10 @@
-'use client';
+"use client";
 import React from 'react';
 import GoUpIcon from '@/assets/GoUp';
 import CustomIcon from '@/assets/Google-footer';
 import WhatsAppIcon from '@/assets/WhatsAppIcon';
 import MobileFooter from './MobileFooter';
-import Logo from '@/assets/Logo';
+import Image from 'next/image';
 
 const DesktopFooter = () => {
   const handleScrollToTop = () => {
@@ -14,14 +14,13 @@ const DesktopFooter = () => {
   return (
     <footer className="relative bg-[#000913] w-full text-white hidden md:block">
       <div className="max-w-[90rem] mx-auto flex flex-col md:flex-row px-16 md:pl-8 relative">
-
         {/* Кнопка "GO UP" */}
         <button
           onClick={handleScrollToTop}
           className="
             absolute 
             top-1/2 
-            left-[32.125rem] 
+            left-[30.75rem] 
             -translate-y-1/2
             -translate-x-[0.3]
             w-[2.375rem] 
@@ -48,15 +47,53 @@ const DesktopFooter = () => {
         {/* Левая секция */}
         <div className="w-[33.125rem] h-[31rem] pr-8 border-r border-[#234151] flex flex-col justify-start md:pt-20 z-10">
           <div className="mb-6">
-            <Logo className='md:size-28 rounded-2xl'/>
+            <div className="flex items-center gap-4">
+              <Image
+                src="/img/icons/logo.png"
+                width={100}
+                height={100}
+                alt="Logo"
+                className="h-[4rem] w-[8rem] md:h-[3rem] md:w-[5.5rem] -ml-2 md:ml-0 md:mt-0 -mt-4"
+              />
+              <div className="flex flex-col leading-tight">
+                <h1 className="text-xl md:text-xs font-bold text-[#fff]">
+                  EVEREST APPLIANCE REPAIR
+                </h1>
+                <p className="text-lg md:text-xs text-[#fff]">
+                  Above and Beyond – Only with <br /> Everest.
+                </p>
+              </div>
+            </div>
           </div>
-          <p className="text-lg leading-relaxed text-[#9FAEB6] mb-8">
-            We are always here to assist you with any <br className=' inline md:block'/>
-            questions or requests. Reach out to us in the <br className='hidden md:block'/>
-            way that suits you best.
-          </p>
+          <div>
+          <h2 className="md:text-3xl text-[#fff] font-bold mb-2">Contact info:</h2>
+          <ul className="space-y-2 text-white md:text-xl">
+            <li>
+              <a
+                href="tel:+18132901625"
+                className="underline hover:text-gray-300 transition-colors"
+              >
+                +1 (813) 290-1625
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:everestprimeservices@gmail.com"
+                className="underline hover:text-gray-300 transition-colors"
+              >
+                everestprimeservices@gmail.com
+              </a>
+            </li>
+            <li className="text-white md:text-base">
+              <p>
+                EVEREST APPLIANCE REPAIR <br />
+                197 S Pick Ave <br />
+                ELMHURST, Illinois 60126
+              </p>
+            </li>
+          </ul>
+        </div>        
         </div>
-
         {/* Правая секция */}
         <div className="w-[56.25rem] h-[31rem] pl-20 flex flex-col justify-between md:pt-20 z-10">
           <div className="flex flex-col md:flex-row gap-16">

@@ -5,7 +5,7 @@ import About from './_component/about';
 import RunningLine from './_component/runningLine';
 import Reviews from './_component/reviews';
 import Services from './_component/services';
-import Advantages from './_component/advantages';
+import Advantages from './_component/OurWork';
 import Appliances from './_component/appliances';
 import BrandGrid from './_component/logoGrid';
 import FaqAccordion from './_component/faq';
@@ -18,6 +18,9 @@ import ForWhoMobile from './_component/forWhoMobile';
 // import ColorPalettes from '@/components/layout/ColorPalettes';
 import NewHero from './_component/newHero';
 import ServiceAreaMarquee from './_component/runningLine-text';
+import OurWorkMobile from './_component/OurWorkMobile';
+import AdvantagesMobile from '../Thermador/_component/AdvantagesMobile';
+import OurWork from './_component/OurWork';
 
 const Main = () => {
   return (
@@ -37,7 +40,8 @@ const Main = () => {
       <Services />
       <About />
       <Reviews />
-      <Advantages />
+      <OurWork />
+      <OurWorkMobile />
       <BrandGrid />
       <Appliances />
       <ForWho />

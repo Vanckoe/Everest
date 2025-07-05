@@ -22,7 +22,7 @@ const grid: CellData[][] = [
     { type: 'logo', src: '/img/brands/bosch.avif', alt: 'Bosch' },
     { type: 'logo', src: '/img/brands/subzero.avif', alt: 'Sub-Zero' },
     { type: 'logo', src: '/img/brands/Kitchenaid.png', alt: 'Kitchenaid' },
-    { type: 'logo', src: '/img/brands/viking.avif', alt: 'viking' },
+    { type: 'logo', src: '/img/brands/miele.png', alt: 'miele' },
     { type: 'logo', src: '/img/brands/thermador.avif', alt: 'Thermador' },
     null,
   ],
@@ -41,7 +41,7 @@ const grid: CellData[][] = [
     null,
     null,
     null,
-    { type: 'logo', src: '/img/brands/dacor.avif', alt: 'dacor' },
+    { type: 'logo', src: '/img/brands/lg-logo.png', alt: 'dacor' },
     null,
   ],
 ];
@@ -77,11 +77,10 @@ export default function BrandGrid() {
               className={`flex items-center justify-center p-3 md:p-6 ${borders} ${baseSpan} ${orderFix}`}
             >
               {cell.type === 'text' ? (
-                <p className="text-start font-semibold leading-[100%] mb-10 text-5xl md:text-4xl">
-                  Our team repairs all
-                  <br />
-                  world-famous brands
-                </p>
+              <p className="text-center md:text-start font-semibold leading-[100%] mb-10 text-5xl md:text-4xl">
+                All brands. <br />
+                One Expert Team. <br />Fixed Right.
+              </p>
               ) : (
                 <Image
                   {...cell}

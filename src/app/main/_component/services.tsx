@@ -128,29 +128,27 @@ export default function Services() {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
 
   return (
-    <section id="services" className="px-10 py-[7.5rem]">
+    <section id="services" className="px-10 py-[4.5rem]">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Заголовок */}
       <div className="mb-10 flex flex-col gap-5">
         <div className="text-2xl font-semibold italic md:text-base">
-          <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 02 - Services
+          <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> SERVICES
         </div>
         <p
           data-aos="fade-up"
           className="text-[3rem] md:text-[2.75rem] leading-[100%] font-semibold"
         >
-          Broken Appliance? <br className="md:hidden" />
-          We’ll Fix It Today! <br />
-          Choose Top-level <br className="md:hidden" />
-          service at fair price
+          Select Your Service Below - <br />
+          Schedule in minutes - Fixed Today!  <br />
         </p>
       </div>
 
       {/* Сетка карточек с линиями */}
       <div
         className="
-          grid grid-cols-1 md:grid-cols-4 gap-0
+          grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-0
           [&>*:not(:first-child)]:border-t [&>*:not(:first-child)]:border-black/10
           md:[&>*:not(:first-child):not(:nth-child(4n+1))]:border-l
           md:[&>*:nth-child(-n+4)]:border-t-0
@@ -163,7 +161,7 @@ export default function Services() {
             // data-aos-offset="50"
             // data-aos-delay={i * 50}
             key={i}
-            className="h-full flex flex-row-reverse items-center md:flex-col py-10 md:p-8"
+            className="h-full flex flex-row-reverse items-center md:flex-col md:p-8"
           >
             <div className="relative min-w-40 md:mr-5 -mt-5">
               <Image
@@ -176,7 +174,7 @@ export default function Services() {
             </div>
             <div className="h-full flex flex-col gap-3 md:gap-6">
               <div className="">
-                <h3 className="whitespace-pre-line mt-5 text-4xl md:text-3xl leading-[100%] font-semibold">
+                <h3 className="whitespace-pre-line mt-10 md:mt-5 text-4xl md:text-3xl leading-[100%] font-semibold">
                   {title}
                 </h3>
                 <div className="flex flex-row items-center gap-2 my-5 md:my-4 text-2xl md:text-base text-[#888]">
@@ -196,7 +194,7 @@ export default function Services() {
               >
                 <div
                   className="
-                  hidden md:flex size-20 min-w-20 md:size-12 md:min-w-12 bg-second rounded-full items-center justify-center
+                  hidden md:flex size-20 min-w-20 md:size-12 md:min-w-12 bg-btsecond rounded-full items-center justify-center
 
                   opacity-0 translate-x-8 group-hover:ml-12 group-hover:opacity-100 group-hover:translate-x-0
                   transition-all duration-300 ease-in-out
@@ -204,12 +202,12 @@ export default function Services() {
                 >
                   <RightIcon color="white" width="1.25rem" height="1.25rem" />
                 </div>
-                <span className="bg-second w-full text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-base">
+                <span className="bg-btsecond w-full text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-base">
                   Book now
                 </span>
                 <div
                   className="
-                  flex size-20 min-w-20 md:size-12 md:min-w-12 bg-second rounded-full items-center justify-center
+                  flex size-20 min-w-20 md:size-12 md:min-w-12 bg-btsecond rounded-full items-center justify-center
                   opacity-100 translate-x-0 group-hover:-mr-12 group-hover:opacity-0 group-hover:-translate-x-4
                   transition-all duration-300 ease-in-out
                 "

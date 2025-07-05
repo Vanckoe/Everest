@@ -6,7 +6,7 @@ const phoneNumber = '+1 (331) 219 8690';
 
 const ServiceAreaMarquee = () => {
   return (
-    <div className="w-full mt-20 md:mt-5 py-3 md:py-10">
+    <div className="w-full mt-32 md:mt-5 py-3 md:py-10">
       <Marquee gradient={false} speed={50} pauseOnHover={true}>
         {[...Array(6)].map((_, index) => (
           <div key={index} className="px-8">
