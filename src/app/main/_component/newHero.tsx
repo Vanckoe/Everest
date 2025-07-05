@@ -56,7 +56,7 @@ const NewHero = () => {
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
             <p className="text-[5.75rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
-              Chicago <br /> and Suburbs, <br className="md:hidden" /> All {' '}
+              Chicago <br /> and <br className="md:hidden" /> Suburbs, <br /> {' '}
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -69,7 +69,7 @@ const NewHero = () => {
               data-aos="fade-up"
               className="text-[5.563rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
             >
-              <span className="hidden md:inline"></span> Covered
+              <span className="hidden md:inline"></span>All<br className="md:hidden" /> Covered
             </p>
           </div>
           <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">
