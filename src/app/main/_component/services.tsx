@@ -128,22 +128,20 @@ export default function Services() {
   const [isVideoVisible, setIsVideoVisible] = useState(false);
 
   return (
-    <section id="services" className="px-10 py-[7.5rem]">
+    <section id="services" className="px-10 py-[4.5rem]">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Заголовок */}
       <div className="mb-10 flex flex-col gap-5">
         <div className="text-2xl font-semibold italic md:text-base">
-          <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> 02 - Services
+          <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> SERVICES
         </div>
         <p
           data-aos="fade-up"
           className="text-[3rem] md:text-[2.75rem] leading-[100%] font-semibold"
         >
-          Broken Appliance? <br className="md:hidden" />
-          We’ll Fix It Today! <br />
-          Choose Top-level <br className="md:hidden" />
-          service at fair price
+          Select Your Service Below - <br />
+          Schedule in minutes - Fixed Today!  <br />
         </p>
       </div>
 
@@ -163,7 +161,7 @@ export default function Services() {
             // data-aos-offset="50"
             // data-aos-delay={i * 50}
             key={i}
-            className="h-full flex flex-row-reverse items-center md:flex-col py-10 md:p-8"
+            className="h-full flex flex-row-reverse items-center md:flex-col md:p-8"
           >
             <div className="relative min-w-40 md:mr-5 -mt-5">
               <Image
