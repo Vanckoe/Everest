@@ -105,8 +105,8 @@ const NewHero = () => {
             <ServiceAreaMarquee />
           </div>
         </div>
-        <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
-          <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-4 tracking-wide">
+        <div className="flex flex-col mt-16 md:mt-[2.75rem] gap-6">
+          <div className="grid gap-5 md:gap-4 grid-cols-1 md:grid-cols-2 tracking-wide">
             {items.map((item, index) => (
               <div
                 key={item.id}
