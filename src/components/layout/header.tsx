@@ -50,13 +50,13 @@ const Header = () => {
         width={100}
         height={100}
         alt="Logo"
-        className="size-32 md:h-[3rem] md:w-[4.8rem] -ml-2 md:ml-0 md:mt-0 -mt-4"
+        className="h-[4rem] w-[8rem] md:h-[3rem] md:w-[4.8rem] -ml-2 md:ml-0 md:mt-0 -mt-4"
       />
-        <div className="hidden sm:flex flex-col leading-tight">
+        <div className="flex flex-col leading-tight">
           <h1 className="text-xl md:text-xs font-bold text-[#171717]">
             EVEREST APPLIANCE REPAIR
           </h1>
-        <p className="text-sm md:text-xs text-[#555]">
+        <p className="text-lg md:text-xs text-[#555]">
           Above and Beyond – Only with <br /> Everest.
         </p>
         </div>
@@ -107,12 +107,12 @@ const Header = () => {
         </div>
 
         <div className="flex flex-row items-center gap-10 md:gap-2">
-          <Link
-            href="tel:+18132901625"
-            className="bg-accent text-white px-8 py-4 md:py-3 text-2xl md:text-base font-semibold md:font-medium rounded-2xl hover:bg-accent/90 transition inline-flex items-center"
-          >
-            (813) 290-1625
-          </Link>
+        <Link
+          href="tel:+18132901625"
+          className="hidden md:inline-flex bg-accent text-white px-8 py-3 text-base font-medium rounded-2xl hover:bg-accent/90 transition items-center"
+        >
+          (813) 290-1625
+        </Link>
           <button
             onClick={() => setIsModalOpen(true)}
             className="bg-second hidden md:block text-white px-8 py-3 rounded-2xl text-2xl md:text-base font-semibold md:font-medium hover:bg-second/90 transition"
