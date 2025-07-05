@@ -4,27 +4,33 @@ import Modal from '@/components/layout/modal';
 import Image from 'next/image';
 import RightIcon from '@/assets/Right';
 import Header from '@/components/layout/header';
-import { BadgeCheck, ShieldCheck, Lightbulb } from 'lucide-react';
+import { BadgeCheck, ShieldCheck, Handshake, Truck } from 'lucide-react';
 import Right from '@/assets/right copy';
 import ServiceAreaMarquee from './runningLine-text';
 const items = [
   {
     id: '01',
-    icon: <BadgeCheck className="text-[#31A301] size-10" />,
-    boldText: '10+ Years Experience',
-    fadedText: ' in appliance repair industry.',
+    icon: <Truck className="text-[#31A301] size-10" />,
+    boldText: 'Stop Googling. Start Fixing.',
+    fadedText: ' One quick call, and we’re on our way today.',
   },
   {
     id: '02',
     icon: <ShieldCheck className="text-[#31A301] size-10" />,
-    boldText: '12-month Labor Warranty',
-    fadedText: ' on all completed jobs.',
+    boldText: 'Licensed, Insured, Vetted',
+    fadedText: ' Technicians you can trust with peace of mind',
   },
   {
     id: '03',
-    icon: <Lightbulb className="text-[#31A301] size-10" />,
-    boldText: 'Same-Day Repairs Available',
-    fadedText: ' for most major brands.',
+    icon: <BadgeCheck className="text-[#31A301] size-10" />,
+    boldText: 'Not Just Fixed — Guaranteed.',
+    fadedText: ' A year-long warranty on all repairs',
+  },
+    {
+    id: '04',
+    icon: <Handshake className="text-[#31A301] size-10" />,
+    boldText: 'Not Just Today — For Years to Come.',
+    fadedText: ' We’ll stand by your family for every repair.',
   },
 ];
 const NewHero = () => {
@@ -46,12 +52,11 @@ const NewHero = () => {
             data-aos="fade-up"
             className="text-xl md:text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
           >
-            [ Small Roots, Big Mission ]
+            [ Family Owned, Locally Trusted ]
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
-            <p className="text-[6.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
-              Chicago <br /> Appliance <br /> Repair, <br className="md:hidden" /> Fast{' '}
-              <span className="md:hidden">&</span>
+            <p className="text-[5.75rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
+              Chicago <br /> and Suburbs, <br className="md:hidden" /> All {' '}
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -62,17 +67,9 @@ const NewHero = () => {
           <div className="flex flex-row items-end">
             <p
               data-aos="fade-up"
-              className="text-[6.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
+              className="text-[5.563rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
             >
-              <span className="hidden md:inline">&</span> Local
-            </p>
-            <p
-              data-aos="fade-right"
-              className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40"
-            >
-              All specialists are licensed,
-              <br /> insured, secured by collateral and
-              <br /> have passed a background check.
+              <span className="hidden md:inline"></span> Covered
             </p>
           </div>
           <div className="mt-[2rem] flex flex-row items-center gap-[1.875rem]">
@@ -109,10 +106,6 @@ const NewHero = () => {
           </div>
         </div>
         <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
-          <p className=" md:hidden text-center mx-auto mt-2 text-[1.6rem] font-normal opacity-70">
-            All specialists are licensed, insured, secured by <br /> collateral and have passed a
-            background check.
-          </p>
           <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-3 tracking-wide">
             {items.map((item, index) => (
               <div
