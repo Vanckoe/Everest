@@ -139,7 +139,7 @@ export default function ReviewsMobileSwipe() {
   }
 
   return (
-    <div className="flex flex-col items-center px-10 py-[7.5rem] justify-center bg-gray-50">
+    <div className="flex flex-col items-center px-10 py-[5.5rem] justify-center bg-gray-50">
       <h2 className="text-4xl font-bold mb-2">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (
