@@ -106,19 +106,19 @@ const NewHero = () => {
           </div>
         </div>
         <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
-          <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-3 tracking-wide">
+          <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-4 tracking-wide">
             {items.map((item, index) => (
               <div
                 key={item.id}
                 data-aos="fade-up"
                 data-aos-delay={index * 300}
-                className="flex items-start border border-neutral-300 bg-white px-8 py-6 rounded-xl gap-6"
+                className="flex items-start border border-neutral-300 bg-white px-8 py-6 rounded-xl"
               >
                 <div className="flex flex-row items-center gap-6 md:gap-4">
                   {item.icon}
                   <div className="flex flex-col">
-                    <p className="text-3xl md:text-2xl font-semibold">{item.boldText}</p>
-                    <p className="text-[1.625rem] md:text-2xl font-medium">{item.fadedText}</p>
+                    <p className="text-3xl md:text-xl font-semibold">{item.boldText}</p>
+                    <p className="text-[1.625rem] md:text-xl font-medium">{item.fadedText}</p>
                   </div>
                 </div>
               </div>

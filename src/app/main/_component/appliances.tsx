@@ -30,10 +30,10 @@ const Appliances = () => {
             transition-all duration-300 ease-in-out
           "
         >
-          <RightIcon color="white" width="1.5rem" height="1.5rem" />
+          <RightIcon color="black" width="1.5rem" height="1.5rem" />
         </div>
 
-        <span className="bg-second text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-3xl">
+        <span className="bg-second text-black px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-3xl">
           +1 (331) 219 8690
         </span>
 
@@ -44,7 +44,7 @@ const Appliances = () => {
             transition-all duration-300 ease-in-out
           "
         >
-          <RightIcon color="white" width="1.5rem" height="1.5rem" />
+          <RightIcon color="black" width="1.5rem" height="1.5rem" />
         </div>
       </a>
     </section>

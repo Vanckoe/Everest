@@ -41,7 +41,7 @@ body {
 }
 
 .bg-accent {
-  background-color: #001f3f;
+  background-color: #171717;
 }
 .accent-color {
   color: #001f3f;
@@ -50,7 +50,11 @@ body {
   color: #fe5b2c;
 }
 .bg-second {
-  background-color: #fe5b2c;
+  background-color: #fff;
+}
+
+.bg-btsecond {
+  background-color: #171717;
 }
 
 /* В globals.css */
