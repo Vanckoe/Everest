@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
 import WhatsAppIcon from '@/assets/WhatsAppIcon';
-import GoUpIcon from '@/assets/GoUp';
 import CustomIcon from '@/assets/Google-footer';
-import Logo from '@/assets/Logo';
+import Image from 'next/image';
 
 const MobileFooter = () => {
   const handleScrollToTop = () => {
@@ -12,45 +11,71 @@ const MobileFooter = () => {
 
   return (
     <footer className="w-full block md:hidden bg-[#000913] text-white pb-10 pt-[3.75rem] px-10 rounded-tl-3xl rounded-tr-3xl">
-      {/* Логотип и описание */}
-      <div className="flex flex-col pb-[1rem] items-start">
-        {/* <img src="/img/footer/logo-footer.png" alt="Logo" className="w-[12rem] h-[12rem] mb-4" /> */}
-        <Logo className="md:size-28 rounded-2xl mb-9" />
-        <p className="text-3xl text-[#9FAEB6]">
-          We are always here to assist you with any questions or requests. Reach out to us in the
-          way that suits you best.
-        </p>
+      {/* Логотип и Контакты */}
+      <div className="flex flex-col gap-8 mb-12">
+        {/* Логотип и слоган */}
+        <div className="flex items-center gap-4">
+          <Image
+            src="/img/icons/logo.png"
+            width={80}
+            height={80}
+            alt="Logo"
+            className="h-[3.5rem] w-[7rem]"
+          />
+          <div className="flex flex-col leading-tight">
+            <h1 className="text-2xl mt-7 font-bold text-white">
+              EVEREST APPLIANCE REPAIR
+            </h1>
+            <p className="text-xl text-white leading-snug">
+              Above and Beyond – Only with <br /> Everest.
+            </p>
+          </div>
+        </div>
+
+        {/* Контактная информация */}
+        <div>
+          <h2 className="text-4xl font-semibold mb-7">Contact info:</h2>
+          <ul className="space-y-2 text-[#9FAEB6] text-2xl">
+            <li>
+              <a
+                href="tel:+18132901625"
+                className="underline text-3xl hover:text-[#fff] transition-colors"
+              >
+                +1 (813) 290-1625
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:everestprimeservices@gmail.com"
+                className="underline text-3xl hover:text-[#fff] transition-colors"
+              >
+                everestprimeservices@gmail.com
+              </a>
+            </li>
+            <li>
+              <p>
+                EVEREST APPLIANCE REPAIR <br />
+                197 S Pick Ave <br />
+                ELMHURST, Illinois 60126
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
 
       {/* Ссылки */}
-      <div className="flex flex-col pt-[4rem] gap-16 mb-8">
+      <div className="flex flex-col pt-[2.8rem] gap-16 mb-4">
         <div>
           <h3 className="text-4xl font-semibold mb-7">Company</h3>
           <ul className="grid grid-cols-2 space-y-2 text-3xl text-[#9FAEB6]">
-            <li>
-              <a href="#about">About us</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#brands">Brands</a>
-            </li>
-            <li>
-              <a href="#reviews">Reviews</a>
-            </li>
-            <li>
-              <a href="#faq">FAQ</a>
-            </li>
-            <li>
-              <a href="#booking-steps-mobile">Steps</a>
-            </li>
-            <li>
-              <a href="#privacy">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#terms">Terms of use</a>
-            </li>
+            <li><a href="#about">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#brands">Brands</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#booking-steps-mobile">Steps</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of use</a></li>
           </ul>
         </div>
         <div>
@@ -91,7 +116,7 @@ const MobileFooter = () => {
 
       <div className="w-full h-px bg-[#234151] mb-16"></div>
 
-      {/* WhatsApp и копирайт */}
+      {/* Copyright */}
       <div className="flex flex-col items-center space-y-2 gap-4">
         <p className="text-[#9FAEB6] text-2xl pb-[3.5rem] font-medium text-center">
           © 2025 EVEREST APPLIANCE REPAIR
