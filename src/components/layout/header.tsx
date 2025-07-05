@@ -44,14 +44,23 @@ const Header = () => {
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       <div className="flex flex-row items-center justify-between w-full gap-10">
-        <Image
-          src="/img/icons/logoBlack.png"
-          width={100}
-          height={100}
-          alt="Logo"
-          className="size-32 -ml-2 md:ml-0 md:size-24 md:mt-0 -mt-4 mr-full"
-        />
-
+        <div className="flex items-center gap-4">
+      <Image
+        src="/img/icons/logoBlack.png"
+        width={100}
+        height={100}
+        alt="Logo"
+        className="size-32 md:h-[3rem] md:w-[4.8rem] -ml-2 md:ml-0 md:mt-0 -mt-4"
+      />
+        <div className="hidden sm:flex flex-col leading-tight">
+          <h1 className="text-xl md:text-xs font-bold text-[#171717]">
+            EVEREST APPLIANCE REPAIR
+          </h1>
+        <p className="text-sm md:text-xs text-[#555]">
+          Above and Beyond – Only with <br /> Everest.
+        </p>
+        </div>
+      </div>
         <div className="hidden md:flex flex-row text-base font-semibold gap-7">
           <button
             onClick={() => handleScrollToSection('about')}
