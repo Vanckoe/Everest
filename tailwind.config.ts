@@ -6,16 +6,13 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx}',
     './src/**/*.{js,ts,jsx,tsx}',
-
   ],
   theme: {
     extend: {
       fontFamily: {
-        'tropiline-square': ['Tropiline-Square', 'sans-serif'],
+        gloock: ['Gloock', 'serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         scroll: {

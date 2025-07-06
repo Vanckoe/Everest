@@ -37,7 +37,7 @@ const OurWork = () => {
       {/* Заголовок и описание */}
       <header className="order-1 mb-14 flex flex-row items-center">
         <div className="flex flex-col gap-2">
-          <h2 className="text-[4rem] font-bold leading-[94%]">Our Work</h2>
+          <h2 className="text-[4rem] font-gloock text-color leading-[94%]">Our Work</h2>
         </div>
 
         {/* Кнопки навигации */}
@@ -46,7 +46,7 @@ const OurWork = () => {
             onClick={prev}
             disabled={index === 0}
             className={`rotate-180 rounded-lg px-20 py-[1.875rem] transition-opacity ${
-              index === 0 ? 'cursor-not-allowed' : 'bg-[#001F3F]'
+              index === 0 ? 'cursor-not-allowed' : 'bg-btsecond'
             }`}
           >
             <Right color={index === 0 ? '#001F3F' : '#FFFFFF'} />
@@ -56,7 +56,7 @@ const OurWork = () => {
             onClick={next}
             disabled={index === maxIndex}
             className={`rounded-lg px-20 py-[1.875rem] transition-opacity ${
-              index === maxIndex ? 'cursor-not-allowed' : 'bg-[#001F3F]'
+              index === maxIndex ? 'cursor-not-allowed' : 'bg-btsecond'
             }`}
           >
             <Right color={index === maxIndex ? '#001F3F' : '#FFFFFF'} />

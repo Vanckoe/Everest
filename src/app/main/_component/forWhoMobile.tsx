@@ -60,7 +60,7 @@ const BookingStepsMobile = () => {
       id="booking-steps-mobile"
       className="flex flex-col items-center md:hidden"
     >
-      <h2 className="mt-20 mb-16 text-[3.75rem] font-semibold leading-[84%] tracking-tighter">
+      <h2 className="mt-20 mb-16 text-[3.75rem] font-gloock leading-[84%] tracking-tighter">
         How it works
       </h2>
 
@@ -79,10 +79,10 @@ const BookingStepsMobile = () => {
               style={{ opacity: currentSlide === index ? 1 : 0.25 }}
             >
               <article className="flex flex-col items-center rounded-3xl border border-neutral-400 px-10 py-12" style={{ height: '26.875rem' }}>
-                <p className="mb-4 text-[6rem] font-extrabold leading-none text-accent">
+                <p className="mb-4 text-[6rem] font-inter-bold leading-none text-accent">
                   {step.number}
                 </p>
-                <h3 className="mb-6 text-center text-[2.5rem] font-semibold leading-[90%]">
+                <h3 className="mb-6 text-center text-[2.5rem] font-inter-semibold leading-[90%]">
                   {step.title}
                 </h3>
                 <p className="text-center text-lg leading-snug">

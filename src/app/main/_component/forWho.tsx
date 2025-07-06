@@ -65,10 +65,10 @@ const StepCard = ({ number, title, description }: Step) => (
         alt="Logo"
         className="size-16 rounded-xl"
       />
-      <h3 className="mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">
+      <h3 className="mb-5 text-center text-2xl font-inter-semibold text-color leading-snug">
         {title}
       </h3>
-      <p className="mb-8 whitespace-pre-line text-center text-lg font-light text-[#979797] max-w-[16rem]">
+      <p className="mb-8 whitespace-pre-line text-center text-lg font-inter text-[#979797] max-w-[16rem]">
         {description}
       </p>
     </div>
@@ -99,7 +99,7 @@ const BookingStepsDesktop = () => {
           <h2
             data-aos="fade-up"
             data-aos-delay={300}
-            className="text-[4rem] font-bold leading-[94%]"
+            className="text-[4rem] font-gloock leading-[94%]"
           >
             How it works
           </h2>
@@ -107,7 +107,7 @@ const BookingStepsDesktop = () => {
           <p
             data-aos="fade-up"
             data-aos-delay={300}
-            className="hidden flex-col gap-3 text-xl font-light text-[#979797] md:flex"
+            className="hidden flex-col gap-3 text-xl font-inter text-[#979797] md:flex"
           >
             A step-by-step diagram of your service order <br />
             from online booking to warranty after repair.
@@ -120,7 +120,7 @@ const BookingStepsDesktop = () => {
             onClick={prev}
             disabled={index === 0}
             className={`rotate-180 rounded-lg px-20 py-[1.875rem] transition-opacity ${
-              index === 0 ? 'cursor-not-allowed' : 'bg-[#001F3F]'
+              index === 0 ? 'cursor-not-allowed' : 'bg-btsecond'
             }`}
           >
             <Right color={index === 0 ? '#001F3F' : '#FFFFFF'} />
@@ -130,7 +130,7 @@ const BookingStepsDesktop = () => {
             onClick={next}
             disabled={index === maxIndex}
             className={`rounded-lg px-20 py-[1.875rem] transition-opacity ${
-              index === maxIndex ? 'cursor-not-allowed' : 'bg-[#001F3F]'
+              index === maxIndex ? 'cursor-not-allowed' : 'bg-btsecond'
             }`}
           >
             <Right color={index === maxIndex ? '#001F3F' : '#FFFFFF'} />

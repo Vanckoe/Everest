@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import RightIcon from '@/assets/Right';
 import Modal from '@/components/layout/modal';
 import Image from 'next/image';
+import Line from '@/assets/line';
 
 type Card = {
   image: string;
@@ -133,12 +134,15 @@ export default function Services() {
 
       {/* Заголовок */}
       <div className="mb-10 flex flex-col gap-5">
-        <div className="text-2xl font-semibold italic md:text-base">
-          <span className="text-3xl md:text-xl text-[#FE5B2C]">//</span> SERVICES
-        </div>
+      <div className="flex items-center gap-4 text-2xl font-inter-semibold text-color md:text-base">
+          <div className="flex-shrink-0">
+            <Line color="#22C2A4" width="2" height="18"/>
+          </div>
+        <span className="text-2xl italic font-inter-semibold md:text-xl">SERVICES</span>
+      </div>
         <p
           data-aos="fade-up"
-          className="text-[3rem] md:text-[2.75rem] leading-[100%] font-semibold"
+          className="text-[2.75rem] md:text-[3rem] text-color leading-[100%] font-gloock"
         >
           Select Your Service Below - <br />
           Schedule in minutes - Fixed Today!  <br />
@@ -174,17 +178,17 @@ export default function Services() {
             </div>
             <div className="h-full flex flex-col gap-3 md:gap-6">
               <div className="">
-                <h3 className="whitespace-pre-line mt-10 md:mt-5 text-4xl md:text-3xl leading-[100%] font-semibold">
+                <h3 className="whitespace-pre-line mt-10 text-color md:mt-5 text-4xl md:text-3xl leading-[100%] font-inter-semibold">
                   {title}
                 </h3>
-                <div className="flex flex-row items-center gap-2 my-5 md:my-4 text-2xl md:text-base text-[#888]">
+                <div className="flex flex-row items-center gap-2 my-5 md:my-4 text-2xl font-inter-medium md:text-base text-[#888]">
                   {/* <p className="">Book now</p>
                 <div className="size-1 rounded-full bg-black"></div> */}
                   <p className="">{cost}</p>
                   <div className="size-1 rounded-full bg-black"></div>
                   <p className="">{time} mins</p>
                 </div>
-                <p className="my-5 md:my-4 text-2xl w-[90%] md:w-full md:text-base text-[#888]">
+                <p className="my-5 md:my-4 text-2xl w-[90%] md:w-full md:text-base font-inter-medium text-[#888]">
                   {subtitle}
                 </p>
               </div>
@@ -202,7 +206,7 @@ export default function Services() {
                 >
                   <RightIcon color="white" width="1.25rem" height="1.25rem" />
                 </div>
-                <span className="bg-btsecond w-full text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-base">
+                <span className="bg-btsecond w-full text-white px-10 md:px-4 py-5 md:py-3 rounded-full font-inter-semibold text-3xl md:text-base">
                   Book now
                 </span>
                 <div

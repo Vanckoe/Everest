@@ -45,18 +45,18 @@ const BurgerMenu = () => {
           className="flex flex-col justify-around items-end size-10 bg-transparent border-none cursor-pointer p-0  z-[99]"
         >
           <div
-            className="w-10 h-0 border border-[#FE5B2C] opacity-15 rounded-lg transition-all duration-300 ease-linear relative origin-[1px]"
+            className="w-10 h-0 border border-[#1C2C4C] opacity-15 rounded-lg transition-all duration-300 ease-linear relative origin-[1px]"
             style={{
               transform: isOpen ? 'rotate(45deg)' : 'rotate(0)',
               opacity: isOpen ? '1' : '1',
             }}
           />
           <div
-            className="w-7 h-0 border border-black rounded-lg transition-all duration-300 ease-linear relative origin-[1px]"
+            className="w-10 h-0 border border-black rounded-lg transition-all duration-300 ease-linear relative origin-[1px]"
             style={{ opacity: isOpen ? '0' : '1' }}
           />
           <div
-            className="w-10 h-0 border border-[#FE5B2C] opacity-15 rounded-lg transition-all duration-300 ease-linear relative origin-[1px]"
+            className="w-10 h-0 border border-[#1C2C4C] opacity-15 rounded-lg transition-all duration-300 ease-linear relative origin-[1px]"
             style={{
               transform: isOpen ? 'rotate(-45deg)' : 'rotate(0)',
               opacity: isOpen ? '1' : '1',

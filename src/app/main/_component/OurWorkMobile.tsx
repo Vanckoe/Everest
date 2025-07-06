@@ -34,7 +34,7 @@ const OurWorkMobile = () => {
 
   return (
     <section id="booking-steps-mobile" className="flex flex-col items-center mb-20 md:hidden">
-      <h2 className="mt-20 mb-16 text-[3.75rem] font-semibold leading-[84%] tracking-tighter">
+      <h2 className="mt-20 mb-16 text-[4.75rem] font-gloock leading-[84%] tracking-tighter">
         Our Work
       </h2>
 
@@ -70,7 +70,7 @@ const OurWorkMobile = () => {
       <div className="mt-8 flex w-full items-center justify-between px-16 gap-9">
         <button
           onClick={prevSlide}
-          className="flex size-16 rotate-180 items-center justify-center rounded-lg bg-accent"
+          className="flex size-16 rotate-180 items-center justify-center rounded-lg bg-btsecond"
         >
           <Right color="white" />
         </button>

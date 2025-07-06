@@ -149,7 +149,7 @@ const ReviewCard = ({
       {isLong && !expanded && (
         <button
           onClick={onToggle}
-          className="mt-[0.25rem] text-black opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
+          className="mt-[0.25rem] text-сolor opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
         >
           Read more
         </button>
@@ -158,7 +158,7 @@ const ReviewCard = ({
       {expanded && (
         <button
           onClick={onToggle}
-          className="mt-[0.25rem] text-black opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
+          className="mt-[0.25rem] text-color opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
         >
           Hide
         </button>
@@ -214,7 +214,7 @@ const Reviews = () => {
 
   return (
     <div className="flex flex-col items-center justify-center py-[6rem] bg-gray-50">
-      <h2 className="text-[1.875rem] font-bold">EXCELLENT</h2>
+      <h2 className="text-[1.875rem] font-gloock">EXCELLENT</h2>
       <div className="flex mb-[0.25rem]">
         {[...Array(5)].map((_, i) => (
           <StarIcon key={i} color="#fbbf24" width="2rem" height="2rem" />

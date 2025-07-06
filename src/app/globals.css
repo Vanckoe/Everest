@@ -1,9 +1,72 @@
 @import 'tailwindcss';
 
+/* Подключение локального шрифта Gloock */
 @font-face {
-  font-family: 'Tropiline-Square';
-  src: url('/fonts/Tropiline-Square.woff2') format('woff2');
-  font-weight: normal;
+  font-family: 'Gloock';
+  src: url('/fonts/Gloock-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Подключение локального шрифта Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Valtherion';
+  src: url('/fonts/ValtherionNormal.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Valtherion';
+  src: url('/fonts/ValtherionMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Valtherion';
+  src: url('/fonts/ValtherionSemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Valtherion';
+  src: url('/fonts/ValtherionBold-Bold.otf') format('opentype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -12,6 +75,7 @@ html {
   font-size: 1.15vw !important;
   scroll-behavior: smooth;
 }
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -20,44 +84,88 @@ html {
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.font-gloock {
+  font-family: 'Gloock', serif !important;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.font-inter-medium {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.font-inter-semibold {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.font-inter-bold {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+
+/* .font-valtherion {
+  font-family: 'Valtherion', sans-serif !important;
+  font-weight: 400 !important;
+}
+
+.font-valtherion-medium {
+  font-family: 'Valtherion', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+.font-valtherion-semibold {
+  font-family: 'Valtherion', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.font-valtherion-bold {
+  font-family: 'Valtherion', sans-serif !important;
+  font-weight: 700 !important;
 } */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
+
 .container {
   max-width: 87.2rem;
 }
 
 .bg-accent {
-  background-color: #171717;
+  background-color: #1C2C4C;
 }
+
 .accent-color {
-  color: #001f3f;
+  color: #1C2C4C;
 }
+
 .second-color {
   color: #fe5b2c;
 }
+
+.text-color {
+  color: #343a40;
+}
+
 .bg-second {
   background-color: #fff;
 }
 
 .bg-btsecond {
-  background-color: #171717;
+  background-color: #1C2C4C;
 }
 
-/* В globals.css */
 .writing-vertical {
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -73,17 +181,16 @@ body {
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none; /* для IE и Edge */
-  scrollbar-width: none; /* для Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  display: none; /* для Chrome, Safari, Opera */
+  display: none;
 }
 
 /* === Animation Start === */
 
-/* Плавное появление снизу */
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -99,7 +206,6 @@ body {
   animation: slideInUp 0.5s ease forwards;
 }
 
-/* Появление слева с торможением */
 @keyframes slideInLeftSlow {
   0% {
     opacity: 0;
@@ -124,7 +230,6 @@ body {
   animation: slideInLeftSlow 0.7s ease forwards;
 }
 
-/* Анимация сдвига влево (например, при свайпе вправо) */
 @keyframes slideLeft {
   from {
     transform: translateX(100px);
@@ -140,7 +245,6 @@ body {
   animation: slideLeft 0.4s ease-in-out;
 }
 
-/* Анимация сдвига вправо (например, при свайпе влево) */
 @keyframes slideRight {
   from {
     transform: translateX(-100px);
@@ -155,8 +259,6 @@ body {
 .slide-anim-right {
   animation: slideRight 0.4s ease-in-out;
 }
-
-/* === Animation End === */
 
 @keyframes slide-up {
   from {
