@@ -127,7 +127,7 @@ const NewHero = () => {
                 <div className="flex flex-row items-center gap-6 md:gap-4">
                   {item.icon}
                   <div className="flex flex-col">
-                    <p className="text-3xl md:text-xl text-color font-inter-bold">{item.boldText}</p>
+                    <p className="text-3xl md:text-xl text-color font-Merriweather">{item.boldText}</p>
                     <p className="text-[1.625rem] md:text-xl text-color font-inter">{item.fadedText}</p>
                   </div>
                 </div>

@@ -142,9 +142,9 @@ export default function Services() {
       </div>
         <p
           data-aos="fade-up"
-          className="text-[2.75rem] md:text-[3rem] text-color leading-[100%] font-gloock"
+          className="text-[2.75rem] md:text-[3rem] text-color leading-[100%] font-Merriweather"
         >
-          Select Your Service Below - <br />
+          Select Your Service Below -
           Schedule in minutes - Fixed Today!  <br />
         </p>
       </div>

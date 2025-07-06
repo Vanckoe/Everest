@@ -99,7 +99,7 @@ const BookingStepsDesktop = () => {
           <h2
             data-aos="fade-up"
             data-aos-delay={300}
-            className="text-[4rem] font-gloock leading-[94%]"
+            className="text-[4rem] font-Merriweather leading-[94%]"
           >
             How it works
           </h2>

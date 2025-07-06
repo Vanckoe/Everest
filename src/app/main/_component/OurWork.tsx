@@ -37,7 +37,7 @@ const OurWork = () => {
       {/* Заголовок и описание */}
       <header className="order-1 mb-14 flex flex-row items-center">
         <div className="flex flex-col gap-2">
-          <h2 className="text-[4rem] font-gloock text-color leading-[94%]">Our Work</h2>
+          <h2 className="text-[4rem] font-Merriweather text-color leading-[94%]">Our Work</h2>
         </div>
 
         {/* Кнопки навигации */}

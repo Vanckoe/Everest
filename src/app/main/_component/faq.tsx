@@ -118,7 +118,7 @@ export default function FaqAccordion() {
     <section id='faq' className="w-full px-18 pt-[9.375rem] pb-[5rem] md:gap-5">
       <div className="grid border-t border-neutral-200 gap-8 md:gap-12 md:grid-cols-[minmax(0,20.5rem)_1fr]">
         {/* Левый заголовок */}
-        <h2 className="text-7xl md:text-7xl py-5 font-gloock leading-[100%] text-color">
+        <h2 className="text-7xl md:text-7xl py-5 font-Merriweather leading-[100%] text-color">
           FAQ <br className="hidden md:block" />
         </h2>
 

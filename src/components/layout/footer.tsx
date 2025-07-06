@@ -66,7 +66,7 @@ const DesktopFooter = () => {
             </div>
           </div>
           <div>
-          <h2 className="md:text-3xl text-[#fff] font-gloock mb-2">Contact info:</h2>
+          <h2 className="md:text-3xl text-[#fff] font-Merriweather mb-2">Contact info:</h2>
           <ul className="space-y-2 text-white md:text-xl">
             <li>
               <a
@@ -99,7 +99,7 @@ const DesktopFooter = () => {
           <div className="flex flex-col md:flex-row gap-16">
             {/* Первый столбец */}
             <div>
-              <h3 className="text-xl font-gloock mb-4">Company</h3>
+              <h3 className="text-xl font-Merriweather mb-4">Company</h3>
               <ul className="space-y-2 text-base font-inter text-[#9FAEB6]">
                 <li><a href="#about" className="hover:underline">About us</a></li>
                 <li><a href="#services" className="hover:underline">Services</a></li>
@@ -114,7 +114,7 @@ const DesktopFooter = () => {
 
             {/* Второй столбец */}
             <div>
-              <h3 className="text-xl font-gloock mb-4">Brands</h3>
+              <h3 className="text-xl font-Merriweather mb-4">Brands</h3>
               <ul className="space-y-2 text-base text-[#9FAEB6]">
                 <li>
                   <a href="/subzero" className="hover:underline font-inter" rel="noopener noreferrer">

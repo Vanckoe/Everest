@@ -12,7 +12,7 @@ const Appliances = () => {
 
       <p
         data-aos="fade-up"
-        className="font-gloock text-[3.6rem] md:text-[3rem] leading-[120%]"
+        className="font-Merriweather text-[3.6rem] md:text-[3rem] leading-[120%]"
       >
         Any questions left? <br />
         Give us a call <br />
