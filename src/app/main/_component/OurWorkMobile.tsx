@@ -34,7 +34,7 @@ const OurWorkMobile = () => {
 
   return (
     <section id="booking-steps-mobile" className="flex flex-col items-center mb-20 md:hidden">
-      <h2 className="mt-20 mb-16 text-[4.75rem] font-gloock leading-[84%] tracking-tighter">
+      <h2 className="mt-20 mb-16 text-[4.75rem] font-Merriweather leading-[84%] tracking-tighter">
         Our Work
       </h2>
 

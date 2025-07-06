@@ -16,7 +16,7 @@ const About = () => {
           </div>
         <span className="text-2xl text-[#fff] font-inter-semibold italic md:text-xl">ABOUT US</span>
       </div>
-          <h1 data-aos="fade-up" className="font-gloock mt-5 leading-[100%] text-[3rem]">
+          <h1 data-aos="fade-up" className="font-Merriweather mt-5 leading-[100%] text-[3rem]">
             A Family Business <br /> Built on Honor
           </h1>
           <p

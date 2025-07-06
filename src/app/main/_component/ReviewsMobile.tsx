@@ -140,14 +140,26 @@ export default function ReviewsMobileSwipe() {
 
   return (
     <div className="flex flex-col items-center px-10 py-[5.5rem] justify-center bg-gray-50">
-      <h2 className="text-5xl tracking-widest font-gloock text-color mb-2">EXCELLENT</h2>
-      <div className="flex mb-1">
-        {[...Array(5)].map((_, i) => (
+      <h2 className="text-5xl tracking-normal font-Merriweather text-color mb-2">EXCELLENT</h2>
+      <div className="flex items-center mb-1">
+        <span className="text-[1.75rem] font-inter-semibold text-color mr-2">4,7</span>
+              {[...Array(4)].map((_, i) => (
           <StarIcon key={i} color="#fbbf24" width="3rem" height="3rem" />
         ))}
+
+        {/* Половинчатая звезда */}
+        <div className="relative w-[3rem] h-[3rem]">
+          {/* Серая звезда — фоновая */}
+          <StarIcon color="#e5e7eb" width="3rem" height="3rem" />
+
+          {/* Жёлтая половинка — верхняя, с обрезкой */}
+          <div className="absolute top-0 left-0 w-[1.5rem] h-[3rem] overflow-hidden">
+            <StarIcon color="#fbbf24" width="3rem" height="3rem" />
+          </div>
+        </div>
       </div>
       <p className="text-2xl text-color mb-6">
-        Based on <span className="font-inter-bold">22 reviews</span>
+        Based on <span className="font-inter-bold">140 reviews</span>
       </p>
       <div className="mb-4">
         <GoogleLogo width="110px" height="35px" />

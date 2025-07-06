@@ -77,7 +77,7 @@ export default function BrandGrid() {
               className={`flex items-center justify-center p-3 md:p-6 ${borders} ${baseSpan} ${orderFix}`}
             >
               {cell.type === 'text' ? (
-              <p className="text-center md:text-start font-gloock leading-[100%] mb-20 text-6xl md:text-4xl">
+              <p className="text-center md:text-start font-Merriweather leading-[100%] mb-20 text-6xl md:text-4xl">
                 All brands. <br />
                 One Expert Team. <br />Fixed Right.
               </p>

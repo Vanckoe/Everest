@@ -34,26 +34,26 @@ const MobileFooter = () => {
 
         {/* Контактная информация */}
         <div>
-          <h2 className="text-4xl font-gloock mb-7">Contact info:</h2>
+          <h2 className="text-3xl font-Merriweather mb-4">Contact info:</h2>
           <ul className="space-y-2 text-[#9FAEB6] text-2xl">
             <li>
               <a
                 href="tel:+18132901625"
-                className="underline text-3xl font-inter hover:text-[#fff] transition-colors"
+                className="underline text-3xl font-inter-medium transition-colors"
               >
-                +1 (813) 290-1625
+                +1(331) 219-8690
               </a>
             </li>
             <li>
               <a
                 href="mailto:everestprimeservices@gmail.com"
-                className="underline text-3xl font-inter hover:text-[#fff] transition-colors"
+                className="underline text-2xl font-inter-medium hover:text-[#fff] transition-colors"
               >
                 everestprimeservices@gmail.com
               </a>
             </li>
             <li>
-              <p>
+              <p className="font-inter-medium">
                 EVEREST APPLIANCE REPAIR <br />
                 197 S Pick Ave <br />
                 ELMHURST, Illinois 60126
@@ -66,8 +66,8 @@ const MobileFooter = () => {
       {/* Ссылки */}
       <div className="flex flex-col pt-[2.8rem] gap-16 mb-4">
         <div>
-          <h3 className="text-4xl font-gloock mb-7">Company</h3>
-          <ul className="grid grid-cols-2 space-y-2 font-inter text-3xl text-[#9FAEB6]">
+          <h3 className="text-3xl font-Merriweather mb-4">Company</h3>
+          <ul className="grid grid-cols-2 space-y-2 font-inter text-2xl text-[#9FAEB6]">
             <li><a href="#about">About us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#brands">Brands</a></li>
@@ -79,8 +79,8 @@ const MobileFooter = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-4xl font-gloock mb-7">Brands</h3>
-          <ul className="space-y-2 text-3xl font-inter text-[#9FAEB6]">
+          <h3 className="text-3xl font-Merriweather mb-4">Brands</h3>
+          <ul className="space-y-2 text-2xl font-inter text-[#9FAEB6]">
             <li>
               <a href="/subzero">
                 Sub-Zero appliance repair
