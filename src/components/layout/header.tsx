@@ -39,12 +39,12 @@ const Header = () => {
   return (
     <div
       // data-aos="fade-down"
-      className="flex flex-row items-center justify-between px-10 md:px-10 pb-5 pt-10 md:pt-5"
+      className="flex flex-row items-center justify-between px-2 md:px-10 pb-5 pt-10 md:pt-5"
     >
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      <div className="flex flex-row items-center justify-between w-full gap-10">
-        <div className="flex items-center gap-4">
+      <div className="flex flex-row items-center justify-between w-full gap-">
+        <div className="flex items-center gap-2">
       <Image
         src="/img/icons/logoBlack.png"
         width={100}
@@ -53,11 +53,11 @@ const Header = () => {
         className="h-[4rem] w-[8rem] md:h-[3rem] md:w-[4.8rem] -ml-2 md:ml-0 md:mt-0 -mt-4"
       />
         <div className="flex flex-col leading-tight">
-          <h1 className="text-xl md:text-xs font-bold text-[#171717]">
+          <h1 className="text-[1.75rem] font-inter-bold md:text-xs font-bold text-color">
             EVEREST APPLIANCE REPAIR
           </h1>
-        <p className="text-lg md:text-xs text-[#555]">
-          Above and Beyond – Only with <br /> Everest.
+        <p className="text-[1.45rem] font-inter md:text-xs text-[#555]">
+          Above and Beyond – Only with Everest.
         </p>
         </div>
       </div>
@@ -109,9 +109,9 @@ const Header = () => {
         <div className="flex flex-row items-center gap-10 md:gap-2">
         <Link
           href="tel:+18132901625"
-          className="hidden md:inline-flex bg-accent text-white px-8 py-3 text-base font-medium rounded-2xl hover:bg-accent/90 transition items-center"
+          className="hidden md:inline-flex bg-[#1C2C4C] text-white px-8 py-3 text-base font-medium rounded-2xl hover:bg-accent/90 transition items-center"
         >
-          (813) 290-1625
+          +1 (813) 290-1625
         </Link>
           <button
             onClick={() => setIsModalOpen(true)}

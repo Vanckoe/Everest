@@ -56,22 +56,22 @@ const DesktopFooter = () => {
                 className="h-[4rem] w-[8rem] md:h-[3rem] md:w-[5.5rem] -ml-2 md:ml-0 md:mt-0 -mt-4"
               />
               <div className="flex flex-col leading-tight">
-                <h1 className="text-xl md:text-xs font-bold text-[#fff]">
+                <h1 className="text-xl md:text-xl font-bold text-[#fff]">
                   EVEREST APPLIANCE REPAIR
                 </h1>
-                <p className="text-lg md:text-xs text-[#fff]">
-                  Above and Beyond – Only with <br /> Everest.
+                <p className="text-lg md:text-base text-[#fff]">
+                  Above and Beyond – Only with Everest.
                 </p>
               </div>
             </div>
           </div>
           <div>
-          <h2 className="md:text-3xl text-[#fff] font-bold mb-2">Contact info:</h2>
+          <h2 className="md:text-3xl text-[#fff] font-gloock mb-2">Contact info:</h2>
           <ul className="space-y-2 text-white md:text-xl">
             <li>
               <a
                 href="tel:+18132901625"
-                className="underline hover:text-gray-300 transition-colors"
+                className="underline font-inter transition-colors"
               >
                 +1 (813) 290-1625
               </a>
@@ -79,12 +79,12 @@ const DesktopFooter = () => {
             <li>
               <a
                 href="mailto:everestprimeservices@gmail.com"
-                className="underline hover:text-gray-300 transition-colors"
+                className="underline font-inter transition-colors"
               >
                 everestprimeservices@gmail.com
               </a>
             </li>
-            <li className="text-white md:text-base">
+            <li className="text-white font-inter md:text-base">
               <p>
                 EVEREST APPLIANCE REPAIR <br />
                 197 S Pick Ave <br />
@@ -99,8 +99,8 @@ const DesktopFooter = () => {
           <div className="flex flex-col md:flex-row gap-16">
             {/* Первый столбец */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Company</h3>
-              <ul className="space-y-2 text-base text-[#9FAEB6]">
+              <h3 className="text-xl font-gloock mb-4">Company</h3>
+              <ul className="space-y-2 text-base font-inter text-[#9FAEB6]">
                 <li><a href="#about" className="hover:underline">About us</a></li>
                 <li><a href="#services" className="hover:underline">Services</a></li>
                 <li><a href="#brands" className="hover:underline">Brands</a></li>
@@ -114,15 +114,15 @@ const DesktopFooter = () => {
 
             {/* Второй столбец */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Brands</h3>
+              <h3 className="text-xl font-gloock mb-4">Brands</h3>
               <ul className="space-y-2 text-base text-[#9FAEB6]">
                 <li>
-                  <a href="/subzero" className="hover:underline" rel="noopener noreferrer">
+                  <a href="/subzero" className="hover:underline font-inter" rel="noopener noreferrer">
                     Sub-Zero appliance <br /> repair
                   </a>
                 </li>
                 <li>
-                  <a href="/Thermador" className="hover:underline" rel="noopener noreferrer">
+                  <a href="/Thermador" className="hover:underline font-inter" rel="noopener noreferrer">
                     Viking Appliance <br /> repair
                   </a>
                 </li>
@@ -155,7 +155,7 @@ const DesktopFooter = () => {
             >
               <WhatsAppIcon className="w-10 h-10 text-[#9FAEB6]" />
             </a>
-            <p className="text-[#9FAEB6] text-base font-medium">© 2025 EVEREST APPLIANCE REPAIR </p>
+            <p className="text-[#9FAEB6] text-base font-inter-medium">© 2025 EVEREST APPLIANCE REPAIR </p>
           </div>
         </div>
       </div>

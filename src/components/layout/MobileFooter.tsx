@@ -23,23 +23,23 @@ const MobileFooter = () => {
             className="h-[3.5rem] w-[7rem]"
           />
           <div className="flex flex-col leading-tight">
-            <h1 className="text-2xl mt-7 font-bold text-white">
+            <h1 className="text-2xl mt-7 font-inter-bold text-white">
               EVEREST APPLIANCE REPAIR
             </h1>
-            <p className="text-xl text-white leading-snug">
-              Above and Beyond – Only with <br /> Everest.
+            <p className="text-xl text-white font-inter leading-snug">
+              Above and Beyond – Only with Everest.
             </p>
           </div>
         </div>
 
         {/* Контактная информация */}
         <div>
-          <h2 className="text-4xl font-semibold mb-7">Contact info:</h2>
+          <h2 className="text-4xl font-gloock mb-7">Contact info:</h2>
           <ul className="space-y-2 text-[#9FAEB6] text-2xl">
             <li>
               <a
                 href="tel:+18132901625"
-                className="underline text-3xl hover:text-[#fff] transition-colors"
+                className="underline text-3xl font-inter hover:text-[#fff] transition-colors"
               >
                 +1 (813) 290-1625
               </a>
@@ -47,7 +47,7 @@ const MobileFooter = () => {
             <li>
               <a
                 href="mailto:everestprimeservices@gmail.com"
-                className="underline text-3xl hover:text-[#fff] transition-colors"
+                className="underline text-3xl font-inter hover:text-[#fff] transition-colors"
               >
                 everestprimeservices@gmail.com
               </a>
@@ -66,8 +66,8 @@ const MobileFooter = () => {
       {/* Ссылки */}
       <div className="flex flex-col pt-[2.8rem] gap-16 mb-4">
         <div>
-          <h3 className="text-4xl font-semibold mb-7">Company</h3>
-          <ul className="grid grid-cols-2 space-y-2 text-3xl text-[#9FAEB6]">
+          <h3 className="text-4xl font-gloock mb-7">Company</h3>
+          <ul className="grid grid-cols-2 space-y-2 font-inter text-3xl text-[#9FAEB6]">
             <li><a href="#about">About us</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#brands">Brands</a></li>
@@ -79,8 +79,8 @@ const MobileFooter = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-4xl font-semibold mb-7">Brands</h3>
-          <ul className="space-y-2 text-3xl text-[#9FAEB6]">
+          <h3 className="text-4xl font-gloock mb-7">Brands</h3>
+          <ul className="space-y-2 text-3xl font-inter text-[#9FAEB6]">
             <li>
               <a href="/subzero">
                 Sub-Zero appliance repair

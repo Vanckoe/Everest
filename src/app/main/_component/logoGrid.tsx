@@ -50,7 +50,7 @@ export default function BrandGrid() {
   return (
     <div
       id="brands"
-      className="grid grid-cols-2 md:grid-cols-6 auto-rows-[8.75rem] bg-[#F7F8FA] px-5 py-40 md:px-20 w-full select-none"
+      className="grid grid-cols-2 md:grid-cols-6 auto-rows-[8.75rem] bg-[#F7F8FA] px-5 py-30 md:px-20 w-full select-none"
     >
       {grid.map((row, r) =>
         row.map((cell, c) => {
@@ -77,7 +77,7 @@ export default function BrandGrid() {
               className={`flex items-center justify-center p-3 md:p-6 ${borders} ${baseSpan} ${orderFix}`}
             >
               {cell.type === 'text' ? (
-              <p className="text-center md:text-start font-semibold leading-[100%] mb-10 text-5xl md:text-4xl">
+              <p className="text-center md:text-start font-gloock leading-[100%] mb-20 text-6xl md:text-4xl">
                 All brands. <br />
                 One Expert Team. <br />Fixed Right.
               </p>

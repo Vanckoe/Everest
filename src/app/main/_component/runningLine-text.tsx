@@ -2,28 +2,16 @@
 
 import Marquee from 'react-fast-marquee';
 
-const phoneNumber = '+1 (331) 219 8690';
-
 const ServiceAreaMarquee = () => {
   return (
-    <div className="w-full mt-20 md:mt-5 py-3 md:py-10">
+    <div className="w-full mt-20 md:mt-10 py-3 md:py-10">
       <Marquee gradient={false} speed={50} pauseOnHover={true}>
-        {[...Array(6)].map((_, index) => (
-          <div key={index} className="px-8">
-            {/* Мобильная версия */}
-            <a
-              href="tel:+13312198690"
-              className="block md:hidden text-2xl font-semibold text-[#171717] whitespace-nowrap underline"
-            >
-              {phoneNumber}
-            </a>
-
-            {/* Десктопная версия */}
-            <span className="hidden md:block text-2xl font-semibold text-[#171717] whitespace-nowrap">
-              {phoneNumber}
-            </span>
-          </div>
-        ))}
+        <div className="text-3xl md:text-2xl font-inter-semibold text-color px-8 whitespace-nowrap">
+          We serve all Chicago and all closest suburbs in 30 miles
+        </div>
+        <div className="text-3xl md:text-2xl font-inter-semibold text-color px-8 whitespace-nowrap">
+          We serve all Chicago and all closest suburbs in 30 miles
+        </div>
       </Marquee>
     </div>
   );

@@ -98,8 +98,8 @@ const ReviewCard = ({
             className="w-18 h-18 rounded-full object-cover"
           />
           <div className="flex flex-col justify-center overflow-hidden">
-            <p className="font-semibold text-2xl text-gray-900 truncate">{review.name}</p>
-            <p className="text-xl text-gray-500">{review.time}</p>
+            <p className="font-inter-semibold text-2xl text-color truncate">{review.name}</p>
+            <p className="text-xl font-inter text-gray-500">{review.time}</p>
           </div>
         </div>
       </div>
@@ -115,7 +115,7 @@ const ReviewCard = ({
         </div>
       </div>
 
-      <div className="text-2xl text-black relative whitespace-normal">
+      <div className="text-2xl text-color font-inter relative whitespace-normal">
         <p className={expanded ? '' : 'line-clamp-3'}>{review.text}</p>
       </div>
 
@@ -140,14 +140,14 @@ export default function ReviewsMobileSwipe() {
 
   return (
     <div className="flex flex-col items-center px-10 py-[5.5rem] justify-center bg-gray-50">
-      <h2 className="text-4xl font-bold mb-2">EXCELLENT</h2>
+      <h2 className="text-5xl tracking-widest font-gloock text-color mb-2">EXCELLENT</h2>
       <div className="flex mb-1">
         {[...Array(5)].map((_, i) => (
           <StarIcon key={i} color="#fbbf24" width="3rem" height="3rem" />
         ))}
       </div>
-      <p className="text-2xl text-gray-800 mb-6">
-        Based on <span className="font-bold">22 reviews</span>
+      <p className="text-2xl text-color mb-6">
+        Based on <span className="font-inter-bold">22 reviews</span>
       </p>
       <div className="mb-4">
         <GoogleLogo width="110px" height="35px" />

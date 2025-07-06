@@ -12,7 +12,7 @@ const Appliances = () => {
 
       <p
         data-aos="fade-up"
-        className="font-semibold text-[2.6rem] md:text-[3rem] leading-[120%]"
+        className="font-gloock text-[3.6rem] md:text-[3rem] leading-[120%]"
       >
         Any questions left? <br />
         Give us a call <br />
@@ -33,7 +33,7 @@ const Appliances = () => {
           <RightIcon color="black" width="1.5rem" height="1.5rem" />
         </div>
 
-        <span className="bg-second text-black px-10 md:px-4 py-5 md:py-3 rounded-full font-semibold text-3xl md:text-3xl">
+        <span className="bg-second text-color px-10 md:px-8 py-5 md:py-3 rounded-full font-inter-semibold text-3xl md:text-3xl">
           +1 (331) 219 8690
         </span>
 
