@@ -4,14 +4,14 @@ import Right from '@/assets/right copy';
 import Image from 'next/image';
 
 const imageSlides = [
+  '/img/forWho/img7.jpg',
+  '/img/forWho/img8.jpg',
   '/img/forWho/img1.jpg',
   '/img/forWho/img2.jpg',
   '/img/forWho/img3.jpg',
   '/img/forWho/img4.jpg',
   '/img/forWho/img5.jpg',
   '/img/forWho/img6.jpg',
-  '/img/forWho/img7.jpg',
-  '/img/forWho/img8.jpg',
   '/img/forWho/img9.jpg',
   '/img/forWho/img10.jpg',
   '/img/forWho/img11.jpg',

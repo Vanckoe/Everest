@@ -4,29 +4,36 @@ import Modal from '@/components/layout/modal';
 import Image from 'next/image';
 import RightIcon from '@/assets/Right';
 import Header from '@/components/layout/header';
-import { BadgeCheck, ShieldCheck, Lightbulb } from 'lucide-react';
+import { Medal, ShieldCheck, Handshake, Wrench, Phone } from 'lucide-react';
 import Right from '@/assets/right copy';
 
 const items = [
   {
     id: '01',
-    icon: <BadgeCheck className="text-[#31A301] size-10" />,
-    boldText: '10+ Years Experience',
-    fadedText: ' in appliance repair industry.',
+    icon: <Wrench className="text-[#339AF0] size-10" />,
+    boldText: 'Stop Googling. Start Fixing.',
+    fadedText: ' One quick call, and we’re on our way today.',
   },
   {
     id: '02',
-    icon: <ShieldCheck className="text-[#31A301] size-10" />,
-    boldText: '12-month Labor Warranty',
-    fadedText: ' on all completed jobs.',
+    icon: <ShieldCheck className="text-[#FCC419] size-10" />,
+    boldText: 'Licensed, Insured, Vetted',
+    fadedText: ' Technicians you can trust with peace of mind',
   },
   {
     id: '03',
-    icon: <Lightbulb className="text-[#31A301] size-10" />,
-    boldText: 'Same-Day Repairs Available',
-    fadedText: ' for most major brands.',
+    icon: <Medal className="text-[#63B4B8] size-10" />,
+    boldText: 'Not Just Fixed — Guaranteed.',
+    fadedText: ' A year-long warranty on all repairs',
+  },
+  {
+    id: '04',
+    icon: <Handshake className="text-[#FF6B6B] size-10" />,
+    boldText: 'Not Just Today — For Years to Come.',
+    fadedText: ' We’ll stand by your family for every repair.',
   },
 ];
+
 const NewHero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isVideoVisible, setIsVideoVisible] = useState(false);
@@ -40,7 +47,7 @@ const NewHero = () => {
     >
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
-      <div className="px-10 mt-10 md:mt-8 py-[7.5rem]">
+      <div className="px-10 mt-10 md:mt-8">
         <div className="flex w-full flex-col md:w-[55.125rem]">
           <p
             data-aos="fade-up"
@@ -49,8 +56,8 @@ const NewHero = () => {
             [ Brand appliance service ]
           </p>
           <div data-aos="fade-up" className="mt-5 flex flex-row items-center gap-5">
-            <p className="text-[5.125rem] md:text-[6.125rem] font-bold  leading-[82%] -tracking-wider">
-              Professional <br /> Sub-Zero appliance <br /> repair in <br className="md:hidden" /> {' '}
+            <p className="text-[5.125rem] md:text-[6.125rem] text-[#343A40] font-gloock  leading-[85%] -tracking-normal">
+              Professional <br /> Sub-Zero appliance <br />repair in <br className="md:hidden" /> {' '}
             </p>
           </div>
           {/* <p className="text-[8.125rem] font-bold lowercase leading-[82%] -tracking-wider">
@@ -61,13 +68,13 @@ const NewHero = () => {
           <div className="flex flex-row items-end">
             <p
               data-aos="fade-up"
-              className="text-[5.125rem] md:text-[6.825rem] font-bold leading-[82%] -tracking-wider"
+              className="text-[5.125rem] md:text-[6.825rem] font-gloock text-[#343A40] leading-[85%] -tracking-normal"
             >
               <span className="hidden md:inline"></span> Chicago
             </p>
             <p
               data-aos="fade-right"
-              className="hidden md:block ml-10 mt-2 text-xl font-normal opacity-40"
+              className="hidden md:block ml-10 mb-2 text-color text-xl font-inter opacity-40"
             >
               Schedule your service today <br /> and enjoy peace of mind with Everest’s <br />
               expert care and certified technicians.
@@ -105,29 +112,31 @@ const NewHero = () => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col mt-16 md:mt-[5.75rem] gap-6">
-          <p className=" md:hidden text-center mx-auto mt-10 text-[1.6rem] font-normal opacity-70">
+        <div className="flex flex-col gap-6">
+          {/* <p className=" md:hidden text-center mx-auto mt-10 text-[1.6rem] font-normal opacity-70">
             All specialists are licensed, insured, secured by <br /> collateral and have passed a
             background check.
-          </p>
-          <div className="grid gap-5 md:gap-6 grid-cols-1 md:grid-cols-3 tracking-wide">
+          </p> */}
+        <div className="flex flex-col mt-16 md:mt-[2.75rem] gap-6">
+          <div className="grid gap-5 md:gap-4 grid-cols-1 md:grid-cols-2 tracking-wide">
             {items.map((item, index) => (
               <div
                 key={item.id}
                 data-aos="fade-up"
                 data-aos-delay={index * 300}
-                className="flex items-start border border-neutral-300 bg-white px-8 py-6 rounded-xl gap-6"
+                className="flex items-start border border-neutral-300 bg-white px-8 py-6 rounded-xl"
               >
                 <div className="flex flex-row items-center gap-6 md:gap-4">
                   {item.icon}
                   <div className="flex flex-col">
-                    <p className="text-3xl md:text-2xl font-semibold">{item.boldText}</p>
-                    <p className="text-[1.625rem] md:text-2xl font-medium">{item.fadedText}</p>
+                    <p className="text-3xl md:text-xl text-color font-Merriweather">{item.boldText}</p>
+                    <p className="text-[1.625rem] md:text-xl text-color font-inter">{item.fadedText}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
         </div>
       </div>
     </div>

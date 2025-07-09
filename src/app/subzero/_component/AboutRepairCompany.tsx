@@ -11,13 +11,13 @@ const AboutRepairCompany = () => {
         <div className="flex flex-col gap-[0.3125rem] md:w-1/2">
           <div className="text-2xl font-semibold italic md:text-base">
           </div>
-          <h1 data-aos="fade-up" className="font-bold mt-5 leading-[100%] text-[3rem]">
+          <h1 data-aos="fade-up" className="font-gloock mt-5 leading-[100%] text-5xl">
             Trusted Appliance Repair Company in Chicago
           </h1>
           <p
             data-aos="fade-up"
             data-aos-delay={300}
-            className="font-medium mt-6 text-xl text-[#A8ABB8]"
+            className="font-inter-medium mt-6 text-xl text-[#A8ABB8]"
           >
             Investing in high-end home appliances is an investment in 
             comfort and convenience for years to come. At Everest, we understand the 
@@ -26,14 +26,14 @@ const AboutRepairCompany = () => {
           <p
             data-aos="fade-up"
             data-aos-delay={500}
-            className="font-medium text-xl my-5 text-[#A8ABB8]"
+            className="font-inter-medium text-xl my-5 text-[#A8ABB8]"
           >
             Our professional repair services are designed to ensure that your 
             luxury appliances receive the best care possible. Whether you need diagnostic
             and repair services, preventative maintenance, customer instruction, or factory updates,
             our team of highly-trained experts is here to help.
           </p>
-          <p data-aos="fade-up" data-aos-delay={700} className="font-medium text-xl text-[#A8ABB8]">
+          <p data-aos="fade-up" data-aos-delay={700} className="font-inter-medium text-xl text-[#A8ABB8]">
             {/* We work with all major brands and provide: <br /> ✅ Accurate diagnostics and
             professional repair <br />✅ Affordable pricing and transparent service <br />✅
             Preventative maintenance and installation help <br />✅ Warranty on labor and parts{' '}
