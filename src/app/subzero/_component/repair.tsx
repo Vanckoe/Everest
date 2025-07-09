@@ -2,25 +2,25 @@ import Repair from "@/assets/icon-repair";
 
 export default function SubZeroRepairSection() {
   return (
-    <section className="w-full bg-white px-10 py-[7.5rem] md:px-10 md:py-20">
+    <section className="w-full bg-white px-10 mb-10 mt-20 md:px-10 md:py-20">
       <div className="flex flex-col md:flex-row">
         {/* Левая сторона (текст) */}
         <div className="md:w-1/2">
-          <h2 className="text-5xl font-semibold text-left text-[#121212] md:text-5xl">
+          <h2 className="text-5xl font-gloock text-left text-color md:text-5xl">
             Same day Sub-Zero <br /> Appliance Repair
           </h2>
-          <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
+          <p className="mt-4 text-left font-inter-meduim text-[1.65rem] md:text-base text-[#555555]">
             Sub-Zero is a renowned American brand known for its premium-quality appliances, cutting-edge technologies, 
             and sleek designs. Homeowners trust Sub-Zero for its reliability, innovation, and performance.
           </p>
 
-          <h3 className="mt-8 text-left text-4xl md:text-2xl font-semibold">
-            Benefits of Choosing Everest for Sub-Zero Appliance Repair in Chicago
+          <h3 className="mt-8 text-left text-4xl md:text-2xl text-color font-gloock">
+            Benefits of Choosing Everest for Sub-Zero <br className="hidden md:block"/> Appliance Repair in Chicago
           </h3>
-          <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
+          <p className="mt-4 text-left font-inter-meduim text-[1.65rem] md:text-base text-[#555555]">
             There’s no better choice for luxury appliance repair in Chicago than Everest. We specialize in servicing high-end brands like Sub-Zero, delivering unmatched quality and attention to detail. Here’s why homeowners trust our team:
           </p>
-            <ul className="mt-6 space-y-4">
+            <ul className="mt-6 font-inter space-y-4">
             {[
                 "Genuine Sub-Zero Parts. We use only authentic manufacturer components, which ensures high-quality repairs and extends the lifespan of your appliances.",
                 "Service Within 24 Hours. Our technicians arrive in under 24 hours, so you avoid delays and restore your Sub-Zero appliance quickly and efficiently.",
@@ -34,7 +34,7 @@ export default function SubZeroRepairSection() {
                 </li>
             ))}
             </ul>
-          <p className="mt-6 text-left text-[1.65rem] md:text-base text-#555555">
+          <p className="mt-6 text-left text-[1.65rem] md:text-base font-inter text-color">
             All our technicians are certified professionals with extensive experience and ongoing advanced training. They stay up to date with the latest Sub-Zero technologies and follow current industry standards, ensuring precise and reliable repairs for even the most modern appliances.
           </p>
         </div>

@@ -52,7 +52,7 @@ const NewHero = () => {
         <div className="flex w-full flex-col md:w-[55.125rem]">
           <p
             data-aos="fade-up"
-              className="text-xl font-inter md:text-base md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#343A40]"
+              className="text-xl font-inter md:text-base md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
           >
             [ Family Owned, Locally Trusted ]
           </p>
