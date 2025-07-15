@@ -10,7 +10,7 @@ const advantages = [
     ),
     subtitle: (
       <>
-        The range includes customizable models with <br /> 
+        The range includes customizable models with <br className="hidden md:inline" /> 
         innovative cooling mechanisms.
       </>
     ),
@@ -23,7 +23,7 @@ const advantages = [
     ),
     subtitle: (
       <>
-        The selection has energy-efficient freezers with <br /> 
+        The selection has energy-efficient freezers with <br className="hidden md:inline" /> 
         different temperature settings.
       </>
     ),
@@ -38,7 +38,7 @@ const advantages = [
     subtitle: (
       <>
         The company also has a wide range of <br /> 
-        customizable refrigerators that fit perfectly into <br /> 
+        customizable refrigerators that fit perfectly into <br className="hidden md:inline" /> 
         the interior of the kitchen.
       </>
     ),
@@ -52,7 +52,7 @@ const advantages = [
     ),
     subtitle: (
       <>
-        The brand produces compact outdoor <br /> refrigerators.
+        The brand produces compact outdoor <br className="hidden md:inline" /> refrigerators.
       </>
     ),
   },
@@ -60,18 +60,18 @@ const advantages = [
 
 export default function AdvantagesMobile() {
   return (
-    <div className="block md:hidden px-10 py-[7.5rem]">
+    <div className="block md:hidden px-10 mb-10 mt-10">
       {/* Заголовок и описание */}
       <div className="mb-10">
-        <h2 className="text-[#001f3f] text-[3.65rem] font-bold leading-tight mb-4">
+        <h2 className="text-color text-[3.65rem] font-gloock leading-tight mb-4">
           We repair all types <br />
           of Sub-Zero Appliances
         </h2>
-        <p className="text-[#001f3f] text-[1.65rem] leading-relaxed">
-          If your Sub-Zero appliance isn’t working right, <br />
-          don’t replace it; fix it instead! To learn more <br /> 
-          about our services or if you do not see your <br /> 
-          appliance listed above, please reach out online <br /> 
+        <p className="text-[1.65rem] font-inter leading-relaxed">
+          If your Sub-Zero appliance isn’t working right, <br className="hidden md:inline"/>
+          don’t replace it; fix it instead! To learn more <br className="hidden md:inline" /> 
+          about our services or if you do not see your <br className="hidden md:inline" /> 
+          appliance listed above, please reach out online <br className="hidden md:inline"/> 
           today.
         </p>
       </div>

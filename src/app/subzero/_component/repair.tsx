@@ -2,7 +2,7 @@ import Repair from "@/assets/icon-repair";
 
 export default function SubZeroRepairSection() {
   return (
-    <section className="w-full bg-white px-10 mb-10 mt-20 md:px-10 md:py-20">
+    <section className="w-full bg-white px-10 py-20 md:px-10 md:py-20">
       <div className="flex flex-col md:flex-row">
         {/* Левая сторона (текст) */}
         <div className="md:w-1/2">
@@ -49,7 +49,7 @@ export default function SubZeroRepairSection() {
         </div>
 
         {/* Мобильная версия картинки */}
-        <div className="block md:hidden mt-[60px] overflow-hidden px-[2,5rem]">
+        <div className="block md:hidden mt-[30px] overflow-hidden px-[2,5rem]">
         <img
             src="img/Subzero/repair.jpg"
             alt="Sub-Zero Appliance"

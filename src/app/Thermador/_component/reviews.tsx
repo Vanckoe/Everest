@@ -149,7 +149,7 @@ const ReviewCard = ({
       {isLong && !expanded && (
         <button
           onClick={onToggle}
-          className="mt-[0.25rem] text-black opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
+          className="mt-[0.25rem] text-сolor opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
         >
           Read more
         </button>
@@ -158,7 +158,7 @@ const ReviewCard = ({
       {expanded && (
         <button
           onClick={onToggle}
-          className="mt-[0.25rem] text-black opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
+          className="mt-[0.25rem] text-color opacity-60 hover:underline text-[0.75rem] font-medium text-left w-full"
         >
           Hide
         </button>
@@ -214,14 +214,27 @@ const Reviews = () => {
 
   return (
     <div className="flex flex-col items-center justify-center py-[6rem] bg-gray-50">
-      <h2 className="text-[1.875rem] font-bold">EXCELLENT</h2>
-      <div className="flex mb-[0.25rem]">
-        {[...Array(5)].map((_, i) => (
+      <h2 className="text-[1.875rem] font-Merriweather">EXCELLENT</h2>
+      <div className="flex items-center gap-2 mb-[0.25rem]">
+        <span className="text-[1.5rem] font-semibold text-color">4,7</span>
+
+        {[...Array(4)].map((_, i) => (
           <StarIcon key={i} color="#fbbf24" width="2rem" height="2rem" />
         ))}
+
+        {/* Половинчатая звезда */}
+        <div className="relative w-[2rem] h-[2rem]">
+          {/* Серая фоновая звезда */}
+          <StarIcon color="#e5e7eb" width="2rem" height="2rem" />
+
+          {/* Жёлтая левая половина */}
+          <div className="absolute top-0 left-0 w-[1rem] h-full overflow-hidden">
+            <StarIcon color="#fbbf24" width="2rem" height="2rem" />
+          </div>
+        </div>
       </div>
       <p className="text-[0.875rem] text-gray-800 mb-[0.5rem]">
-        Based on <span className="font-bold">22 reviews</span>
+        Based on <span className="font-bold">140 reviews</span>
       </p>
       <div className="mb-[1rem]">
         <GoogleLogo width="6.875rem" height="2.1875rem" />
