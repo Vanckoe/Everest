@@ -30,7 +30,7 @@ const Issues = () => {
       </div>
 
       {/* Дополнительный текст */}
-      <p className="text-[#555555] font-inter text-2xl md:text-sm mb-8 text-left">
+      <p className="text-[#555555] font-inter text-2xl md:text-lg mb-8 text-left">
         Even premium appliances like Sub-Zero can experience technical issues over time. While they are known for their reliability and advanced features, wear and tear, heavy usage, or lack of maintenance can lead to malfunctions.
       </p>
 

@@ -43,7 +43,7 @@ const Issues = () => {
           <div className="flex flex-row items-start">
             <div className="mt-1"></div>
             <div>
-              <p className="md:text-2xl text-3xl font-semibold text-[#121212]">
+              <p className="md:text-2xl text-3xl font-gloock text-[#121212]">
                 Flexible <br />Scheduling
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
@@ -62,7 +62,7 @@ const Issues = () => {
           <div className="flex flex-row items-start">
             <div className="mt-1"></div>
             <div>
-              <p className="md:text-2xl text-3xl font-semibold text-[#121212]">
+              <p className="md:text-2xl text-3xl font-gloock text-[#121212]">
                 Genuine Viking Parts
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
@@ -81,7 +81,7 @@ const Issues = () => {
           <div className="flex flex-row items-start">
             <div className="mt-1"></div>
             <div>
-              <p className="md:text-2xl text-3xl font-semibold text-[#121212]">
+              <p className="md:text-2xl text-3xl font-gloock text-[#121212]">
                 Comprehensive Diagnostics
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
@@ -100,7 +100,7 @@ const Issues = () => {
           <div className="flex flex-row items-start">
             <div className="mt-1"></div>
             <div>
-              <p className="md:text-2xl text-3xl font-semibold text-[#121212]">
+              <p className="md:text-2xl text-3xl font-gloock text-[#121212]">
                 Fast Response Times
               </p>
               <p className="text-2xl md:text-base mt-4 md:mt-4 font-light text-[#888888]">
