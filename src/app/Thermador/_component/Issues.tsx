@@ -3,14 +3,14 @@ import PlusIcon from '@/assets/PlusIcon';
 
 const Issues = () => {
   return (
-    <section className="px-10 md:px-10 py-10">
+    <section className="px-10 md:px-10">
       {/* Заголовок и подзаголовок */}
-      <h2 className="text-[#121212] text-4xl md:text-3xl font-bold mb-4 text-left">
+      <h2 className="text-color text-5xl md:text-4xl font-gloock mb-8 md:mb-4 text-left">
         Why Do 10 Out of 10 Customers Choose EVEREST?
       </h2>
-      <p className="text-[#555555] text-2xl md:text-lg mb-8 text-left max-w-3xl">
+      <p className="text-[#555555] font-inter text-2xl md:text-lg mb-8 text-left">
         Because EVEREST sets the standard for premium appliance repair — especially when it comes to high-end 
-        brands like Viking. Our clients trust us for our expertise, precision, and commitment to long-term results. <br />
+        brands like Viking. Our clients trust us for our expertise, precision, and commitment to long-term results. <br className="block md:hidden"/>
         Viking repair is a technically complex process that demands the attention of 
         highly qualified technicians and the use of specialized diagnostic equipment. That's why, when your 
         Viking appliance stops working, customers in Chicago turn to Everest, the certified service provider 

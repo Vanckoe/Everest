@@ -51,7 +51,7 @@ const NewHero = () => {
         <div className="flex w-full flex-col md:w-[55.125rem]">
           <p
             data-aos="fade-up"
-            className="text-xl md:text-base font-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
+            className="text-xl md:text-base font-inter-medium md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
           >
             [ Brand appliance service ]
           </p>

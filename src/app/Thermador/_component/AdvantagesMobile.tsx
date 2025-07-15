@@ -72,7 +72,7 @@ export default function AdvantagesMobile() {
     <div className="block md:hidden px-10 py-[7.5rem]">
       {/* Заголовок и описание */}
       <div className="mb-10">
-        <h2 className="text-[#001f3f] text-[3.25rem] font-bold leading-tight mb-4">
+        <h2 className="text-color text-[3.65rem] font-gloock leading-tight mb-10 mt-10">
           We repair all types of <br />
           Viking Appliances
         </h2>

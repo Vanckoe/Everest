@@ -2,11 +2,11 @@ import Repair from "@/assets/icon-repair";
 
 export default function SubZeroRepairSection() {
   return (
-    <section className="w-full bg-white px-10 py-[7.5rem] md:px-10 md:py-20">
+    <section className="w-full bg-white px-10 py-[5.5rem] md:px-10 md:py-16">
       <div className="flex flex-col md:flex-row">
         {/* Левая сторона (текст) */}
         <div className="md:w-1/2">
-          <h2 className="text-5xl font-semibold text-left text-[#121212] md:text-5xl">
+          <h2 className="text-5xl font-gloock text-left text-color md:text-5xl">
             Viking appliance <br /> repair in Chicago - fast, <br /> reliable, and guarantee
           </h2>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
@@ -16,7 +16,7 @@ export default function SubZeroRepairSection() {
             refrigerators.
           </p>
 
-          <h3 className="mt-8 text-left text-4xl md:text-2xl font-semibold">
+          <h3 className="mt-8 text-left text-4xl md:text-2xl text-color font-gloock">
             The most common causes of Viking failure
           </h3>
           <p className="mt-4 text-left text-[1.65rem] md:text-base text-[#555555]">
@@ -38,10 +38,12 @@ export default function SubZeroRepairSection() {
             ))}
             </ul>
           <p className="mt-6 text-left text-[1.65rem] md:mb-2 md:text-base text-#555555">
-            These are just some of the most common issues that can cause your Viking appliance to malfunction. However, the exact cause of the breakdown can only be identified through professional diagnostics performed by a qualified technician.
-          </p>
-          <p>
-            At Everest, we provide comprehensive Viking appliance diagnostics and repair services in Chicago. Our experts use advanced tools to accurately detect the source of the problem and offer reliable solutions that restore your appliance’s full functionality — all with a service guarantee.
+            These are just some of the most common issues that can cause your Viking 
+            appliance to malfunction. However, the exact cause of the breakdown can 
+            only be identified through professional diagnostics performed by a qualified technician. <br/>
+            At Everest, we provide comprehensive Viking appliance diagnostics and repair services in Chicago. 
+            Our experts use advanced tools to accurately detect the source of the problem and offer reliable 
+            solutions that restore your appliance’s full functionality — all with a service guarantee.
           </p>
         </div>
 
@@ -55,7 +57,7 @@ export default function SubZeroRepairSection() {
         </div>
 
         {/* Мобильная версия картинки */}
-        <div className="block md:hidden mt-[60px] overflow-hidden px-[2,5]">
+        <div className="block md:hidden mt-[30px] overflow-hidden px-[2,5]">
         <img
             src="img/Thermador/repair.jpg"
             alt="Sub-Zero Appliance"
