@@ -63,7 +63,7 @@ const StepCard = ({ number, title, description }: Step) => (
         width={100}
         height={100}
         alt="Logo"
-        className="size-16 rounded-xl"
+        className="w-24 h-14 min-h-14 min-w-24 mb-3 rounded-xl"
       />
       {/* <p className="text-lg font-medium text-accent">{number}</p> */}
       <h3 className=" mb-5 text-center text-2xl font-semibold text-[#001F3F] leading-snug">

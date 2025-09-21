@@ -22,8 +22,7 @@ const bookingSteps: Step[] = [
   {
     number: '02',
     title: 'Pick date & time',
-    description:
-      'Select a convenient day and time slot in the online calendar.',
+    description: 'Select a convenient day and time slot in the online calendar.',
   },
   {
     number: '03',
@@ -34,20 +33,17 @@ const bookingSteps: Step[] = [
   {
     number: '04',
     title: 'Pre-Arrival Call',
-    description:
-      'You’ll get a heads-up call before your technician arrives.',
+    description: 'You’ll get a heads-up call before your technician arrives.',
   },
   {
     number: '05',
     title: 'We Come. We Fix.',
-    description:
-      'Fast, reliable service from certified professionals.',
+    description: 'Fast, reliable service from certified professionals.',
   },
   {
     number: '06',
     title: 'Pay & warranty',
-    description:
-      'The invoice will be issued on site right after the repair is done.',
+    description: 'The invoice will be issued on site right after the repair is done.',
   },
 ] as const;
 
@@ -63,7 +59,7 @@ const StepCard = ({ number, title, description }: Step) => (
         width={100}
         height={100}
         alt="Logo"
-        className="size-16 rounded-xl"
+        className="w-24 h-14 min-h-14 min-w-24 mb-3 rounded-xl"
       />
       <h3 className="mb-5 text-center text-2xl font-inter-semibold text-color leading-snug">
         {title}
