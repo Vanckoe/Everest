@@ -38,16 +38,13 @@ const faqs = [
   },
   {
     q: 'Is your work guaranteed?',
-    a: 'Absolutely — all our repairs come with a 12-month labor warranty, so you can feel confident the job is done right.',
+    a: 'Absolutely — all our repairs come with a 6-month labor warranty, so you can feel confident the job is done right.',
   },
-
-
 ] as const;
 
 /* ---------- SVG иконка + / – ---------- */
 const Icon = ({ open }: { open: boolean }) => (
   <svg
-    
     className="h-6 w-6 shrink-0 stroke-[3] transition-transform duration-200"
     viewBox="0 0 24 24"
     fill="none"
@@ -91,7 +88,9 @@ const Item = ({
   return (
     <li className="border-b border-neutral-200 last:border-none">
       <button onClick={() => toggle(i)} className="flex w-full items-center justify-between  py-5 ">
-        <p className=" max-w-[90%] text-left text-2xl md:text-xl text-color font-inter-semibold">{q}</p>
+        <p className=" max-w-[90%] text-left text-2xl md:text-xl text-color font-inter-semibold">
+          {q}
+        </p>
         <Icon open={open} />
       </button>
 
@@ -115,7 +114,7 @@ export default function FaqAccordion() {
   const toggle = (i: number) => setOpenIndex(prev => (prev === i ? null : i));
 
   return (
-    <section id='faq' className="w-full px-18 pt-[9.375rem] pb-[5rem] md:gap-5">
+    <section id="faq" className="w-full px-18 pt-[9.375rem] pb-[5rem] md:gap-5">
       <div className="grid border-t border-neutral-200 gap-8 md:gap-12 md:grid-cols-[minmax(0,20.5rem)_1fr]">
         {/* Левый заголовок */}
         <h2 className="text-7xl md:text-7xl py-5 font-Merriweather leading-[100%] text-color">

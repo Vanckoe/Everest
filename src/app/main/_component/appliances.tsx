@@ -19,10 +19,7 @@ const Appliances = () => {
         and we’ll be happy to help.
       </p>
 
-      <a
-        href="tel:+13312198690"
-        className="group md:-ml-12 flex w-fit items-center"
-      >
+      <a href="tel:+18132901625" className="group md:-ml-12 flex w-fit items-center">
         <div
           className="
             hidden md:flex size-14 min-w-14 bg-second rounded-full items-center justify-center
@@ -34,7 +31,7 @@ const Appliances = () => {
         </div>
 
         <span className="bg-second text-color px-10 md:px-8 py-5 md:py-3 rounded-full font-inter-semibold text-3xl md:text-3xl">
-          +1 (331) 219 8690
+          +1 (813) 290 1625
         </span>
 
         <div

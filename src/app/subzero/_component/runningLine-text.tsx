@@ -2,7 +2,7 @@
 
 import Marquee from 'react-fast-marquee';
 
-const phoneNumber = '+1 (331) 219 8690';
+const phoneNumber = '+1 (813) 290 1625';
 
 const ServiceAreaMarquee = () => {
   return (
@@ -12,7 +12,7 @@ const ServiceAreaMarquee = () => {
           <div key={index} className="px-8">
             {/* Мобильная версия */}
             <a
-              href="tel:+13312198690"
+              href="tel:+18132901625"
               className="block md:hidden text-2xl font-semibold text-[#171717] whitespace-nowrap underline"
             >
               {phoneNumber}

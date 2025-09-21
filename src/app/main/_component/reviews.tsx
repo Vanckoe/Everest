@@ -1,17 +1,17 @@
-'use client'
-import React, { useState, useRef, useEffect } from 'react'
-import GoogleIcon from '@/assets/google-icon'
-import StarIcon from '@/assets/Star'
-import VerifiedIcon from '@/assets/verified'
-import GoogleLogo from '@/assets/google'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
-import ReviewsMobile from './ReviewsMobile'
+'use client';
+import React, { useState, useRef, useEffect } from 'react';
+import GoogleIcon from '@/assets/google-icon';
+import StarIcon from '@/assets/Star';
+import VerifiedIcon from '@/assets/verified';
+import GoogleLogo from '@/assets/google';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ReviewsMobile from './ReviewsMobile';
 
 export default function Home() {
   return (
     <div>
       {/* ПК версия */}
-      <div id='reviews' className="hidden md:block">
+      <div id="reviews" className="hidden md:block">
         <Reviews />
       </div>
 
@@ -20,7 +20,7 @@ export default function Home() {
         <ReviewsMobile />
       </div>
     </div>
-  )
+  );
 }
 
 const reviewsData = [
@@ -86,22 +86,22 @@ const reviewsData = [
     time: '1 months ago',
     avatar: '/img/icons/user-7.png',
     text: 'Dan did a great job. They were fast and courteous too. Fixed my stove in 15 minutes. Thank you!',
-  }
-  ]
+  },
+];
 
-const CARD_WIDTH_REM = 18.375
+const CARD_WIDTH_REM = 18.375;
 
 const ReviewCard = ({
   review,
   expanded,
   onToggle,
 }: {
-  review: typeof reviewsData[0]
-  expanded: boolean
-  onToggle: () => void
+  review: (typeof reviewsData)[0];
+  expanded: boolean;
+  onToggle: () => void;
 }) => {
-  const maxChars = 120
-  const isLong = review.text.length > maxChars
+  const maxChars = 120;
+  const isLong = review.text.length > maxChars;
 
   return (
     <div
@@ -164,53 +164,53 @@ const ReviewCard = ({
         </button>
       )}
     </div>
-  )
-}
+  );
+};
 
 const Reviews = () => {
-  const [expandedId, setExpandedId] = useState<number | null>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [expandedId, setExpandedId] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const toggleExpanded = (id: number) => {
-    setExpandedId(prev => (prev === id ? null : id))
-  }
+    setExpandedId(prev => (prev === id ? null : id));
+  };
 
   const scrollLeft = () => {
     if (containerRef.current) {
-      const newScroll = containerRef.current.scrollLeft - CARD_WIDTH_REM * 16
-      containerRef.current.scrollTo({ left: newScroll, behavior: 'smooth' })
+      const newScroll = containerRef.current.scrollLeft - CARD_WIDTH_REM * 16;
+      containerRef.current.scrollTo({ left: newScroll, behavior: 'smooth' });
     }
-  }
+  };
 
   const scrollRight = () => {
     if (containerRef.current) {
-      const newScroll = containerRef.current.scrollLeft + CARD_WIDTH_REM * 16
-      containerRef.current.scrollTo({ left: newScroll, behavior: 'smooth' })
+      const newScroll = containerRef.current.scrollLeft + CARD_WIDTH_REM * 16;
+      containerRef.current.scrollTo({ left: newScroll, behavior: 'smooth' });
     }
-  }
+  };
 
   const canScrollLeft = () => {
-    return containerRef.current ? containerRef.current.scrollLeft > 10 : false
-  }
+    return containerRef.current ? containerRef.current.scrollLeft > 10 : false;
+  };
 
   const canScrollRight = () => {
-    if (!containerRef.current) return false
-    const { scrollWidth, clientWidth, scrollLeft } = containerRef.current
-    return scrollLeft + clientWidth + 10 < scrollWidth
-  }
+    if (!containerRef.current) return false;
+    const { scrollWidth, clientWidth, scrollLeft } = containerRef.current;
+    return scrollLeft + clientWidth + 10 < scrollWidth;
+  };
 
-  const [, forceUpdate] = useState(0)
+  const [, forceUpdate] = useState(0);
 
   useEffect(() => {
-    const el = containerRef.current
+    const el = containerRef.current;
     const handleScroll = () => {
-      forceUpdate(n => n + 1)
-    }
-    if (el) el.addEventListener('scroll', handleScroll)
+      forceUpdate(n => n + 1);
+    };
+    if (el) el.addEventListener('scroll', handleScroll);
     return () => {
-      if (el) el.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+      if (el) el.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center py-[6rem] bg-gray-50">
@@ -234,7 +234,7 @@ const Reviews = () => {
         </div>
       </div>
       <p className="text-[0.875rem] text-gray-800 mb-[0.5rem]">
-        Based on <span className="font-bold">140 reviews</span>
+        Based on <span className="font-bold">162 reviews</span>
       </p>
       <div className="mb-[1rem]">
         <GoogleLogo width="6.875rem" height="2.1875rem" />
@@ -276,7 +276,7 @@ const Reviews = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export { Reviews }
+export { Reviews };

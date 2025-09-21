@@ -23,9 +23,7 @@ const MobileFooter = () => {
             className="h-[3.5rem] w-[7rem]"
           />
           <div className="flex flex-col leading-tight">
-            <h1 className="text-2xl mt-7 font-inter-bold text-white">
-              EVEREST APPLIANCE REPAIR
-            </h1>
+            <h1 className="text-2xl mt-7 font-inter-bold text-white">EVEREST APPLIANCE REPAIR</h1>
             <p className="text-xl text-white font-inter leading-snug">
               Above and Beyond – Only with Everest.
             </p>
@@ -41,7 +39,7 @@ const MobileFooter = () => {
                 href="tel:+18132901625"
                 className="underline text-3xl font-inter-medium transition-colors"
               >
-                +1(331) 219-8690
+                +1 (813) 290 1625
               </a>
             </li>
             <li>
@@ -68,28 +66,40 @@ const MobileFooter = () => {
         <div>
           <h3 className="text-3xl font-Merriweather mb-4">Company</h3>
           <ul className="grid grid-cols-2 space-y-2 font-inter text-2xl text-[#9FAEB6]">
-            <li><a href="#about">About us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#brands">Brands</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#booking-steps-mobile">Steps</a></li>
-            <li><a href="#privacy">Privacy Policy</a></li>
-            <li><a href="#terms">Terms of use</a></li>
+            <li>
+              <a href="#about">About us</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#brands">Brands</a>
+            </li>
+            <li>
+              <a href="#reviews">Reviews</a>
+            </li>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+            <li>
+              <a href="#booking-steps-mobile">Steps</a>
+            </li>
+            <li>
+              <a href="#privacy">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="#terms">Terms of use</a>
+            </li>
           </ul>
         </div>
         <div>
           <h3 className="text-3xl font-Merriweather mb-4">Brands</h3>
           <ul className="space-y-2 text-2xl font-inter text-[#9FAEB6]">
             <li>
-              <a href="/subzero">
-                Sub-Zero appliance repair
-              </a>
+              <a href="/subzero">Sub-Zero appliance repair</a>
             </li>
             <li>
-              <a href="/Thermador">
-                Viking appliance repair
-              </a>
+              <a href="/Thermador">Viking appliance repair</a>
             </li>
           </ul>
         </div>

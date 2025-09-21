@@ -21,6 +21,7 @@ import ServiceAreaMarquee from './_component/runningLine-text';
 import OurWorkMobile from './_component/OurWorkMobile';
 import AdvantagesMobile from '../Thermador/_component/AdvantagesMobile';
 import OurWork from './_component/OurWork';
+import ServiceAreas from './_component/ServiceAreas';
 
 const Main = () => {
   return (
@@ -43,6 +44,7 @@ const Main = () => {
       <OurWork />
       <OurWorkMobile />
       <BrandGrid />
+      <ServiceAreas />
       <Appliances />
       <ForWho />
       <ForWhoMobile />

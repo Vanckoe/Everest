@@ -20,7 +20,7 @@ const cards: Card[] = [
     title: 'Refrigerator Repair',
     subtitle:
       'Get your refrigerator back to top-notch condition with our expert repair service. Our skilled technicians will conduct a thorough inspection, leak test, and swiftly identify the issue.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '45 ',
   },
   {
@@ -29,7 +29,7 @@ const cards: Card[] = [
     title: 'Oven Repair',
     subtitle:
       'Is your oven failing to preheat, leaving you in a panic before your big party? Book our expert oven repair service now for a quick inspection and efficient solution.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '30 ',
   },
   {
@@ -38,7 +38,7 @@ const cards: Card[] = [
     title: 'Dryer Repair',
     subtitle:
       'Is your dryer not heating or spinning properly? Book our expert dryer repair service for a thorough inspection and a quick estimate.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '30 ',
   },
   {
@@ -47,7 +47,7 @@ const cards: Card[] = [
     title: 'Washer Repair',
     subtitle:
       'Is your washer not draining, spinning, or starting the cycle? Our expert technicians will inspect your unit thoroughly and provide the best solution.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '30 ',
   },
   {
@@ -56,7 +56,7 @@ const cards: Card[] = [
     title: 'Dishwasher Repair',
     subtitle:
       'Is your dishwasher not draining properly or leaving your dishes less than sparkling clean? Schedule an appointment now to have it expertly repaired.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '30 ',
   },
   {
@@ -65,7 +65,7 @@ const cards: Card[] = [
     title: 'Range Repair',
     subtitle:
       'Is your burner clicking but not igniting? Our expert technicians fix these issues daily. Book now for a thorough inspection and repair.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '30 ',
   },
   {
@@ -74,7 +74,7 @@ const cards: Card[] = [
     title: 'Garbage Disposal Repair',
     subtitle:
       'Is your garbage disposal not running or just humming? Book now to get it back up and running smoothly.',
-    cost: '65.00 $',
+    cost: '79.00 $',
     time: '30 ',
   },
   {
@@ -134,18 +134,17 @@ export default function Services() {
 
       {/* Заголовок */}
       <div className="mb-10 flex flex-col gap-5">
-      <div className="flex items-center gap-4 text-2xl font-inter-semibold text-color md:text-base">
+        <div className="flex items-center gap-4 text-2xl font-inter-semibold text-color md:text-base">
           <div className="flex-shrink-0">
-            <Line color="#22C2A4" width="2" height="18"/>
+            <Line color="#22C2A4" width="2" height="18" />
           </div>
-        <span className="text-2xl italic font-inter-semibold md:text-xl">SERVICES</span>
-      </div>
+          <span className="text-2xl italic font-inter-semibold md:text-xl">SERVICES</span>
+        </div>
         <p
           data-aos="fade-up"
           className="text-[2.75rem] md:text-[3rem] text-color leading-[100%] font-Merriweather"
         >
-          Select Your Service Below -
-          Schedule in minutes - Fixed Today!  <br />
+          Select Your Service Below - Schedule in minutes - Get Fixed Today! <br />
         </p>
       </div>
 

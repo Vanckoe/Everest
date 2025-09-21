@@ -1,8 +1,8 @@
-'use client'
-import React, { useState } from 'react'
-import StarIcon from '@/assets/Star'
-import VerifiedIcon from '@/assets/verified'
-import GoogleLogo from '@/assets/google'
+'use client';
+import React, { useState } from 'react';
+import StarIcon from '@/assets/Star';
+import VerifiedIcon from '@/assets/verified';
+import GoogleLogo from '@/assets/google';
 
 const reviewsData = [
   {
@@ -68,19 +68,19 @@ const reviewsData = [
     avatar: '/img/icons/user-7.png',
     text: 'Dan did a great job. They were fast and courteous too. Fixed my stove in 15 minutes. Thank you!',
   },
-]
+];
 
 const ReviewCard = ({
   review,
   expanded,
   onToggle,
 }: {
-  review: typeof reviewsData[0]
-  expanded: boolean
-  onToggle: () => void
+  review: (typeof reviewsData)[0];
+  expanded: boolean;
+  onToggle: () => void;
 }) => {
-  const maxChars = 140
-  const isLong = review.text.length > maxChars
+  const maxChars = 140;
+  const isLong = review.text.length > maxChars;
 
   return (
     <div
@@ -128,22 +128,22 @@ const ReviewCard = ({
         </button>
       )}
     </div>
-  )
-}
+  );
+};
 
 export default function ReviewsMobileSwipe() {
-  const [expandedId, setExpandedId] = useState<number | null>(null)
+  const [expandedId, setExpandedId] = useState<number | null>(null);
 
   const toggleExpanded = (id: number) => {
-    setExpandedId(prev => (prev === id ? null : id))
-  }
+    setExpandedId(prev => (prev === id ? null : id));
+  };
 
   return (
     <div className="flex flex-col items-center px-10 py-[5.5rem] justify-center bg-gray-50">
       <h2 className="text-5xl tracking-normal font-Merriweather text-color mb-2">EXCELLENT</h2>
       <div className="flex items-center mb-1">
         <span className="text-[1.75rem] font-inter-semibold text-color mr-2">4,7</span>
-              {[...Array(4)].map((_, i) => (
+        {[...Array(4)].map((_, i) => (
           <StarIcon key={i} color="#fbbf24" width="3rem" height="3rem" />
         ))}
 
@@ -159,7 +159,7 @@ export default function ReviewsMobileSwipe() {
         </div>
       </div>
       <p className="text-2xl text-color mb-6">
-        Based on <span className="font-inter-bold">140 reviews</span>
+        Based on <span className="font-inter-bold">162 reviews</span>
       </p>
       <div className="mb-4">
         <GoogleLogo width="110px" height="35px" />
@@ -173,7 +173,7 @@ export default function ReviewsMobileSwipe() {
         }}
       >
         <div className="flex flex-nowrap gap-4">
-          {reviewsData.map((review) => (
+          {reviewsData.map(review => (
             <ReviewCard
               key={review.id}
               review={review}
@@ -184,5 +184,5 @@ export default function ReviewsMobileSwipe() {
         </div>
       </div>
     </div>
-  )
+  );
 }
