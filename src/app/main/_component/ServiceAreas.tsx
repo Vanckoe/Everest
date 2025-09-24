@@ -75,7 +75,7 @@ export default function ServiceAreasSticky({ stickyOffsetRem = 6 }: Props) {
                 area.
               </p>
               <div className="rounded-xl bg-white/10 p-4">
-                <p className="text-2xl md:text-sm text-white/90">
+                <p className="text-2xl md:text-base text-white/90">
                   Don’t see your city? We frequently travel to nearby locations. We’ll do our best
                   to help.
                 </p>

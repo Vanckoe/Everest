@@ -12,11 +12,11 @@ const Appliances = () => {
 
       <p
         data-aos="fade-up"
-        className="font-Merriweather text-[3.6rem] md:text-[3rem] leading-[120%]"
+        className="font-Merriweather text-[3.3rem] md:text-[3rem] leading-[120%]"
       >
-        Any questions left? <br />
-        Give us a call <br />
-        and we’ll be happy to help.
+        Any questions left? <br className="hidden md:block" />
+        Give us a call and we’ll <br className="hidden md:block" />
+        be happy to help.
       </p>
 
       <a href="tel:+18132901625" className="group md:-ml-12 flex w-fit items-center">
