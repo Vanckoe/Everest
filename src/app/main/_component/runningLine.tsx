@@ -19,7 +19,7 @@ const brandLogos = [
 
 const BrandMarquee = () => {
   return (
-    <div className="w-full bg-[#F7F8F9] py-5 md:py-10">
+    <div className="w-full  py-5 md:py-10">
       <Marquee gradient={false} speed={50} pauseOnHover={true}>
         {brandLogos.map((src, idx) => (
           <div key={idx} className="mx-8">
