@@ -7,9 +7,9 @@ import { PhoneCall } from 'lucide-react';
 type NavItem = { id: string; label: string; href: string };
 
 const DEFAULT_ITEMS: NavItem[] = [
-  { id: 'help', label: 'Help Centre', href: '/help' },
-  { id: 'terms', label: 'Terms & Policies', href: '/terms&policies' },
-  { id: 'contact', label: 'Contact Us', href: '/contact' },
+  { id: 'whatsapp', label: 'Whatsapp', href: 'https://web.whatsapp.com/' },
+  { id: 'call', label: 'Call', href: 'tel:+18132901625' },
+  //   { id: 'terms', label: 'Terms & Policies', href: '/terms&policies' },
 ];
 
 export default function Help({ items = DEFAULT_ITEMS }: { items?: NavItem[] }) {

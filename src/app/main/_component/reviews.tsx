@@ -33,9 +33,9 @@ const reviewsData = [
   },
   {
     id: 2,
-    name: 'Golden Soul_17',
+    name: 'D_Golden Soul_17',
     time: '6 months ago',
-    avatar: '/img/icons/user.png',
+    avatar: '/img/icons/unnamed.png',
     text: 'Dan came to our apt and fixed our dryer. He did everything in a proper way and now our dryer looks new. He has little English speaking barriers but he good enough to explain everything. Most importantly, I can tell he speaks very well on appliance’s language and fixed our dryer the same day!',
   },
   {
