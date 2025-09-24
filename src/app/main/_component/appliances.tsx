@@ -7,7 +7,7 @@ const Appliances = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="flex flex-col gap-20 md:flex-row md:items-center justify-between w-full bg-accent text-white py-32 md:py-24 px-12 md:px-16">
+    <section className="flex flex-col gap-10 md:gap-20 -mt-0.5 md:flex-row md:items-center justify-between w-full bg-accent text-white pt-16 pb-32 md:pt-20 md:pb-24 px-12 md:px-16">
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       <p

@@ -52,7 +52,7 @@ const NewHero = () => {
         <div className="flex w-full flex-col md:w-[55.125rem]">
           <p
             data-aos="fade-up"
-              className="text-xl font-inter md:text-base md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
+            className="text-xl font-inter md:text-base md:font-light uppercase leading-[150%] tracking-[0.1rem] text-[#929292] md:text-[#CACACA]"
           >
             [ Family Owned, Locally Trusted ]
           </p>
@@ -68,7 +68,8 @@ const NewHero = () => {
               data-aos="fade-up"
               className="text-[5.563rem] text-[#343A40] md:text-[6.825rem] font-gloock leading-[85%] -tracking-normal"
             >
-              <span className="hidden md:inline"></span>All<br className="md:hidden" /> Covered
+              <span className="hidden md:inline"></span>All
+              <br className="md:hidden" /> Covered
             </p>
           </div>
 
@@ -127,8 +128,12 @@ const NewHero = () => {
                 <div className="flex flex-row items-center gap-6 md:gap-4">
                   {item.icon}
                   <div className="flex flex-col">
-                    <p className="text-3xl md:text-xl text-color font-Merriweather">{item.boldText}</p>
-                    <p className="text-[1.625rem] md:text-xl text-color font-inter">{item.fadedText}</p>
+                    <p className="text-3xl md:text-xl text-color font-Merriweather">
+                      {item.boldText}
+                    </p>
+                    <p className="text-[1.625rem] md:text-xl text-color font-inter">
+                      {item.fadedText}
+                    </p>
                   </div>
                 </div>
               </div>

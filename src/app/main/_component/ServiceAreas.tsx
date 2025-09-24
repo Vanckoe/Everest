@@ -45,14 +45,14 @@ export default function ServiceAreasSticky({ stickyOffsetRem = 6 }: Props) {
           {/* LEFT: sticky intro panel (sticks within this section only) */}
           <aside
             className={[
-              'rounded-2xl bg-accent px-6 text-white md:col-span-2 md:px-8',
+              'rounded-2xl bg-accent text-white md:col-span-2 md:pl-0 md:pr-8',
               'md:sticky', // becomes sticky on md+
               stickyTopClass, // top offset (in rem)
               'self-start', // prevent stretching so sticky works correctly
             ].join(' ')}
           >
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium">
-              <MapPin className="h-4 w-4" aria-hidden />
+            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 md:px-3 py-2 md:py-1 text-2xl md:text-sm font-medium">
+              <MapPin className="size-6 md:size-4" aria-hidden />
               Service Coverage
             </div>
 
@@ -65,7 +65,7 @@ export default function ServiceAreasSticky({ stickyOffsetRem = 6 }: Props) {
             </h2>
 
             {/* This box can be taller so you see the internal scroll “falling” effect */}
-            <div className="mt-3 space-y-3 text-white/85 md:text-lg">
+            <div className="mt-3 space-y-3 text-white/85 text-2xl md:text-lg">
               <p>
                 Everest Appliance Repair serves the Greater Chicagoland suburbs. The list on the
                 right shows our current coverage.
@@ -75,7 +75,7 @@ export default function ServiceAreasSticky({ stickyOffsetRem = 6 }: Props) {
                 area.
               </p>
               <div className="rounded-xl bg-white/10 p-4">
-                <p className="text-sm text-white/90">
+                <p className="text-2xl md:text-sm text-white/90">
                   Don’t see your city? We frequently travel to nearby locations. We’ll do our best
                   to help.
                 </p>

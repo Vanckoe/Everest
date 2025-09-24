@@ -29,12 +29,12 @@ const Main = () => {
       {/* <ColorPalettes /> */}
       <Header />
       {/* <Hero /> */}
-      <div className="md:hidden">
-        <RunningLine />
-      </div>
+      {/* <div className="md:hidden"> */}
+      <RunningLine />
+      {/* </div> */}
       <NewHero />
       <div className="hidden mt-12 md:block">
-        <RunningLine />
+        {/* <RunningLine /> */}
         <ServiceAreaMarquee />
       </div>
 
