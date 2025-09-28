@@ -12,7 +12,7 @@ const grid: CellData[][] = [
   // row 0
   [
     null,
-    { type: 'logo', src: '/img/brands/viking.avif', alt: 'viking' },
+    { type: 'logo', src: '/img/brands/Viking.png', alt: 'viking' },
     { type: 'text', spanMd: 3 },
     null,
   ],
@@ -20,7 +20,7 @@ const grid: CellData[][] = [
   [
     null,
     { type: 'logo', src: '/img/brands/bosch.avif', alt: 'Bosch' },
-    { type: 'logo', src: '/img/brands/subzero.avif', alt: 'Sub-Zero' },
+    { type: 'logo', src: '/img/brands/subzero.png', alt: 'Sub-Zero' },
     { type: 'logo', src: '/img/brands/Kitchenaid.png', alt: 'Kitchenaid' },
     { type: 'logo', src: '/img/brands/miele.png', alt: 'miele' },
     { type: 'logo', src: '/img/brands/thermador.avif', alt: 'Thermador' },
@@ -29,11 +29,11 @@ const grid: CellData[][] = [
   // row 2
   [
     null,
-    { type: 'logo', src: '/img/brands/dacor.avif', alt: 'Dacor' },
-    { type: 'logo', src: '/img/brands/h.avif', alt: 'h' },
+    { type: 'logo', src: '/img/brands/dacor.png', alt: 'Dacor' },
+    { type: 'logo', src: '/img/brands/h.png', alt: 'h' },
     { type: 'logo', src: '/img/brands/samsung.avif', alt: 'marvel' },
     { type: 'logo', src: '/img/brands/Whirlpool.png', alt: 'Scotsman' },
-    { type: 'logo', src: '/img/brands/wolf.avif', alt: 'Wolf' },
+    { type: 'logo', src: '/img/brands/wolf.png', alt: 'Wolf' },
   ],
   // row 3
   [
