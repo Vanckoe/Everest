@@ -4,15 +4,15 @@ import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 
 const brandLogos = [
-  '/img/brands/subzero.avif',
-  '/img/brands/viking.avif',
+  '/img/brands/subzero.png',
+  '/img/brands/Viking.png',
   '/img/brands/thermador.avif',
   '/img/brands/Kitchenaid.png',
   '/img/brands/bosch.avif',
-  '/img/brands/dacor.avif',
+  '/img/brands/dacor.png',
   '/img/brands/Fisherpaykel.png',
-  '/img/brands/h.avif',
-  '/img/brands/wolf.avif',
+  '/img/brands/h.png',
+  '/img/brands/wolf.png',
   '/img/brands/samsung.avif',
   '/img/brands/Whirlpool.png',
 ];
