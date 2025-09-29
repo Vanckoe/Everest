@@ -107,8 +107,16 @@ const DesktopFooter = () => {
                 <li><a href="#reviews" className="hover:underline">Reviews</a></li>
                 <li><a href="#booking-steps" className="hover:underline">Steps</a></li>
                 <li><a href="#faq" className="hover:underline">FAQ</a></li>
-                <li><a href="#privacy" className="hover:underline">Privacy Policy</a></li>
-                <li><a href="#terms" className="hover:underline">Terms of use</a></li>
+                <li>
+                  <a href="/privacy" className="hover:underline">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="hover:underline">
+                    Terms of use
+                  </a>
+                </li>
               </ul>
             </div>
 
